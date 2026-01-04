@@ -1,0 +1,113 @@
+<div class="publications-container">
+    <div class="publications-header"></div>
+    <ul class="publications-list" id="publications-list">
+        {{ $isPublicationsPage := and (eq .context.Kind "page") (eq .context.File.BaseFileName "Publications") }}
+        {{ $currentPageSlug := .context.File.BaseFileName }}
+        {{ $showNumbers := .displayNumbers }}
+        {{ $counter := 0 }}
+
+        {{ $publicationsToDisplay := .context.Site.Data.Publications }}
+
+        {{ if not $isPublicationsPage }}
+            {{ $publicationsToDisplay = slice }}
+            {{ range .context.Site.Data.Publications }}
+                {{ if in .referenced_in $currentPageSlug }}
+                    {{ $publicationsToDisplay = $publicationsToDisplay | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $publicationsToDisplay }}
+            {{ $counter = add $counter 1 }}
+
+            {{/* ГЕНЕРАЦИЯ cardId */}}
+            {{ $cardId := "" }}
+            {{ with .anchor }}
+                {{ $cardId = trim . " " }}
+            {{ end }}
+            {{ if eq $cardId "" }}
+                {{ with .name }}
+                    {{ $cardId = . | urlize }}
+                {{ else }}
+                    {{ $cardId = printf "publication-%d" $counter }}
+                {{ end }}
+            {{ end }}
+
+            <li class="publication-item"
+                id="card-{{ $cardId }}"
+                data-card-id="{{ $cardId }}"
+                data-publication-number="{{ $counter }}"
+                data-publication-name="{{ .name | default .title }}">
+
+                <!-- КОРОТКИЙ ВИД -->
+                <span class="publication-item-short">
+                    {{ if $showNumbers }}
+                        <span class="publication-number">{{ $counter }}.</span>
+                        <span class="publication-name">{{ .name | default .title }}</span>
+                    {{ end }}
+                </span>
+
+                <!-- ПОЛНЫЙ ВИД -->
+                <span class="publication-item-full" style="display: none;">
+                    <span class="publication-item-header">
+                        <span class="publication-number">{{ $counter }}.</span>
+                        <span class="publication-name">{{ .name | default .title }}</span>
+                    </span>
+                    <div class="publication-details">
+                        <p>
+                            {{ with .author }}<strong>Автор:</strong> {{ . }}<br>{{ end }}
+                            {{ with .year }}<strong>Год:</strong> {{ . }}<br>{{ end }}
+                            {{ .description }}
+                            <br>
+                            {{ if .url }}
+                                <a href="{{ .url }}" target="_blank">{{ .url }}</a>
+                            {{ end }}
+                        </p>
+
+                        <!-- ССЫЛКА -->
+                        {{ $collectionBaseUrl := "/docs/reference-books/publications/" }}
+                        <div class="publication-item-more-details">
+                            <a href="{{ $collectionBaseUrl }}#card-{{ $cardId }}"
+                               class="more-details-button"
+                               onclick="return saveScrollPositionForPublications(event)">
+                               More detailed
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+
+<script>
+// ФУНКЦИЯ СОХРАНЕНИЯ ДЛЯ PUBLICATIONS
+function saveScrollPositionForPublications(event) {
+    console.log('📍 [PUBLICATIONS] Сохраняем данные для возврата...');
+
+    // Находим карточку
+    const link = event.currentTarget;
+    const card = link.closest('.publication-item');
+
+    if (!card) {
+        console.error('❌ Карточка публикации не найдена');
+        return true;
+    }
+
+    // Получаем номер маркера
+    const publicationNumber = card.getAttribute('data-publication-number');
+
+    // Очищаем ВСЁ для чистоты
+    sessionStorage.clear();
+
+    // Сохраняем тип И номер
+    sessionStorage.setItem('markerType', 'publication');  // КЛЮЧЕВОЕ!
+    sessionStorage.setItem('markerNumber', publicationNumber);
+    sessionStorage.setItem('scrollTop', window.pageYOffset);
+    sessionStorage.setItem('timestamp', Date.now());
+
+    console.log('💾 [PUBLICATIONS] Сохранено тип: publication, номер:', publicationNumber);
+
+    return true; // Разрешаем переход
+}
+</script>

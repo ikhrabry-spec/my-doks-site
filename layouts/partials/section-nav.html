@@ -1,0 +1,53 @@
+{{ $currentPage := . }}
+{{ $sections := slice
+    (site.GetPage "docs/inside")
+    (site.GetPage "docs/aspects")
+    (site.GetPage "docs/outside")
+    (site.GetPage "blog/discussion")
+    (site.GetPage "blog/news-archive")
+    (site.GetPage "docs/reference-books")
+    (site.GetPage "about")
+}}
+
+{{ range $section := $sections }}
+                {{ if ne $section.Title "Empty" }}
+                    <li>
+                        <details {{ if $currentPage.IsDescendant $section }}open{{ end }}>
+                            <summary>
+                                <a href="{{ $section.Permalink }}" class="section-title-link {{ if eq $currentPage.Permalink $section.Permalink }}active{{ end }}">
+                                    {{ $section.Title }}
+                                </a>
+                            </summary>
+                            <ul class="list-unstyled list-nested">
+                                {{ range $section.Pages.ByWeight }}
+                                    {{ if ne .Title "Empty" }}
+                                        <li>
+                                            {{ if .Pages }}
+                                                <details {{ if $currentPage.IsDescendant . }}open{{ end }} class="list-item-details">
+                                                    <summary>
+                                                        <a href="{{ .Permalink }}" class="{{ if eq .Permalink $.Page.Permalink }}active{{ end }}">
+                                                            {{ .Title }}
+                                                        </a>
+                                                    </summary>
+
+                                                    <ul class="list-unstyled list-nested">
+                                                        {{ range .Pages.ByWeight }}
+                                                            <li {{ if eq .Permalink $.Page.Permalink }}class="active"{{ end }}>
+                                                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                                            </li>
+                                                        {{ end }}
+                                                    </ul>
+                                                </details>
+                                                {{ else }}
+                                                <a href="{{ .Permalink }}" class="{{ if eq .Permalink $.Page.Permalink }}active{{ end }}">
+                                                    {{ .Title }}
+                                                </a>
+                                            {{ end }}
+                                        </li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                        </details>
+                    </li>
+                {{ end }}
+            {{ end }}

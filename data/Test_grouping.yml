@@ -1,0 +1,32 @@
+# data/Patent+grouping.yml
+
+- name: "Test 1"
+  header_text: "Test 1"
+  subtypes:
+    - name: "Test 1.1"
+      centered_subtitle: "Test 1.1"
+      description_text: "From traditional paper-based voting to digital formats and infrastructure"
+    - name: "Test 1.2"
+      centered_subtitle: "Test 1.2"
+      description_text: "Distributed ledger mechanisms ensuring vote immutability."
+
+
+- name: "Test 2"
+  header_text: "Test 2"
+  subtypes:
+    - name: "Test 2.1"
+      centered_subtitle: "Test 2.1"
+      description_text: "Credential- and record-based admission techniques."
+    - name: "Test 2.2"
+      centered_subtitle: "Test 2.2"
+      description_text: "Verification using biometric or physiological features (e.g., iris, fingerprint)."
+
+- name: "Test 3"
+  header_text: "Test 3"
+  subtypes:
+    - name: "Test 3.1"
+      centered_subtitle: "Test 3.1"
+      description_text: "Structure and protection of personal voter information."
+    - name: "Test 3.2"
+      centered_subtitle: "Test 3.2"
+      description_text: "Identity-based or document-driven registration systems."

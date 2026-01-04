@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Эмблема</title>
+  <style>
+    .emblem-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+    .emblem {
+      position: relative;
+      width: 300px;
+    }
+    .emblem img {
+      width: 100%;
+      display: block;
+    }
+    .emblem-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+    .emblem-title {
+      font-size: 24px;
+      margin: 0;
+      font-weight: bold;
+    }
+    .emblem-subtitle {
+      font-size: 16px;
+      margin: 5px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="emblem-container">
+    <div class="emblem">
+      <!-- Путь исправлен: от корня проекта к static/images/ -->
+      <img src="static/images/emblem-bg.png" alt="Эмблема">
+      <div class="emblem-text">
+        <h1 class="emblem-title">Balloting.net</h1>
+        <p class="emblem-subtitle"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

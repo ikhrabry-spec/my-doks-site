@@ -1,0 +1,95 @@
+{{ define "main" }}
+<div class="container py-2 px-1 ">
+  <h1 class="text-center mb-3">{{ .Title }}</h1>
+
+  {{ if .Params.subtitle }}
+    <p class="lead text-center mb-4">{{ .Params.subtitle }}</p>
+  {{ end }}
+
+  <div class="toc-grid justify-content-center">
+    {{ $sections := slice
+        (site.GetPage "docs/inside")
+        (site.GetPage "docs/aspects")
+        (site.GetPage "docs/outside")
+        (site.GetPage "docs/reference-books")
+        (site.GetPage "blog/discussion")
+        (site.GetPage "blog/news-archive")
+        (site.GetPage "empty")
+        (site.GetPage "about")
+    }}
+
+    {{ $currentPage := . }}
+
+    {{ range $section := $sections }}
+      <div class="toc-item">
+        <div class="toc-card">
+
+          <h3 class="card-title">
+            <a href="{{ $section.RelPermalink }}" class="card-title-link">{{ $section.Title }}</a>
+          </h3>
+
+          {{ if $section.Params.subtitle }}
+            <p class="card-subtitle">{{ $section.Params.subtitle }}</p>
+          {{ end }}
+
+          {{ if $section.Description }}
+            <p class="card-text card-description">{{ $section.Description }}</p>
+          {{ end }}
+
+          {{ $pages := where (where $section.Pages "Kind" "page") "File.BaseFileName" "!=" "_index" }}
+          {{ $pageCount := len $pages }}
+
+          {{ if gt $pageCount 0 }}
+
+            <div class="card-list">
+              <ul class="list-unstyled">
+                {{ $sectionPages := sort $section.Pages ".Weight" }}
+                {{ range $page := $sectionPages }}
+                  {{ if ne $page.Title "Empty" }}
+
+                    {{ $hasChildren := or (gt (len $page.Pages) 0) (gt (len $page.Sections) 0) }}
+
+                    <li>
+                      {{ if $hasChildren }}
+                        <details class="list-nested-details" {{ if $currentPage.IsDescendant $page }}open{{ end }}>
+
+                          <summary class="card-list-summary">
+                            <a href="{{ $page.RelPermalink }}" class="{{ if eq $page.Permalink $currentPage.Permalink }}active{{ end }}">
+                              {{ $page.Title }}
+                            </a>
+                          </summary>
+
+                          <ul class="list-unstyled list-nested">
+                            {{ $subPages := sort (union $page.Pages $page.Sections) ".Weight" }}
+                            {{ range $subPage := $subPages }}
+                              {{ if ne $subPage.Title "Empty" }}
+                                <li {{ if eq $subPage.Permalink $currentPage.Permalink }}class="active"{{ end }}>
+                                  <a href="{{ $subPage.RelPermalink }}">{{ $subPage.Title }}</a>
+                                </li>
+                              {{ end }}
+                            {{ end }}
+                          </ul>
+                        </details>
+                      {{ else }}
+                        <a href="{{ $page.RelPermalink }}" class="{{ if eq $page.Permalink $currentPage.Permalink }}active{{ end }}">
+                          {{ $page.Title }}
+                        </a>
+                      {{ end }}
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ define "bodyClass" }}section-table-of-contents{{ end }}
+
+
+

@@ -1,0 +1,89 @@
+baseURL: 'http://localhost:1313/'
+title: 'Balloting.Net'
+theme: 'doks'
+languageCode: 'en-us'
+buildDrafts: true
+enableGitInfo: true
+
+languages:
+  en:
+    contentDir: "content"
+    languageName: "English"
+    title: "Balloting.Net"
+    weight: 1
+    languageCode: "en-US"
+    outputs:
+      home:
+        - html
+        - rss
+        - sitemap
+        - json
+
+# Основные параметры
+params:
+  logo: "/images/logos/logo-black-red-horizontal-sharped.svg"
+  mainSections:
+    - blog
+    - docs
+    - references
+  overview:
+    grid_columns: 3
+    display_mode: "hover"
+  doks:
+    home:
+      showHero: false
+  flexsearch:
+    enabled: true
+    params:
+      charset: 'latin:extra' # Нужен для правильной обработки кириллицы
+      lang: 'ru'             # Указывает FlexSearch использовать русский анализатор/стеммер
+      tokenize: 'full'       # Рекомендуется для лучшего поиска
+
+# Настройка постоянных ссылок
+permalinks:
+  cover: "/"
+  table-of-contents: "/table-of-contents/"
+
+# Навигационное меню
+menu:
+  main:
+    - name: "Table-of-content"
+      url: "/table-of-contents/"
+      weight: 10
+      identifier: "toc-link"
+
+# Настройка вывода для поиска
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+outputFormats:
+  JSON:
+    mediaType: "application/json"
+    baseName: "search"
+
+# Кастомизация разделов
+taxonomies:
+  category: categories
+  tag: tags
+
+# Настройка обработки контента
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    noClasses: false
+module:
+  mounts:
+  - source: assets
+    target: assets
+
+disableKinds: []  # Убедитесь, что никакие виды не отключены
+
+sitemap:
+  changefreq: monthly
+  priority: 0.5

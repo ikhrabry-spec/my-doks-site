@@ -1,0 +1,1398 @@
+/* ===================== */
+/* ОБЩИЕ СТИЛИ ВЫСОТЫ СТРАНИЦЫ */
+/* ===================== */
+/* Сброс отступов для всего документа */
+@import 'custom';
+
+html, body {
+  overflow: hidden;
+  //scroll-padding-top: 15rem; /* Подберите значение под высоту вашей шапки */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body:not(.home) {
+  min-height: 100vh;
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 1.8vh;
+  }
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.docs-content {
+  position: relative;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-bottom: 0rem;
+  overflow-y: scroll;
+
+  .td-docs .docs-content {
+    padding-left: 5rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(124, 89, 156, 0.1);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.2);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: rgba(124, 89, 156, 0.9);
+    }
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1);
+}
+
+// Dысота хедера: 10vh
+// Высота футера: 9vh
+.docs-content {
+  height: calc(100vh - 10vh - 6vh);
+}
+
+/* Стиль ссылок только внутри основного контента */
+.docs-content a {
+    color: #7c599c;
+    text-decoration: none;
+
+    &:hover {
+    color: rgba(124, 89, 156, 0.6); /* Новый цвет при наведении */
+    text-decoration: none; /* Удавляет подчеркивание при наведении */
+    font-weight: bold;
+  }
+}
+
+.docs-sidebar {
+  height: calc(100vh - 10vh - 6vh);
+  overflow-y: scroll;
+}
+
+// 1. Определение переменных шрифта
+$font-family-base: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-weight-normal: 400;
+$font-weight-semybold: 600;
+$font-weight-bold: 700;
+$line-height-base: 1.6;
+$body-font-size: 1.2rem;
+$h1-font-size: $body-font-size * 2.5;
+$h2-font-size: $body-font-size * 2;
+$h3-font-size: $body-font-size * 1.75;
+$h4-font-size: $body-font-size * 1.5;
+$h5-font-size: $body-font-size * 1.25;
+$h6-font-size: $body-font-size * 1;
+
+// 2. Импорт Bootstrap ДО применения глобальных стилей
+@import "bootstrap/scss/bootstrap";
+
+// 3. Применение шрифта ко всем элементам
+* {
+  font-family: $font-family-base !important;
+}
+
+// 4. Переопределение Bootstrap компонентов
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-semybold;
+  letter-spacing: 0.01em;
+}
+
+.btn, .form-control, .navbar, .card-title {
+  font-family: $font-family-base;
+}
+
+// 5. Специфичные для шрифта Jost настройки
+p, li, td, th, .form-control {
+  letter-spacing: 0.01em;
+}
+
+// 6. Импорт компонентов
+@import "components/grid-fix";
+
+// 7. Классы для исключений
+.no-jost-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  }
+}
+
+// 8. Переопределение кода и моноширинных элементов
+code, kbd, pre, samp, .monospace {
+  font-family: Jost, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/* Переопределение глобальных стилей для заголовков */
+.card-title {
+  font-size: 3rem;
+}
+
+.card-title,
+.card-subtitle {
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+  }
+}
+
+/* ===================== */
+/* СТИЛИ ДЛЯ ФУТЕРА */
+/* ===================== */
+
+.footer {
+  flex-shrink: 0;
+  background: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  padding: 0.3rem 0; /* Увеличил вертикальный отступ, чтобы сделать футер выше */
+  display: flex; /* Добавлено для Flexbox */
+  justify-content: center; /* Добавлено для горизонтального центрирования */
+
+  &-content {
+    width: 1320px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+    display: flex;
+    justify-content: space-between; /* Используем для размещения элементов по краям */
+    align-items: center;
+
+     p {
+      margin: 0; /* Сбрасываем все отступы */
+      padding: 0; /* Сбрасываем все внутренние отступы */
+    }
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .search-box .search-input {
+    min-width: 150px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header-container {
+    padding: 0.02rem calc((100% - 1300px) / 2);
+  }
+}
+
+/* ========================================================== */
+/* СТИЛИ ДЛЯ СПИСКА ИСТОЧНИКОВ В ПРАВОЙ БОКОВОЙ КОЛОНКЕ */
+/* ========================================================== */
+.docs-sidebar.sidebar-right {
+    .sources-container, .publications-container, .patents-container, .companies-container, .legal-container, .test-container {
+      margin-top: 0;
+      margin-left: 2.3rem;
+      padding-right: 0.7rem;
+
+      .sources-list, .publications-list, .patents-list, .companies-list, .legal-list, .test-list {
+        margin: 0;
+        padding-right: 0.9;
+        list-style: none;
+
+        .source-item, .publication-item, .company-item, .patent-item, .legal-item, .test-item  {
+          font-size: 0.875rem;
+          border: none;
+          background-color: transparent;
+          padding: 0.3rem 0;
+
+          .source-name, .publication-name, .company-name, .patent-name, .legal-name, .test-name  {
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+          }
+          .source-number, .publication-number, .company-number, .patent-number, .test-number, .legal-number  {
+            font-weight: bold;
+            font-size: 1.1rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+}
+
+/* =================================== */
+/* HOVER ЭФФЕКТЫ ДЛЯ ВСЕХ ТИПОВ КАРТОЧЕК */
+/* =================================== */
+
+/* Hover для карточек в правой колонке */
+.docs-sidebar.sidebar-right {
+    .source-item:hover,
+    .publication-item:hover,
+    .company-item:hover,
+    .patent-item:hover,
+    .legal-item:hover,
+    .test-item:hover {
+        background-color: #f8f9fa !important;
+        color: red;
+    }
+}
+
+/* Hover для карточек на отдельных страницах справочников */
+.sources-list .source-item:hover,
+.publications-list .publication-item:hover,
+.companies-list .company-item:hover,
+.patents-list .patent-item:hover,
+.test-list .test-item:hover,
+.legal-list .legal-item:hover {
+    background-color: #f8f9fa !important;
+    border-color: #f70707 !important;
+    padding: 0.8rem;
+    box-shadow: 0 2px 8px rgba(124, 89, 156, 0.1) !important;
+}
+
+/* ========================================================== */
+/* СТИЛИ ДЛЯ СТРАНИЦЫ 'ИСТОЧНИКИ' */
+/* ========================================================== */
+.sources-container, .publications-container, .patents-container, .companies-container, .legal-container, .test-container {
+  margin-top: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.sources-header, .publications-header, .patents-header, .companies-header, .legal-header, .test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.sources-list, .publications-list, .patents-list, .companies-list, .legal-list, .test-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0%;
+
+  .source-item, .publication-item, .company-item, .patent-item, .legal-item, .test-item {
+    margin: 0rem;
+    padding: 0rem;
+    cursor: pointer;
+
+    &.highlighted {
+      color: red;
+    }
+
+    .source-item-short, .publication-item-short, .company-item-short, .patent-item-short, .legal-item-short, .test-item-short  {
+      display: block;
+      transition: display 0.2s ease;
+    }
+
+    .source-item-full, .publication-item-full, .company-item-full, .patent-item-full, .legal-item-full, .test-item-full {
+      display: none;
+      transition: display 0.2s ease;
+    }
+
+    .source-name, .publication-name, .company-name, .patent-name, .legal-name, .test-name {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+ .source-details {
+      /* Межстрочный интервал для всего текста внутри карточки */
+      line-height: 1.2;
+
+      /* Расстояние между абзацами (вместе с margin-bottom для p) */
+      p {
+        margin-top: 0.2em;
+        margin-bottom: 0.8em;
+        /* Можно дополнительно задать line-height для абзацев, если нужно: */
+        /* line-height: 1.6; */
+      }
+    }
+  .sources-section-title {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-size: 1.5rem !important;
+    color: #0a0a0a;
+    border-bottom: 2px solid #eee;
+    text-align: center;
+    padding-bottom: 0rem;
+  }
+}
+
+.text-center.mb-2 {
+    /* Ваши стили */
+    color: #333;
+    font-size: 0.9;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.1;
+    text-align: center !important;
+}
+
+.lead.text.mb-2 {
+
+    color: #333;
+    font-size: 0.8;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.1;
+}
+
+.more-details-button {
+  display: block;
+  text-align: right;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: black !important;
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold !important;
+    font-size: 0.85rem;
+    color: #7c599c !important;
+    text-decoration: none !important;
+  }
+}
+
+
+
+/* Правила для РАЗВЁРНУТОГО СОСТОЯНИЯ ОДНОГО ЭЛЕМЕНТА */
+.source-item.is-expanded,
+.publication-item.is-expanded,
+.company-item.is-expanded,
+.patent-item.is-expanded,
+.legal-item.is-expanded,
+.test-item.is-expanded {
+  .source-item-short,
+  .publication-item-short,
+  .company-item-short,
+  .patent-item-short,
+  .legal-item-short,
+  .test-item-short {
+    display: none;
+  }
+  .source-item-full,
+  .publication-item-full,
+  .company-item-full,
+  .patent-item-full,
+  .legal-item-full,
+  .patent-item-full {
+    display: block;
+   }
+}
+
+
+/* ==================================== */
+/* Правила для ГЛОБАЛЬНЫХ КНОПОК */
+/* ==================================== */
+
+.compact {
+  .source-item {
+    .source-item-short, .publication-short {
+      display: block;
+    }
+    .source-item-full, .publication-item-full {
+      display: none;
+    }
+  }
+}
+
+.expanded {
+  .source-item,
+  .publication-item,
+  .company-item,
+  .patent-item,
+  .legal-item {
+    .source-item-short,
+    .publication-item-short,
+    .company-item-short,
+    .patent-item-short,
+    .legal-item-short {
+      display: none;
+    }
+    .source-item-full,
+    .publication-item-full,
+    .company-item-full,
+    .patent-item-full,
+    .legal-item-full {
+      display: block;
+    }
+  }
+}
+
+/* Стили для ссылок на источники в тексте */
+.source-ref,
+.source-reference, .publication-reference, .patent-reference, .company-reference, .legal-reference, .test-reference {
+  cursor: pointer;
+  color: #0056b3;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: rgb(247, 6, 6);
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+
+  &.highlighted {
+    color: rgb(247, 6, 6);
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+}
+
+/* =================================== */
+/* Стили для кнопки "more detailed" */
+/* =================================== */
+
+#list-icon {
+  display: none;
+}
+
+#desc-icon {
+  display: block;
+}
+
+.toc-grid .toc-card .card-list {
+  display: none;
+}
+
+.toc-grid .toc-card .card-text {
+  display: block;
+}
+
+/* ========================================================== */
+/* ОБЩИЕ СТИЛИ                                */
+/* ========================================================== */
+
+// Импортируем стили для хедера
+@import 'components/header';
+/* Импорт стилей правой колонки из отдельного файла */
+@import 'right-column';
+
+
+.docs-content > .centered-heading {
+  text-align: center;
+  position: fixed; /* Позиционирует элемент относительно окна браузера */
+  top: 4.4%; /* Прикрепляет его к верхней части окна */
+
+  /* Используйте следующие свойства, чтобы отцентрировать его */
+  left: 50%;
+  transform: translateX(-50%);
+  background: opacify; /* Добавьте фон, чтобы текст под ним не просвечивал */
+  padding-bottom: 0rem; /* Отступы для красоты */
+  z-index: 100; /* Убедитесь, что заголовок будет поверх всего остального */
+  border-bottom: 1px solid #ddd; /* Опционально: добавьте разделительную линию */
+
+}
+  .docs-content.col-lg-6.col-xl-6.title-center.my-custom-page {
+  h1.centered-heading + p {
+
+    text-align: center !important;
+    //font-style: italic;
+    color: #333;
+
+  }
+}
+
+/* Добавленные стили для кнопки Grid navigation */
+.grid-nav-container {
+  margin-bottom: 15px;
+}
+
+.grid-nav-button {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left;
+  line-height: 1.2;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-nav-button:hover {
+  color: #7c599c;
+  text-decoration: none;
+}
+
+/* Заголовки разделов в левой колонке */
+.docs-sidebar .section-nav summary {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #212529;
+  cursor: pointer;
+  list-style: none;
+
+  &:hover {
+    color: #7c599c;
+    font-weight: 700;
+    text-decoration: none !important;
+  }
+}
+
+.docs-sidebar .section-nav details {
+  margin-left: 0.5rem;
+}
+
+.docs-sidebar .section-nav ul.list-nested {
+  padding-left: 1.75vw;
+}
+
+.docs-sidebar .section-nav ul.list-nested li {
+  list-style-type: disc;
+}
+
+.docs-sidebar .section-nav li.active > a {
+  font-weight: 500;
+  color: red;
+}
+
+/* Стили для страницы "Наша команда" */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 0.2rem;
+}
+
+.team-member {
+  text-align: center;
+
+  .team-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #eee;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .position {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .bio {
+    color: #444;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.team-photo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+// Стили для должности
+.position {
+    color: var(--td-text-color-light); // Более светлый текст для должности
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+// Стили для вводного/заключительного текста
+.intro-text, .outro-text {
+    font-style: italic;
+    padding: 10px;
+    border-left: 3px solid var(--td-accent-color);
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.02);
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .team-photo {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-photo {
+    max-width: 200px;
+  }
+}
+
+.team-photo.placeholder {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Переопределение заголовков для страницы команды */
+.docs-content {
+    text-align: center;
+
+    h2 {
+        font-size: 1.75rem; /* Новое, меньшее значение для заголовков разделов */
+        text-align: center
+      }
+
+    /* Если нужно уменьшить и имя (###) */
+    h3 {
+        font-size: 1.2rem;
+    }
+  }
+
+
+/* СТИЛИ ДЛЯ ДВУХУРОВНЕВОГО МЕНЮ*/
+.docs-sidebar {
+  position: relative;
+  padding-bottom: 2rem;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(124, 89, 156, 0.1);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.1);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: rgba(124, 89, 156, 0.6);
+    }
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1);
+}
+
+.section-nav {
+  details {
+    margin-bottom: 0.5rem;
+    transition: all 0.25s ease;
+
+    &.active > summary,
+    &[open].active > summary {
+      .section-title-link {
+        color: #ff0000;
+        font-weight: 700;
+      }
+    }
+
+    &[open].closing {
+      pointer-events: none;
+      summary {
+        pointer-events: none;
+      }
+      ul {
+        pointer-events: none;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: max-height 5s ease, opacity 5s ease, transform 5s ease;
+      }
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.5;
+      transition: all 0.25s ease;
+      position: relative;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      .section-title-link {
+        display: block;
+        padding: 0rem 0;
+        color: inherit;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.25s ease;
+
+        &:hover {
+          font-weight: 700;
+          color: #7c599c;
+          text-decoration: none !important;
+        }
+
+        &.active {
+          color: #ff0000;
+          font-weight: 700;
+        }
+      }
+    }
+
+    ul {
+      max-height: 0;
+      overflow: hidden;
+      transform: translateY(-10px);
+      transition: max-height 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      padding-left: 1rem;
+
+      li {
+        margin-bottom: 0.25rem;
+
+        a {
+          display: block;
+          line-height: 1.0;
+          padding: 0rem 0;
+          transition: color 0.15s ease;
+
+          &:hover {
+            font-weight: bold;
+            color: #7c599c;
+            text-decoration: none
+          }
+
+          &.active {
+            color: #ff0000;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &[open] {
+      ul {
+        max-height: 1000px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.expand-all-menu {
+  left: 2rem;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 8px solid #7c599c;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  opacity: 1;
+  z-index: 100;
+}
+/* 1. Базовое состояние (Свернуто): ВНИЗ */
+.docs-sidebar.col-lg-3 .expand-all-menu {
+    transform: rotate(0deg);
+    transition: transform 0.25s ease;
+}
+
+/* 2. Развернутое состояние (.expanded): ВВЕРХ */
+/* Используем удвоение класса для максимального приоритета */
+.docs-sidebar.col-lg-3 .expand-all-menu.expanded.expanded {
+    transform: rotate(180deg);
+}
+
+
+.docs-sidebar {
+  .section-nav {
+    padding-right: 5px;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(124, 89, 156, 0.6);
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: rgba(124, 89, 156, 0.8);
+      }
+    }
+    scrollbar-width: thin;
+    scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1);
+  }
+}
+
+.scrollbar-transparency-100 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.1) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 1) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+.scrollbar-transparency-80 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.8) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 0.8) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+.scrollbar-transparency-60 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.6) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+.scrollbar-transparency-40 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.4) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 0.4) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+/* ===================== */
+/* СТИЛИ ДЛЯ ЦЕНТРАЛЬНОЙ КОЛОНКИ */
+/* ===================== */
+.docs-content {
+  h1.active,
+  h2.active,
+  h3.active,
+  h4.active,
+  h5.active,
+  h6.active {
+    color: #ff0000;
+    font-weight: 700;
+  }
+}
+
+.my-custom-page h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.my-custom-page h3 {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.my-custom-page p, ul, ol, li {
+  text-align: left !important;
+}
+
+/* ========================================================= */
+/* ЦЕНТРИРОВАНИЕ ТОЛЬКО ДЛЯ СТРАНИЦЫ 'О НАС' */
+/* ========================================================= */
+
+/* 1. Центрируем все содержимое в центральной колонке на странице "О нас" */
+.about-page-main {
+    /* Центрируем строчный контент */
+    text-align: center !important;
+
+    /* Дополнительно центрируем блочные элементы (например, изображения без классов) */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Явно центрируем параграфы, списки и текст */
+    p, ul, ol, li {
+        text-align: center !important;
+    }
+}
+
+
+/* ========================================================== */
+/* Стили для блока управления поиском, фильтром и сортировкой */
+/* ========================================================== */
+.sources-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /* Общие стили для всех полей ввода и селектов */
+  .sources-search,
+  .sources-filter,
+  .sources-sort {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 1 auto; /* Позволяет элементам растягиваться */
+
+    label {
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap; /* Предотвращает перенос текста метки */
+    }
+
+    /* Стили для поля поиска */
+    input[type="text"] {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 100%;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #7c599c;
+        box-shadow: 0 0 0 2px rgba(124, 89, 156, 0.2);
+      }
+    }
+
+    /* Стили для селектов */
+    select {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="%237c599c" d="M7 10l5 5 5-5z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 10px;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #7c599c;
+        box-shadow: 0 0 0 2px rgba(124, 89, 156, 0.2);
+      }
+    }
+  }
+}
+
+/* =================================== */
+/* Стили для подсветки на sources.html */
+/* =================================== */
+
+/* Стили для подсветки заголовков разделов */
+.sources-section-title.highlight {
+    background-color: #ffcccc;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Стили для подсветки ссылок в правой колонке */
+.docs-sidebar.sidebar-right a.highlight {
+    color: #c90000;
+    font-weight: bold;
+    transition: color 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+}
+
+/* Hide these elements by default on page load */
+.search-block .clear-search-btn,
+.search-block .search-pagination {
+    display: none;
+}
+
+/* Три колонки * не реализованы/
+.attribute-values-menu.columns-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 20px;
+    align-items: start;
+}
+/* Заголовок группы с кнопками сортировки */
+.attribute-header {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    margin-bottom: 10x;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Выравнивание по левому краю и блок в середине колонки */
+.value-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    padding: 0px 12px;
+    margin-left: 3rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    text-align: left;
+    line-height: 1,1;
+    width: fit-content; /* Блок помещается в середине колонки */
+    min-width: 120px; /* Минимальная ширина для аккуратного вида */
+}
+
+.value-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* =========================================== */
+/* ПОДСВЕТКА КАРТОЧЕК ДЛЯ ВСЕХ ТИПОВ СТРАНИЦ  */
+/* =========================================== */
+
+/* 1. ОБЩИЙ СТИЛЬ ДЛЯ ВСЕХ КАРТОЧЕК */
+.source-item:target,
+.publication-item:target,
+.company-item:target,
+.patent-item:target,
+.test-item:target,
+.legal-item:target {
+    /* Рамка и фон */
+    outline: 1px solid #ffffff !important;
+    outline-offset: 1px !important;
+    margin-top: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+
+    /* Анимация */
+    animation: universal-card-highlight 10s ease forwards !important;
+}
+
+/* 2. ПОДСВЕТКА ТЕКСТА НАЗВАНИЯ */
+.source-item:target .source-name,
+.publication-item:target .source-name,
+.company-item:target .source-name,
+.patent-item:target .source-name,
+.legal-item:target .source-name,
+.test-item:target .test-name {
+    color: #d32f2f !important;
+    font-weight: 500 !important;
+    animation: universal-text-highlight 10s ease forwards !important;
+}
+
+/* 3. АНИМАЦИИ */
+@keyframes universal-card-highlight {
+    0%, 70% {
+        outline-color: rgba(211, 47, 47, 0.7);
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+    100% {
+        outline-color: transparent;
+        background-color: transparent;
+    }
+}
+
+@keyframes universal-text-highlight {
+    0%, 70% {
+        color: #d32f2f;
+        font-weight: 700;
+    }
+    100% {
+        color: inherit;
+        font-weight: inherit;
+    }
+}
+
+/* Общие стили для всех кнопок возврата */
+.back-to-text-btn {
+    float: right;
+    margin: 0 0 10px 15px;
+    padding: 6px 12px;
+    background-color: #f8f9fa;
+    color: #000000;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 0.75rem
+    rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    top: -5px;
+}
+
+.back-to-text-btn:hover {
+    background-color: #ffffff;
+    color: #7c599c;
+    font-weight: 600;
+    border-color: #fdfeff;
+}
+
+/* Чтобы заголовки обтекали кнопки */
+.source-item-header,
+.test-item-header,
+.publication-item-header,
+.patent-item-header,
+.company-item-header,
+.legal-item-header {
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+/* Стили для advanced-карточек */
+.filterable-item {
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.filterable-item:hover {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.filterable-item .card-content-wrapper {
+    position: relative;
+}
+
+.filterable-item .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.filterable-item .card-title {
+    margin: 0;
+    flex: 1;
+}
+
+.filterable-item .close-card-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.filterable-item .close-card-btn:hover {
+    color: #dc3545;
+}
+
+.filterable-item .card-body {
+    max-height: none;
+    overflow: visible;
+}
+
+/* Стили для элементов внутри карточки */
+.styled-text-block .text-segment {
+    margin-bottom: 0.75rem;
+}
+
+.text-segment.text-bold {
+    font-weight: 600;
+}
+
+.text-segment.text-italic {
+    font-style: italic;
+}
+
+.paragraphs-block {
+    margin: 1rem 0;
+}
+
+.columns-block {
+    margin: 1.5rem 0;
+}
+
+.columns-title {
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+.card-badges {
+    margin-left: 0.5rem;
+}
+
+.card-badges .badge {
+    margin-right: 0.25rem;
+    font-size: 0.75em;
+}
+
+.basic-info {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+.more-details-link {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .filterable-item {
+        margin: 0.5rem;
+    }
+
+    .columns-block .row > div {
+        margin-bottom: 1rem;
+    }
+}
+
+.media-block {
+    margin: 1rem 0;
+}
+
+.media-centered {
+    text-align: center;
+}
+
+.media-full-width {
+    width: 100%;
+}
+
+/* Подсветка заголовков в центральной колонке */
+.docs-content h1.active,
+.docs-content h2.active,
+.docs-content h3.active,
+.docs-content h4.active,
+.docs-content h5.active,
+.docs-content h6.active,
+.docs-content .sources-group-header.active,
+.docs-content .sources-subtype-header.active {
+    color: #dc3545 !important;
+    font-weight: 700;
+    position: relative;
+
+/* === ЗАЩИТА КОЛОНОК ВНУТРИ ОТКРЫТОЙ КАРТОЧКИ === */
+/* Когда карточка развернута, её внутренний контент НЕ должен реагировать на внешние скрипты */
+.source-item.is-expanded .source-item-full,
+.source-item:target .source-item-full {
+    /* 1. Жестко фиксируем отображение блока с колонками */
+    .columns-block {
+        display: flex !important;
+        gap: 2rem;
+        align-items: flex-start;
+        /* 2. Запрещаем любое изменение через opacity/visibility */
+        opacity: 1 !important;
+        visibility: visible !important;
+        height: auto !important;
+    }
+    /* 3. Защищаем сами колонки от сжатия */
+    .column {
+        flex: 1 !important;
+        min-width: 0 !important; /* Критично для корректного сжатия в Flexbox */
+        /* 4. Отключаем любые переходы, которые могут вызвать прыжок */
+        transition: none !important;
+    }
+}
+
+   /* &::after {
+        content: ' ←';
+        color: #dc3545;
+        font-weight: normal;
+
+
+        }*/
+}
+
+/*.sort-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.sort-btn {
+    padding: 4px 8px;
+    font-size: 0.8em;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sort-btn:hover {
+    background: #e9e9e9;
+}
+
+.sort-btn.active {
+    background: #7c599c;
+    color: white;
+    border-color: #7c599c;
+}*/

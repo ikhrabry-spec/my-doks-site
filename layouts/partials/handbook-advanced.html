@@ -1,0 +1,362 @@
+
+
+{{ $card := .card | default .source }}
+{{ $index := .index }}
+{{ $showNumbers := .displayNumbers }}
+{{ $cardType := .cardType | default "source" }}
+{{ $groupType := .groupType | default "default" }}
+{{ $parentPage := .parentPage | default "" }}
+
+{{/* Динамические классы и атрибуты */}}
+{{ $itemClass := print $cardType "-item" }}
+{{ $numberAttr := print "data-" $cardType "-number" }}
+
+{{/* ГЕНЕРАЦИЯ cardId */}}
+{{ $cardId := "" }}
+{{ with $card.anchor }}
+    {{ $cardId = trim . " " }}
+{{ end }}
+{{ if eq $cardId "" }}
+    {{ with $card.name }}
+        {{ $cardId = . | urlize }}
+    {{ else }}
+        {{ $cardId = printf "%s-%d" $cardType $index }}
+    {{ end }}
+{{ end }}
+
+{{/* Группа карточки для стилизации */}}
+{{ $cardGroup := $card.group_id | default "default" }}
+
+{{/* 1. Генерируем строку тегов для фильтрации */}}
+{{ $filterTags := slice }}
+{{ range $key, $value := $card.attributes }}
+    {{ if reflect.IsSlice $value }}
+        {{ range $value }}
+            {{ $filterTags = $filterTags | append (printf "attr_%s_%s" ($key | lower) (. | lower)) }}
+        {{ end }}
+    {{ else }}
+        {{ $filterTags = $filterTags | append (printf "attr_%s_%s" ($key | lower) ($value | lower)) }}
+    {{ end }}
+{{ end }}
+
+<div class="filterable-item {{ $itemClass }} card-group-{{ $cardGroup | urlize }}"
+     id="card-{{ $cardId }}"
+     {{ printf "%s=\"%d\"" $numberAttr (add $index 1) | safeHTMLAttr }}
+     data-card-id="{{ $cardId }}"
+     data-card-type="{{ $cardType }}"
+     data-card-group="{{ $cardGroup }}"
+     data-parent-page="{{ $parentPage }}"
+     data-content="{{ delimit $filterTags " " }}"
+     style="margin-bottom: 1.5rem;">
+
+    <!-- КОРОТКИЙ ВИД -->
+    <div class="{{ $itemClass }}-short" style="cursor: pointer;" onclick="expandCard('{{ $cardId }}')">
+        {{ if $showNumbers }}
+            <span class="{{ $cardType }}-number" style="font-weight: bold; margin-right: 0.5rem;">{{ add $index 1 }}.</span>
+        {{ end }}
+        <span class="{{ $cardType }}-name">{{ $card.name }}</span>
+    </div>
+
+    <!-- ПОЛНЫЙ ВИД -->
+    <div class="{{ $itemClass }}-full" style="display: none; margin-top: 1rem; padding: 1rem; border: 1px solid #dee2e6; border-radius: 0.25rem; background: #fff;">
+
+        <!-- ЗАГОЛОВОК С КНОПКОЙ BACK -->
+        <div class="{{ $itemClass }}-header-wrapper" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div class="{{ $itemClass }}-header">
+                <span class="{{ $cardType }}-name">
+                    <b>{{ $card.name }}</b>
+                    {{ if $card.attributes }}
+                        <span class="card-badges" style="margin-left: 0.5rem;">
+                            {{ range $key, $value := $card.attributes }}
+                                {{ if reflect.IsSlice $value }}
+                                    {{ range $value }}
+                                        <span class="badge badge-{{ $key | lower }}" style="background-color: #6c757d; color: white; font-size: 0.75em; margin-right: 0.25rem;">{{ . }}</span>
+                                    {{ end }}
+                                {{ else }}
+                                    <span class="badge badge-{{ $key | lower }}" style="background-color: #6c757d; color: white; font-size: 0.75em; margin-right: 0.25rem;">{{ $value }}</span>
+                                {{ end }}
+                            {{ end }}
+                        </span>
+                    {{ end }}
+                </span>
+            </div>
+
+            <!-- КНОПКА BACK -->
+            <button class="back-to-text-btn"
+                    data-card-id="{{ $cardId }}"
+                    style="display: none; float: right; margin: 0 0 10px 15px; padding: 0.25rem 0.75rem; background: #6c757d; color: white; border: none; border-radius: 0.25rem; cursor: pointer;"
+                    onclick="returnToReferencePage()">
+                Back to Text
+            </button>
+        </div>
+
+        <div class="{{ $cardType }}-details card-group-{{ $cardGroup | urlize }}-details">
+            <!-- === БЛОК: ТЕКСТ С РАЗНЫМИ СТИЛЯМИ === -->
+            {{ with $card.fields.description }}
+                {{ if reflect.IsSlice . }}
+                    <div class="styled-text-block" style="margin-bottom: 1rem;">
+                        {{ range . }}
+                            {{ $text := .text | default . }}
+                            {{ $style := .style | default "default" }}
+                            {{ $format := .format | default "default" }}
+
+                            <div class="text-segment text-{{ $style }} format-{{ $format }}" style="margin-bottom: 0.5rem;">
+                                {{ if eq $style "raw_html" }}
+                                    {{ $text | safeHTML }}
+                                {{ else if eq $style "shorcode_custom_font" }}
+                                    {{ $text | markdownify }}
+                                {{ else if eq $style "bold" }}
+                                    <strong>{{ $text | markdownify }}</strong>
+                                {{ else if eq $style "italic" }}
+                                    <em>{{ $text | markdownify }}</em>
+                                {{ else }}
+                                    {{ $text | markdownify }}
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    </div>
+                {{ else }}
+                    <p class="default-description" style="margin-bottom: 1rem;">{{ . | markdownify }}</p>
+                {{ end }}
+            {{ end }}
+
+            <!-- === БЛОК: АБЗАЦЫ С ФОРМАТИРОВАНИЕМ === -->
+            {{ with $card.fields.paragraphs }}
+                <div class="paragraphs-block" style="margin-bottom: 1rem;">
+                    {{ range . }}
+                        {{ $text := .text }}
+                        {{ $format := .format | default "default" }}
+
+                        <div class="paragraph format-{{ $format }}" style="margin-bottom: 0.75rem;">
+                            {{ if eq $format "raw_html" }}
+                                {{ $text | safeHTML }}
+                            {{ else }}
+                                {{ $text | markdownify }}
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+
+            <!-- === БЛОК: КОЛОНКИ === -->
+            {{ with $card.fields.columns_data }}
+                <div class="columns-block columns-{{ .type | default "two-columns" }}" style="margin-bottom: 1.5rem;">
+                    {{ if .title }}<h4 class="columns-title" style="margin-bottom: 1rem; color: #495057;">{{ .title }}</h4>{{ end }}
+
+                    {{ if eq (.type | default "two-columns") "two-columns" }}
+                        <div class="two-columns-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            {{ range .content }}
+                                <div class="column">
+                                    {{ if .title }}<h5 style="margin-bottom: 0.5rem; color: #6c757d;">{{ .title }}</h5>{{ end }}
+                                    <div>{{ .text | markdownify }}</div>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ else if eq .type "three-columns" }}
+                        <div class="three-columns-layout" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                            {{ range .content }}
+                                <div class="column">
+                                    {{ if .title }}<h5 style="margin-bottom: 0.5rem; color: #6c757d;">{{ .title }}</h5>{{ end }}
+                                    <div>{{ .text | markdownify }}</div>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+
+            <!-- === БЛОК: СПИСКИ === -->
+            {{ with $card.fields.product_list }}
+                {{ $listType := .type | default "unordered" }}
+                {{ $tag := cond (eq $listType "ordered") "ol" "ul" }}
+
+                <{{ $tag }} class="product-list list-{{ $listType }}" style="margin-bottom: 1rem; {{ if eq $listType "unordered" }}padding-left: 1.5rem;{{ end }}">
+                    {{ range .items }}
+                        <li style="margin-bottom: 0.25rem;">{{ . | markdownify }}</li>
+                    {{ end }}
+                </{{ $tag }}>
+            {{ end }}
+
+            {{ with $card.fields.items }}
+                <ul class="simple-list" style="margin-bottom: 1rem; padding-left: 1.5rem;">
+                    {{ range . }}
+                        <li style="margin-bottom: 0.25rem;">{{ . | markdownify }}</li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+
+            <!-- === БЛОК: СУБТИТРЫ/ЦИТАТЫ === -->
+            {{ with $card.fields.subtitles }}
+                <div class="subtitles-block" style="margin-bottom: 1rem;">
+                    {{ if reflect.IsSlice . }}
+                        {{ range . }}
+                            {{ $text := .text | default . }}
+                            {{ $format := .format | default "default" }}
+
+                            <div class="subtitle format-{{ $format }}" style="margin-bottom: 0.75rem;">
+                                {{ if eq $format "h2" }}
+                                    <h3 style="margin-bottom: 0.5rem; color: #343a40;">{{ $text | markdownify }}</h3>
+                                {{ else if eq $format "quote" }}
+                                    <blockquote class="quote" style="border-left: 3px solid #dee2e6; padding-left: 1rem; font-style: italic; color: #6c757d;">
+                                        {{ $text | markdownify }}
+                                    </blockquote>
+                                {{ else if eq $format "quote_author" }}
+                                    <div class="quote-author" style="text-align: right; font-size: 0.9em; color: #868e96;">
+                                        — {{ $text | markdownify }}
+                                    </div>
+                                {{ else }}
+                                    <div class="subtitle-text">{{ $text | markdownify }}</div>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    {{ else }}
+                        <ul class="subtitles-list" style="padding-left: 1.5rem;">
+                            {{ range . }}
+                                <li style="margin-bottom: 0.25rem;">{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                </div>
+            {{ end }}
+
+            <!-- === БЛОК: МЕДИА === -->
+            {{/*{{ with $card.fields.media }}
+                {{ range . }}
+                    {{ if eq (.layout | default "default") "float-left" }}
+                        <div class="media-block media-float-left" style="float: left; margin: 0 1rem 1rem 0; max-width: 40%;">
+                            {{ partial "media-block.html" (dict
+                                "media" .
+                                "cardType" $cardType
+                                "cardGroup" $cardGroup
+                                "index" $index) }}
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}*/}}
+
+            <!-- === ОСНОВНАЯ ИНФОРМАЦИЯ === -->
+            <div class="card-main-content" style="clear: both;">
+                {{ if $card.description }}
+                    <p style="margin-bottom: 1rem;">{{ $card.description | markdownify }}</p>
+                {{ end }}
+
+                {{ if $card.address }}
+                    <p style="margin-bottom: 0.5rem;"><strong>Адрес:</strong> {{ $card.address }}</p>
+                {{ end }}
+
+                {{ if $card.url }}
+                    <p style="margin-bottom: 0.5rem;"><strong>Сайт:</strong> <a href="{{ $card.url }}" target="_blank" style="color: #007bff;">{{ $card.url }}</a></p>
+                {{ end }}
+
+                <!-- ДОПОЛНИТЕЛЬНЫЕ ПОЛЯ -->
+                {{ if eq $cardType "publication" }}
+                    {{ with $card.author }}<p style="margin-bottom: 0.5rem;"><strong>Автор:</strong> {{ . }}</p>{{ end }}
+                    {{ with $card.year }}<p style="margin-bottom: 0.5rem;"><strong>Год:</strong> {{ . }}</p>{{ end }}
+                {{ else if eq $cardType "company" }}
+                    {{ with $card.industry }}<p style="margin-bottom: 0.5rem;"><strong>Отрасль:</strong> {{ . }}</p>{{ end }}
+                    {{ with $card.founded }}<p style="margin-bottom: 0.5rem;"><strong>Основана:</strong> {{ . }}</p>{{ end }}
+                {{ end }}
+            </div>
+
+            <!-- === БЛОК: МЕДИА (остальные) === -->
+            {{/*{{ with $card.fields.media }}
+    {{ range . }}
+        {{ $currentMedia := . }}
+        {{ $layout := $currentMedia.layout | default "default" }}
+
+        {{ if not (eq $layout "float-left") }}
+            <div class="media-block media-{{ $layout }}">
+                {{ partial "media-block.html" (dict
+                    "media" $currentMedia
+                    "cardType" $cardType
+                    "cardGroup" $cardGroup
+                    "index" $index) }}
+            </div>
+        {{ end }}
+    {{ end }}
+{{ end }}*/}}
+
+            <!-- === КНОПКА MORE DETAILED === -->
+            {{ if $card.more_details_page }}
+                <div class="{{ $itemClass }}-more-details" style="margin-top: 1.5rem; text-align: right;">
+                    <a href="{{ $card.more_details_page }}"
+                       class="more-details-button"
+                       onclick="return saveScrollPosition(event)"
+                       style="display: inline-block; padding: 0.375rem 0.75rem; background: #28a745; color: white; text-decoration: none; border-radius: 0.25rem;">
+                        More detailed
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<!-- СКРИПТ ДЛЯ КНОПКИ BACK И АВТОРАСКРЫТИЯ -->
+<script>
+    (function() {
+        const cardId = '{{ $cardId }}';
+        const currentHash = window.location.hash;
+        const cardType = '{{ $cardType }}';
+        const cardGroup = '{{ $cardGroup | urlize }}';
+
+        // Автораскрытие при переходе по якорю
+        if (currentHash === '#card-' + cardId) {
+            // Показываем кнопку Back
+            const btn = document.querySelector('.back-to-text-btn[data-card-id="' + cardId + '"]');
+            if (btn) {
+                btn.style.display = 'inline-block';
+            }
+
+            // Раскрываем карточку
+            expandCard(cardId);
+        }
+
+        // Инициализация фильтров по атрибутам
+        const card = document.getElementById('card-' + cardId);
+        if (card && card.hasAttribute('data-content')) {
+            const filterData = card.getAttribute('data-content');
+            // Можно добавить логику фильтрации здесь
+        }
+    })();
+
+    // Функция для раскрытия карточки
+    function expandCard(cardId) {
+        const card = document.getElementById('card-' + cardId);
+        if (!card) return;
+
+        const full = card.querySelector('.{{ $itemClass }}-full');
+        const short = card.querySelector('.{{ $itemClass }}-short');
+
+        if (full && short) {
+            // Скрываем все другие открытые карточки
+            document.querySelectorAll('.{{ $itemClass }}-full').forEach(el => {
+                if (el !== full) {
+                    el.style.display = 'none';
+                    const parent = el.closest('.filterable-item');
+                    if (parent) {
+                        const parentShort = parent.querySelector('.{{ $itemClass }}-short');
+                        if (parentShort) parentShort.style.display = 'block';
+                    }
+                }
+            });
+
+            // Показываем/скрываем текущую карточку
+            full.style.display = 'block';
+            short.style.display = 'none';
+
+            // Показываем кнопку Back
+            const btn = card.querySelector('.back-to-text-btn');
+            if (btn) {
+                btn.style.display = 'inline-block';
+            }
+
+            // Плавная прокрутка
+            setTimeout(() => {
+                card.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    }
+</script>".

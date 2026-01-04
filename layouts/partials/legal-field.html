@@ -1,0 +1,206 @@
+<div class="legal-container">
+    <div class="legal-header"></div>
+    <ul class="legal-list" id="legal-list">
+        {{ $isLegalPage := and (eq .context.Kind "page") (eq .context.File.BaseFileName "Legal_field") }}
+        {{ $currentPageSlug := .context.File.BaseFileName }}
+        {{ $showNumbers := .displayNumbers }}
+        {{ $counter := 0 }}
+
+        {{ $legalToDisplay := .context.Site.Data.Legal_field }}
+
+        {{ if not $isLegalPage }}
+            {{ $legalToDisplay = slice }}
+            {{ range .context.Site.Data.Legal_field }}
+                {{ if in .referenced_in $currentPageSlug }}
+                    {{ $legalToDisplay = $legalToDisplay | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $legalToDisplay }}
+            {{ $counter = add $counter 1 }}
+
+            {{/* ГЕНЕРАЦИЯ cardId */}}
+            {{ $cardId := "" }}
+            {{ with .anchor }}
+                {{ $cardId = trim . " " }}
+            {{ end }}
+            {{ if eq $cardId "" }}
+                {{ with .name }}
+                    {{ $cardId = . | urlize }}
+                {{ else }}
+                    {{ $cardId = printf "legal-%d" $counter }}
+                {{ end }}
+            {{ end }}
+
+            <li class="legal-item"
+                id="card-{{ $cardId }}"
+                data-card-id="{{ $cardId }}"
+                data-legal-number="{{ $counter }}"
+                data-legal-name="{{ .name | default .title }}">
+
+                <!-- КОРОТКИЙ ВИД -->
+                <span class="legal-item-short">
+                    {{ if $showNumbers }}
+                        <span class="legal-number">{{ $counter }}.</span>
+                        <span class="legal-name">{{ .name | default .title }}</span>
+                    {{ end }}
+                </span>
+
+                <!-- ПОЛНЫЙ ВИД -->
+                <span class="legal-item-full" style="display: none;">
+                    <span class="legal-item-header">
+                        <span class="legal-number">{{ $counter }}.</span>
+                        <span class="legal-name">{{ .name | default .title }}</span>
+                    </span>
+                    <div class="legal-details">
+                        <p>
+                            {{ with .type }}<strong>Тип документа:</strong> {{ . }}<br>{{ end }}
+                            {{ with .date }}<strong>Дата:</strong> {{ . }}<br>{{ end }}
+                            {{ with .authority }}<strong>Орган:</strong> {{ . }}<br>{{ end }}
+                            {{ .description }}
+                            <br>
+                            {{ if .url }}
+                                <a href="{{ .url }}" target="_blank">{{ .url }}</a>
+                            {{ end }}
+                        </p>
+
+                        <!-- ССЫЛКА -->
+                        {{ $collectionBaseUrl := "/docs/reference-books/Legal_field/" }}
+                        <div class="legal-item-more-details">
+                            <a href="{{ $collectionBaseUrl }}#card-{{ $cardId }}"
+                               class="more-details-button"
+                               onclick="return saveScrollPositionForLegal(event)">
+                                More detailed
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+        {{ end }} <!-- ЗАКРЫВАЕМ range здесь -->
+    </ul>
+</div>
+
+<!-- СКРИПТ для автоматического раскрытия по hash - ПОСЛЕ закрытия всех Hugo блоков -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash;
+    console.log('LEGAL FIELD DEBUG: Текущий hash:', hash);
+
+    if (hash && hash.startsWith('#card-')) {
+        const cardId = hash.substring(6); // Убираем "#card-"
+        console.log('LEGAL FIELD DEBUG: Ищем карточку с ID:', cardId);
+
+        const card = document.getElementById('card-' + cardId);
+        if (card) {
+            console.log('✅ LEGAL FIELD: Карточка найдена');
+
+            const full = card.querySelector('.legal-item-full');
+            const short = card.querySelector('.legal-item-short');
+
+            if (full && short) {
+                console.log('LEGAL FIELD: Full/Short элементы найдены');
+                console.log('До - full.display:', full.style.display);
+                console.log('До - short.display:', short.style.display);
+
+                full.style.display = 'block';
+                short.style.display = 'none';
+
+                console.log('После - full.display:', full.style.display);
+                console.log('После - short.display:', short.style.display);
+
+                // Добавляем класс для стилизации
+                card.classList.add('is-expanded');
+
+                // Прокручиваем с задержкой
+                setTimeout(() => {
+                    card.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    console.log('✅ LEGAL FIELD: Карточка раскрыта и прокручена');
+                }, 150);
+            } else {
+                console.log('❌ LEGAL FIELD: Full или Short элементы не найдены');
+                if (!full) console.log('  - Не найден .legal-item-full');
+                if (!short) console.log('  - Не найден .legal-item-short');
+            }
+        } else {
+            console.log('❌ LEGAL FIELD: Карточка не найдена по ID card-' + cardId);
+
+            // Пробуем найти другим способом
+            const allLegalCards = document.querySelectorAll('.legal-item');
+            console.log('Все legal карточки на странице:', allLegalCards.length);
+
+            // Ищем по data-card-id
+            const cardByDataId = document.querySelector('.legal-item[data-card-id="' + cardId + '"]');
+            console.log('Нашли по data-card-id:', !!cardByDataId);
+
+            // Пробуем раскрыть если нашли
+            if (cardByDataId) {
+                console.log('✅ Нашли по data-card-id!');
+                const full = cardByDataId.querySelector('.legal-item-full');
+                const short = cardByDataId.querySelector('.legal-item-short');
+
+                if (full && short) {
+                    full.style.display = 'block';
+                    short.style.display = 'none';
+                    cardByDataId.classList.add('is-expanded');
+
+                    setTimeout(() => {
+                        cardByDataId.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 150);
+                }
+            }
+        }
+    } else {
+        console.log('LEGAL FIELD: Нет hash или hash не начинается с #card-');
+    }
+});
+
+// Также обрабатываем изменения hash
+window.addEventListener('hashchange', function() {
+    console.log('LEGAL FIELD: Hash изменён на', window.location.hash);
+    // Перезагружаем страницу для простоты, или можно добавить логику закрытия/открытия
+    setTimeout(() => {
+        location.reload();
+    }, 100);
+});
+</script>
+
+<script>
+// ФУНКЦИЯ СОХРАНЕНИЯ ДЛЯ LEGAL
+function saveScrollPositionForLegal(event) {
+    console.log('📍 [LEGAL] Сохраняем данные для возврата...');
+
+    // Находим карточку
+    const link = event.currentTarget;
+    const card = link.closest('.legal-item');
+
+    if (!card) {
+        console.error('❌ Карточка закона не найдена');
+        return true;
+    }
+
+    // Получаем номер маркера
+    const legalNumber = card.getAttribute('data-legal-number');
+
+    // Очищаем ВСЁ для чистоты
+    sessionStorage.clear();
+
+    // Сохраняем тип И номер
+    sessionStorage.setItem('markerType', 'legal');  // КЛЮЧЕВОЕ!
+    sessionStorage.setItem('markerNumber', legalNumber);
+    sessionStorage.setItem('scrollTop', window.pageYOffset);
+    sessionStorage.setItem('timestamp', Date.now());
+
+    console.log('💾 [LEGAL] Сохранено тип: legal, номер:', legalNumber);
+
+    return true; // Разрешаем переход
+}
+</script>
+
+

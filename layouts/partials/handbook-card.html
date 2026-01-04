@@ -1,0 +1,142 @@
+{{/* handbook-card.html - ЧИСТАЯ ВЕРСИЯ для нового старта */}}
+
+{{ $source := .source }}
+{{ $index := .index }}
+{{ $showNumbers := .displayNumbers }}
+
+{{/* ГЕНЕРАЦИЯ cardId */}}
+{{ $cardId := "" }}
+{{ with $source.anchor }}
+    {{ $cardId = trim . " " }}
+{{ end }}
+{{ if eq $cardId "" }}
+    {{ with $source.name }}
+        {{ $cardId = . | urlize }}
+    {{ else }}
+        {{ $cardId = printf "card-%d" $index }}
+    {{ end }}
+{{ end }}
+
+{{/* Фильтры */}}
+{{ $filterTags := slice }}
+{{ range $key, $value := $source.attributes }}
+    {{ if reflect.IsSlice $value }}
+        {{ range $value }}
+            {{ $filterTags = $filterTags | append (printf "attr_%s_%s" ($key | lower) (. | lower)) }}
+        {{ end }}
+    {{ else }}
+        {{ $filterTags = $filterTags | append (printf "attr_%s_%s" ($key | lower) ($value | lower)) }}
+    {{ end }}
+{{ end }}
+
+<li class="source-item filterable-item"
+    id="card-{{ $cardId }}"
+    data-content="{{ delimit $filterTags " " }}"
+    data-attributes="{{ $source.attributes | jsonify }}">
+
+    <span class="source-item-short">
+        {{ if $showNumbers }}
+            <span class="source-number">{{ add $index 1 }}.</span>
+        {{ end }}
+        <span class="source-name">{{ $source.name }}</span>
+    </span>
+
+    <span class="source-item-full">
+        <div class="source-item-header-wrapper">
+            <span class="source-item-header">
+                <span class="source-name"><b>{{ $source.name }}</b></span>
+            </span>
+            <button class="back-to-text-btn"
+                    data-card-id="{{ $cardId }}"
+                    style="display: none; float: right; margin: 0 0 10px 15px;"
+                    onclick="returnToReferencePage()">
+                Back to Text
+            </button>
+        </div>
+
+        <div class="source-details">
+
+            {{/* ===================================================== */}}
+            {{/* ЕДИНЫЙ ПОДХОД: ВСЁ через content_blocks              */}}
+            {{/* ===================================================== */}}
+            {{ if $source.content_blocks }}
+
+                {{ range $block := $source.content_blocks }}
+                    {{ partial "content-block.html" (dict
+                        "block" $block
+                        "context" "handbook") }}
+                {{ end }}
+
+            {{ else }}
+
+                {{/* ===================================================== */}}
+                {{/* ПРОСТОЙ ФОРМАТ для обратной совместимости             */}}
+                {{/* ===================================================== */}}
+
+                {{/* БЕЗОПАСНАЯ обработка description */}}
+                {{ with $source.description }}
+                    {{ if reflect.IsSlice . }}
+                        {{/* Если это массив (старый формат), игнорируем */}}
+                        <!-- Старый формат description - не поддерживается -->
+                    {{ else }}
+                        <p>{{ . | markdownify }}</p>
+                    {{ end }}
+                {{ end }}
+
+                {{ with $source.address }}
+                    <p><strong>Address:</strong> {{ . }}</p>
+                {{ end }}
+
+                {{ with $source.url }}
+                    <p><strong>Website:</strong> <a href="{{ . }}" target="_blank">{{ . }}</a></p>
+                {{ end }}
+
+            {{ end }}
+
+            {{/* Кнопка More detailed */}}
+            {{ if $source.more_details_page }}
+                <div class="source-item-more-details">
+                    <a href="{{ $source.more_details_page }}"
+                        class="more-details-button"
+                        onclick="return saveScrollPosition(event)">
+                        More detailed
+                    </a>
+                </div>
+            {{ end }}
+
+        </div>
+    </span>
+
+    <script>
+        (function() {
+            const cardId = '{{ $cardId }}';
+            const currentHash = window.location.hash;
+
+            if (currentHash === '#card-' + cardId) {
+                const btn = document.querySelector('.back-to-text-btn[data-card-id="' + cardId + '"]');
+                if (btn) {
+                    btn.style.display = 'inline-block';
+                }
+
+                const card = document.getElementById('card-' + cardId);
+                if (card) {
+                    const full = card.querySelector('.source-item-full');
+                    const short = card.querySelector('.source-item-short');
+
+                    if (full && short) {
+                        full.style.display = 'block';
+                        short.style.display = 'none';
+
+                        setTimeout(() => {
+                            card.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }, 100);
+                    }
+                }
+            }
+        })();
+    </script>
+
+</li>

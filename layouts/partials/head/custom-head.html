@@ -1,1 +1,39 @@
-<!-- Custom head -->
+{{ $scss := resources.Get "scss/main.scss" }}
+{{ if $scss }}
+  {{ $options := (dict "includePaths" (slice "node_modules")) }}
+  {{ $css := $scss | toCSS $options | postCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+  <!-- Для отладки - удалите позже -->
+  <script>
+    console.log("CSS path: {{ $css.RelPermalink }}");
+  </script>
+{{ else }}
+  <!-- ОШИБКА: SCSS не найден! -->
+   <style>
+    body:before {
+      content: "ОШИБКА: SCSS файл не найден!";
+      display: block;
+      background: red;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  </style>
+{{ end }}
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> <!-- Если есть в архиве -->
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+

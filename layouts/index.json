@@ -1,0 +1,68 @@
+{{- $pages := .Site.RegularPages -}}
+{{- $excludedURIs := slice "/blog/example/" "/docs/guides/example/" "/docs/reference/example/" "/docs/resources/" "/privacy/" -}}
+{{- $searchData := slice -}}
+{{- $dataKeysToSkip := slice "filter_configs" "filters" -}}
+{{- $processedURLs := slice -}} {{/* МАССИВ ДЛЯ ОТСЛЕЖИВАНИЯ УНИКАЛЬНЫХ URL */}}
+
+{{/* 1. ИНДЕКСАЦИЯ СТРАНИЦ (.md) */}}
+{{- $filteredPages := where $pages "RelPermalink" "not in" $excludedURIs -}}
+{{- $filteredPages = where $filteredPages "Title" "!=" "404 Page Not Found" -}}
+{{- $filteredPages = where $filteredPages "Title" "!=" "" -}}
+
+{{- range $filteredPages -}}
+    {{- $page := . -}}
+    {{- $url := $page.RelPermalink -}}
+    
+    {{/* ПРОВЕРЯЕМ, НЕ ОБРАБАТЫВАЛИ ЛИ МЫ УЖЕ ЭТОТ URL */}}
+    {{- if not (in $processedURLs $url) -}}
+        {{- $processedURLs = $processedURLs | append $url -}}
+        
+        {{- $contentToIndex := $page.Plain | htmlUnescape -}}
+        {{- with $page.Params.subtitle -}}
+            {{- $contentToIndex = printf "%s %s" $contentToIndex . -}}
+        {{- end -}}
+        {{- with $page.Params.description -}}
+            {{- $contentToIndex = printf "%s %s" $contentToIndex . -}}
+        {{- end -}}
+
+        {{- $data := dict "uri" $url "title" $page.Title "content" $contentToIndex -}}
+        {{- $searchData = $searchData | append $data -}}
+    {{- end -}}
+{{- end -}}
+
+{{/* 2. ИНДЕКСАЦИЯ ФАЙЛОВ ДАННЫХ (.yml) */}}
+{{- range $dataKey, $ymlData := .Site.Data -}}
+    {{- if not (hasPrefix $dataKey "_") -}}
+        {{- if not (in $dataKeysToSkip $dataKey) -}}
+            {{- if or (reflect.IsMap $ymlData) (reflect.IsSlice $ymlData) (reflect.IsString $ymlData) -}}
+                {{- if not (hasSuffix $dataKey "_grouping") -}}
+
+                    {{- $ymlContent := printf "%v" ($ymlData | jsonify) -}}
+                    {{- $cleanedYmlContent := replace $ymlContent "\"" "" -}}
+                    {{- $shortTitle := $dataKey | humanize -}}
+
+                    {{/* НОРМАЛИЗУЕМ URL К НИЖНЕМУ РЕГИСТРУ */}}
+                    {{- $url := printf "/docs/reference-books/%s/" (lower $dataKey) -}}
+                    
+                    {{/* ПРОВЕРЯЕМ, НЕ ОБРАБАТЫВАЛИ ЛИ МЫ УЖЕ ЭТОТ URL */}}
+                    {{- if not (in $processedURLs $url) -}}
+                        {{- $processedURLs = $processedURLs | append $url -}}
+
+                        {{- $data := dict
+                            "uri" $url
+                            "title" $shortTitle
+                            "content" $cleanedYmlContent
+                            "isYml" true
+                        -}}
+                        {{- $searchData = $searchData | append $data -}}
+                    {{- end -}}
+
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{
+"docs": {{- $searchData | jsonify -}}
+}

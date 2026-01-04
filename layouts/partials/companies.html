@@ -1,0 +1,114 @@
+<div class="companies-container">
+    <div class="companies-header"></div>
+    <ul class="companies-list" id="companies-list">
+        {{ $isCompaniesPage := and (eq .context.Kind "page") (eq .context.File.BaseFileName "Companies") }}
+        {{ $currentPageSlug := .context.File.BaseFileName }}
+        {{ $showNumbers := .displayNumbers }}
+        {{ $counter := 0 }}
+
+        {{ $companiesToDisplay := .context.Site.Data.Companies }}
+
+        {{ if not $isCompaniesPage }}
+            {{ $companiesToDisplay = slice }}
+            {{ range .context.Site.Data.Companies }}
+                {{ if in .referenced_in $currentPageSlug }}
+                    {{ $companiesToDisplay = $companiesToDisplay | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $companiesToDisplay }}
+            {{ $counter = add $counter 1 }}
+
+            {{/* ГЕНЕРАЦИЯ cardId */}}
+            {{ $cardId := "" }}
+            {{ with .anchor }}
+                {{ $cardId = trim . " " }}
+            {{ end }}
+            {{ if eq $cardId "" }}
+                {{ with .name }}
+                    {{ $cardId = . | urlize }}
+                {{ else }}
+                    {{ $cardId = printf "company-%d" $counter }}
+                {{ end }}
+            {{ end }}
+
+            <li class="company-item"
+                id="card-{{ $cardId }}"
+                data-card-id="{{ $cardId }}"
+                data-company-number="{{ $counter }}"
+                data-company-name="{{ .name | default .title }}">
+
+                <!-- КОРОТКИЙ ВИД -->
+                <span class="company-item-short">
+                    {{ if $showNumbers }}
+                        <span class="company-number">{{ $counter }}.</span>
+                        <span class="company-name">{{ .name | default .title }}</span>
+                    {{ end }}
+                </span>
+
+                <!-- ПОЛНЫЙ ВИД -->
+                <span class="company-item-full" style="display: none;">
+                    <span class="company-item-header">
+                        <span class="company-number">{{ $counter }}.</span>
+                        <span class="company-name">{{ .name | default .title }}</span>
+                    </span>
+                    <div class="company-details">
+                        <p>
+                            {{ with .industry }}<strong>Отрасль:</strong> {{ . }}<br>{{ end }}
+                            {{ with .founded }}<strong>Основана:</strong> {{ . }}<br>{{ end }}
+                            {{ with .country }}<strong>Страна:</strong> {{ . }}<br>{{ end }}
+                            {{ .description }}
+                            <br>
+                            {{ if .url }}
+                                <a href="{{ .url }}" target="_blank">{{ .url }}</a>
+                            {{ end }}
+                        </p>
+
+                        <!-- ССЫЛКА -->
+                        {{ $collectionBaseUrl := "/docs/reference-books/companies/" }}
+                        <div class="company-item-more-details">
+                            <a href="{{ $collectionBaseUrl }}#card-{{ $cardId }}"
+                               class="more-details-button"
+                               onclick="return saveScrollPositionForCompanies(event)">
+                                More detailed
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+
+<script>
+// ФУНКЦИЯ СОХРАНЕНИЯ ДЛЯ COMPANIES
+function saveScrollPositionForCompanies(event) {
+    console.log('📍 [COMPANIES] Сохраняем данные для возврата...');
+
+    // Находим карточку
+    const link = event.currentTarget;
+    const card = link.closest('.company-item');
+
+    if (!card) {
+        console.error('❌ Карточка компании не найдена');
+        return true;
+    }
+
+    // Получаем номер маркера
+    const companyNumber = card.getAttribute('data-company-number');
+
+    // Очищаем ВСЁ для чистоты
+    sessionStorage.clear();
+
+    // Сохраняем тип И номер
+    sessionStorage.setItem('markerType', 'company');  // КЛЮЧЕВОЕ!
+    sessionStorage.setItem('markerNumber', companyNumber);
+    sessionStorage.setItem('scrollTop', window.pageYOffset);
+    sessionStorage.setItem('timestamp', Date.now());
+
+    console.log('💾 [COMPANIES] Сохранено тип: company, номер:', companyNumber);
+
+    return true; // Разрешаем переход
+}
+</script>

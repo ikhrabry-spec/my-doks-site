@@ -1,0 +1,286 @@
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+.toc-item .toc-card  {
+  text-align: center; /* Центрируем весь текст */
+  color: #000; /* Черный цвет текста */
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(56, 10, 99, 0.1);
+  transition: transform 0.3s ease;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex; /* Добавляем flex */
+  flex-direction: column; /* Вертикальное расположение */
+  align-items: center; /* Центрирование по горизонтали */
+  height: 20vh; /* Задаем фиксированную высоту для единообразия */
+  overflow: hidden; /* Скрываем контент, выходящий за пределы */
+  position: relative;
+
+
+
+  /* Стрелочка внизу карточки */
+  &.collapsed::after {
+    content: ""; // Убираем текстовую стрелку
+    position: absolute;
+    bottom: 0.5rem; // Оставляем только одно значение bottom
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent; // Уменьшаем размер для лучшего вида
+    border-right: 16px solid transparent;
+    border-top: 8px solid #7c599c;
+    opacity: 1; // Делаем видимой по умолчанию
+    transition: opacity 0.3s ease;
+    z-index: 100;
+    pointer-events: none;
+  }
+  /* Скрываем стрелочку при наведении */
+  &:hover::after {
+    opacity: 0;
+  }
+  .card-text, .card-list {
+    overflow: hidden;
+  }
+}
+
+/* Стрелочка внизу карточки */
+  .toc-card {
+    position: relative; // Важно для позиционирования псевдоэлемента
+
+/* Для плавного раскрытия списка - если используете */
+.toc-card .card-body {
+  transition: max-height 0.1s ease; // Увеличиваем время для плавности
+}
+
+
+.toc-card.expanded .card-body {
+  max-height: 1000px;
+}
+
+  &:hover {
+    transform: translateY(-5px);
+    height: auto; /* Высота становится автоматической при наведении */
+    padding-bottom: 0.2rem;
+    overflow: visible; /* Контент становится видимым */
+    z-index: 100;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.15rem;
+    color: #000; /* Черный цвет заголовка */
+    text-decoration: none !important; /* Убираем подчеркивание */
+
+      &:hover {
+              color: #7c599c;
+              font-weight: 700;
+            }
+       }
+
+  .card-subtitle {
+    color: #000 !important; /* Черный цвет подзаголовка */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Исправляем стили для card-list */
+  .card-list {
+    /* width: 90%; /* Занимает всю ширину родительской карточки */
+    /* max-width: 300px; /* Устанавливаем максимальную ширину для единообразия */
+    margin: 0 auto; /* Эта команда центрирует ВЕСЬ БЛОК по горизонтали */
+    text-align: left; /* Выравниваем текст по левому краю */
+    width: fit-content;
+  }
+  .list-unstiled{
+    justify-content: center; /* Выравниваем блок текста по центру */
+  }
+
+  /* Начало изменений для списка */
+  ul {
+    padding-left: 0;
+    margin: 0 auto;
+    list-style: none;
+    /* Добавьте padding для выравнивания, если нужно */
+    padding-left: 0.2rem;
+   }
+
+    li {
+      display: flex; // Главное изменение
+      align-items: center; // Центрируем по вертикали
+      gap: 0.5rem; // Расстояние между буллитом и текстом
+      margin-bottom: 0.5rem;
+      padding-left: 0; // Сбрасываем padding
+      min-height: 1.5rem; // Гарантируем минимальную высоту
+      line-height: 1.2; // Оптимальный интерлиньяж
+
+      &::before {
+        content: "•"; /* Маркер */
+        color: #000000; /* Цвет маркера */
+        font-size: 3rem; // Увеличиваем размер буллита
+        flex-shrink: 0; // Предотвращает сжатие
+        line-height: 0.25; // Фиксируем высоту строки
+        margin-top: 0.5rem; // Точная настройка позиции
+      }
+
+      a {
+        color: #000; /* Черный цвет ссылок */
+        text-decoration: none; /* Убираем подчеркивание */
+
+        word-break: break-word; // Правильный перенос слов
+        hyphens: auto; // Автоматическая расстановка переносов
+        box-decoration-break: clone; // Сохранение стилей при переносе
+        padding-top: 0; // Легкая коррекция выравнивания
+
+        &:hover {
+          color: #7c599c;
+          font-weight: 700;
+          text-decoration: none
+        }
+      }
+    }
+
+  .btn {
+    display: inline-block;
+    background: #007bff;
+    color: rgb(231, 9, 9);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+
+    &:hover {
+      background: #0056b3;
+    }
+  }
+}
+
+.toc-card {
+    // Ваши существующие стили карточки
+    transition: all 0.3s ease;
+
+    // Стиль для карточек с неполными списками
+    &.list-incomplete {
+
+      border: 2px solid #ff6b6b; // Красная рамка
+        box-shadow: 0 0 10px rgba(255, 107, 107, 0.5); // Свечение
+
+        // Альтернативные варианты подсветки:
+        // background-color: rgba(255, 107, 107, 0.1); // Легкая красная заливка
+        // transform: scale(1.02); // Легкое увеличение
+    }
+
+    // Дополнительно: стиль при наведении на карточки с неполными списками
+    &.list-incomplete:hover {
+        border-color: #ff4757; // Более яркая рамка при наведении
+        box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
+    }
+}
+
+.toc-card.list-incomplete {
+    border: 2px solid #ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+
+    &:hover {
+        border-color: #ff4757;
+        box-shadow: 0 0 12px rgba(255, 71, 87, 0.6);
+    }
+}
+/* ================================================= */
+/* СТИЛИ ДЛЯ ЗАГОЛОВКА 2-ГО УРОВНЯ С ПОДМЕНЮ (КАК В БОКОВОМ МЕНЮ) */
+/* ================================================= */
+
+    /* Обертка для 2-го уровня, если есть 3-й (details) */
+    .list-nested-details {
+        margin-bottom: 0.5rem; // Отступ снизу для разделения
+
+        /* Заголовок 2-го уровня (summary) */
+        .card-list-summary {
+            font-weight: 600;
+            font-size: 1.25rem; // Размер как у card-title
+            color: #212529;
+            cursor: pointer;
+            list-style: none; // Скрываем стандартный маркер details
+
+            &::-webkit-details-marker {
+                display: none; // Скрываем маркер в Chrome/Safari
+            }
+
+            &::marker {
+                display: none; // Скрываем маркер в Firefox
+            }
+
+            /* Ссылка внутри summary */
+            a {
+                display: block;
+                padding: 0rem 0;
+                color: inherit; // Наследует цвет от родительского .card-list-summary
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.25s ease;
+            }
+
+            /* Эффект при наведении (как в левом меню) */
+            &:hover {
+                color: #7c599c;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            /* Эффект при наведении на саму ссылку */
+            a:hover {
+                font-weight: 700;
+                color: #7c599c; // Дублируем, чтобы быть уверенным
+                text-decoration: none;
+            }
+        }
+
+        /* Стиль для активной ссылки 2-го уровня */
+        a.active {
+            font-weight: 700;
+            color: #7c599c;
+        }
+    }
+
+
+  /* Стрелочка внизу карточки */
+  //&.collapsed::after {
+
+  .card-text, .card-list {
+    overflow: hidden;
+  }
+.toc-card.list-incomplete {
+  border: none !important;
+  box-shadow: none !important;
+  position: relative;
+  padding-bottom: 1.5rem; /* Добавляем отступ снизу для стрелочки */
+}
+
+.toc-card.list-incomplete::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 8px solid #7c599c;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toc-card.list-incomplete:hover::after {
+  opacity: 0;
+}

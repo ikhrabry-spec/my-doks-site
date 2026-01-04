@@ -1,0 +1,25 @@
+[en]
+languageName = "English"
+contentDir = "content/en"
+weight = 1
+[en.params]
+languageISO = "EN"
+languageTag = "en-US"
+
+[de]
+languageName = "German"
+contentDir = "content/de"
+weight = 2
+disabled = true
+[de.params]
+languageISO = "DE"
+languageTag = "de-DE"
+
+[nl]
+languageName = "Nederlands"
+contentDir = "content/nl"
+weight = 3
+disabled = true
+[nl.params]
+languageISO = "NL"
+languageTag = "nl-NL"

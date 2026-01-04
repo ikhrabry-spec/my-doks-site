@@ -1,0 +1,1022 @@
+/* ===================== */
+/* ОБЩИЕ СТИЛИ ВЫСОТЫ СТРАНИЦЫ */
+/* ===================== */
+/* Сброс отступов для всего документа */
+@import 'custom';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 5hv;
+  overflow: hidden; /* Предотвращаем горизонтальный скролл */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================== */
+/* СТИЛИ ДЛЯ НЕ-ГЛАВНЫХ СТРАНИЦ */
+/* ===================== */
+
+body:not(.home) {
+  min-height: 100vh;
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: none; /* Отключаем прокрутку основного контента */
+  }
+}
+
+.main-content {
+  flex: 1 0 auto; /* Растягиваем на всё доступное пространство */
+}
+
+.docs-content {
+    /* Main content column */
+
+  position: relative;
+  height: 88vh;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-bottom: 2rem; /* Место для стрелочки раскрытия всех */
+  overflow-y: scroll;
+
+  .td-docs .docs-content {
+  padding-left: 5rem;
+  }
+
+   /* Стили для Webkit-браузеров (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(124, 89, 156, 0.1);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.4);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: rgba(124, 89, 156, 0.6);
+    }
+  }
+
+  /* Стили для Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1);
+}
+
+/* ===================== */
+/* СПЕЦИАЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ОГЛАВЛЕНИЯ */
+/* ===================== */
+
+body.section-table-of-contents {
+  height: 100vh;
+  overflow-y: none;
+
+  .main-content {
+    height: calc(100vh - 120px); /* Высота минус header и footer */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    flex: 1;
+    overflow: none; /* Включаем прокрутку внутри контейнера */
+    padding-bottom: 1rem;
+  }
+
+  .toc-grid {
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-auto-rows: minmax(auto, 22vh);
+    gap: 1.5rem;
+    margin-top: 0;
+    justify-items: center;
+    overflow: hidden;
+    padding-bottom: 0.5rem;
+  }
+}
+
+// 1. Определение переменных шрифта
+$font-family-base: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-weight-normal: 400; // Обычный вес
+$font-weight-semybold: 600; // Полужирный вес
+$font-weight-bold: 700;  // Жирный вес
+$line-height-base: 1.6; // Базовая высота строки
+$body-font-size: 1.2rem; // Задайте желаемый размер шрифта здесь (например, 1rem)
+$h1-font-size: $body-font-size * 2.5;
+$h2-font-size: $body-font-size * 2;
+$h3-font-size: $body-font-size * 1.75;
+$h4-font-size: $body-font-size * 1.5;
+$h5-font-size: $body-font-size * 1.25;
+$h6-font-size: $body-font-size * 1;
+
+
+// 2. Импорт Bootstrap ДО применения глобальных стилей
+@import "bootstrap/scss/bootstrap";
+
+// 3. Применение шрифта ко всем элементам
+* {
+  font-family: $font-family-base !important;
+}
+
+// 4. Переопределение Bootstrap компонентов
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-semybold;
+  letter-spacing: 0.01em; // Улучшение читаемости заголовков
+}
+
+.btn, .form-control, .navbar, .card-title {
+  font-family: $font-family-base;
+}
+
+// 5. Специфичные для шрифта Jost настройки
+p, li, td, th, .form-control {
+  letter-spacing: 0.01em;
+}
+
+// 6. Импорт компонентов
+@import "components/grid-fix";
+
+// 7. Классы для исключений
+.no-jost-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  }
+}
+
+// 8. Переопределение кода и моноширинных элементов
+code, kbd, pre, samp, .monospace {
+  font-family: Jost, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/* Переопределение глобальных стилей для заголовков */
+.card-title {
+  font-size: 3rem;
+}
+
+.card-title,
+.card-subtitle {
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+  }
+}
+
+/* ===================== */
+/* ФИНАЛЬНЫЕ СТИЛИ ДЛЯ HEADER */
+/* ===================== */
+
+.header {
+  background: #fbfcfb;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: none !important;
+  margin: 0 !important;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.2rem 1.4vw;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 1.4vw;
+  padding-right: 0.6vw;
+}
+
+.navbar-brand {
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.header-logo {
+  height: 2vw;
+  min-height: 30px;
+  max-height: 50px;
+  width: auto;
+  display: block;
+  max-width: 400px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search-box {
+  position: relative;
+  height: 1.7vw;
+  min-height: 25px;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+
+  form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  #toggle-cards-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin-left: 0.5rem;
+  }
+}
+
+#toggle-cards-button img {
+  height: 2.2vh;
+  max-height: 30px;
+  width: auto;
+}
+
+.search-input {
+  height: 75%;
+  box-sizing: border-box;
+  padding: 0.1rem;
+  padding-left: 0.5rem;
+  padding-right: 10px;
+  border: 1px solid #0a0a0a;
+  border-radius: 4px;
+  min-width: 200px;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #030303;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #007bff;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.search-box form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* ===================== */
+/* СТИЛИ ДЛЯ ФУТЕРА */
+/* ===================== */
+
+.footer {
+  flex-shrink: 0;
+  background: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  width: 100%;
+  padding: 1.1rem 0;
+  height: 0.6vw;
+
+  &-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 0.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .search-box .search-input {
+    min-width: 150px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header-container {
+    padding: 0.02rem calc((100% - 1300px) / 2);
+  }
+}
+
+/* ========================================================== */
+/* СТИЛИ ДЛЯ СТРАНИЦЫ 'ИСТОЧНИКИ'                  */
+/* ========================================================== */
+.sources-container {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+.sources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  /* Базовые стили для элементов списка */
+  .source-item {
+    margin-bottom: 0rem;
+    padding: 0rem;
+    border: 1px solid #b808af;
+    border-radius: 5px;
+    border-left: 3px solid #dee2e6;
+    transition: background-color 0.2s ease, border-left-color 0.2s ease;
+    cursor: pointer; // Добавляем курсор, чтобы показать, что элемент кликабелен
+    &.highlighted {
+      color:red;
+      background-color: rgba(255, 220, 100, 0.2);
+      border-left: 3px solid #ff6479;
+    }
+  }
+
+  .source-number {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
+  .source-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .source-details {
+    margin-top: 0.5rem;
+
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+
+  /* Правила для компактного вида */
+  &.compact {
+    .source-item {
+      .source-item-short {
+        display: block;
+      }
+      .source-details,
+      .source-item-full {
+        display: none;
+      }
+    }
+  }
+
+  /* Правила для расширенного вида */
+  &.expanded {
+    .source-item {
+      .source-item-short {
+        display: none;
+      }
+      .source-details,
+      .source-item-full {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Стили для ссылок на источники в тексте */
+.source-ref,
+.source-reference {
+  cursor: pointer;
+  color: #0056b3;
+
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid transparent; /* Убирает лишнюю рамку, делает hover более плавным */
+
+  &:hover {
+    color: rgb(247, 6, 6);
+    font-weight: 400;
+  }
+
+  &.highlighted {
+    color: rgb(247, 6, 6);
+    font-weight: 400;
+
+  }
+}
+
+/* Стили для выделения элементов, связанных с источниками */
+
+
+/* =================================== */
+/* Стили для кнопки "more detailed" */
+/* =================================== */
+
+.more-details-button {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #7c599c;
+    border-radius: 5px;
+    color: #7c599c !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #7c599c;
+        color: #fff !important;
+    }
+}
+
+
+/* Стили для кнопки Sources Toggle */
+.sources-toggle-btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #247205;
+  }
+}
+
+/* Стили для начального состояния иконок кнопки и карточек оглавления */
+#list-icon {
+  display: none;
+}
+
+#desc-icon {
+  display: block;
+}
+
+.toc-grid .toc-card .card-list {
+  display: none;
+}
+
+.toc-grid .toc-card .card-text {
+  display: block;
+}
+
+/* ========================================================== */
+/* СТИЛИ ДЛЯ ПРАВОЙ БОКОВОЙ ПАНЕЛИ (ОГЛАВЛЕНИЕ)         */
+/* ========================================================== */
+.docs-sidebar.sidebar-right {
+
+  /* ... (Дополнительные стили, если есть) ... */
+  .page-links {
+  /* Стили для оглавления и других блоков в правой колонке */
+  }
+
+  .source-item {
+  /* Отступ для списка источников, чтобы он был выровнен с оглавлением */
+  margin-left: 1.6rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0rem;
+}
+}
+
+/* ========================================================== */
+/* ОБЩИЕ СТИЛИ                                */
+/* ========================================================== */
+
+/* Импорт стилей правой колонки из отдельного файла */
+@import 'right-column';
+
+.centered-heading {
+  text-align: center;
+}
+
+/* Добавленные стили для кнопки Grid navigation */
+.grid-nav-container {
+  margin-bottom: 15px; /* Отступ от меню */
+}
+
+.grid-nav-button {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left;
+  line-height: 1.2;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-nav-button:hover {
+  color: #7c599c;
+  text-decoration: none;
+}
+
+/* Заголовки разделов в левой колонке */
+.docs-sidebar .section-nav summary {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #212529;
+  cursor: pointer;
+  list-style: none;
+
+  &:hover {
+    color: #7c599c;
+    font-weight: 700;
+  }
+}
+
+.docs-sidebar .section-nav details {
+  margin-left: 0.5rem;
+}
+
+.docs-sidebar .section-nav ul.list-nested {
+  padding-left: 1.75vw;
+}
+
+.docs-sidebar .section-nav ul.list-nested li {
+  list-style-type: disc;
+}
+
+.docs-sidebar .section-nav li.active > a {
+  font-weight: bold;
+  color: red;
+}
+
+/* Устаревшие или неупорядоченные стили, перенесенные в конец */
+.source-item {
+  transition: all 0.2s ease; /* Это правило дублировалось */
+
+  &.highlighted {
+    background-color: rgba(255, 220, 100, 0.2);
+    border-left: 3px solid #ffdc64;
+
+    .source-number {
+      font-weight: bold;
+      color: #d35400;
+    }
+  }
+}
+
+/* По умолчанию, скрываем полный вид и показываем краткий */
+
+.source-item-short {
+    display: block;
+}
+
+
+/* Изменение курсора при наведении */
+.source-item-short,
+.source-item-full {
+    cursor: pointer;
+}
+
+/* Очистка дубликатов */
+/* Стили для списка источников */
+/* .sources-container { margin-top: 1rem; } */
+/* .sources-header { margin-bottom: 1rem; } */
+/* .form-select { ... } */
+/* .sources-list { ... } */
+/* .source-item { ... } */
+/* ... и т.д., все дубликаты были объединены. */
+
+/* Стили для страницы "Наша команда" */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+
+  .team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #eee;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .position {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .bio {
+    color: #444;
+    line-height: 1.5;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.team-photo {
+  width: 100%;
+  max-width: 400px; /* Максимальный размер соответствует обработанному изображению */
+  height: auto;
+  border-radius: 50%; /* Для круглых фото */
+  object-fit: cover; /* Важно: обеспечивает правильное отображение обрезанных изображений */
+  aspect-ratio: 1 / 1; /* Сохраняет квадратную форму */
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .team-photo {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-photo {
+    max-width: 200px;
+  }
+}
+
+.team-photo.placeholder {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: bold;
+}
+
+/* СТИЛИ ДЛЯ ДВУХУРОВНЕВОГО МЕНЮ*/
+.docs-sidebar {
+  position: relative;
+  height: 88vh;
+  padding-bottom: 2rem; /* Место для стрелочки раскрытия всех */
+  overflow-y: scroll;
+
+   /* Стили для Webkit-браузеров (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(124, 89, 156, 0.1);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.4);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background: rgba(124, 89, 156, 0.8);
+    }
+  }
+
+  /* Стили для Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1);
+}
+
+  .section-nav {
+    details {
+      margin-bottom: 0.5rem;
+      transition: all 0.25s ease;
+
+      /* Стиль для активного меню первого уровня */
+      &.active > summary,
+      &[open].active > summary {
+        .section-title-link {
+          color: #ff0000;
+          font-weight: 700;
+        }
+      }
+
+          // Во время анимации закрытия отключаем взаимодействие с мышью
+      &[open].closing {
+        pointer-events: none;
+
+        summary {
+          pointer-events: none;
+        }
+
+        ul {
+          pointer-events: none;
+          max-height: 0;
+          opacity: 0;
+          transform: translateY(-20px);
+          transition: max-height 5s ease, opacity 5s ease, transform 5s ease;
+        }
+      }
+
+      summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.25s ease;
+        position: relative;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        .section-title-link {
+          display: block;
+          padding: 0.5rem 0;
+          color: inherit;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.25s ease;
+
+          &:hover {
+            font-weight: 700;
+            color: #7c599c;
+          }
+
+          &.active {
+            color: #ff0000;
+            font-weight: 700;
+          }
+
+        }
+      }
+
+      ul {
+        max-height: 0;
+        overflow: hidden;
+        transform: translateY(-10px);
+        transition: max-height 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
+
+        opacity: 0;
+        padding-left: 1rem;
+
+        li {
+          margin-bottom: 0.25rem;
+
+          a {
+            display: block;
+            line-height: 1.0;
+            padding: 0.25rem 0;
+            transition: color 0.15s ease;
+
+            &:hover {
+              font-weight: bold;
+              color: #7c599c;
+              text-decoration: none
+            }
+
+            &.active {
+              color: #ff0000;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      // Стандартное открытое состояние
+      &[open] {
+        ul {
+        max-height: 1000px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+      }}
+
+
+    }
+  }
+  // Ключевые кадры для анимации "уплывания"
+@keyframes slideUp {
+  0% {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+  /* Стрелочка раскрытия всех меню */
+  .expand-all-menu {
+      /* Удаляем абсолютное позиционирование */
+    /* position: absolute; */
+    /* Удаляем bottom, так как оно работает только с absolute */
+    /* bottom: 1.5rem; */
+    /* Убираем transform, так как он используется для центрирования в абсолюте */
+    /* transform: translateX(-50%); */
+
+    left: 2rem; /* Отступ слева - 2rem как requested */
+
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 8px solid #7c599c;
+    margin-left: 0.5rem;
+
+
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    opacity: 1;
+    z-index: 100;
+
+    &.expanded {
+      transform: rotate(180deg);
+    }
+
+    }
+
+
+/* Стили для полосы прокрутки левого меню */
+.docs-sidebar {
+  .section-nav {
+
+    padding-right: 5px; /* Добавляем отступ для полосы прокрутки */
+
+    /* Стили для Webkit-браузеров (Chrome, Safari, Edge) */
+    &::-webkit-scrollbar {
+      width: 8px; /* Ширина полосы прокрутки */
+    }
+
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(124, 89, 156, 0.6); /* Основной цвет ползунка */
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: rgba(124, 89, 156, 0.8); /* Цвет при наведении */
+      }
+    }
+
+    /* Стили для Firefox */
+    scrollbar-width: thin; /* Тонкая полоса прокрутки */
+    scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1); /* Цвет ползунка и дорожки */
+  }
+}
+
+/* Дополнительные классы для регулировки прозрачности */
+.scrollbar-transparency-100 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.1) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 1) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+.scrollbar-transparency-80 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.8) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 0.8) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+.scrollbar-transparency-60 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.6) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 0.6) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+.scrollbar-transparency-40 {
+  .docs-sidebar .section-nav::-webkit-scrollbar-thumb {
+    background: rgba(124, 89, 156, 0.4) !important;
+  }
+  .docs-sidebar .section-nav {
+    scrollbar-color: rgba(124, 89, 156, 0.4) rgba(124, 89, 156, 0.1) !important;
+  }
+}
+
+/* ===================== */
+/* СТИЛИ ДЛЯ ЦЕНТРАЛЬНОЙ КОЛОНКИ */
+/* ===================== */
+/* Выделение при клике в правом оглавлении */
+
+.docs-content {
+  h1.active,
+  h2.active,
+  h3.active,
+  h4.active,
+  h5.active,
+  h6.active {
+    color: #ff0000; /* Красный цвет */
+    font-weight: 700; /* Жирный шрифт */
+  }
+}
+
+/* Специальные стили для заголовков на моей типовой странице */
+.my-custom-page h2 {
+  font-size: 1.5rem; /* Здесь вы можете задать нужный размер для H2 */
+  text-align: center; /* Добавлено для центрирования */
+}
+
+.my-custom-page h3 {
+  font-size: 1.25rem; /* И здесь для H3 */
+  text-align: center; /* Добавлено для центрирования */
+}
+
+/* =================================== */
+/* Стили для заголовков в правой боковой панели */
+/* =================================== */
+
+/* Применение сиреневого цвета при наведении на заголовок */
+.docs-sidebar.sidebar-right .centered-heading a:hover {
+  color: #7c599c; /* Сиреневый цвет (пример) */
+  text-decoration: none; /* Убирает подчеркивание при наведении */
+}

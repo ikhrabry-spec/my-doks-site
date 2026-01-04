@@ -1,0 +1,71 @@
+{{ $currentPageName := .Page.File.BaseFileName }}
+{{ $config := index .Site.Data.filter_configs $currentPageName }}
+
+<div id="attribute-filter-content" class="filter-attribute-ui d-none">
+    {{ if $config}}
+    {{/* Сериализация только списка ключей (key) для использования в JS */}}
+    <div id="attribute-controls-wrapper" class="attribute-filter-wrapper filter-thin-red-border"
+         data-filter-data='[{{ range $i, $g := $config.groups }}{{ if $i }},{{ end }}"{{ $g.key }}"{{ end }}]'>
+
+        {{/* ⭐ 1. Заголовок и кнопки в одной строке (Пункт 1, 2, 3) */}}
+        <div class="filter-controls-header header-row">
+            {{/* Заголовок: сиреневый, полужирный, слева */}}
+            <span class="filter-title bold violet-text">
+                Filter by Attribute:</span>
+                <div class="active-filters-summary">
+                    <span id="active-filters-list"></span>
+                </div>
+            <div class="filter-actions action-row">
+                {{/* ⭐ 2. Кнопка "Очистить" (Красный крестик, id для JS) */}}
+                <button id="reset-filter-btn" class="icon-btn red-cross-icon" title="Сбросить все фильтры">
+                </button>
+
+                {{/* ⭐ 3. Кнопка "Скрыть" (Иконка, id для JS) */}}
+                <button id="toggle-hide-btn" class="icon-btn hide-filter-icon" type="button">
+                    {{ $filterRemoveIcon := resources.Get "images/icon/filter-xmark.svg" }}
+                    <img src="{{ $filterRemoveIcon.RelPermalink }}" alt="Remove filter">
+                </button>
+            </div>
+        </div>
+
+        {{/* ⭐ 5. Список чекбоксов в две колонки */}}
+        <div id="attribute-menu-body" class="attribute-menu-body filter-menu-collapsed">
+            {{/* Итерируем по группам фильтров из config-файла */}}
+            {{ range $group := $config.groups }}
+            <div class="attribute-group" data-attribute-key="{{ $group.key }}">
+                <div class="attribute-header">{{ $group.header }}</div>
+
+                {{/* Добавляем класс columns-2 для стилизации в две колонки */}}
+                <div class="attribute-values-menu columns-2">
+                    {{/* Итерируем по значениям внутри группы */}}
+                    {{ range $val := $group.values }}
+                    <label class="value-item">
+                        <input type="checkbox"
+                               class="attribute-filter-checkbox"
+                               data-attribute-key="{{ $group.key }}"
+                       {{/* УНИФИЦИРОВАННЫЙ МАРКЕР ДЛЯ МАССИВОВ */}}
+                       value="attr_{{ $group.key | lower }}_{{ $val.value | lower }}"
+                       data-filter-type="array"> {{/* Добавляем тип фильтрации */}}
+                        {{ $val.label }}
+                    </label>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+
+        {{/* ⭐ 4. Кнопка "Свернуть/Развернуть" (в отдельном контейнере снизу) */}}
+        <div class="filter-footer-actions">
+{{/* Классы collapse-toggle-btn и violet-arrow-icon используются для стилизации и JS-логики */}}
+            <button id="toggle-collapse-btn"
+                    title="Свернуть/Развернуть"
+                    type="button">
+
+                {{/* Оставляем только фигуру, которая будет стилизована как стрелка */}}
+                <div class="expand-all-menu"></div>
+            </button>
+        </div>
+    </div>
+    {{ end }}
+</div>

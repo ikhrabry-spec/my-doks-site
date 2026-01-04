@@ -1,0 +1,181 @@
+
+# data/companies+.yml
+#
+# Этот файл будет содержать расширенные данные для компаний,
+# демонстрирующие различные возможности верстки.
+#
+# Важно: YML хранит ДАННЫЕ и ИНСТРУКЦИИ по верстке.
+# Hugo будет преобразовывать эти инструкции в HTML-структуру с классами.
+# SCSS будет стилизовать эти классы.
+
+- name: "Алмаз-Антей"
+  anchor: "almaz-antey"
+  group_id: "Voter Registration & Mail-in Voting Systems" # <-- Используется для привязки к заголовку H3
+  referenced_in: ["Problems"]
+  attributes:
+    ownership: "State"     # <-- Используется для ФИЛЬТРАЦИИ
+    rd_presence: "High"    # <-- Используется для ФИЛЬТРАЦИИ
+  fields:
+    description:
+      # Задача 1: Выделить куски текста с разным шрифтом
+      - text: "Ключевые центры разработки вооружений и военной техники"
+        style: "default" # Обычный стиль
+      - text: "*Радиолокационные комплексы*" # Markdown курсив
+        style: "italic"
+      - text: "**Зенитно-ракетные системы**" # Markdown жирный
+        style: "bold"
+      - text: "Очень <span class='highlight-text'>важная</span> <span class='small-text'>информация</span>" # Прямой HTML для специфичного выделения (менее удобно)
+        style: "raw_html"
+      - text: "<code>Моноширинный код</code>" # Markdown моноширинный
+        style: "code"
+
+
+    # Задача 2: Положение текста, отступы, красная строка, интерлиньяж
+    paragraphs:
+      - text: | # Блок с переносами строк
+          Это первый абзац с обычным интерлиньяжем и отступами.
+          Его можно использовать для длинного описания.
+        format: "default"
+      - text: "Этот абзац имеет **красную строку** и уменьшенный интерлиньяж."
+        format: "indent-compact" # Класс для CSS: text-indent, line-height
+      - text: "Следующий абзац имеет увеличенные отступы со всех сторон."
+        format: "padded-block" # Класс для CSS: margin, padding
+
+    # Задача 3: Скомпоновать текст в две или три колонки
+    # Для этого нужен шорткод в Markdown или сложная структура в YML,
+    # которая будет рендериться в колонки.
+    # Здесь YML предоставляет данные для колонок, а Hugo их верстает.
+    columns_data:
+      type: "two-columns" # Инструкция для Hugo, как рендерить следующий контент
+      content:
+        - title: "История"
+          text: "Текст для первой колонки, рассказывающий историю компании, её становление и развитие в оборонной отрасли."
+        - title: "Продукция"
+          text: "Список основной продукции: ракетные комплексы, радары, системы ПВО. Описание их характеристик и применения."
+
+    # Задача 4: Сделать из текста список (маркированный, нумерованный)
+    product_list:
+      type: "unordered" # Или "ordered"
+      items:
+        - "Ракетные комплексы S-400"
+        - "РЛС «Небо-М»"
+        - "Системы ПВО «Бук-М2»"
+
+    # Задача 5 & 6: Снабдить картинку заголовком/подписью, определить положение/обтекание
+    media:
+      - type: "image"
+        path: "images/foto/Iosif.png"
+        alt: "Памятник И.В. Сталину"
+        caption: "Скульптура И.В. Сталина, расположенная на территории завода." # Подпись
+        title: "Ключевая фигура" # Заголовок
+        layout: "float-left" # float: left;
+        max_width: "300px" # Максимальная ширина изображения
+
+      - type: "image"
+        path: "images/foto/Almaz_Antei_Headquarters.jpg"
+        alt: "Штаб-квартира Алмаз-Антей"
+        caption: "Современное здание штаб-квартиры концерна."
+        title: "Архитектура успеха"
+        layout: "centered" # display: block; margin: auto;
+        max_width: "500px"
+
+      - type: "video_youtube"
+        url: "https://www.youtube.com/embed/VIDEO_ID_HERE"
+        alt: "Обзор продукции"
+        caption: "Видеообзор новейших разработок концерна Алмаз-Антей."
+        title: "Технологии завтрашнего дня"
+        layout: "full-width" # Ширина 100%
+
+  # Дополнительные поля, не связанные с версткой напрямую, но используемые в карточке
+  url: "http://www.almaz-antey.ru"
+  address: "Москва, ул. Старая Басманная, 25"
+
+- name: "Яндекс"
+  group_id: "Specialized Voting Devices"
+  anchor: "Yandex"
+  attributes:
+    ownership: "Public"
+    rd_presence: "High"
+  fields:
+    # Задача 1 (доп. пример):
+    subtitles:
+      - text: "## Quote" # Пример текста с Markdown заголовком
+        format: "h2"
+      - text: "Всё так сложно, всё так запутанно"
+        format: "quote" # Класс для цитаты
+      - text: "Но разбираться нам некогда брат"
+        format: "quote"
+      - text: "наш дурдом голосует за Путина,**" # Markdown жирный
+        format: "quote"
+      - text: "Путин точно наш кандидат»"
+        format: "quote"
+      - text: "— АЛЕКСАНДР ЕЛИН*" # Markdown курсив
+        format: "quote_author"
+
+    # Задача 2 (доп. пример):
+    description:
+      - text: "Машинное обучение"
+        style: "main_heading_color-blue" # Более специфичный класс для стилизации
+      - text: "Беспилотные технологии"
+      - text: "Облачные сервисы"
+
+    # Задача 4 (доп. пример):
+    items:
+      - "Первый элемент"
+      - "Второй элемент"
+
+  # Дополнительные поля
+  address: "Москва, ул. Льва Толстого, 16"
+  url: "http://www.yandex.ru"
+# data/companies+.yml
+
+- name: "Алмаз-Антей"
+  group_id: "Design Bureau" # <-- Используется для привязки к заголовку H3
+  attributes:
+    ownership: "State"      # <-- Используется для ФИЛЬТРАЦИИ
+    rd_presence: "High"     # <-- Используется для ФИЛЬТРАЦИИ
+  fields:
+    description: "Ключевые центры разработки вооружений и военной техники
+      * Радиолокационные комплексы
+      * Зенитно-ракетные системы"
+    address: "Москва, ул. Старая Басманная, 25"
+    url: "http://www.almaz-antey.ru"
+    subtitles:
+      - "Радиолокационные комплексы"
+      - "Зенитно-ракетные системы"
+  media: # <--- ЭТОТ СПИСОК КРИТИЧЕСКИ ВАЖЕН
+    - type: "image"
+      path: "images/foto/Iosif.png"
+      alt: "Снимок 1"
+
+    - type: "video_youtube"
+      url: "https://www.youtube.com/embed/VIDEO_ID_HERE"
+      alt: "Видео на YouTube"
+
+    #- type: "video_local" # <--- НОВЫЙ ТИП
+    #  path: "video/my-promo-clip.mp4" # <--- ПУТЬ ВНУТРИ assets/
+    #  alt: "Промо-ролик"
+
+- name: "Яндекс"
+  group_id: "Search Engines & Services"
+  attributes:
+    ownership: "Public"
+    rd_presence: "High"
+  fields:
+    subtitles:
+      - "## Quote"
+      - «Всё так сложно, всё так запутанно</span>"
+      -    «Но разбираться нам некогда брат"
+      - наш дурдом голосует за Путина,**
+      - Путин точно наш кандидат»
+      - — АЛЕКСАНДР ЕЛИН*"
+    address: "Москва, ул. Льва Толстого, 16"
+    url: "http://www.yandex.ru"
+    description:
+      - main_heading_color: blue"Машинное обучение"
+      - "Беспилотные технологии"
+      - "Облачные сервисы"
+  items:
+    - Первый элемент
+    - Второй элемент
+

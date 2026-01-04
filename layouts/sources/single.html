@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="container">
+  <article class="source-detail">
+    <header>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.publication_info }}
+        <p class="publication-info">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="source-links">
+      {{ with .Params.external_url }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="btn btn-outline-primary">
+          Внешняя ссылка
+        </a>
+      {{ end }}
+    </div>
+
+    <div class="source-content">
+      {{ with .Params.annotation }}
+        <div class="annotation">
+          <h3>Аннотация</h3>
+          <blockquote>{{ . }}</blockquote>
+        </div>
+      {{ end }}
+
+      <div class="full-description">
+        <h3>Подробное описание</h3>
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+</div>
+{{ end }}

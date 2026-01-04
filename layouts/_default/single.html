@@ -1,0 +1,44 @@
+﻿{{ define "main" }}
+<div class="wrap container-lg">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+
+      <div class="col-lg-3 docs-sidebar d-none d-lg-block">
+        <nav class="section-nav docs-links">
+          <ul class="list-unstyled">
+            {{ range .Site.Sections }}
+              <li>
+                <details {{ if eq .Section $.Page.Section }}open{{ end }}>
+                  <summary>{{ .Title }}</summary>
+                  <ul class="list-unstyled list-nested">
+                    {{ range .RegularPages.ByWeight }}
+                      <li {{ if eq .Permalink $.Page.Permalink }}class="active"{{ end }}>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                </details>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+
+      <main class="docs-content col-lg-9 col-xl-6">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </main>
+
+      <nav class="docs-toc d-none d-xl-block col-xl-3">
+        <div class="page-links">
+          <h3>Источники</h3>
+          {{ partial "sources.html" (dict "context" . "displayMode" "compact") }}
+          <h3 class="mt-4">На этой странице</h3>
+          {{ .TableOfContents }}
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+{{ end }}
+

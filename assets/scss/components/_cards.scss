@@ -1,0 +1,60 @@
+// Общие стили карточек для всего сайта
+.card {
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+/* Начало изменений */
+  text-align: center; /* Центрируем весь текст */
+  color: #000; /* Черный цвет текста */
+  /* Конец изменений */
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.5rem;
+
+    /* Начало изменений */
+    justify-content: center; /* Вертикальное центрирование */
+    align-items: center; /* Горизонтальное центрирование */
+    /* Конец изменений */
+  }
+
+  &-title {
+    margin-bottom: 0.5rem;
+
+    /* Начало изменений */
+    width: 100%; /* Занимает всю ширину контейнера */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    /* Конец изменений */
+  }
+
+  &-subtitle {
+    font-size: 0.9rem;
+     /* Начало изменений */
+    width: 100%; /* Занимает всю ширину контейнера */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    /* Конец изменений */
+  }
+
+  &-text {
+    flex-grow: 1;
+
+    /* Начало изменений */
+    width: 100%; /* Занимает всю ширину контейнера */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    /* Конец изменений */
+
+  }
+
+}

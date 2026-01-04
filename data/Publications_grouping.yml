@@ -1,0 +1,57 @@
+# data/Publications+grouping.yml
+
+- name: "Research and Analytical Works"
+  header_text: "Materials presenting developments, studies, theoretical perspectives, and analyses relevant to the website’s subject matter."
+  subtypes:
+    - name: "Books and Monographs"
+      centered_subtitle: "Books and Monographs"
+      description_text: "Comprehensive works presenting original research or theoretical perspectives."
+    - name: "Scholarly Articles"
+      centered_subtitle: "Scholarly Articles"
+      description_text: "Peer-reviewed studies and analytical papers published in academic journals."
+    - name: "Conference Proceedings"
+      centered_subtitle: "Conference Proceedings"
+      description_text: "Papers and reports presented at academic or professional conferences."
+    - name: "Theses and Dissertations"
+      centered_subtitle: "Theses and Dissertations"
+      description_text: "Graduate and postgraduate research providing in-depth exploration of specific topics."
+
+- name: "Policy and Institutional Materials"
+  header_text: "Documents produced by policy centers, research institutes, and organizations offering structured analyses, recommendations, or institutional perspectives."
+  subtypes:
+    - name: "Policy Papers and Reports"
+      centered_subtitle: "Policy Papers and Reports"
+      description_text: "Analytical documents from think tanks, research institutes, and policy organizations."
+    - name: "Institutional Publications"
+      centered_subtitle: "Institutional Publications"
+      description_text: "Official releases, annual reviews, and position papers by organizations and NGOs"
+    - name: "White Papers"
+      centered_subtitle: "White Papers"
+      description_text: "Detailed technical or policy-oriented analyses issued by institutions or corporations."
+
+- name: "Journalistic and Opinion Publications"
+  header_text: "A collection of journalistic and opinion-based materials offering commentary, interpretation, and discussion of relevant issues."
+  subtypes:
+    - name: "Essays and Commentaries"
+      centered_subtitle: "Essays and Commentaries"
+      description_text: "Authorial reflections, analytical essays, and thematic overviews."
+    - name: "Editorials and Opinion Pieces"
+      centered_subtitle: "Editorials and Opinion Pieces"
+      description_text: "Media articles expressing perspectives or critical analyses."
+    - name: "Interviews and Speeches"
+      centered_subtitle: "RInterviews and Speeches"
+      description_text: "Public statements, interviews, and keynote addresses relevant to the topic."
+
+- name: " Historical and Contextual References"
+  header_text: "A collection of journalistic and opinion-based materials offering commentary, interpretation, and discussion of relevant issues."
+  subtypes:
+    - name: "Historical References"
+      centered_subtitle: "Historical References"
+      description_text: "Publications providing historical context or retrospective analysis."
+    - name: "Biographical Works"
+      centered_subtitle: "Biographical Works"
+      description_text: "Accounts and studies of influential figures related to the subject field."
+    - name: "Documentary Collections"
+      centered_subtitle: "Documentary Collections"
+      description_text: "Curated compilations of documents, testimonies, or archival materials."
+

@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="wrap container-lg">
+  <div class="content">
+    <div class="row flex-xl-nowrap mt-5 align-items-start">
+
+      <!-- Левая боковая панель -->
+      <div class="col-lg-3 docs-sidebar d-none d-lg-block">
+        <div class="grid-nav-container">
+          <a href="/table-of-contents/">
+            <button class="grid-nav-button">Grid navigation</button>
+          </a>
+        </div>
+        <nav class="section-nav docs-links">
+          <ul class="list-unstyled">
+            <!-- Навигация по разделам -->
+            {{ partial "section-nav" . }}
+          </ul>
+        </nav>
+         <!-- Стрелочка для раскрытия всех меню -->
+        <div class="expand-all-menu"></div>
+
+      </div>
+
+      <!-- Центральная колонка -->
+      <main class="docs-content col-lg-9 col-xl-{{ if .Page.Params.has_sections }}6{{ else }}9{{ end }} title-center **about-page-main**">
+        <h1 class="centered-heading">{{ .Title }}</h1>
+        <div class="team-page-content">
+            {{ .Content }}
+        </div>
+      </main>
+
+     <!-- Правая боковая панель - источники и оглавление -->
+      <nav class="col-lg-3 docs-sidebar sidebar-right d-none d-lg-block">
+        <div class="page-links">
+
+          {{ if .TableOfContents }}
+            <h3 class="mt-1 sources-toc-title">On this page</h3>
+            {{ .TableOfContents }}
+          {{ end }}
+          {{ if .Site.Data.sources }}
+          {{ $currentPageSlug := .File.BaseFileName }}
+                    {{ $filteredSources := slice }}
+                    {{ range .Site.Data.sources }}
+                        {{ if in .referenced_in $currentPageSlug }}
+                            {{ $filteredSources = $filteredSources | append . }}
+                        {{ end }}
+                    {{ end }}
+
+                    {{ if gt (len $filteredSources) 0 }}
+                    <h3 class="mt-1 centered-heading">
+                        <a href="/docs/reference-books/sources/">Sources</a>
+                    </h3>
+                    {{ partial "sources.html" (dict "context" . "sources" $filteredSources "displayNumbers" true) }}
+                    {{ end }}
+          {{ end }}
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "footer" }}
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>&copy; 2025 Balloting.Net. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <p>Новый текст</p>
+    </div>
+  </div>
+</footer>
+{{ end }}

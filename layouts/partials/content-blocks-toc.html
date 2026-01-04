@@ -1,0 +1,114 @@
+{{/* =============================================== */}}
+{{/* PARTIAL: content-blocks-toc.html               */}}
+{{/* Копия работающего sources-toc.html            */}}
+{{/* =============================================== */}}
+
+{{ $blocks := .Page.Params.content_blocks }}
+
+{{ if $blocks }}
+  {{ $headings := slice }}
+
+  {{/* Собираем H2 и H3 из content_blocks */}}
+  {{ range $blocks }}
+    {{ if and (eq .type "text") .content }}
+      {{ $content := .content }}
+      {{ $lines := split $content "\n" }}
+
+      {{ range $lines }}
+        {{ $line := trim . " \t\r\n" }}
+
+        {{ if hasPrefix $line "## " }}
+          {{ $title := trim (replace $line "## " "") " " }}
+          {{ $cleanTitle := replaceRE "\\*\\*([^*]+)\\*\\*" "$1" $title }}
+          {{ $cleanTitle = replaceRE "\\*([^*]+)\\*" "$1" $cleanTitle }}
+          {{ $cleanTitle = replaceRE "`([^`]+)`" "$1" $cleanTitle }}
+          {{ $cleanTitle = replaceRE "\\[([^\\]]+)\\]\\([^\\)]+\\)" "$1" $cleanTitle }}
+
+          {{ $headings = $headings | append (dict
+            "level" 2
+            "title" $cleanTitle
+            "id" ($cleanTitle | anchorize)
+            "subheadings" slice
+          ) }}
+
+        {{ else if hasPrefix $line "### " }}
+          {{ $title := trim (replace $line "### " "") " " }}
+          {{ $cleanTitle := replaceRE "\\*\\*([^*]+)\\*\\*" "$1" $title }}
+          {{ $cleanTitle = replaceRE "\\*([^*]+)\\*" "$1" $cleanTitle }}
+          {{ $cleanTitle = replaceRE "`([^`]+)`" "$1" $cleanTitle }}
+          {{ $cleanTitle = replaceRE "\\[([^\\]]+)\\]\\([^\\)]+\\)" "$1" $cleanTitle }}
+
+          {{ $headings = $headings | append (dict
+            "level" 3
+            "title" $cleanTitle
+            "id" ($cleanTitle | anchorize)
+            "parent" "temp"
+          ) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if gt (len $headings) 0 }}
+    {{/* Группируем H3 под соответствующими H2 */}}
+    {{ $grouped := slice }}
+    {{ $currentH2 := dict }}
+
+    {{ range $heading := $headings }}
+      {{ if eq $heading.level 2 }}
+        {{/* Сохраняем предыдущий H2 с его H3 */}}
+        {{ if $currentH2 }}
+          {{ $grouped = $grouped | append $currentH2 }}
+        {{ end }}
+
+        {{/* Начинаем новый H2 */}}
+        {{ $currentH2 = dict
+          "title" $heading.title
+          "id" $heading.id
+          "subheadings" slice
+        }}
+
+      {{ else if eq $heading.level 3 }}
+        {{/* Добавляем H3 к текущему H2 */}}
+        {{ if $currentH2 }}
+          {{ $currentH2 = merge $currentH2 (dict
+            "subheadings" ($currentH2.subheadings | append (dict
+              "title" $heading.title
+              "id" $heading.id
+            ))
+          ) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Добавляем последний H2 */}}
+    {{ if $currentH2 }}
+      {{ $grouped = $grouped | append $currentH2 }}
+    {{ end }}
+
+    {{/* Рендерим ТОЧНО ТАКУЮ ЖЕ структуру как в sources-toc.html */}}
+    <div class="page-links section-nav content-blocks-toc">
+       {{/*  <h3 class="mt-1 sources-toc-title">On this page</h3> */}}
+
+        <ul class="sources-toc list-unstyled">
+            {{ range $group := $grouped }}
+                <li>
+                    {{/* Ссылка на H2 */}}
+                    <a href="#{{ $group.id }}" class="sources-toc-link">{{ $group.title }}</a>
+
+                    {{/* Если есть H3, создаем nested-toc */}}
+                    {{ if gt (len $group.subheadings) 0 }}
+                        <ul class="nested-toc">
+                          {{ range $sub := $group.subheadings }}
+                            <li>
+                                <a href="#{{ $sub.id }}" class="sources-toc-link">{{ $sub.title }}</a>
+                            </li>
+                          {{ end }}
+                        </ul>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+  {{ end }}
+{{ end }}

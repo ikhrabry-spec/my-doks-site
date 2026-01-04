@@ -1,0 +1,177 @@
+- name: "The End of History?"
+  anchor: "The-End-of-History"
+  group_id: "Scholarly Articles"
+  referenced_in: ["Prerequisites"]
+  number: 1
+  description: "Fukuyama, Francis. 'The End of History?'' The National Interest, no. 16, Summer 1989, pp. 3-18."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Fukuyama, Francis. 'The End of History?'' The National Interest, no. 16, Summer 1989, pp. 3-18.</em></p>
+
+          <p><strong>Annotation:</strong> This provocative and widely debated essay first introduced Fukuyama's famous thesis. Written in the context of the collapse of the Berlin Wall and the end of the Cold War, it argues that the systematic failure of fascism and communism marks the ideological victory of Western liberal democracy as the final form of human government. Drawing on a Hegelian concept of history driven by the "struggle for recognition," the article posits that the end point of mankind's ideological evolution has been reached, sparking a global intellectual controversy about the future of geopolitics, democracy, and human society.</p>
+
+          <p><strong>Available at:</strong> <a href="https://archive.org/stream/THEENDOFHISTORYFUKUYAMA/THE%20END%20OF%20HISTORY%20-%20FUKUYAMA_djvu.txt"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://archive.org/stream/THEENDOFHISTORYFUKUYAMA/THE%20END%20OF%20HISTORY%20-%20FUKUYAMA_djvu.txt
+          </a></p>
+
+
+- name: "The End of History and the Last Man"
+  anchor: "The-End-of-History-and-the"
+  group_id: "Books and Monographs"
+  referenced_in: ["Prerequisites"]
+  number: 2
+  description: "Fukuyama, Francis. 'The End of History and the Last Man.' New York: Free Press, 1992."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Fukuyama, Francis. 'The End of History and the Last Man.' New York: Free Press, 1992.</em></p>
+
+          <p><strong>Annotation:</strong> In this comprehensive book, Fukuyama expands his controversial thesis into a full-scale philosophical and historical argument. He provides a deeper examination of the twin engines of history: modern natural science (which dictates a universal evolutionary pattern) and the Hegelian "struggle for recognition" (thymos). The work addresses major critiques of the original essay, analyzes the psychological and moral foundations of liberal democracy, and introduces the Nietzschean concept of the "last man"—the content, unambitious citizen of a prosperous post-historical world. This volume remains the definitive and systematic exposition of the "end of history" hypothesis.</p>
+
+          <p><strong>Available at:</strong> <a href="https://books.google.co.zm/books?id=4HQjTGWNfhwC&printsec=frontcover&hl=ru#v=onepage&q&f=false"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://books.google.co.zm/books?id=4HQjTGWNfhwC&printsec=frontcover&hl=ru#v=onepage&q&f=false
+          </a></p>
+
+- name: "The Clash of Civilizations?"
+  anchor: "The-Clash-of-Civilizations"
+  group_id: "Scholarly Articles"
+  referenced_in: ["Prerequisites"]
+  number: 3
+  description: "Huntington, Samuel P. 'The Clash of Civilizations?' Foreign Affairs, vol. 72, no. 3 (Summer 1993): 22-49."
+
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Huntington, Samuel P. 'The Clash of Civilizations?' Foreign Affairs, vol. 72, no. 3 (Summer 1993): 22-49.</em></p>
+
+          <p><strong>Annotation:</strong> This groundbreaking and highly influential article presented a revolutionary framework for understanding global politics in the post-Cold War era. Huntington argues that the fundamental source of conflict in the new world would not be primarily ideological or economic, but cultural. He posits that nation-states will remain the most powerful actors, but their alignments and conflicts will be shaped by the cultural affinities and divisions between seven or eight major civilizations (e.g., Western, Sinic, Islamic, Orthodox). The article served as a powerful counter-thesis to Francis Fukuyama's "end of history," predicting cultural and religious fault lines as the new battle lines of the future.</p>
+
+          <p><strong>Available at:</strong> <a href="https://www.grip.org/wp-content/uploads/2003/05/THE-CLASH-OF-CIVILIZATIONS_1993_Huntington.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.grip.org/wp-content/uploads/2003/05/THE-CLASH-OF-CIVILIZATIONS_1993_Huntington.pdf
+          </a></p>
+
+- name: "The Clash of Civilizations and the Remaking of World Order."
+  anchor: "The-Clash-of-Civilizations-and"
+  group_id: "Books and Monographs"
+  referenced_in: ["Prerequisites"]
+  number: 4
+  description: "Huntington, Samuel P. 'The Clash of Civilizations and the Remaking of World Order.' New York: Simon & Schuster, 1996."
+
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Huntington, Samuel P. 'The Clash of Civilizations and the Remaking of World Order.' New York: Simon & Schuster, 1996.</em></p>
+
+          <p><strong>Annotation:</strong> In this comprehensive book, Huntington elaborates the thesis of his famous article into a detailed and systematic analysis of international relations. He deepens the definition of civilizations as the broadest level of cultural identity, examines the dynamics within and between them (including the concept of "kin-country rallying" and the "torn countries"), and analyzes the declining influence of the West in a multipolar civilizational world. The book addresses critiques of the original essay, explores the specific challenges posed by Confucian and Islamic civilizations, and discusses the conditions for preserving Western unity and identity. It stands as the definitive statement of a paradigm that reshaped debates on globalization, multiculturalism, and international security after the Cold War.</p>
+
+          <p><strong>Available at:</strong> <a href="https://msuweb.montclair.edu/~lebelp/1993SamuelPHuntingtonTheClashOfCivilizationsAndTheRemakingofWorldOrder.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://msuweb.montclair.edu/~lebelp/1993SamuelPHuntingtonTheClashOfCivilizationsAndTheRemakingofWorldOrder.pdf
+          </a></p>
+
+- name: "Master's Thesis (Barelli, 2023)"
+  anchor: "MasterThesisBarelli"
+  group_id: "Theses and Dissertations"
+  referenced_in: ["Requirements"]
+  number: 1
+  description: "Academic literature review of electronic voting systems and documented attack vectors."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Barelli, Riccardo. Towards Secure Electronic Voting: A Literature Review on E-Voting Systems and Attacks. Master's thesis. Polytechnic University of Milan, School of Industrial and Information Engineering, May 2023. Electronic thesis (PDF).</em></p>
+
+          <p><strong>Annotation:</strong> This master's thesis presents a systematic review of academic and technical literature on electronic voting systems, focusing on their security properties and known vulnerabilities. The work surveys existing e-voting architectures, threat models, and documented attacks, emphasizing that most system designs concentrate on cryptographic secrecy and integrity while underestimating coordinated malicious actions by insiders, participants, or institutional actors. The thesis provides a structured analytical foundation for understanding why existing electronic voting systems fail to meet the requirements of state-level secret ballots.
+
+          <p><strong>Publisher:</strong> Polytechnic University of Milan — a public technical university and academic degree-granting institution. Master’s theses are published as part of its official academic output.
+
+          <p><strong>Available at:</strong> <a href="https://www.politesi.polimi.it/bitstream/10589/203908/3/2023_5_Barelli.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.politesi.polimi.it/bitstream/10589/203908/3/2023_5_Barelli.pdf
+          </a></p>
+
+- name: "IEEE Survey Article — Barelli et al."
+  anchor: "IEEESurveyArticle"
+  group_id: "Scholarly Articles"
+  referenced_in: ["Requirements"]
+  number: 2
+  description: "Peer-reviewed technical survey of electronic voting systems and attack models."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>2)"Riccardo Barelli, Mario D'Ongia, Stefano Longari. 'Toward Secure Electronic Voting: A Survey on E-Voting Systems and Attacks', Publisher: IEEE, published 2023. Electronic journal article (PDF)</em></p>
+
+          <p><strong>Annotation:</strong> This IEEE-published survey article analyzes a broad range of electronic voting systems and documented attack scenarios, synthesizing findings from prior academic research. The authors classify attack vectors affecting secrecy, integrity, availability, and trustworthiness, and demonstrate that purely technical safeguards cannot ensure robustness against coordinated hostile actions involving voters, officials, developers, or auditors. The article contributes to the understanding that technical correctness alone is insufficient for public electoral use without institutional and procedural resilience.
+
+          <p><strong>Publisher:</strong> IEEE (Institute of Electrical and Electronics Engineers) — an international professional association and academic publisher of peer-reviewed scientific and engineering research.
+
+          <p><strong>Available at:</strong> <a href="https://www.researchgate.net/publication/391686424_Towards_Secure_Electronic_Voting_a_Survey_on_E-Voting_Systems_and_Attacks"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.researchgate.net/publication/391686424_Towards_Secure_Electronic_Voting_a_Survey_on_E-Voting_Systems_and_Attacks
+          </a></p>
+
+- name: "Going from Bad to Worse"
+  anchor: "GoingfromBadtoWorse"
+  group_id: "Scholarly Articles"
+  referenced_in: ["Requirements"]
+  number: 3
+  description: "Critical academic analysis of Internet and blockchain-based voting systems."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Sunoo Park, Michael Specter, Neha Narula, and Ronald L. Rivest, MIT. 'Going from Bad to Worse: From Internet Voting to Blockchain Voting.' Journal of Cybersecurity, Volume 7, Issue 1, February 16, 2021. Electronic journal article (PDF).</em></p>
+
+          <p><strong>Annotation:</strong> This article presents a comprehensive critique of Internet voting and blockchain-based voting systems based on the analysis of 106 academic publications, technical reports, and system deployments. The authors demonstrate that blockchain technologies do not resolve the fundamental security, coercion, and verifiability problems of online voting and often exacerbate them.
+
+          A key contribution of the paper is the formulation of a detailed checklist of necessary but unsatisfied conditions for a secure online voting system, including voter authentication without coercion, end-to-end verifiability without vote selling, resistance to insider attacks, transparency without compromising secrecy, and meaningful auditability. The authors argue that the absence of credible answers to these questions renders Internet and blockchain voting unsuitable for governmental elections.
+
+          <p><strong>Publisher:</strong> Journal of Cybersecurity (Oxford University Press) — a peer-reviewed academic journal specializing in security research at the intersection of technology, policy, and society.
+
+          <p><strong>Scientific Supervision:</strong> The research was conducted under the auspices of the MIT Computer Science and Artificial Intelligence Laboratory (CSAIL). Several authors are affiliated with MIT, including Ronald L. Rivest, one of the inventors of the RSA cryptosystem. MIT provided the academic research environment and institutional backing.
+
+          <p><strong>Available at:</strong> <a href="https://doi.org/10.1093/cybsec/tyaa025"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+          https://doi.org/10.1093/cybsec/tyaa025
+          </a></p>
+
+
+
+

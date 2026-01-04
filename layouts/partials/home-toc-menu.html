@@ -1,0 +1,23 @@
+<div class="homepage-menu">
+  <hr>
+  <h3>Оглавление сайта</h3>
+  <div class="row">
+    {{ with .Site.Menus.main }}
+    {{ range . }}
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{{ .URL }}">{{ .Name }}</a></h5>
+          <p class="card-text">{{ .Title }}</p>
+          <ul>
+            {{ range .Children }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>

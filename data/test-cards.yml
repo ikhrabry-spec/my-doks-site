@@ -1,0 +1,239 @@
+
+- name: "ООО 'НаноТех'"
+  group_id: "Сайты"
+  attributes:
+    ownership: "Private"
+    rd_presence: "Low"
+  fields:
+    address: "Санкт-Петербург, пр. Энгельса, 150"
+    url: "http://www.nanotech.ru"
+    subtitles:
+      - "Композитные материалы"
+      - "Специальные покрытия"
+
+- name: "Научный Фонд 'Прогресс'"
+  group_id: "Книги"
+  attributes:
+    ownership: "State"
+    rd_presence: "High"
+    region: ["spb", "ekb"]  # <-- несколько регионов
+
+  fields:
+    address: "Новосибирск, ул. Академическая, 3"
+    url: ""
+    subtitles:
+      - "Анализ угроз"
+
+- name: "АйТи-Решения"
+  group_id: "Книги"
+  attributes:
+    ownership: "Private"
+    rd_presence: "Low"
+  fields:
+    address: "Казань, ул. Баумана, 5"
+    url: "http://www.itsolutions.ru"
+    subtitles:
+      - "Веб-разработка"
+      - "Мобильные приложения"
+
+- name: "КБ 'Восход'"
+  group_id: "Книги"
+  attributes:
+    ownership: "State"
+    rd_presence: "High"
+    region: "moscow" # <-- Избыточное поле для фильтрации
+  fields:
+    short_field_1: "Москва"
+    full_detail_1: "Год основания: 1960"
+    date_added: "2025-01-15" # <-- Избыточное поле (не для фильтрации)
+    comment: "Очень важный источник."
+
+- name: "Аналитический центр 'Цифра'"
+  group_id: "Статьи"
+  attributes:
+    ownership: "Private"
+    rd_presence: "Low"
+    region: "spb" # <-- Избыточное поле для фильтрации
+  fields:
+    short_field_1: "Санкт-Петербург"
+    full_detail_1: "Год основания: 2018"
+    date_added: "2024-11-20" # <-- Избыточное поле (не для фильтрации)
+    comment: "Рекомендовано для изучения."
+
+- name: "Название Компании A"
+  group_id: "Статьи"
+  fields:
+    description: "Описание..."
+    # ... другие поля
+
+  media: # <--- ЭТОТ СПИСОК КРИТИЧЕСКИ ВАЖЕН
+    #- type: "image"
+      #path: "/img/cards/photo-1.jpg"
+      #alt: "Снимок 1"
+    - type: "video_youtube"
+      url: "https://www.youtube.com/embed/VIDEO_ID_HERE"
+      alt: "Видео на YouTube"
+    #- type: "image"
+      #path: "/img/cards/photo-2.jpg"
+      #alt: "Снимок 2"
+
+
+
+
+
+
+- name: "Meta"
+  group_id: "Сайты"
+  number: 1
+  referenced_in: ["problems"]
+  description: "Научное исследование работы мета."
+  more_details_page: /docs/inside/prospects/
+  type:
+    address: "Автор: И. С. Иванов, Год: 2023, Издательство: ABC"
+    url:
+    more_details_page: /docs/inside/prospects/
+    full_content_file: "rasskazy-o-meta-full-content.md"
+    label: "Закон"
+    key: "law"
+
+- name: "History"
+  group_id: "Сайты"
+  #number: 2
+  referenced_in: ["problems"]
+  description: "Подробный анализ смысла жизни.В настоящее время люди, принимающие участие в демократической процедуре принятия решения, формируют своё мнение на основе информации, полученной ими из средств массовой информации и общения в своём [1] кругу. Этот круг часто формируется из единомышленников и становится коконом, блокирующим инакомыслие. При этом источником. причём единственным, остаются средства массовой информации. В которых наряду с информацией гуляет дезинформация и агитация, читай пропаганда."
+  fields:
+    subtitles:
+    - "Это очень важный подзаголовок"
+    description: "Подробный анализ смысла жизни.В настоящее время люди, принимающие участие в демократической процедуре принятия решения, формируют своё мнение на основе информации, полученной ими из средств массовой информации и общения в своём [1] кругу. Этот круг часто формируется из единомышленников и становится коконом, блокирующим инакомыслие. При этом источником. причём единственным, остаются средства массовой информации. В которых наряду с информацией гуляет дезинформация и агитация, читай пропаганда."
+    address: ""
+    url: "http://mebel.sppok.ru"
+    referenced_in: ["problems"]
+    more_details_page: "/empty/contacts/"
+    url: /empty/contacts/
+    is_details_page: false
+    label: "Закон"
+    key: "law"
+
+- name: "Vatson"
+  number: 1
+  group_id: "Книги"
+  type:
+    description: "Простой тест на здоровье"
+    address: ""
+    url: http://mebel.sppok.ru
+    referenced_in: ["some-other-page"]
+    url: /docs/aspects/
+    more_details_page: /aspects/
+    more_details_page: "Просто неочем писать"
+    is_details_page: false
+
+- name: Holms
+  group_id: "Книгии"
+  more_details_page: /docs/inside/prospects/
+  url: "http://mebel.sppok.ru"
+  label: "Закон"
+  key: "law"
+
+- name: "Vatson"
+  group_id: "Книги"
+  #number: 1
+  type:
+    description: " «Расходы на организацию выборов в местных избирательных округах: результаты общенационального проекта по сбору данных», доклад на конференции по избирательным наукам, реформе и управлению (ESRA) 2018 года в Университете Висконсин-Мэдисон, (авторы: Закари Мур, доктор философии - CGFM, Марта Кропф, доктор философии, Джоэллен Поуп - MPA KPA, Мэри Джо Шепард, доктор философии, и Мэдисон Эстерле - MPA)"
+    address: ""
+    url: http://mebel.sppok.ru
+    referenced_in: ["costs"]
+    url: /docs/aspects/
+    more_details_page: ""
+    more_details_page: ""
+    is_details_page: false
+    label: "Статья"
+    key: "article"
+
+
+
+- name: "Almaz-antey"
+  anchor: "almaz"
+  group_id: "Official Publications" # <-- Используется для привязки к заголовку H3
+
+  referenced_in: ["Problems"]
+  number: 1
+  description: "Самыые ключевые центры разработки вооружений и военной техники"
+  more_details_page: /docs/empty/prospects/
+
+  attributes:
+    ownership: "State"      # <-- Используется для ФИЛЬТРАЦИИ
+    rd_presence: "High"     # <-- Используется для ФИЛЬТРАЦИИ
+    region: ["moscow", "spb"]  # <-- массив регионов
+
+  fields:
+    short_field_1: "Москва"
+
+    description: "Ключевые центры разработки вооружений и военной техники
+      - Радиолокационные комплексы
+      - Зенитно-ракетные системы"
+    address: "Москва, ул. Старая Басманная, 25"
+    url: "http://www.almaz-antey.ru"
+    subtitles:
+      - "Радиолокационные комплексы"
+      - "Зенитно-ракетные системы"
+  media: # <--- ЭТОТ СПИСОК КРИТИЧЕСКИ ВАЖЕН
+    - type: "image"
+      path: "images/foto/Iosif.png"
+      alt: "Снимок 1"
+
+    - type: "video_youtube"
+      url: "https://www.youtube.com/embed/VIDEO_ID_HERE"
+      alt: "Видео на YouTube"
+
+    #- type: "video_local" # <--- НОВЫЙ ТИП
+    #  path: "video/my-promo-clip.mp4" # <--- ПУТЬ ВНУТРИ assets/
+    #  alt: "Промо-ролик"
+
+
+# ============ ДОБАВЛЕННАЯ КАРТОЧКА ============
+- name: "Test 1 Symple card"
+  anchor: "test-simple-card"
+  group_id: "TThematic websites"
+  referenced_in: ["test", "test-page"]  # ← ДОБАВЛЕНО "test-page"
+  number: 99
+  description: |
+    Это **простая карточка**, созданная для проверки совместимости со старым форматом.
+    Она использует обычное поле `description`.
+    - Проверяет базовый рендеринг Markdown
+    - Не использует систему блоков `content_blocks`
+  more_details_page: /empty/test-page/
+  attributes:
+    category: ["test", "simple", "legacy"]
+    priority: "low"
+    status: "active"
+  fields:
+    short_field_1: "Тестовая карточка"
+    description: |
+      Это **простая карточка**, созданная для проверки совместимости со старым форматом.
+      Она использует обычное поле `description`.
+      - Проверяет базовый рендеринг Markdown
+      - Не использует систему блоков `content_blocks`
+    address: "Москва, ул. Тестовая, 1"
+    url: "https://example.com"
+    subtitles:
+      - "Тестирование"
+      - "Совместимость"
+      - "Демонстрация"
+# ==============================================
+
+
+
+- name: "Rostech"
+  group_id: "Thematic websites"
+  referenced_in: ["Problems"]
+  number: 1
+  description: "Самыые ключевые"
+  attributes:
+    region: ["moscow"]  # <-- один регион в массиве
+
+- name: "Gazprom"
+  group_id: "Thematic websites"
+  referenced_in: ["Problems"]
+  number: 2
+  attributes:
+    region: ["spb", "ekb"]  # <-- несколько регионов

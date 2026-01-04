@@ -1,0 +1,115 @@
+<div class="patents-container">
+    <div class="patents-header"></div>
+    <ul class="patents-list" id="patents-list">
+        {{ $isPatentsPage := and (eq .context.Kind "page") (eq .context.File.BaseFileName "Patents") }}
+        {{ $currentPageSlug := .context.File.BaseFileName }}
+        {{ $showNumbers := .displayNumbers }}
+        {{ $counter := 0 }}
+
+        {{ $patentsToDisplay := .context.Site.Data.Patents }}
+
+        {{ if not $isPatentsPage }}
+            {{ $patentsToDisplay = slice }}
+            {{ range .context.Site.Data.Patents }}
+                {{ if in .referenced_in $currentPageSlug }}
+                    {{ $patentsToDisplay = $patentsToDisplay | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $patentsToDisplay }}
+            {{ $counter = add $counter 1 }}
+
+            {{/* ГЕНЕРАЦИЯ cardId */}}
+            {{ $cardId := "" }}
+            {{ with .anchor }}
+                {{ $cardId = trim . " " }}
+            {{ end }}
+            {{ if eq $cardId "" }}
+                {{ with .name }}
+                    {{ $cardId = . | urlize }}
+                {{ else }}
+                    {{ $cardId = printf "patent-%d" $counter }}
+                {{ end }}
+            {{ end }}
+
+            <li class="patent-item"
+                id="card-{{ $cardId }}"
+                data-card-id="{{ $cardId }}"
+                data-patent-number="{{ $counter }}"
+                data-patent-name="{{ .name | default .title }}">
+
+                <!-- КОРОТКИЙ ВИД -->
+                <span class="patent-item-short">
+                    {{ if $showNumbers }}
+                        <span class="patent-number">{{ $counter }}.</span>
+                        <span class="patent-name">{{ .name | default .title }}</span>
+                    {{ end }}
+                </span>
+
+                <!-- ПОЛНЫЙ ВИД -->
+                <span class="patent-item-full" style="display: none;">
+                    <span class="patent-item-header">
+                        <span class="patent-number">{{ $counter }}.</span>
+                        <span class="patent-name">{{ .name | default .title }}</span>
+                    </span>
+                    <div class="patent-details">
+                        <p>
+                            <!--{{ with .number }}<strong>Номер патента:</strong> {{ . }}<br>{{ end }}-->
+                            {{ with .inventor }}<strong>Изобретатель:</strong> {{ . }}<br>{{ end }}
+                            {{ with .year }}<strong>Год:</strong> {{ . }}<br>{{ end }}
+                            {{ with .country }}<strong>Страна:</strong> {{ . }}<br>{{ end }}
+                            {{ .description }}
+                            <br>
+                            {{ if .url }}
+                                <a href="{{ .url }}" target="_blank">{{ .url }}</a>
+                            {{ end }}
+                        </p>
+
+                        <!-- ССЫЛКА -->
+                        {{ $collectionBaseUrl := "/docs/reference-books/patents/" }}
+                        <div class="patent-item-more-details">
+                            <a href="{{ $collectionBaseUrl }}#card-{{ $cardId }}"
+                               class="more-details-button"
+                               onclick="return saveScrollPositionForPatents(event)">
+                                More detailed
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+
+<script>
+// ФУНКЦИЯ СОХРАНЕНИЯ ДЛЯ PATENTS
+function saveScrollPositionForPatents(event) {
+    console.log('📍 [PATENTS] Сохраняем данные для возврата...');
+
+    // Находим карточку
+    const link = event.currentTarget;
+    const card = link.closest('.patent-item');
+
+    if (!card) {
+        console.error('❌ Карточка патента не найдена');
+        return true;
+    }
+
+    // Получаем номер маркера
+    const patentNumber = card.getAttribute('data-patent-number');
+
+    // Очищаем ВСЁ для чистоты
+    sessionStorage.clear();
+
+    // Сохраняем тип И номер
+    sessionStorage.setItem('markerType', 'patent');  // КЛЮЧЕВОЕ!
+    sessionStorage.setItem('markerNumber', patentNumber);
+    sessionStorage.setItem('scrollTop', window.pageYOffset);
+    sessionStorage.setItem('timestamp', Date.now());
+
+    console.log('💾 [PATENTS] Сохранено тип: patent, номер:', patentNumber);
+
+    return true; // Разрешаем переход
+}
+</script>

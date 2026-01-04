@@ -1,0 +1,28 @@
+{{/* handbook-router.html - ПРОСТОЙ РАЗВЕТВИТЕЛЬ */}}
+
+{{ $data := .source }}
+{{ $index := .index }}
+
+{{/* ПРОВЕРЯЕМ ТОЛЬКО ФОРМАТ ДАННЫХ */}}
+{{ $isAdvanced := false }}
+
+{{/* Если есть sections → расширенный формат */}}
+{{ if $data.sections }}
+    {{ $isAdvanced = true }}
+{{ end }}
+
+{{/* Если есть columns_data → расширенный формат */}}
+{{ if and $data.fields $data.fields.columns_data }}
+    {{ $isAdvanced = true }}
+{{ end }}
+
+{{/* ВЫБИРАЕМ ШАБЛОН */}}
+{{ if $isAdvanced }}
+    {{ partial "handbook-advanced.html" (dict
+        "source" $data
+        "index" $index) }}
+{{ else }}
+    {{ partial "handbook-card.html" (dict
+        "source" $data
+        "index" $index) }}
+{{ end }}

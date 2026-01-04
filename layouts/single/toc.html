@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="toc-container">
+  {{ .Content }}
+</div>
+
+<style>
+  .toc-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1; /* Таблица займет все доступное пространство */
+    margin: 0;
+  }
+  tr {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Строки равномерно распределяются */
+  }
+  td {
+    flex: 1;
+  }
+</style>
+{{ end }}

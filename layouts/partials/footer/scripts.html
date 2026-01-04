@@ -1,0 +1,19 @@
+<!-- Основные скрипты -->
+
+
+{{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true) }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+
+<!-- Google Analytics -->
+{{ if .Site.GoogleAnalytics }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
+
+<!-- Дополнительные скрипты -->
+{{ if .Site.Params.customJS }}
+  {{ range .Site.Params.customJS }}
+    <script src="{{ . | relURL }}" defer></script>
+  {{ end }}
+{{ end }}
+
+

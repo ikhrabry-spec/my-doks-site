@@ -1,0 +1,47 @@
+# data/Legal-field_grouping.yml
+
+- name: "Laws & Statutes"
+  header_text: "Legislation establishing the legal foundations of electoral systems and digital democracy."
+  subtypes:
+    - name: "Electoral Laws & Voting Rights"
+      centered_subtitle: "Electoral Laws & Voting Rights"
+      description_text: "Statutes defining electoral procedures, eligibility, and protection of voting rights."
+    - name: "Electronic Voting & Digital Democracy Regulations"
+      centered_subtitle: "Electronic Voting & Digital Democracy Regulations"
+      description_text: "Laws and regulations governing electronic voting systems and their implementation in public decision-making processes."
+    - name: "Data Protection & Privacy Laws"
+      centered_subtitle: "Data Protection & Privacy Laws"
+      description_text: "Regulations ensuring the security and lawful use of personal information."
+    - name: "Public Opinion Research & Polling Regulations"
+      centered_subtitle: "Public Opinion Research & Polling Regulations"
+      description_text: "Detailed legal instruments specifying technical, procedural, and administrative aspects of election law."
+
+- name: "Secondary Legislation & Guidelines"
+  header_text: "Interpretative and analytical works explaining and assessing electoral and data protection law."
+  subtypes:
+    - name: "Technical Standards & Certifications"
+      centered_subtitle: "Technical Standards & Certifications"
+      description_text: "Official requirements for hardware, software, and security systems used in elections."
+    - name: "Administrative Regulations & Procedures "
+      centered_subtitle: "Administrative Regulations & Procedures "
+      description_text: "Rules detailing the organization and management of electoral processes."
+
+- name: "Legal Commentary & Analysis"
+  header_text: "Detailed legal instruments specifying technical, procedural, and administrative aspects of election law."
+  subtypes:
+    - name: "Commentary on Electoral Legislation"
+      centered_subtitle: "Commentary on Electoral Legislation"
+      description_text: "Expert and academic interpretations of electoral law provisions and reforms."
+    - name: "Analysis of Data Protection Laws"
+      centered_subtitle: "Analysis of Data Protection Laws"
+      description_text: "Legal studies evaluating the application and evolution of privacy and data protection norms."
+
+- name: "Case Law & Jurisprudence"
+  header_text: "Judicial decisions interpreting and enforcing electoral and data protection laws."
+  subtypes:
+    - name: "Court Rulings on Electoral Disputes"
+      centered_subtitle: "Court Rulings on Electoral Disputes"
+      description_text: "Cases addressing election validity, campaign conduct, and voter rights."
+    - name: "Judicial Practice on Data Protection & Privacy"
+      centered_subtitle: "Judicial Practice on Data Protection & Privacy"
+      description_text: "Judgments clarifying the scope and enforcement of data protection and privacy laws."

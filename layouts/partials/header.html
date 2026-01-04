@@ -1,0 +1,156 @@
+<header class="header">
+    <div class="header-container">
+        <nav class="navbar">
+            <a href="/" class="navbar-brand">
+                <img
+                    src="{{ .Site.Params.header.logo }}"
+                    alt="{{ .Site.Title }}"
+                    class="header-logo"
+                >
+            </a>
+
+            <div class="header-controls">
+                {{ if .Site.Params.header.show_search }}
+
+                {{/* ОСНОВНОЙ КОНТЕЙНЕР ДЛЯ ВСЕХ ЭЛЕМЕНТОВ ПОИСКА */}}
+                <div class="search-block">
+
+
+                    {{/* 1. КОНТЕЙНЕР ДЛЯ ТЕКСТОВОГО ПОЛЯ (UI для filter-text и page-highlight) */}}
+                    <div class="search-input-wrapper" id="search-input-container">
+                        <input
+                            type="search"
+                            id="search-input"
+                            name="q"
+                            placeholder="Search & Filter"
+                            aria-label="Search"
+                            class="search-input"
+                            autocomplete="off"
+                        >
+                        {{/* Кнопка "Очистить" (для режима site/page-highlight) */}}
+                        <button type="button" class="clear-search-btn" id="clear-search-btn" style="display: none;">×</button>
+
+                        {{/* 4. Универсальная кнопка удаления фильтра (для filter-text) */}}
+                        <button type="button" class="btn filter-remove-btn" id="filter-remove-btn" style="display: none;">
+                            {{ $filterRemoveIcon := resources.Get "images/icon/filter-xmark.svg" }}
+                            <img src="{{ $filterRemoveIcon.RelPermalink }}" alt="Remove filter">
+                        </button>
+                    </div>
+
+                    {{/* 2. ИЗОЛИРОВАННЫЙ БЛОК ДЛЯ UI АТРИБУТНОГО ФИЛЬТРА */}}
+                    {{ $path := .Page.RelPermalink }}
+                    {{ $targetSection := "" }}
+
+                    <div id="filter-attribute-ui" class="filter-attribute-ui d-none">
+
+                        {{/* ** ЛОГИКА: Получаем имя секции из URL ** */}}
+
+                        {{ if hasPrefix $path "/docs/reference-books/companies/" }}
+                            {{ $targetSection = "companies" }}
+                        {{ else if hasPrefix $path "/docs/reference-books/sources/" }}
+                            {{ $targetSection = "sources" }}
+                        {{ else if hasPrefix $path "/docs/reference-books/legislation/" }}
+                            {{ $targetSection = "legislation" }}
+                        {{ else if hasPrefix $path "/docs/reference-books/patents/" }}
+                            {{ $targetSection = "patents" }}
+                        {{ else if hasPrefix $path "/docs/reference-books/publications/" }}
+                            {{ $targetSection = "publications" }}
+                        {{ end }}
+
+                        {{/* Проверяем, что извлеченное имя секции не пустое, и вызываем Partial */}}
+                        {{ if ne $targetSection "" }}
+
+                            {{/* Здесь будет сгенерирован ваш HTML с селектами */}}
+                            {{ partial "filter-by-attribute.html" (dict "context" . "section" $targetSection) }}
+
+                        {{ end }}
+
+                        <button id="filter-attribute-remove-btn" class="btn filter-remove-btn d-none" type="button">
+                            {{ $filterRemoveIcon := resources.Get "images/icon/filter-xmark.svg" }}
+                            <img src="{{ $filterRemoveIcon.RelPermalink }}" alt="Remove filter">
+                        </button>
+
+                        <div id="attribute-filter-info" class="attribute-filter-info" style="display: none;">
+                            <span id="active-filter-display"></span>
+                        </div>
+                    </div>
+
+                    <div class="search-controls">
+
+                        {{/* 3. Блок переключения режимов (ТРИ ТОЧКИ) */}}
+                        <div class="search-mode-container">
+                            <button type="button" class="btn search-mode-toggle" id="search-mode-toggle">
+                                <img src="{{ (resources.Get "images/icon/Three dots.svg").RelPermalink }}" alt="Переключить режим поиска">
+                            </button>
+
+                            {{/* Выпадающее меню режимов */}}
+                            <div class="search-mode-dropdown" id="search-mode-dropdown" style="display: none;">
+
+
+                                <ul class="search-mode-list" id="search-mode-list">
+
+                                    {{/* Ваши оригинальные пункты меню */}}
+                                    <li data-mode="page-highlight">
+                                        <span class="mode-icon">
+                                            <img src="{{ (resources.Get "images/icon/Search (2).svg").RelPermalink }}" alt="Find on this Page">
+                                        </span>
+                                        Find on this Page
+                                    </li>
+                                    <li data-mode="site">
+                                        <span class="mode-icon">
+                                            <img src="{{ (resources.Get "images/icon/Search (2).svg").RelPermalink }}" alt="Search this site">
+                                        </span>
+                                        Search this site
+                                    </li>
+                                    <li data-mode="filter-text">
+                                        <span class="mode-icon">
+                                            <img src="{{ (resources.Get "images/icon/Filter (2).svg").RelPermalink }}" alt="Contains Text">
+                                        </span>
+                                        Contains Text
+                                    </li>
+
+                                    {{/* ⭐ ИСПРАВЛЕННЫЙ ПУНКТ МЕНЮ С НОВЫМ ID ⭐ */}}
+                                    <li data-mode="filter-attribute" id="filter-mode-menu-item">
+                                        <span class="mode-icon">
+                                            <img src="{{ (resources.Get "images/icon/Filter (2).svg").RelPermalink }}" alt="Filter by Attribute">
+                                        </span>
+                                        Filter by Attribute
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        {{/* 5. Элементы пагинации */}}
+                        <div class="search-pagination" id="search-pagination" style="display: none;">
+                            <span class="search-indicator" id="search-indicator">0/0</span>
+                            <button type="button" class="btn" id="next-btn">
+                                <img src="{{ (resources.Get "images/icon/Arrow-down-thin.svg").RelPermalink }}" alt="Следующий результат">
+                            </button>
+                            <button type="button" class="btn" id="prev-btn">
+                                <img src="{{ (resources.Get "images/icon/Arrow-up-thin.svg").RelPermalink }}" alt="Предыдущий результат">
+                            </button>
+                        </div>
+                    </div>
+
+                    {{/* ⭐ ИСПРАВЛЕНИЕ: КОНТЕЙНЕР РЕЗУЛЬТАТОВ ВЫНЕСЕН ИЗ search-controls и находится прямо в search-block */}}
+                    <div class="search-results-container" id="search-results-container" style="display: none;">
+                        <ul class="search-results-list"></ul>
+                    </div>
+
+                </div> {{/* Закрывающий тег для search-block */}}
+
+
+
+                {{/* Кнопка переключения вида карточек (находится вне search-block) */}}
+                <button type="button" id="toggle-cards-button" class="btn btn-primary">
+                    {{ $listIcon := resources.Get "images/icon/icon-list.svg" }}
+                    {{ $descIcon := resources.Get "images/icon/icon-text.svg" }}
+                    <img id="list-icon" src="{{ $listIcon.RelPermalink }}" alt="List" style="display: none;">
+                    <img id="desc-icon" src="{{ $descIcon.RelPermalink }}" alt="Text">
+                </button>
+                {{ end }}
+            </div>
+        </nav>
+    </div>
+</header>

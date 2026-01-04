@@ -1,0 +1,2055 @@
+
+- name: "US20240244049A1"
+  anchor: "US20240244049A1"
+  group_id: "Use of complex technologies"
+  referenced_in: ["A_cure-all_technology"]
+  number: 1
+  description: "A peer-to-peer video authentication method that verifies real human presence through unpredictable actions and reactions, preventing bots and proxy voting even when attackers possess stolen credentials or biometric data."
+  content_blocks:
+
+    - type: "text"
+      content: |
+         <p><em><strong>Cross-authentication with the use of selfie video</strong>
+
+          - <strong>inventors:</strong> Khrabryi, Aleksandr
+          - <strong>published date:</strong> 2024-07-18
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Abstract (quote):</strong> A system and method of mutual authentication of group members through video is presented. The presented invention proposes a method for authenticating a group of people using computer devices equipped with video recording devices inter-connected into a peer-to-peer overlay network. The verification is based on the analysis of actions and reactions of a user that are inseparable from their appearance and represent either their response to unpredictable video situations or their actions according to unpredictable instructions. The invention is efficient, in particular, for online voter authentication, where it counters malicious actors that might have access to personal authentication data of voters. It prevents these actors from using this authentication data (e.g., certificates, tokens, biomarkers, photos and videos of voters) to create bots voting instead of real people. In addition, it prevents fake user authentication through devices and passwords that were seized or stolen from voters.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20240244049A1/en?oq=US20240244049A1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20240244049A1/en?oq=US20240244049A1
+          </a></p>
+
+- name: "US20240403987A1"
+  anchor: "US20240403987A1"
+  group_id: "Peer-to-peer voting"
+  referenced_in: ["A_cure-all_technology"]
+  number: 2
+  description: "A system for transparently creating and verifying voter lists within any community or territory, enabling public oversight of voter registration and preventing the inclusion of ineligible or non-existent ones."
+  content_blocks:
+
+    - type: "text"
+      content: |
+         <p><em><strong>System and method for creating, maintaining and verifying voter lists</strong>
+
+          - <strong>inventors:</strong> Khrabryi, Aleksandr
+          - <strong>published date:</strong> 2024-12-05
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Abstract (quote):</strong> The system and method for creating and verifying a list of voters specific to some territory or any community have been announced, providing for: first, the capability for any user or several users together to create a community of voters, while specifying the characteristics of the positions that can be occupied by members of this community, and, second, keeping accurate records of the participants of this community, allowing them, as well as outside observers, to check at any time: a list of positions within this community, and the list of individuals included in this community.The present invention is intended to enable public monitoring of the activities of election commissions for the assembly and maintenance of voter lists, with the aim to exclude the possibility of uncontrolled entry into these lists of non-existent persons and persons who do not have the right to be voters.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20240403987A1/en?oq=US20240403987A1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20240403987A1/en?oq=US20240403987A1
+          </a></p>
+
+
+- name: "US20250182552A1"
+  anchor: "US20250182552A1"
+  group_id: "Composite technologies"
+  referenced_in: ["A_cure-all_technology"]
+  number: 3
+  description: "A peer-to-peer online voting system that prevents vote loss, stuffing, and substitution, allows voters to verify and change their votes during the voting period, and publishes immediate, publicly verifiable results at low organizational cost."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>System and method of secret online voting countering vote stuffing and substitution, vote trading and pressure on voters</strong>
+
+          - <strong>inventors:</strong> Khrabryi, Aleksandr
+          - <strong>published date:</strong> 2024-10-14
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Abstract (quote):</strong> The proposed system and method eliminate the possibility of vote loss, stuffing and substitution during secret online voting. Voters can verify the accuracy of their votes in the final results only during the public procedure. They also have the option to change their choice within the allotted voting period, eliminating the motivation behind vote trading and coercion. Results are available to all participants immediately after the voting concludes. Additionally, a view of the social distribution of preferences can be obtained. At the core of the system are personal devices connected into a peer-to-peer network. The invention relies on direct messaging between devices within the network, employing asymmetric multi-stage encryption, distributed storage of information with redundancy, and independent processing by each device. Together, these elements minimize the computational resources and financial costs for voting organizers.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20250182552A1/en?oq=US20250182552A1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20250182552A1/en?oq=US20250182552A1
+          </a></p>
+
+- name: "US20230083852A1"
+  anchor: "US20230083852A1"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 1
+  description: "Methods of admission to voting on a document and data in the database"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Methods of admission to voting on a document and data in the database</strong>
+
+          - <strong>inventors:</strong> Abdelkader M'hamed, Benkreira Joshua Edwards, Michael Mossoba,
+          - <strong>priority date:</strong> November 14, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies voter identity by first comparing a selfie image of the user’s face with a photo contained in an identity document, and second by recognizing data objects and symbols in the document using OCR and computer vision. Based on the recognition results, the system identifies the document type, calculates a document validity index, and displays the user’s confidence status according to predefined thresholds derived from facial correspondence and document validity.
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230083852A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230083852A1/en
+          </a></p>
+
+- name: "US20220138298A1"
+  anchor: "US20220138298A1"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 2
+  description: "Methods of admission to voting on a document and data in the database"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Methods of identity verification using facial images and identity documents</strong>
+
+          - <strong>inventors:</strong> Simon Law, Pasan Chankama Hapuarachchi, Phillip L. Kumnick, Thomas R. Szoke, Maxim Umarov,
+          - <strong>priority date:</strong> November 5, 2021,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies voter identity by comparing images of the user’s face (including a selfie image) with a scanned photograph contained in an identity document. Based on the results of this comparison and predefined confidence thresholds, the system determines the user’s confidence status, using Fast Identity Online (FIDO) mechanisms.
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20220138298A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20220138298A1/en
+          </a></p>
+
+- name: "US20210294880A1"
+  anchor: "US20210294880A1"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 3
+  description: "Digital identity verification using documents and biometric data"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Digital identity verification using documents and biometric data</strong>
+
+          - <strong>inventors:</strong> Vasilis Polychronidis, Adarbad Master, Michal Kepkowski,
+          - <strong>priority date:</strong> March 24, 2018,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies identity by scanning submitted documents and/or biometric data and comparing them with public and private databases. Individual verification results are aggregated into a confidence score, and the verified identity is combined with mobile device credentials to create a reusable digital identity token.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20210294880A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20210294880A1/en
+          </a></p>
+
+- name: "US20230177508A1"
+  anchor: "US20230177508A1"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 4
+  description: "Biometric authentication without persistent personal data storage"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Biometric authentication without persistent personal data storage</strong>
+
+          - <strong>inventors:</strong> Rikesh Ram,
+          - <strong>priority date:</strong> May 18, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system performs biometric authentication without requesting personal data or permanent device identifiers by creating a temporary 3D facial model with liveliness detection. Identity verification is performed by matching real-time facial scans against registered records, after which the biometric model is deleted.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230177508A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230177508A1/en
+          </a></p>
+
+- name: "US20210105271A1"
+  anchor: "US20210105271A1"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 5
+  description: "Multi-factor identity verification using biometric and contextual data"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Multi-factor identity verification using biometric and contextual data</strong>
+
+          - <strong>inventors:</strong> Jay Nitturkar, Erika Eördögh,
+          - <strong>priority date:</strong> September 28, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system implements multi-factor identity verification by combining automatic selfie capture with address verification, biometric attributes, geolocation data, and unique smartphone identifiers to assess identity confidence. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20210105271A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20210105271A1/en
+          </a></p>
+
+- name: "US20230316790A1"
+  anchor: "US20230316790A1"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 6
+  description: "Fraud detection using biometric attribute comparison"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Fraud detection using biometric attribute comparison</strong>
+
+          - <strong>inventors:</strong> Lukas Bayer, Can Wang, Dayron Rizo Rodriguez, Jason Richard Taylor,
+          - <strong>priority date:</strong> March 30, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> Proposes a method for detecting fraud when a user sends an image of a photo identity card and a selfie taken during the verification process. The machine learning model can determine biometric data from selfies (for example, estimated age, gender, hair and eye color, etc.). The decision is made based on a comparison of the biometric data obtained from the selfie with the biometric data of the photo ID,<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230316790A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230316790A1/en
+          </a></p>
+
+- name: "US11688194B2"
+  anchor: "US11688194B2"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 7
+  description: "Authentication of identity documents using encoded reference data"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Authentication of identity documents using encoded reference data</strong>
+
+          - <strong>inventors:</strong> Sébastien Bahloul,
+          - <strong>application filing date:</strong> April 22, 2020
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method authenticates identity documents by extracting photographic and machine-readable data from document images and comparing them with corresponding encoded data stored in a database.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11688194B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11688194B2/en
+          </a></p>
+
+- name: "US11722306B2"
+  anchor: "US11722306B2"
+  group_id: "Admission to voting via documents or databases"
+  referenced_in: ["Patented_ideas"]
+  number: 8
+  description: "User authentication using biometric data and identity documents"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>User authentication using biometric data and identity documents</strong>
+
+          - <strong>inventors:</strong> Sébastien Bahloul
+          - <strong>priority date:</strong> May 19, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system authenticates users by comparing biometric data and identity document images stored on a client device with encoded reference data in a database, using a multi-stage verification process. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11722306B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11722306B2/en
+          </a></p>
+
+- name: "US20170109955A1"
+  anchor: "US20170109955A1"
+  group_id: "Authentication by Biometric and physiological traits"
+  referenced_in: ["Patented_ideas"]
+  number: 9
+  description: "Blockchain-based voting system with voter identification and hidden registration tokens"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Blockchain-based voting system with voter identification and hidden registration tokens</strong>
+
+          - <strong>inventors:</strong> Adam Ernest, Nathan Hourt, Daniel Larimer,
+          - <strong>priority date:</strong> October 19, 2016,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system separates voter identification from voting by first authenticating the voter via an ID server using a webcam, generating a hidden voter token, and subsequently verifying this token through a registration server during the voting process, while election data are stored on a blockchain. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20170109955A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20170109955A1/en
+          </a></p>
+
+- name: "US9652920B2"
+  anchor: "US9652920B2"
+  group_id: "Authentication by Biometric and physiological traits"
+  referenced_in: ["Patented_ideas"]
+  number: 10
+  description: "Mobile device-based electronic voting with certificate issuance"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Mobile device-based electronic voting with certificate issuance</strong>
+
+          - <strong>inventors:</strong> Lao Chen,
+          - <strong>priority date:</strong> July 3, 2013,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system enables voting via intelligent mobile communication devices, where a server verifies voter registration and identity, issues voting certificates using asymmetric encryption, and distributes them to voting devices in random order after validation. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US9652920B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US9652920B2/en
+          </a></p>
+
+- name: "US10979225B1"
+  anchor: "US10979225B1"
+  group_id: "Authentication by Biometric and physiological traits"
+  referenced_in: ["Patented_ideas"]
+  number: 11
+  description: "Device-based voting authorization using homomorphic signatures"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Device-based voting authorization using homomorphic signatures</strong>
+
+          - <strong>inventors:</strong> Trupti Shiralkar, Joshua Stevens,
+          - <strong>priority date:</strong> November 15, 2018,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies a homomorphically encrypted digital signature and a voting access token across multiple devices, confirming voting rights based on the device’s hash value derived in part from a unique hardware identifier and device type. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10979225B1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10979225B1/en
+          </a></p>
+
+- name: "US11323262B2"
+  anchor: "US11323262B2"
+  group_id: "Authentication by Biometric and physiological traits"
+  referenced_in: ["Patented_ideas"]
+  number: 12
+  description: "Blockchain-based voter verification using multi-device identification data"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Blockchain-based voter verification using multi-device identification data</strong>
+
+          - <strong>inventors:</strong> Paul Zawierka,
+          - <strong>priority date:</strong> March 3, 2019,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies a voter by storing identification data, including biometric data and a signature, in blockchain records, partially encrypted, and validating voting rights and vote uniqueness when voting requests are received from multiple devices linked to the same account. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11323262B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11323262B2/en
+          </a></p>
+
+- name: "US11093770B2"
+  anchor: "US11093770B2"
+  group_id: "Authentication by Biometric and physiological traits"
+  referenced_in: ["Patented_ideas"]
+  number: 13
+  description: "Liveness detection using multi-frame facial illumination analysis"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Liveness detection using multi-frame facial illumination analysis</strong>
+
+          - <strong>inventors:</strong> Stephen Miu, Yecheng Wu,
+          - <strong>priority date:</strong> December 31, 2018,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> User liveness is determined by analyzing multiple facial image frames to assess three-dimensionality based on the consistency between natural facial illumination and multiple controlled light sources operating under predefined lighting patterns. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11093770B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11093770B2/en
+          </a></p>
+
+- name: "US20210264183A1 / US11488419B2"
+  anchor: "US20210264183A1US11488419B2"
+  group_id: "Authentication by Biometric and physiological traits"
+  referenced_in: ["Patented_ideas"]
+  number: 14
+  description: "User liveness detection using IR and visible facial images"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>User liveness detection using IR and visible facial images</strong>
+
+          - <strong>inventors:</strong> Jeffrey James Wolf, Michael James Smith, Christopher J. McClellan, Matthew Francis Keller, Evan Robert Thompson, Johnathan David MacGregor,
+          - <strong>priority date:</strong> February 19, 2021,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> User liveness is verified by analyzing the correspondence between two simultaneously captured facial images—one infrared and one color—allowing detection of real human presence based on cross-spectrum consistency. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20210264183A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20210264183A1/en
+          </a></p>
+
+- name: "US11134079B2"
+  anchor: "US11134079B2"
+  group_id: "Authentication by Biometric and physiological traits"
+  referenced_in: ["Patented_ideas"]
+  number: 15
+  description: "Context-based liveness detection using device field of view and pose"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Context-based liveness detection using device field of view and pose</strong>
+
+          - <strong>inventors:</strong> Sarbajit K. Rakshit, Martin G. Keen, James E. Bostick, John M. Ganci, Jr.,
+          - <strong>priority date:</strong> November May 21, 2019,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> Liveness is determined by analyzing digital images revealing the device’s current field of view, user location, and pose, and comparing them with previously recorded authentication data to detect inconsistencies or replay attempts.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11134079B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11134079B2/en
+          </a></p>
+
+- name: "EP3332403B1"
+  anchor: "EP3332403B1"
+  group_id: "Authentication by behavior-related signs"
+  referenced_in: ["Patented_ideas"]
+  number: 16
+  description: "UDetecting user liveliness during video selfie capture"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Detecting user liveliness during video selfie capture</strong>
+
+          - <strong>inventors:</strong> Benjamin Robert Tremoulheac, Georgios Paraskevas, Francisco Angel Garcia Rodriguez, Symeon Nikitidis, Thomas Bastiani, Miguel Fernando Jimenez Sola, Usan Mahmood Khan,
+          - <strong>priority date:</strong> August 10, 2016,,
+          - <strong>jurisdiction:</strong> European Patent Office</em></p>
+
+          <p><strong>Brief:</strong> The method determines user liveliness during a video selfie by correlating changes in the user’s visible appearance with variations in the spatial position and orientation of the device recorded by its built-in sensors. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/EP3332403B1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/EP3332403B1/en
+          </a></p>
+
+- name: "US9230158B1"
+  anchor: "US9230158B1"
+  group_id: "Authentication by behavior-related signs"
+  referenced_in: ["Patented_ideas"]
+  number: 17
+  description: "Detection of non-live facial images "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Detection of non-live facial images</strong>
+
+          - <strong>inventors:</strong> Sharadh Ramaswamy,
+          - <strong>priority date:</strong> December 18, 2012,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system detects the unreality of a user by analyzing time-sequenced facial images and identifying the absence of natural changes such as skin tone variation, facial feature deformation during motion, eye reflections, shadows, and lighting dynamics. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US9230158B1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US9230158B1/en
+          </a></p>
+
+- name: "US10990808B2"
+  anchor: "US10990808B2"
+  group_id: "Authentication by behavior-related signs"
+  referenced_in: ["Patented_ideas"]
+  number: 18
+  description: "User authentication based on behavioral video dynamics"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>User authentication based on behavioral video dynamics</strong>
+
+          - <strong>inventors:</strong> Fang Hua, Taras Riopka,
+          - <strong>priority date:</strong> February 8, 2017,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method confirms user authenticity and liveliness by analyzing dynamic changes in video images that reflect characteristic behavioral features of the user, such as motion patterns and gait. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10990808B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10990808B2/en
+          </a></p>
+
+- name: "US11330012B2"
+  anchor: "US11330012B2"
+  group_id: "Authentication by behavior-related signs"
+  referenced_in: ["Patented_ideas"]
+  number: 19
+  description: "Verification of video freshness using device motion sensors"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Verification of video freshness using device motion sensors</strong>
+
+          - <strong>inventors:</strong> Avi Turgeman,
+          - <strong>priority date:</strong> November 5, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies the freshness and authenticity of a selfie video by analyzing device motion data from sensors such as accelerometers and gyroscopes and correlating these parameters with background changes observed in the video. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11330012B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11330012B2/en
+          </a></p>
+
+- name: "EP3282390B1"
+  anchor: "EP3282390B1"
+  group_id: "Authentication by behavior-related signs"
+  referenced_in: ["Patented_ideas"]
+  number: 20
+  description: "Liveness detection based on head and device movement "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Liveness detection based on head and device movement </strong>
+
+          - <strong>inventors:</strong> Mircea Ionita,
+          - <strong>priority date:</strong> July 28, 2017,
+          - <strong>jurisdiction:</strong> European Patent Office</em></p>
+
+          <p><strong>Brief:</strong> The method determines user liveliness by comparing expected and actual changes in facial image parameters, such as distances between facial points, during controlled movements of the user’s head and the smartphone capturing the selfie. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/EP3282390B1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/EP3282390B1/en
+          </a></p>
+
+- name: "US9940532B2"
+  anchor: "US9940532B2"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 21
+  description: "Authentication based on image response to light stimulation "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Authentication based on image response to light stimulation </strong>
+
+          - <strong>inventors:</strong> Haoqiang Fan, Kai Jia, Qi Yin,
+          - <strong>priority date:</strong> December 29, 2015,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method authenticates a user by recording changes in facial image color or brightness caused by controlled variations in displayed illumination and analyzing the correlation and rhythm of these changes to confirm liveness. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US9940532B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US9940532B2/en
+          </a></p>
+
+- name: "US10637853B2"
+  anchor: "US10637853B2"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 22
+  description: "Multi-modal biometric authentication with pupil response and voice correlation "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Multi-modal biometric authentication with pupil response and voice correlation </strong>
+
+          - <strong>inventors:</strong> Rolf Lindemann,
+          - <strong>priority date:</strong> August 5, 2016,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system authenticates a user by combining measurement of pupil size changes in response to screen light variations with voice recognition, correlating recorded speech with stored voiceprints to detect fraudulent authentication attempts. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10637853B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10637853B2/en
+          </a></p>
+
+- name: "US20220245963A1"
+  anchor: "US20220245963A1"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 23
+  description: "Facial micro-movement–based user authentication "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Facial micro-movement–based user authentication </strong>
+
+          - <strong>inventors:</strong> Hugo Embrechts, Gonzalo Bailador, Dimitri Torfs,
+          - <strong>priority date:</strong> June 17, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method authenticates a user by prompting a specific facial gesture, recording the gesture on video, and comparing facial micro-movements with a user-specific reference pattern associated with that gesture. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20220245963A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20220245963A1/en
+          </a></p>
+
+- name: "US10339402B2"
+  anchor: "US10339402B2"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 24
+  description: "User activity verification using random action instructions"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> User activity verification using random action instructions </strong>
+
+          - <strong>inventors:</strong> Kai Jia, Qi Yin,
+          - <strong>priority date:</strong> August 17, 2016,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The and device type. <p>
+          <p><strong>Available at:</strong> <a href="The system verifies user activity by generating a random sequence of action instructions and determining whether these instructions are consistently executed using data from both image sensors and non-image sensors."
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           The system verifies user activity by generating a random sequence of action instructions and determining whether these instructions are consistently executed using data from both image sensors and non-image sensors.
+          </a></p>
+
+- name: "US20230306789A1"
+  anchor: "US20230306789A1"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 25
+  description: "User liveness detection using IR and visible facial images "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Liveness detection based on gaze direction and head movement </strong>
+
+          - <strong>inventors:</strong> Spandana Vemulapalli,
+          - <strong>priority date:</strong> March 25, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method confirms user liveness by analyzing changes in gaze direction captured in video while the user follows instructions involving controlled head movements. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230306789A1/en
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230306789A1/en
+          </a></p>
+
+- name: "US20230306792A1"
+  anchor: "US20230306792A1"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 26
+  description: "Facial expression challenge-response liveness detection "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Facial expression challenge-response liveness detection </strong>
+
+          - <strong>inventors:</strong> Spandana Vemulapalli, Reza R. Derakhshani,
+          - <strong>priority date:</strong> May 30, 2023,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system detects user liveness by repeatedly instructing the user to produce specific facial expressions and comparing the captured images with stored template images corresponding to those expressions. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230306792A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230306792A1/en
+          </a></p>
+
+- name: "US10896248B2"
+  anchor: "US10896248B2"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 27
+  description: "Touch-based facial image sequence authentication "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Touch-based facial image sequence authentication </strong>
+
+          - <strong>inventors:</strong> Hisham I. Salama, Paul Mon-Wah Chan, Dino D’Agostino, Orin Del Vecchio,
+          - <strong>priority date:</strong> January 23, 2018,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method authenticates a user by requiring interaction with a touch screen to correctly select a sequence of regions on an image of the user's own face, verifying both knowledge and interaction behavior. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10896248B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10896248B2/en
+          </a></p>
+
+- name: "US11093772B2"
+  anchor: "US11093772B2"
+  group_id: "Authentication by reaction to external stimuli"
+  referenced_in: ["Patented_ideas"]
+  number: 28
+  description: "Detection of false biometric data in authentication processes "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Detection of false biometric data in authentication processes </strong>
+
+          - <strong>inventors:</strong> Stephen Borza,
+          - <strong>priority date:</strong> June 11, 2019,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system identifies fraudulent biometric data by supplementing biometric verification with additional factors such as response timing, depth analysis of images, cross-camera image comparison, and database consistency checks. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11093772B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11093772B2/en
+          </a></p>
+
+- name: "WO2016109841A1"
+  anchor: "WO2016109841A1"
+  group_id: "Use of new technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 29
+  description: "Methods, systems and data carriers for determining face liveliness "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Methods, systems and data carriers for determining face liveliness </strong>
+
+          - <strong>inventors:</strong> Brian Martin,
+          - <strong>priority date:</strong> December 31, 2015,
+          - <strong>jurisdiction:</strong> International (WO)</em></p>
+
+          <p><strong>Brief:</strong> The method determines facial liveliness by processing first and second images of a subject’s face captured at sequential moments in time and extracting corneal reflections of external objects. It analyzes changes in these reflections between the two moments and compares them with known changes caused by camera movement or controlled variations in illumination, allowing verification that the observed face belongs to a real, physically present person. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/WO2016109841A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/WO2016109841A1/en
+          </a></p>
+
+- name: "US20230306790A1"
+  anchor: "US20230306790A1"
+  group_id: "Use of new technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 30
+  description: "Method and system for determining liveliness using corneal reflections"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> User liveness images </strong>
+
+          - <strong>inventors:</strong> David Hirvonen,
+          - <strong>priority date:</strong> March 25, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method determines liveliness by acquiring multiple images of both eyes of a person and extracting corneal reflections from these images. By analyzing displacement and changes in displacement between corresponding corneal reflections, the system estimates scene depth in front of the subject; the analysis may additionally incorporate a scene indicator that includes the subject’s pose, the content displayed on the device screen, or the orientation of the user device to confirm that the observed subject is a real person. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230306790A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230306790A1/en
+          </a></p>
+
+- name: "US20230084760A1"
+  anchor: "US20230084760A1"
+  group_id: "Use of new technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 31
+  description: "User liveness detection using IR and visible facial images "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> User liveness images </strong>
+
+          - <strong>inventors:</strong> David Hirvonen, Spandana Vemulapalli,
+          - <strong>priority date:</strong> September 10, 2021,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method determines human liveliness using multiple cameras that capture a set of images of the same person from different angles. From this multi-view image set, parameters are extracted and analyzed, including corneal reflections of at least one object in at least one eye of the subject, allowing the system to confirm the physical presence and three-dimensionality of a living person. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230084760A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230084760A1/en
+          </a></p>
+
+- name: "US20230097348A1"
+  anchor: "US20230097348A1"
+  group_id: "Use of new technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 32
+  description: "Liveliness detection using opposite-side cameras of a mobile device "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Liveliness detection using opposite-side cameras of a mobile device </strong>
+
+          - <strong>inventors:</strong> David Hirvonen, Reza R. Derakhshani,
+          - <strong>priority date:</strong> November 14, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method determines whether a subject is a living person by capturing a first image using a camera on one side of a mobile device and a second image using a camera on the opposite side. The images are preprocessed to generate overlapping fields of view, and reflections visible on the subject’s cornea are analyzed to determine whether the scene observed by both cameras is essentially the same, which confirms that the subject is physically present and alive. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230097348A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230097348A1/en
+          </a></p>
+
+- name: "WO2014184436A1"
+  anchor: "WO2014184436A1"
+  group_id: "Use of new technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 33
+  description: "System and method for gaze-based liveness detection during image capture "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and method for gaze-based liveness detection during image capture </strong>
+
+          - <strong>inventors:</strong> Kongqiao Wang, Wendong Wang, Bo Zhang,
+          - <strong>priority date:</strong> May 14, 2014,,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method determines user liveness during facial image acquisition by recognizing the user’s face and analyzing whether the user’s gaze moves toward a randomly appearing object on the display screen. The system evaluates the direction, timing, and duration of gaze movement relative to the object’s position; the object may be an attention-grabbing abnormal spot appearing on the selfie image. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/WO2014184436A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/WO2014184436A1/en
+          </a></p>
+
+- name: "US8856541B1"
+  anchor: "US8856541B1"
+  group_id: "Use of new technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 34
+  description: "User liveness detection using IR and visible facial images "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> User liveness detection using IR and visible facial images </strong>
+
+          - <strong>inventors:</strong> Krishnendu Chaudhury, Avani Devarasetty,
+          - <strong>priority date:</strong> October 1, 2013,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The authentication method analyzes multiple images of the user’s eyes to detect the direction of gaze movement while a visual element moves along a predefined template within a graphical user interface. The detected gaze direction, derived from at least two facial images, is compared with the programmed movement of the on-screen element to verify user authenticity. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US8856541B1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US8856541B1/en
+          </a></p>
+
+- name: "US10853677B2 / GB2560340A"
+  anchor: "US10853677B2GB2560340A"
+  group_id: "Use of new technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 35
+  description: "Liveness detection based on predicted eye and face response to a moving stimulus "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Liveness detection based on predicted eye and face response to a moving stimulus </strong>
+
+          - <strong>inventors:</strong> Sheikh Faridul Hasan, Ben Arbia Mohamed,
+          - <strong>priority date:</strong> March 7, 2017,
+          - <strong>jurisdiction:</strong> United States / United Kingdom</em></p>
+
+          <p><strong>Brief:</strong> The method determines user liveness by presenting a moving visual stimulus and predicting the expected movement of the user’s face or eyes in response to that stimulus. The actual movement of the user’s eyes or face is captured by a camera and compared with the predicted movement pattern; liveness is confirmed by matching the real motion dynamics with the calculated response reflecting the stimulus movement. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10853677B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10853677B2/en
+          </a></p>
+           <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/GB2560340A/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/GB2560340A/en
+          </a></p>
+
+- name: "WO2017025575A1"
+  anchor: "WO2017025575A1"
+  group_id: "Use of complex technologies"
+  referenced_in: ["Patented_ideas"]
+  number: 36
+  description: "Integrated liveliness detection using multi-modal user reactions "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Integrated liveliness detection using multi-modal user reactions </strong>
+
+          - <strong>inventors:</strong> Eleanor Simone Frederika Loughlin-Mchugh, Roman Edward Szczesniak, Francisco Angel Garcia Rodriguez, Georgios Paraskevas, Benjamin Robert Tremoulheac, Usman Mahmood Khan,
+          - <strong>priority date:</strong> August 10, 2015,
+          - <strong>jurisdiction:</strong> International (WO)</em></p>
+
+          <p><strong>Brief:</strong> The system implements an integrated approach to liveliness detection based on interaction between a user’s personal device and a server using a shared secret of undisclosed origin. The method consists of transmitting liveliness test parameters to the user’s device that define expected user reactions and subsequently evaluating these reactions. The tests include tracking voluntary motor eye reactions to a moving object on the screen, involuntary eye responses to light flashes (including correlation of pupil constriction with random changes in flash frequency), and accounting for user touch interactions with one or more elements displayed on the screen. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/WO2017025575A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/WO2017025575A1/en
+          </a></p>
+
+- name: "US11863553B2"
+  anchor: "US11863553B2"
+  group_id: "Secure personal voter data and its composition"
+  referenced_in: ["Patented_ideas"]
+  number: 37
+  description: "Multi-factor identity verification "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Multi-factor identity verification </strong>
+
+          - <strong>inventors:</strong> Jay Nitturkar, Erika Eördögh,
+          - <strong>priority date:</strong> September 28, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system implements multi-factor identity verification by combining automated photo ID–to–selfie matching with cross-referenced address data, biometric attributes, geo-location information, and unique smartphone device identifiers, allowing flexible selection and weighting of verification factors depending on the application context. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11863553B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11863553B2/en
+          </a></p>
+
+- name: "US20210288958A1"
+  anchor: "US20210288958A1"
+  group_id: "Secure personal voter data and its composition"
+  referenced_in: ["Patented_ideas"]
+  number: 38
+  description: "Systems and methods for secure online credential authentication "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Systems and methods for secure online credential authentication </strong>
+
+          - <strong>inventors:</strong> Blake Hall,
+          - <strong>priority date:</strong> October 14, 2016,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method secures voter credentials by storing identifying information exclusively in hashed form and requiring that all user-provided identification data be transformed into the same hashed representation before comparison, preventing disclosure of original personal data during authentication. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20210288958A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20210288958A1/en
+          </a></p>
+
+- name: "US11688194B2"
+  anchor: "US11688194B2"
+  group_id: "Secure personal voter data and its composition"
+  additional_groups: ["Secure personal voter data and its composition"]
+  referenced_in: ["Patented_ideas"]
+  number: 39
+  description: "Authentication of identity documents using encoded reference data"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Authentication of identity documents using encoded reference data</strong>
+
+          - <strong>inventors:</strong> Sébastien Bahloul,
+          - <strong>application filing date:</strong> April 22, 2020
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method authenticates identity documents by extracting photographic and machine-readable data from document images and comparing them with corresponding encoded data stored in a database.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11688194B2/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11688194B2/en
+          </a></p>
+
+- name: "US20210294880A1"
+  anchor: "US20210294880A1"
+  group_id: "Registration by document"
+  referenced_in: ["Patented_ideas"]
+  number: 40
+  description: "Digital identity verification using documents and biometric data"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Digital identity verification using documents and biometric data </strong>
+
+          - <strong>inventors:</strong> Vasilis Polychronidis, Adarbad Master, Michal Kepkowski
+          - <strong>priority date:</strong> March 24, 2018
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies a person’s identity by scanning submitted documents and/or biometric data and comparing them with available government and private databases. Each verified element is assigned a score that is aggregated into an overall confidence score, after which the verified identity is digitally combined with mobile device credentials to create a reusable identity token tied to the user’s phone. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20210294880A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20210294880A1/en
+          </a></p>
+
+- name: "US20220138298A1"
+  anchor: "US20220138298A1"
+  group_id: "Registration by document"
+  referenced_in: ["Patented_ideas"]
+  number: 41
+  description: "Identity verification by face and document image comparison "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Identity verification by face and document image comparison </strong>
+
+          - <strong>inventors:</strong> Simon Law, Pasan Chankama Hapuarachchi, Phillip L. Kumnick, Thomas R. Szoke, Maxim Umarov
+          - <strong>priority date:</strong> November 5, 2021
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies a voter’s identity by comparing an image of the user’s face, such as a selfie, with a scanned photograph from an identity document. Based on predefined confidence thresholds, the system determines the user’s confidence status using Fast Identity Online (FIDO) mechanisms.<p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20220138298A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20220138298A1/en
+          </a></p>
+
+- name: "US20230177508A1"
+  anchor: "US20230177508A1"
+  group_id: "Registration by document"
+  referenced_in: ["Patented_ideas"]
+  number: 42
+  description: "Biometric authentication with liveliness detection and 3D face mapping"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Biometric authentication with liveliness detection and 3D face mapping </strong>
+
+          - <strong>inventors:</strong> Rikesh Ram,
+          - <strong>priority date:</strong> May 18, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system performs biometric authentication without requesting personal information or a separate user device. It registers users, compensates for blurred or poor-quality images using machine learning, verifies registration data with the issuing authority, performs liveliness detection by creating a real-time 3D face map, and authenticates identity by matching face scans with stored records, after which the 3D face map is deleted. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230177508A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230177508A1/en
+          </a></p>
+
+- name: "US20230316790A1"
+  anchor: "US20230316790A1"
+  group_id: "Registration by document"
+  referenced_in: ["Patented_ideas"]
+  number: 43
+  description: "Fraud detection using biometric attribute comparison"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Fraud detection using biometric attribute comparison</strong>
+
+          - <strong>inventors:</strong> Lukas Bayer, Can Wang, Dayron Rizo Rodriguez, Jason Richard Taylor,
+          - <strong>priority date:</strong> March 30, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> Proposes a method for detecting fraud when a user sends an image of a photo identity card and a selfie taken during the verification process. The machine learning model can determine biometric data from selfies (for example, estimated age, gender, hair and eye color, etc.). The decision is made based on a comparison of the biometric data obtained from the selfie with the biometric data of the photo ID <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230316790A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230316790A1/en
+          </a></p>
+
+- name: "US20230083852A1"
+  anchor: "US20230083852A1"
+  group_id: "Registration by document"
+  referenced_in: ["Patented_ideas"]
+  number: 44
+  description: "Methods of admission to voting on a document and data in the database"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong>Methods of admission to voting on a document and data in the database</strong>
+
+          - <strong>inventors:</strong> Abdelkader M'hamed, Benkreira Joshua Edwards, Michael Mossoba,
+          - <strong>priority date:</strong> November 14, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system verifies voter identity by first comparing a selfie image of the user’s face with a photo contained in an identity document, and second by recognizing data objects and symbols in the document using OCR and computer vision. Based on the recognition results, the system identifies the document type, calculates a document validity index, and displays the user’s confidence status according to predefined thresholds derived from facial correspondence and document validity.
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230083852A1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230083852A1/en
+          </a></p>
+
+- name: "US6175833B1"
+  anchor: "US6175833B1"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 45
+  description: "System and method for interactive live online voting with tallies for updating voting results "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and method for interactive live online voting with tallies for updating voting results </strong>
+
+          - <strong>inventors:</strong> Brenden West, Sean Anderson
+          - <strong>priority date:</strong> April 22, 1998
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> Covers a system and method for interactive online voting, including the introduction of alternatives, creation and distribution of ballots containing these alternatives, receiving and storing no more than one vote per voter, and updating and presenting results as votes accumulate. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US6175833B1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US6175833B1/en
+          </a></p>
+
+- name: "US20020077885A1"
+  anchor: "US20020077885A1"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 46
+  description: "Electronic voting system "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Electronic voting system </strong>
+
+          - <strong>inventors:</strong> Jared Karro, Jie Wang,
+          - <strong>priority date:</strong> June 12, 2000,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> Describes an electronic voting system using a dedicated voting device and voter authentication tool. Votes are encrypted using a key stored in the authentication device issued during voter registration. The system verifies that ballots contain identifiers confirming issuance at an authorized distribution point and that voting occurred at the registration location. Authenticated votes and ballot identifiers are transmitted via the Internet to a remote vote counter. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20020077885A1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20020077885A1
+           </a></p>
+
+- name: "US7549049B2"
+  anchor: "US7549049B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 47
+  description: "Dynamic auditing of electronic electionss "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Dynamic auditing of electronic elections </strong>
+
+          - <strong>inventors:</strong> John J. Bogasky; Carl Almond,
+          - <strong>priority date:</strong> July 08, 2005,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> This patent describes an electronic voting system with dynamic auditing. An authenticated voter receives a digitally signed ballot from a local election bureau, completes it, signs it with a roaming digital certificate, encrypts it using a symmetric key, and encrypts that key with the bureau’s public key. The encrypted ballot and key are stored in an electronic ballot box, enabling post-election auditing without compromising ballot secrecy.
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US7549049B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US7549049B2
+          </a></p>
+
+- name: "US11038675B2"
+  anchor: "US11038675B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 48
+  description: "Electronic voting using secure electronic identity device "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Electronic voting using secure electronic identity device </strong>
+
+          - <strong>inventors:</strong> Milan J. Krizenecky; Michael Webster; Michal Botka,
+          - <strong>priority date:</strong> September 19, 2016
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The and device type. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11038675B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11038675B2
+          </a></p>
+
+- name: "US11049349B2"
+  anchor: "US11049349B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 49
+  description: "Computerized voting system "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Computerized voting system </strong>
+
+          - <strong>inventors:</strong> Daniel W. Onischuk,
+          - <strong>priority date:</strong> November 22, 2017,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent describes a system where officials distribute machine-readable encoded documents linked by unique identifiers. Voters exchange ballots to preserve confidentiality, complete documents with personal security identifiers, and submit them through multiple channels including mail, Internet, and electronic media. Image-processing machines register, verify, and store ballot data in a secure voter data warehouse. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11049349B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11049349B2
+          </a></p>
+
+- name: "US11138821B2"
+  anchor: "US11138821B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 50
+  description: "System and method for hybrid model electronic voting "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and method for hybrid model electronic voting </strong>
+
+          - <strong>inventors:</strong> Matthew Heuman,
+          - <strong>priority date:</strong> October 7, 2019
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The invention proposes a hybrid voting system combining a remote electronic voting device, a portal server verifying voter eligibility, and a voting machine that produces and photographs a physical ballot. The components communicate via a data network, including the Internet, enabling both electronic convenience and physical auditability. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11138821B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11138821B2
+          </a></p>
+
+- name: "US11138821B2"
+  anchor: "US11138821B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 51
+  description: "System and method of casting a vote in an electronic voting system "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and method of casting a vote in an electronic voting system </strong>
+
+          - <strong>inventors:</strong> Alexandra M. Nikolina; Alexander S. Korunov; Alexander V. Sazonov; Ochir V. Abushinov; Zoya S. Sergeeva,
+          - <strong>priority date:</strong> May 21, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The method increases vote reliability through deferred two-factor confirmation. After vote submission, the voter receives a delayed request to confirm vote validity. A printed copy of the completed ballot is generated and stored centrally, and votes are counted only after confirmation is received and the hard copy is successfully created. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11600128B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+          https://patents.google.com/patent/US11600128B2
+          </a></p>
+
+- name: "US9292987B1"
+  anchor: "US9292987B1"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 52
+  description: "System and method for fully encrypted remote web-based voting "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and method for fully encrypted remote web-based voting </strong>
+
+          - <strong>inventors:</strong> David Myr,
+          - <strong>priority date:</strong> September 22, 2014,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent describes a fully encrypted voting method where votes remain encrypted throughout storage and processing until the end of the voting period. Encryption keys are derived from voter PIN codes acting as certificates. Even database administrators cannot access voting data prior to authorized decryption by election officials. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US9292987B1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US9292987B1
+          </a></p>
+
+- name: "US11640616B2"
+  anchor: "US11640616B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 53
+  description: "System and method of counting votes in an electronic voting system "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and method of counting votes in an electronic voting system </strong>
+
+          - <strong>inventors:</strong> Roman V. Aleshkin; Maxim V. Riveiro; Artem G. Nagorny; Evgeny N. Barkov; Mikhail D. Kudryavtsev,
+          - <strong>priority date:</strong> October 16, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The invention introduces surplus one-time-use voting tokens exceeding the number of voters. Each token activates a ballot without linking it to a specific individual. Tokens may be QR codes, barcodes, character sequences, or RFID tags, enabling voter and server verification while preserving ballot secrecy. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11640616B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11640616B2
+          </a></p>
+
+- name: "US10109129B2"
+  anchor: "US10109129B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 54
+  description: "Express voting "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Express voting </strong>
+
+          - <strong>inventors:</strong> Eric James Joyce; Craig Harold Reines; Anthony Kelly,
+          - <strong>priority date:</strong> January 24, 2014,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The system enables voter authentication at polling station kiosks via tokens associated with voter identity cards. Ballots are transmitted to voter devices over short-range communication, encoded as barcodes, scanned by kiosks, displayed for confirmation, and counted after voter verification. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10109129B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10109129B2
+          </a></p>
+
+- name: "US9652920B2"
+  anchor: "US9652920B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 55
+  description: "Voting systems and voting methods based on smart mobile communication devices "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Voting systems and voting methods based on smart mobile communication devices </strong>
+
+          - <strong>inventors:</strong> Lihao Chen,
+          - <strong>priority date:</strong> June 21, 2012,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent claims a distributed voting system using smart mobile devices and servers. Voting certificates are generated with asymmetric cryptography, issued randomly, and used by voters to sign their votes. Server modules manage voter data, certification, and vote tallying over mobile communication networks.
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US9652920B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US9652920B2
+          </a></p>
+
+- name: "US11837031B2"
+  anchor: "US11837031B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 56
+  description: "Distributed voting platform "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Distributed voting platform </strong>
+
+          - <strong>inventors:</strong> Arthur Andrew; Montgomery Scotson,
+          - <strong>priority date:</strong> July 07, 2016,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> This distributed platform connects remote voters to state voting systems via networked client devices equipped with biometric and location capabilities. It supports account creation, ongoing biometric authentication, controlled voting access for verified users, and informational access for unverified users. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11837031B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11837031B2
+          </a></p>
+
+- name: "US11847865B2"
+  anchor: "US11847865B2"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 57
+  description: "App-assisted voting "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> App-assisted voting </strong>
+
+          - <strong>inventors:</strong> Jacek Joseph Matysiak; Dilinur Wushour,
+          - <strong>priority date:</strong> January 21, 2021,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The and device type. <p>
+          <p><strong>Available at:</strong> <a href="https://paten1/en"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/pate1/en
+          </a></p>
+
+- name: "US11361606B1"
+  anchor: "US11361606B1"
+  group_id: "From paper ballots to digital records"
+  referenced_in: ["Patented_ideas"]
+  number: 58
+  description: "Tamper resistant public ledger voting system "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Tamper resistant public ledger voting system </strong>
+
+          - <strong>inventors:</strong> Oren Zbeda; Eran Eliyahu Tobul,
+          - <strong>priority date:</strong> November 29, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> This patent proposes a voting system using a tamper-resistant public ledger, including a blockchain. Voters receive anonymous key pairs; votes are encrypted with private keys and recorded in a public registry. Election authorities verify and re-encrypt confirmed votes, enabling transparent verification without revealing voter identities. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11361606B1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11361606B1
+          </a></p>
+
+- name: "US11323262B2"
+  anchor: "US11323262B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 59
+  description: "Method and system for verifying a voter through the use of blockchain validation "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Method and system for verifying a voter through the use of blockchain validation </strong>
+
+          - <strong>inventors:</strong> Paul Zawierka,
+          - <strong>priority date:</strong> March 13, 2019,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent proposes a method in which several processors receive voter identification information associated with a voter’s account and verify the voter’s right to vote according to the organizer’s requirements. Part of the identification information is encrypted, and the encrypted and remaining parts are stored separately on a blockchain. After a voting request is submitted from the voter’s account, multiple processors access the account, verify voting eligibility and whether the voter has already voted, receive the voter’s vote together with the account signature, and store portions of the voting data in encrypted and unencrypted form on the blockchain. Identification data may include biometric data and signature, the received vote, global positioning data, and voting time. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11323262B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11323262B2
+          </a></p>
+
+- name: "US10790964B2"
+  anchor: "US10790964B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 60
+  description: "Peer voting on a blockchain "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Peer voting on a blockchain </strong>
+
+          - <strong>inventors:</strong> Anuj Chopra; Zhou Yinsheng; Yuan Yuan; Wenbin Zhang,
+          - <strong>priority date:</strong> November 17, 2017,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent describes a voting method in which each identified device splits the vote submitted by its owner for one of the alternatives into several parts and transmits these parts to other devices participating in the voting process. Each device stores the received vote parts in a blockchain maintained collectively by the participating devices. After voting ends, each device counts the total number of vote parts corresponding to each alternative based on the blockchain records. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10790964B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10790964B2
+          </a></p>
+
+- name: "US11663872B2"
+  anchor: "US11663872B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 61
+  description: "Computer implemented method of online voting and vote validation "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Computer implemented method of online voting and vote validation </strong>
+
+          - <strong>inventors:</strong> Benjamin J. White,
+          - <strong>priority date:</strong> May 11, 2021,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent states a method for submitting votes from any Internet-connected computer device, in which an electronic ballot completed by a voter is stored in two copies, encrypted or unencrypted. One copy is stored as a database record, and the other as an electronic document, with each copy sent to a separate blockchain. Only ballots whose two copies match after decryption and comparison are counted as valid. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11663872B"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11663872B
+          </a></p>
+
+- name: "US9836908B2"
+  anchor: "US9836908B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 62
+  description: "System and method for securely receiving and counting votes in an election "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and method for securely receiving and counting votes in an election </strong>
+
+          - <strong>inventors:</strong> Nikolaos Spanos; Andrew R. Martin; Eric T. Dixon,
+          - <strong>priority date:</strong> August 06, 2015,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent describes an electronic voting system using branched blockchain technology to store secret ballot data. The system includes a network of voting machines equipped with barcode scanners, network communication devices, and voting client software. Votes are received through barcode scanners or voter interfaces and stored on the blockchain. Vote counts for candidates are updated and saved as votes are received, creating a verifiable vote trail to detect, correct, and prevent fraud and errors. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US9836908B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           hhttps://patents.google.com/patent/US9836908B2
+          </a></p>
+
+
+- name: "US11394773B2"
+  anchor: "US11394773B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 63
+  description: "Cryptographic currency block chain based voting system "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Cryptographic currency block chain based voting system </strong>
+
+          - <strong>inventors:</strong> Jim Austin Joseph,
+          - <strong>priority date:</strong> June 25, 2039,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent proposes a voting system based on cryptographic currency. Identifiers are created for each alternative in a poll, and a cryptographic currency address is generated for each identifier. Voters transfer a number of tokens corresponding to their vote weight to the address associated with the chosen alternative through a cryptographic currency network, where transactions are confirmed and recorded in the blockchain. The method allows weighted voting, while the mechanism for acquiring tokens is not specified. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11394773B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+            https://patents.google.com/patent/US11394773B2
+          </a></p>
+
+- name: "US11961336B2"
+  anchor: "US11961336B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 64
+  description: "Distributed ledger-based voting system, apparatus and method "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Distributed ledger-based voting system, apparatus and method </strong>
+
+          - <strong>inventors:</strong> Dennis Lyon,
+          - <strong>priority date:</strong> June 07, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent states a method for remote voting using an application linked to an Ethereum NFT source address. Potential voters submit registration requests to a distributed ledger, where computing nodes executing a smart voting contract register voters and issue cryptographic voting tokens. Registered voters submit electronic ballots using these tokens. Voting transactions are verified by each node, aggregated into cryptographic blocks, and added to the distributed ledger blockchain. After voting concludes, nodes verify final vote counts and publish the results. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11961336B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11961336B2
+          </a></p>
+
+- name: "US11488433B2"
+  anchor: "US11488433B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 65
+  description: "Method and system for public elections on a moderated blockchain "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Method and system for public elections on a moderated blockchain </strong>
+
+          - <strong>inventors:</strong> Steven C. Davis,
+          - <strong>priority date:</strong> January 11, 2018,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent proposes a method for conducting public elections using a moderated blockchain. The system includes generation of election and candidate references, creation of asymmetric cryptographic key pairs, formation of a registration block containing election data and a public key, and its transmission to blockchain nodes. Voting messages received from voter devices are aggregated into voting blocks, which are then added to the blockchain and distributed to participating nodes. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11488433B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11488433B2
+          </a></p>
+
+- name: "US11869018B2"
+  anchor: "US11869018B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 66
+  description: "Voting system to prevent fraud using blockchain technology"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Voting system to prevent fraud using blockchain technology </strong>
+
+          - <strong>inventors:</strong> Nathaniel Loyd; John Wesley Barron; Joshua Jarrell,
+          - <strong>priority date:</strong> December 23, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent describes a system including at least one voting machine and a blockchain initialized with a primary block. Voting transactions are received, each transaction containing voting data. For each transaction, a new block is created containing the transaction data and the hash of the previous block, and added to the blockchain. The system allows receipt of transactions through a smartphone application, distribution of the blockchain to multiple user devices, and issuance of transaction receipts containing corresponding hash values. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11869018B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11869018B2
+          </a></p>
+
+- name: "US10977887B2"
+  anchor: "US10977887B2"
+  group_id: "Voting method"
+  referenced_in: ["Patented_ideas"]
+  number: 67
+  description: "User liveness detectioacial images "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Voting method </strong>
+
+          - <strong>inventors:</strong> Hendrik Hackmann,
+          - <strong>priority date:</strong> April 17, 2019,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent proposes a voting method using a voting machine that maintains three lists: a voter list, a voting list, and a list of links consisting of hash values. After a voter casts a vote, an entry is created in the voting list, a hash value is calculated for this entry, and a corresponding link is stored in the link list. One or more of these lists may be implemented as a blockchain. Voting machines are located at polling stations. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10977887B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10977887B2
+          </a></p>
+
+- name: "US20230370269A1"
+  anchor: "US20230370269A1"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 68
+  description: "User liveness detectioacial images "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> User liveness images </strong>
+
+          - <strong>inventors:</strong> My T. Thai; Truc Nguyen,
+          - <strong>priority date:</strong> 11, 2023,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent states a method for electronic voting or polling using a distributed ledger. A node receives a transaction commit request containing encrypted votes and cryptographic authentication or input verification proofs. A smart contract authenticates the user ID and verifies encrypted votes using a non-interactive zero-knowledge proof protocol. If verification succeeds, the transaction data block is added to the distributed ledger. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230370269A1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230370269A1
+          </a></p>
+
+- name: "US11749047B2"
+  anchor: "US11749047B2"
+  group_id: "Voting using blockchain"
+  referenced_in: ["Patented_ideas"]
+  number: 69
+  description: "Electronic voting system and control method "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Electronic voting system and control method </strong>
+
+          - <strong>inventors:</strong> Yuji Unagami; Junichiro Soeda,
+          - <strong>priority date:</strong> August 18, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent proposes an electronic voting system using mathematical anonymization criteria. One voting server receives voting data containing a voter-related identifier and vote information. The system evaluates whether the data meets predefined anonymization criteria and generates two blocks: one containing anonymized voting data and another containing non-compliant data linked to the voter. These blocks are attached to a blockchain. Compliance with anonymization criteria is determined by consensus among servers, and voting results are displayed accordingly. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11749047B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11749047B2
+          </a></p>
+
+- name: "US6704887B2"
+  anchor: "US6704887B2"
+  group_id: "Peer-to-peer voting"
+  referenced_in: ["Patented_ideas"]
+  number: 70
+  description: "Method and apparatus for improved security in distributed-environment voting "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Method and apparatus for improved security in distributed-environment voting </strong>
+
+          - <strong>inventors:</strong> Kevin A. Kwiati; Benjamin C. Hardekopf,
+          - <strong>priority date:</strong> March 08, 2001,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> One of the earliest attempts to reduce the ability of vote organizers to influence voting results. The patent proposes the use of a local network in which the voting process is initiated by a majority of participants. Each participant sends their vote to all other participants, where the votes are accumulated in a shared results buffer. Approval of voting results occurs when most participants find their own vote recorded in the buffer. The method does not provide for encryption and relies on mutual visibility and majority confirmation within the distributed environment. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US6704887B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US6704887B2
+          </a></p>
+
+- name: "US10979225B1"
+  anchor: "US10979225B1"
+  group_id: "Peer-to-peer voting"
+  referenced_in: ["Patented_ideas"]
+  number: 71
+  description: "Secure and anonymous electronic polling "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Secure and anonymous electronic polling </strong>
+
+          - <strong>inventors:</strong> Trupti Shiralkar; Joshua Stevens,
+          - <strong>priority date:</strong> November 15, 2018,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent describes a system for secure and anonymous electronic polling in which a voter’s vote is homomorphically encrypted and transmitted together with the voter’s digital signature and a voting access token from the voter’s device. Multiple receiving devices verify the signature and token, using a hash value based at least in part on the unique hardware identifier of the receiving device and its type. After verification, the encrypted vote is stored in a data warehouse and also recorded in a publicly available distributed registry. The system does not provide for decryption of votes or their public disclosure. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US10979225B1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US10979225B1
+          </a></p>
+
+- name: "EP3574482B1"
+  anchor: "EP3574482B8"
+  group_id: "Peer-to-peer voting"
+  referenced_in: ["Patented_ideas"]
+  number: 72
+  description: "Voting system and method"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Voting system and method </strong>
+
+          - <strong>inventors:</strong> Max Kaye,
+          - <strong>priority date:</strong> January 30, 2017,
+          - <strong>jurisdiction:</strong> European Patent (EP)</em></p>
+
+          <p><strong>Brief:</strong> The patent proposes a voting system and method in which each voter is identified by a single public identification key. The system includes nodes responsible for collecting and combining votes into a container and storing this container in a public data repository. Nodes exchange public voting keys and apply cryptographic techniques to remove the association between public voting keys and public identification keys, forming a list of anonymized public voting keys. After this unlinking, votes authenticated by anonymized public voting keys are transmitted and combined into a voting container.
+
+          A later version of the invention, published on August 2, 2023, as EP3574482B8, introduces an electronic signature that re-establishes an association between voting public keys and identity public keys. The early version does not prevent vote stuffing, while the later version addresses vote stuffing but still does not eliminate vote trading or voting under coercion. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/EP3574482B1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/EP3574482B1
+          </a></p>
+
+- name: "US11062546B1"
+  anchor: "US11062546B1"
+  group_id: "Peer-to-peer voting"
+  referenced_in: ["Patented_ideas"]
+  number: 73
+  description: "Voting systems and methods for encoding voting selection data in a compressed format "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Voting systems and methods for encoding voting selection data in a compressed format </strong>
+
+          - <strong>inventors:</strong> Michael Davis; Bruno Roger; Casey Ballentine; Christopher Horvath; Kevin Day,
+          - <strong>priority date:</strong> December 23, 2020,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent discloses electronic voting systems that encode voter selections in a compressed format suitable for both electronic processing and paper-based verification. The voting device presents the voter with multiple alternatives for one or more votes and allows the voter to select one or more options. Based on the selections, the device creates a bitmap consisting of bit cells corresponding to voting alternatives, where each cell stores a binary value indicating whether the alternative was selected.
+
+          The bitmap is converted into a compressed character string, which is then encoded into one or more barcodes. These barcodes are printed onto paper to form a paper ballot.
+
+          The system further includes a summarizing device capable of reading the printed barcodes, decoding the compressed character string, converting it back into binary form, determining the selected voting options, and storing these options in the official vote records. The approach combines compact encoding, machine readability, and paper auditability of voting results. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11062546B1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11062546B1
+          </a></p>
+
+- name: "US20230147564A1"
+  anchor: "US20230147564A1"
+  group_id: "Peer-to-peer voting"
+  referenced_in: ["Patented_ideas"]
+  number: 74
+  description: "System and Method for Conducting a Publicly Auditable Election"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> System and Method for Conducting a Publicly Auditable Election </strong>
+
+          - <strong>inventors:</strong> Carey Robert Briggs,
+          - <strong>priority date:</strong> November 08, 2022,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent application proposes a method for conducting elections that allows voters to verify that their ballot was included in the final tally in the same order in which it was submitted and to cryptographically prove whether their ballot was altered or removed.
+
+          The method includes converting a voter-completed ballot into a predefined digital format and cryptographically signing it using a cryptographic processor that stores the voter’s private key from an asymmetric key pair. The formatted ballot, its signature, the corresponding public key, and an identifying characteristic of the cryptographic processor are transmitted to the election server.
+
+          The election authority then signs the formatted ballot using its own private key from an asymmetric key pair. The authority’s signature on the ballot is transmitted back to the voter, enabling the voter to retain cryptographic proof of inclusion and integrity. The system emphasizes public auditability, voter verifiability, and cryptographic assurance of ballot handling without relying on trust in election administrators alone. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US20230147564A1"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US20230147564A1
+          </a></p>
+
+- name: "US11069170B2"
+  anchor: "US11069170B2"
+  group_id: "Peer-to-peer voting"
+  referenced_in: ["Patented_ideas"]
+  number: 75
+  description: "Method of verifiable and anonymous voter receipt for electronic voting system"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em><strong> Method of verifiable and anonymous voter receipt for electronic voting system </strong>
+
+          - <strong>inventors:</strong> Zhenxiang Zhang,
+          - <strong>priority date:</strong> December 04, 2017,
+          - <strong>jurisdiction:</strong> United States</em></p>
+
+          <p><strong>Brief:</strong> The patent describes a voting method that provides voters with an anonymous, verifiable, secure, and forgery-resistant receipt while preserving ballot secrecy and transparency. The receipt encodes the voter’s choice indirectly by placing a unique voter number—randomly generated by the electronic voting system—into a specific line of the ballot corresponding to the selected option.
+
+          In addition to the voter’s unique number and signature (randomly generated symbols associated with the voter), the receipt also contains entries for all other ballot options, filled with unique numbers and signatures of other voters. This design prevents third parties from determining how a specific voter voted while still allowing individual verification.
+
+          The voter’s receipt can be printed on paper, stored on a digital medium, sent via mobile communication, or delivered by email. Voters can later verify their receipt against published election results. The method is applicable to electronic voting systems operating within polling station networks, mobile networks, or the Internet. <p>
+          <p><strong>Available at:</strong> <a href="https://patents.google.com/patent/US11069170B2"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://patents.google.com/patent/US11069170B2
+          </a></p>
+
+

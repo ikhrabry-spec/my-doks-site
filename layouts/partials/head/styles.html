@@ -1,0 +1,52 @@
+<style>
+/* Общие стили для всех страниц */
+body {
+    background: white;
+    margin: 0;
+    min-height: 100vh;
+    /* Применение шрифта к основному тексту */
+    font-family: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Специальные стили для главной и обложки */
+{{ if or .IsHome (eq .Type "cover") }}
+body {
+    background: none !important;
+    overflow-x: hidden;
+}
+
+.container {
+    background: none !important;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+{{ end }}
+
+/* Применение шрифта к заголовкам */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Применение шрифта к ссылкам в меню оглавления */
+.homepage-menu a, .homepage-menu h1, h2, h3, h4, h5 {
+    font-family: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">

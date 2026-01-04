@@ -1,0 +1,42 @@
+{{/* Шаблон для страницы reference-books.html*/}}
+{{ define "main" }}
+<div class="wrap container-lg">
+    <div class="content">
+        <div class="row flex-xl-nowrap mt-5 align-items-start">
+
+          <div class="col-lg-3 docs-sidebar d-none d-lg-block">
+            <div class="grid-nav-container">
+              <a href="/table-of-contents/">
+                <button class="grid-nav-button">Grid navigation</button>
+              </a>
+            </div>
+            <nav class="section-nav docs-links">
+              <ul class="list-unstyled">
+                <!-- Навигация по разделам -->
+                {{ partial "section-nav" . }}
+              </ul>
+            </nav>
+            <div class="expand-all-menu"></div>
+          </div>
+
+          <main class="docs-content col-lg-6 col-xl-6 title-center my-custom-page">
+              <h1 class="centered-heading">{{ .Title }}</h1>
+
+              {{ .Content }}
+
+              {{ partial "attribute-filter.html" . }}
+
+              {{ partial "source-list.html" . }}
+
+          </main>
+
+          <div class="col-lg-3 docs-sidebar sidebar-right d-none d-lg-block">
+                    {{ partial "sources-toc.html" . }}
+          </div>
+
+        </div>
+    </div>
+</div>
+{{ end }}
+
+

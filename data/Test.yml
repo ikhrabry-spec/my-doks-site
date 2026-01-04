@@ -1,0 +1,188 @@
+  # ==================== КАРТОЧКА 1: ПРОСТОЙ ФОРМАТ ====================
+  - name: "Test 1 Symple card"
+    anchor: "test-simple-card"
+    group_id: "Test 2.1"
+    referenced_in: ["test", "test-page"]
+    # Простое текстовое описание (старый совместимый формат)
+    description: |
+      Это **простая карточка**, созданная для проверки совместимости со старым форматом.
+      Она использует обычное поле `description`.
+
+      - Проверяет базовый рендеринг Markdown
+      - Не использует систему блоков `content_blocks`
+    address: "Москва, ул. Тестовая, 1"
+    url: "https://example.com"
+    attributes:
+      category: ["test", "simple", "legacy"]
+      status: "active"
+      priority: "low"
+
+  # ==================== КАРТОЧКА 2: НОВЫЙ ФОРМАТ (С БЛОКАМИ) ====================
+  - name: "Тест 2: Технологическая компания FutureTech"
+    anchor: "test-future-tech"
+    group_id: "Test 2.1"
+
+    # НОВЫЙ ФОРМАТ: структурированные блоки
+    content_blocks:
+      # ----- Текстовый блок с Markdown -----
+      - type: "text"
+        content: |
+          ## О компании FutureTech
+
+          **FutureTech** — инновационная компания, специализирующаяся на разработке решений в области искусственного интеллекта и робототехники.
+
+          Основана в **2018 году**, штаб-квартира расположена в инновационном центре.
+
+      # ----- Изображение с обтеканием слева -----
+      - type: "image"
+        path: "images/test/company-hq.jpg"        # Путь от корня папки assets/
+        layout: "float-left"
+        max_width: "250px"
+        caption: "Штаб-квартира FutureTech"
+        alt: "Современное стеклянное здание офиса"
+        border_radius: true                       # Закругленные углы
+
+      # ----- Текст, который обтекает изображение -----
+      - type: "text"
+        content: |
+          ### Наша миссия
+
+          Мы создаем технологии будущего, которые делают жизнь людей проще и безопаснее.
+
+          **Ключевые принципы:**
+          - Инновации в каждом продукте
+          - Открытость и прозрачность
+          - Устойчивое развитие
+
+      # ----- Двухколоночный блок с информацией -----
+      - type: "columns"
+        layout: "two-columns"
+        title: "Ключевые показатели"
+        columns:
+          - title: "Финансы и рост"
+            content: |
+              - Годовой оборот: **$150 млн**
+              - Инвестиции в R&D: **$40 млн**
+              - Рост за год: **+85%**
+              - Прибыль: **$25 млн**
+
+          - title: "Команда и география"
+            content: |
+              - Сотрудников: **320+**
+              - Офисы: **5 стран**
+              - Инженеры: **65% штата**
+              - Патенты: **45+**
+
+      # ----- Нумерованный список продуктов -----
+      - type: "list"
+        list_type: "ordered"
+        title: "Наши основные продукты:"
+        items:
+          - "**Autonomous Robotics Platform** — платформа для автономных роботов"
+          - "**AI Vision Suite** — набор инструментов компьютерного зрения"
+          - "**Smart Factory OS** — операционная система для умных фабрик"
+          - "**Edge AI Processors** — процессоры для ИИ на периферии"
+
+      # ----- YouTube видео -----
+      - type: "video_youtube"
+        video_id: "dQw4w9WgXcQ"                   # Тестовый ID
+        layout: "centered"
+        max_width: "700px"
+        caption: "Демонстрация нашей флагманской технологии"
+        autoplay: false
+
+      # ----- Текстовый блок с raw HTML -----
+      - type: "text"
+        style: "raw_html"
+        content: |
+          <div class="alert alert-info mt-4" role="alert">
+            <strong>Контакты для сотрудничества:</strong> Для получения дополнительной информации посетите наш сайт или свяжитесь с отделом продаж.
+          </div>
+
+    # Основные поля карточки (для фильтров и информации)
+    address: "Сколково, Инновационный центр, корпус 7"
+    url: "https://futuretech.example.com"
+
+    # Атрибуты для фильтрации
+    attributes:
+      category: ["technology", "ai", "robotics", "startup"]
+      region: ["moscow", "global"]
+      employees: "320"
+      funding: "series-c"
+      complexity: "high"
+
+  # ==================== КАРТОЧКА 3: МЕДИА-ГАЛЕРЕЯ ====================
+  - name: "Тест 3: Галерея продуктов RoboLine"
+    anchor: "test-robo-gallery"
+    group_id: "Test 2.1"
+
+    content_blocks:
+      # ----- Заголовок -----
+      - type: "text"
+        content: "## Продуктовая линейка RoboLine"
+
+      # ----- Ряд изображений (галерея) -----
+      - type: "image"
+        path: "images/test/robot-arm.jpg"
+        layout: "float-left"
+        max_width: "48%"
+        caption: "Промышленный робот-манипулятор"
+
+      - type: "image"
+        path: "images/test/drone.jpg"
+        layout: "float-right"
+        max_width: "48%"
+        caption: "Автономный дрон для инспекции"
+        margin_left: "4%"
+
+      # ----- Очистка float -----
+      - type: "text"
+        style: "raw_html"
+        content: "<div style='clear: both; margin-bottom: 2rem;'></div>"
+
+      # ----- Второй ряд -----
+      - type: "image"
+        path: "images/test/agv.jpg"
+        layout: "float-left"
+        max_width: "48%"
+        caption: "Автономный транспортёр (AGV)"
+
+      - type: "image"
+        path: "images/test/vision-camera.jpg"
+        layout: "float-right"
+        max_width: "48%"
+        caption: "Камера для систем компьютерного зрения"
+        margin_left: "4%"
+
+      # ----- Очистка float -----
+      - type: "text"
+        style: "raw_html"
+        content: "<div style='clear: both; margin-bottom: 2rem;'></div>"
+
+      # ----- Локальное видео -----
+      - type: "video_local"
+        path: "videos/test/assembly-process.mp4"
+        layout: "centered"
+        max_width: "800px"
+        poster: "images/test/video-poster.jpg"
+        caption: "Процесс сборки роботизированной ячейки"
+        controls: true
+        autoplay: false
+        loop: false
+        muted: true
+
+      # ----- Итоговый список -----
+      - type: "list"
+        list_type: "unordered"
+        title: "Преимущества линейки RoboLine:"
+        items:
+          - "**Модульность** — легко адаптируется под задачи"
+          - "**Совместимость** — работает с существующими системами"
+          - "**Надёжность** — среднее время наработки на отказ 50,000 часов"
+          - "**Поддержка** — круглосуточная техподдержка и обучение"
+
+    attributes:
+      category: ["robotics", "manufacturing", "automation"]
+      product_type: ["hardware", "software"]
+      price_range: "premium"
+      availability: "worldwide"

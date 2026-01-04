@@ -1,0 +1,21 @@
+﻿baseURL: 'http://localhost/'
+title: 'Balloting.Net'
+theme: 'doks'
+languageCode: 'en-us'
+
+params:
+  doks:
+    backgroundDots: true
+    sectionFooter: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+outputFormats:
+  JSON:
+    mediaType: "application/json"
+    isPlainText: true
+

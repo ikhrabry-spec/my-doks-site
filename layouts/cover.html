@@ -1,0 +1,187 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <style>
+    /* ОБЩИЕ СТИЛИ ДЛЯ ОБЛОЖКИ */
+    body.cover-page {
+      background: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+
+    /* Скрываем стандартные header и footer */
+    header, footer {
+      display: none !important;
+    }
+
+    /* КОНТЕЙНЕР ОБЛОЖКИ */
+    .cover-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Фоновый элемент (аналогично тестовой странице) */
+    .cover-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ОСТАЛЬНЫЕ СТИЛИ БЕЗ ИЗМЕНЕНИЙ */
+    :root { --button-height-ratio: 0.1; }
+    main.container { all: unset !important; display: contents !important; }
+
+    .cover-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 3% 3% 1% 3%;
+      box-sizing: border-box;
+    }
+
+    .cover-logo {
+      position: absolute;
+      top: 4vw;
+      left: 5vw;
+      width: 12%;
+      aspect-ratio: 1/1;
+      z-index: 2;
+    }
+
+    .cover-logo-secondary {
+      position: absolute;
+      width: 35%;
+      z-index: 2;
+      bottom: 20%;
+      right: 6.7%;
+    }
+
+    .cover-text {
+      margin-top: auto;
+      align-self: flex-end;
+      text-align: right;
+      color: white;
+      max-width: 30%;
+      padding-right: 4%;
+      padding-bottom: 2%;
+    }
+
+    .cover-text h1 {
+      font-family: Jost SemiBold, 'Montserrat', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 10vw, 4rem);
+      margin-bottom: 1rem;
+    }
+
+    .cover-text p {
+      font-family: Jost, 'Montserrat', Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      line-height: 1.0;
+      font-size: clamp(1rem, 1.7vw, 3rem);
+      margin-bottom: -0.5rem;
+    }
+
+    .cover-button {
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 3.2em;
+      background: #ff3366;
+      color: white;
+      border-radius: 10px;
+      font-family: Jost SemiBold, Century Gothic, Montserrat, Arial, Helvetica, sans-serif;
+      font-size: calc(9vw * var(--button-height-ratio) * 1.1);
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .cover-footer {
+      position: absolute;
+      left: 5%;
+      bottom: 3%;
+      color: black;
+      font-family: Jost SemiBold, Verdana, Montserrat, Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body class="cover-page">
+  <div class="cover-container">
+    <!-- Добавляем отдельный элемент для фона -->
+    <div class="cover-bg"></div>
+
+    <div class="cover-content">
+      {{ $logo := resources.Get "images/logos/logo-black-red.svg" }}
+      <img src="{{ $logo.RelPermalink }}" alt="Logo" class="cover-logo">
+
+      {{ $logo2 := resources.Get "images/logos/White red text shared.svg" }}
+      <img src="{{ $logo2.RelPermalink }}" alt="Secondary Logo" class="cover-logo-secondary">
+
+      <div class="cover-text">
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Params.subtitle }}</p>
+        <a href="{{ .Params.button_link | relURL  }}" class="cover-button">
+          {{ .Params.button_text }}
+        </a>
+      </div>
+
+      <div class="cover-footer">
+        © {{ now.Format "2006" }} Balloting.Net
+      </div>
+    </div>
+  </div>
+<script>
+    // Обновление переменной --vh
+    function updateViewportHeight() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    document.addEventListener('DOMContentLoaded', updateViewportHeight);
+    window.addEventListener('resize', updateViewportHeight);
+    window.addEventListener('orientationchange', updateViewportHeight);
+    setTimeout(updateViewportHeight, 100);
+
+    // Установка фона после загрузки
+    document.addEventListener('DOMContentLoaded', function() {
+      const bgDiv = document.querySelector('.cover-bg');
+
+      // Вариант 1: Используем resources.Get как в тестовой странице
+      {{ $bg := resources.Get "images/backgrounds/background.png" }}
+      {{ if $bg }}
+        bgDiv.style.backgroundImage = "url('{{ $bg.RelPermalink }}')";
+      {{ else }}
+        // Вариант 2: Альтернативный путь
+        bgDiv.style.backgroundImage = "url('/images/backgrounds/background.png')";
+        console.warn("Фоновое изображение не найдено через resources.Get, используем статический путь");
+      {{ end }}
+
+      // Добавляем fixed для плавности
+      bgDiv.style.backgroundAttachment = "fixed";
+    });
+</script>
+</body>
+</html>
+{{ end }}

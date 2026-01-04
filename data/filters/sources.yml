@@ -1,0 +1,13 @@
+filters:
+  - name: "Форма собственности"
+    key: "ownership" # Используется для префикса
+    values:
+      - label: "Частная"
+        value: "private"
+      - label: "Государственная"
+        value: "state"
+  - name: "Отрасль"
+    key: "industry"
+    values:
+      - label: "ИТ"
+        value: "IT"

@@ -1,0 +1,114 @@
+<div class="sources-container">
+    <div class="sources-header"></div>
+    <ul class="sources-list" id="sources-list">
+        {{ $isSourcesPage := and (eq .context.Kind "page") (eq .context.File.BaseFileName "Sources") }}
+        {{ $currentPageSlug := .context.File.BaseFileName }}
+        {{ $showNumbers := .displayNumbers }}
+        {{ $counter := 0 }}
+
+        {{ $sourcesToDisplay := .context.Site.Data.Sources }}
+
+        {{ if not $isSourcesPage }}
+            {{ $sourcesToDisplay = slice }}
+            {{ range .context.Site.Data.Sources }}
+                {{ if in .referenced_in $currentPageSlug }}
+                    {{ $sourcesToDisplay = $sourcesToDisplay | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $sourcesToDisplay }}
+            {{ $counter = add $counter 1 }}
+
+            {{/* ГЕНЕРАЦИЯ cardId */}}
+            {{ $cardId := "" }}
+            {{ with .anchor }}
+                {{ $cardId = trim . " " }}
+            {{ end }}
+            {{ if eq $cardId "" }}
+                {{ with .name }}
+                    {{ $cardId = . | urlize }}
+                {{ else }}
+                    {{ $cardId = printf "source-%d" $counter }}
+                {{ end }}
+            {{ end }}
+
+            <li class="source-item"
+                id="card-{{ $cardId }}"
+                data-card-id="{{ $cardId }}"
+                data-source-number="{{ $counter }}"
+                data-source-name="{{ .name | default .title }}">
+
+                <!-- КОРОТКИЙ ВИД -->
+                <span class="source-item-short">
+                    {{ if $showNumbers }}
+                        <span class="source-number">{{ $counter }}.</span>
+                        <span class="source-name">{{ .name | default .title }}</span>
+                    {{ end }}
+                </span>
+
+                <!-- ПОЛНЫЙ ВИД -->
+                <span class="source-item-full" style="display: none;">
+                    <span class="source-item-header">
+                        <span class="source-number">{{ $counter }}.</span>
+                        <span class="source-name">{{ .name | default .title }}</span>
+                    </span>
+                    <div class="source-details">
+                        <p>
+                            {{ with .author }}<strong>Автор:</strong> {{ . }}<br>{{ end }}
+                            {{ with .year }}<strong>Год:</strong> {{ . }}<br>{{ end }}
+                            {{ .description }}
+                            <br>
+                            {{ if .url }}
+                                <a href="{{ .url }}" target="_blank">{{ .url }}</a>
+                            {{ end }}
+                        </p>
+
+                        <!-- ССЫЛКА -->
+                        {{ $collectionBaseUrl := "/docs/reference-books/sources/" }}
+                        <div class="source-item-more-details">
+                            <a href="{{ $collectionBaseUrl }}#card-{{ $cardId }}"
+                               class="more-details-button"
+                               onclick="return saveScrollPositionForSources(event)">
+                                More detailed
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+
+<script>
+// ФУНКЦИЯ СОХРАНЕНИЯ ДЛЯ SOURCES
+function saveScrollPositionForSources(event) {
+
+  console.log('📍 [SOURCES] Сохраняем данные для возврата...');
+
+    // Находим карточку
+    const link = event.currentTarget;
+    const card = link.closest('.source-item');
+
+    if (!card) {
+        console.error('❌ Карточка источника не найдена');
+        return true;
+    }
+
+    // Получаем номер маркера
+    const sourceNumber = card.getAttribute('data-source-number');
+
+    // Очищаем ВСЁ для чистоты
+    sessionStorage.clear();
+
+    // Сохраняем тип И номер (новый формат)
+    sessionStorage.setItem('markerType', 'source');  // КЛЮЧЕВОЕ!
+    sessionStorage.setItem('markerNumber', sourceNumber);
+    sessionStorage.setItem('scrollTop', window.pageYOffset);
+    sessionStorage.setItem('timestamp', Date.now());
+
+    console.log('💾 [SOURCES] Сохранено тип: source, номер:', sourceNumber);
+
+    return true; // Разрешаем переход
+}
+</script>

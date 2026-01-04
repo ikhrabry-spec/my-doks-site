@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+    <style>
+        body { font-family: Arial; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        .date { color: #666; font-size: 0.9em; }
+        .content { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>{{ .Title }}</h1>
+    <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+    <div class="content">
+        {{ .Content }}
+    </div>
+</body>
+</html>

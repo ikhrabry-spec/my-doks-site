@@ -1,0 +1,168 @@
+/* =================================== */
+/* Стили для оглавления - правая колонка*/
+/* =================================== */
+
+.docs-sidebar {
+  // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc 1⭐
+  #TableOfContents,
+    .sources-toc {
+    padding-left: 0;
+    list-style-type: none; /* Remove bullets from the main list */
+    line-height: 1.2;
+    margin-top: 0.75rem;
+    }
+
+  /* 1. ЗАГОЛОВКИ ВЕРХНЕГО УРОВНЯ (РАЗДЕЛЕНИЕ 8 ММ) */
+    // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc 2⭐
+    #TableOfContents li > a ,
+      .sources-toc {
+      display: block; // Убеждаемся, что a занимает всю ширину и реагирует на padding
+        margin-top: 1rem;
+      }
+
+  /* Стили для вложенных пунктов (уровни 2 и ниже) */
+  // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc 3⭐
+  #TableOfContents ul li,
+    .sources-toc {
+    list-style-type: none;
+    margin-bottom: -0.4rem;
+    padding-left: 0vw;
+    margin-left: 0.5rem;
+  }
+
+  // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc 4⭐
+    #TableOfContents ul li a ,
+    .sources-toc {
+     display: block;
+     padding-top: 0rem;
+     padding-bottom: 0.1rem; /* Увеличьте это значение, если нужно */
+    margin-bottom: -0.4rem;
+
+    font-weight: 600; /* Полужирный шрифт */
+    font-size: 1.25rem; /* Размер шрифта 1.25rem */
+    text-decoration: none;
+    color: #000000;
+  }
+
+  // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc .nested-toc 1⭐
+  #TableOfContents ul li ul li ,
+  .sources-toc .nested-toc li {
+    list-style-type: disc; /* Add bullets to all nested lists */
+    margin-top: -0.8rem;
+    margin-bottom: 0.35rem;
+    }
+
+  // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc .nested-toc 2⭐
+  #TableOfContents ul li ul li a ,
+    .sources-toc .nested-toc li a {
+    display: block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: inherit;
+
+    padding-bottom: 0.7rem;
+    transition: all 0.15s ease;
+    list-style-type: disc !important;
+
+    &:hover {
+    font-weight: bold;
+    color: #7c599c;
+    text-decoration: none
+    }
+  }
+
+  // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc 5⭐
+  #TableOfContents a:hover ,
+  .sources-toc a:hover {
+    font-weight: bold;
+    color: #7c599c;
+    text-decoration: none !important;
+  }
+
+  // ⭐ ИЗМЕНЕНИЕ: ДОБАВЛЕН .sources-toc .sources-toc-link ⭐
+  // При условии, что класс .active добавляется JavaScript-ом:
+  #TableOfContents ul li a.active,
+    .sources-toc a.active,
+    .sources-toc .sources-toc-link.active,
+    .content-blocks-toc .sources-toc-link.active {
+
+    font-weight: 600;
+    color: #ff0000;
+    // But the fade to black starts after a 2-second delay
+    }
+    /* =================== */
+    /* Стили для активных ссылок */
+    /* =================== */
+    a.active {
+      font-weight: 700;
+      color: #000000;
+    }
+    h3.centered-heading a {
+       display: flex;
+      justify-content: center; /* Выравнивает дочерние элементы по горизонтали */
+      align-items: center;     /* Выравнивает дочерние элементы по вертикали */
+      text-decoration: none; // Removes underline
+      color: inherit;       // Inherits color from the h3
+      font-weight: 600;     // Ensures consistent font weight
+    }
+    .page-links .sources-toc-title {
+      text-align: center !important; /* Центрирует текст внутри заголовка */
+    }
+}
+.docs-sidebar {
+    // Стиль для обертки оглавления
+    .page-links {
+        // Здесь могут быть общие отступы или позиционирование блока
+    }
+
+    // Стиль для основного списка (sources-toc, который заменяет TableOfContents)
+    .sources-toc {
+        padding-left: 0;
+        list-style-type: none; /* Убираем маркеры у корневого списка */
+        margin-left: 2.3rem;
+        margin-top: 0.75rem;
+    }
+
+    // Стили для всех элементов списка (li) в оглавлении
+    .sources-toc li {
+        list-style-type: none;
+        margin-bottom: 0; /* Контроль вертикального расстояния */
+        padding-left: 0;
+    }
+
+    // Стили для ссылок первого уровня (Типы)
+    .sources-toc > li > a {
+        display: block;
+        margin-top: 1rem; /* Интерлиньяж для заголовков первого уровня */
+        line-height: 1.2; /* Интерлиньяж */
+        /* ... другие стили шрифта ... */
+    }
+
+    // Стили для вложенных списков (Подтипы)
+    .sources-toc .nested-toc {
+        list-style-type: none;
+        padding-left: 2rem; /* Отступ для вложенных элементов */
+    }
+
+    // Стили для элементов второго уровня вложенного списка (Подтипы)
+    .sources-toc .nested-toc li {
+        list-style-type: disc; /* Возвращаем маркеры (точки) */
+        margin-top: 0;
+        margin-bottom: 0.35rem; /* Интерлиньяж между подтипами */
+        margin-left: 0.5rem;
+        padding-left: 0;
+    }
+
+    // Стили для ссылок второго уровня (Подтипы)
+    .sources-toc .nested-toc li a {
+        display: block;
+        line-height: 1.1; /* Интерлиньяж */
+        padding: 0.1rem 0; /* Контроль вертикального расстояния вокруг ссылки */
+        /* ... другие стили шрифта и цвета ... */
+    }
+}
+
+
+

@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}</title>
+  {{ partial "head/custom-head" . }}
+</head>
+<body class="{{ block "bodyClass" . }}{{ end }}">
+  {{ if not .IsHome }}
+    {{ partial "header" . }}
+  {{ end }}
+
+  <main class="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ if not .IsHome }}
+    {{ partial "footer" . }}
+  {{ end }}
+
+  {{ $toggleJS := resources.Get "js/toggle-cards.js" | minify | fingerprint }}
+  <script src="{{ $toggleJS.Permalink }}"></script>
+
+  {{ $flexsearch := resources.Get "js/vendor/flexsearch.bundle.min.js" | minify | fingerprint }}
+  <script src="{{ $flexsearch.Permalink }}"></script>
+
+  {{ $searchJS := resources.Get "js/search-controls.js" }}
+  <script src="{{ $searchJS.RelPermalink }}"></script>
+
+  {{ $filterJS := resources.Get "js/attribute-filter.js" }}
+  <script src="{{ $filterJS.RelPermalink }}"></script>
+
+<script>
+// ФУНКЦИЯ ВОЗВРАТА
+window.returnToReferencePage = function() {
+    window.history.back();
+    return false;
+};
+</script>
+
+<script>
+setTimeout(() => {
+    console.log('🔄 Интеллектуальное восстановление...');
+
+    // Пропускаем карточные страницы
+
+// Пропускаем карточные страницы
+console.log('🔍 ПРОВЕРКА КАРТОЧНЫХ СТРАНИЦ:');
+console.log('- Текущий путь:', window.location.pathname);
+console.log('- Включает /legal_field/?', window.location.pathname.includes('/legal_field/'));
+console.log('- Включает /publications/?', window.location.pathname.includes('/publications/'));
+
+if (window.location.pathname.includes('/sources/') ||
+    window.location.pathname.includes('/publications/') ||
+    window.location.pathname.includes('/companies/') ||
+    window.location.pathname.includes('/patents/') ||
+    window.location.pathname.includes('/legal_field/') ||
+    window.location.pathname.includes('/test/')) {
+    console.log('✅ Это карточная страница, пропускаем восстановление');
+    return;
+} else {
+    console.log('📄 Это НЕ карточная страница, продолжаем восстановление');
+}
+
+    if (window.location.pathname.includes('/sources/') ||
+        window.location.pathname.includes('/publications/') ||
+        window.location.pathname.includes('/companies/') ||
+        window.location.pathname.includes('/patents/') ||
+        window.location.pathname.includes('/Legal_field/') ||
+        window.location.pathname.includes('/test/')) {
+        return;
+    }
+
+    // Новый единый формат
+    const markerType = sessionStorage.getItem('markerType');
+    const markerNumber = sessionStorage.getItem('markerNumber');
+    const scrollTop = sessionStorage.getItem('scrollTop');
+
+    console.log('📋 Данные:', {type: markerType, number: markerNumber, scrollTop});
+
+    if (!markerType || !markerNumber) {
+        console.log('ℹ️ Нет данных для восстановления');
+        return;
+    }
+
+    // Восстанавливаем скролл
+    if (scrollTop) {
+        window.scrollTo({ top: parseInt(scrollTop), behavior: 'smooth' });
+    }
+
+    // Интеллектуальный поиск маркера
+    setTimeout(() => {
+        let marker = null;
+        let searchText = '';
+        let foundBy = '';
+
+        // Определяем что искать в зависимости от типа
+        switch(markerType) {
+            case 'source':
+                searchText = `[s${markerNumber}]`;
+                marker = document.querySelector(`.source-reference[data-source-number="${markerNumber}"]`);
+                foundBy = 'data-source-number';
+
+                if (!marker) {
+                    console.log('🔍 Ищу source по тексту', searchText);
+                    const allElements = document.querySelectorAll('.source-reference, [class*="reference"]');
+                    for (let el of allElements) {
+                        if (el.textContent.includes(searchText)) {
+                            marker = el;
+                            foundBy = 'текст [sX]';
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 'publication':
+                searchText = `[p${markerNumber}]`;
+                marker = document.querySelector(`.publication-reference[data-publication-number="${markerNumber}"]`);
+                foundBy = 'data-publication-number';
+
+                if (!marker) {
+                    console.log('🔍 Ищу publication по тексту', searchText);
+                    const allElements = document.querySelectorAll('.publication-reference, [class*="reference"]');
+                    for (let el of allElements) {
+                        if (el.textContent.includes(searchText)) {
+                            marker = el;
+                            foundBy = 'текст [pX]';
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 'company':
+                searchText = `[c${markerNumber}]`;
+                marker = document.querySelector(`.company-reference[data-company-number="${markerNumber}"]`);
+                foundBy = 'data-company-number';
+
+                if (!marker) {
+                    console.log('🔍 Ищу company по тексту', searchText);
+                    const allElements = document.querySelectorAll('.company-reference, [class*="reference"]');
+                    for (let el of allElements) {
+                        if (el.textContent.includes(searchText)) {
+                            marker = el;
+                            foundBy = 'текст [cX]';
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 'patent':
+                searchText = `[pt${markerNumber}]`;
+                marker = document.querySelector(`.patent-reference[data-patent-number="${markerNumber}"]`);
+                foundBy = 'data-patent-number';
+
+                if (!marker) {
+                    console.log('🔍 Ищу patent по тексту', searchText);
+                    const allElements = document.querySelectorAll('.patent-reference, [class*="reference"]');
+                    for (let el of allElements) {
+                        if (el.textContent.includes(searchText)) {
+                            marker = el;
+                            foundBy = 'текст [ptX]';
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 'legal':
+                searchText = `[le${markerNumber}]`;
+                marker = document.querySelector(`.legal-reference[data-legal-number="${markerNumber}"]`);
+                foundBy = 'data-legal-number';
+
+                if (!marker) {
+                    console.log('🔍 Ищу legal по тексту', searchText);
+                    const allElements = document.querySelectorAll('.legal-reference, [class*="reference"]');
+                    for (let el of allElements) {
+                        if (el.textContent.includes(searchText)) {
+                            marker = el;
+                            foundBy = 'текст [leX]';
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 'test':
+                searchText = `[tst${markerNumber}]`;
+                marker = document.querySelector(`.test-reference[data-test-number="${markerNumber}"]`);
+                foundBy = 'data-test-number';
+
+                if (!marker) {
+                    console.log('🔍 Ищу test по тексту', searchText);
+                    const allElements = document.querySelectorAll('.test-reference, [class*="reference"]');
+                    for (let el of allElements) {
+                        if (el.textContent.includes(searchText)) {
+                            marker = el;
+                            foundBy = 'текст [tstX]';
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            default:
+                console.error(`❌ Неизвестный тип маркера: ${markerType}`);
+        }
+
+        // Подсветка маркера
+        if (marker) {
+            console.log(`✅ Нашли ${markerType} маркер ${searchText} способом: ${foundBy}`);
+
+            // Прокручиваем к маркеру
+            marker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Цвета для разных типов
+            switch(markerType) {
+                case 'source':
+                    marker.style.backgroundColor = '#7c599c';//'#4CAF50'; // Зелёный
+                    break;
+                case 'publication':
+                    marker.style.backgroundColor = '#7c599c';//'#2196F3'; // Синий
+                    break;
+                case 'company':
+                    marker.style.backgroundColor = '#7c599c';//'#FF9800'; // Оранжевый
+                    break;
+                case 'patent':
+                    marker.style.backgroundColor = '#7c599c';//'#9C27B0'; // Фиолетовый
+                    break;
+                case 'legal':
+                    marker.style.backgroundColor = '#7c599c';//'#F44336'; // Красный
+                    break;
+                case 'test':
+                    marker.style.backgroundColor = '#7c599c';//'#795548'; // Коричневый
+                    break;
+            }
+
+            marker.style.color = 'white';
+            marker.style.padding = '2px 0px 2px 5px';
+            marker.style.fontWeight = '500';
+            marker.style.transition = 'background-color 0.3s';
+
+            // Убираем подсветку через 3 секунды
+            setTimeout(() => {
+                marker.style.backgroundColor = '';
+                marker.style.color = '';
+                marker.style.padding = '';
+                marker.style.fontWeight = '';
+            }, 3000);
+
+        } else {
+            console.error(`❌ ${markerType} маркер ${searchText} не найден!`);
+            console.log('Проверьте что на странице есть элемент с текстом:', searchText);
+        }
+
+        // Очистка sessionStorage после использования
+        sessionStorage.clear();
+
+    }, 200);
+
+}, 200);
+</script>
+</body>
+</html>

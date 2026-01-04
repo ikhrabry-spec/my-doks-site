@@ -1,59 +1,193 @@
+﻿<!-- ДИАГНОСТИКА НАЧАЛО -->
+<div style="position: fixed; top: 0; left: 0; background: red; color: white; padding: 10px; z-index: 10000; font-weight: bold;">
+  ШАБЛОН INDEX.HTML ЗАГРУЖЕН - {{ now.Format "15:04:05" }}
+</div>
+<!-- ДИАГНОСТИКА КОНЕЦ -->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  alert(`Hugo Template Debug:\n
+    Path: {{ .Path }}\n
+    Kind: {{ .Kind }}\n
+    Type: {{ .Type }}\n
+    Layout: {{ .Layout }}\n
+    Template: {{ . }}`);
+});
+</script>
+
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
-      <h1>{{ .Title }}</h1>
-    </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/example-guide/" role="button">{{ i18n "get_started" }}</a>
-      {{ .Content }}
-    </div>
+<div class="homepage">
+  {{/* Загрузка ресурсов */}}
+  {{ $bg := resources.Get "images/backgrounds/home-bg.png" }}
+  {{ $logo := resources.Get "images/logos/logo-black-red.svg" }}
+
+  {{/* Основной фон */}}
+  <div class="homepage-bg"
+       style="background-image: url('{{ with $bg }}{{ .RelPermalink }}{{ else }}none{{ end }}');
+              background-size: cover;
+              background-position: center;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              z-index: -10;
+              {{ if not $bg }}background-color: #f0f0f0;{{ end }}">
   </div>
-</section>
+
+  {{/* Основной контент */}}
+  <div class="content-wrapper">
+    <header class="header">
+      {{ with $logo }}
+        <div class="logo">{{ .Content | safeHTML }}</div>
+      {{ end }}
+
+      <nav class="nav-buttons">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL }}" class="btn nav-btn">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <h1 class="hero-title">{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+      </section>
+
+      {{/* Оглавление в стиле Doks */}}
+      <section id="toc" class="doks-toc">
+        <div class="doks-toc-header">
+          <h2>Оглавление</h2>
+          <p>Все разделы нашего сайта</p>
+        </div>
+
+        <div class="doks-toc-grid">
+          {{ range .Site.Sections }}
+            {{ if not (eq .Title "Cover") }} {{/* Исключаем раздел обложки */}}
+              <a href="{{ .RelPermalink }}" class="doks-toc-card">
+                <div class="doks-toc-card-icon">
+                  {{ $icon := .Params.icon | default "book" }}
+                  <i class="bi bi-{{ $icon }}"></i>
+                </div>
+                <div class="doks-toc-card-content">
+                  <h3>{{ .Title }}</h3>
+                  <p>{{ .Description | default .Summary | truncate 120 }}</p>
+                </div>
+                <div class="doks-toc-card-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="copyright">© {{ now.Year }} {{ site.Params.author | default "Balloting.Net" }}</p>
+      <a href="#toc" class="btn footer-btn">Оглавление</a>
+    </footer>
+  </div>
+</div>
+
+<style>
+  /* Стили для оглавления в стиле Doks */
+  .doks-toc {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  }
+
+  .doks-toc-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .doks-toc-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    color: #1a1a1a;
+  }
+
+  .doks-toc-header p {
+    font-size: 1.2rem;
+    color: #4d4d4d;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .doks-toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .doks-toc-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    text-decoration: none !important;
+    color: #333;
+    border: 1px solid #eaeaea;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .doks-toc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    border-color: #d0d0d0;
+  }
+
+  .doks-toc-card-icon {
+    margin-bottom: 1.2rem;
+    font-size: 2.2rem;
+    color: #e63946; /* Красный акцент как в логотипе */
+  }
+
+  .doks-toc-card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #1a1a1a;
+  }
+
+  .doks-toc-card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  .doks-toc-card-arrow {
+    margin-top: auto;
+    color: #e63946;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .doks-toc-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .doks-toc {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<!-- Подключаем Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 {{ end }}
 
-{{ define "sidebar-prefooter" }}
-  {{ if site.Params.doks.backgroundDots -}}
-  <div class="d-flex justify-content-start">
-    <div class="bg-dots"></div>
-  </div>
-  {{ end -}}
-  {{ if eq $.Site.Language.LanguageName "English" }}
-  <section class="section section-md section-features">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-5">
-          <h2 class="h4">Update content</h2>
-          <p>Edit <code>content/_index.md</code> to see this page change.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Add new content</h2>
-          <p>Add Markdown files to <code>content</code> to create new pages.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Configure your site</h2>
-          <p>Edit your config in <code>config/_default/params.toml</code>.</p>
-        </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Read the docs</h2>
-          <p>Learn more in the <a href="https://getdoks.org/">Docs</a>.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  {{ end }}
-{{ end }}
-
-{{ define "sidebar-footer" }}
-{{ if site.Params.doks.sectionFooter -}}
-<section class="section section-md container-fluid bg-light">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-7">
-      <h2 class="mt-2">Start building with Doks today</h2>
-      <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
-    </div>
-  </div>
-</section>
-{{ end -}}
-{{ end }}

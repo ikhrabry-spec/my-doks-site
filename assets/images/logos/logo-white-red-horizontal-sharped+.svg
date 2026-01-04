@@ -1,0 +1,86 @@
+/* assets/scss/components/grid-fix.scss */
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.toc-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .card-title-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+
+     
+  // Новые стили для кликабельного заголовка
+  .card-title-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      .card-title {
+        color: #007bff; // Изменение цвета при наведении
+        text-decoration: underline; // Подчеркивание при наведении
+      }
+    }
+  }
+  
+  .card-title {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease; // Плавное изменение
+    position: relative;
+    padding-right: 1.5rem; // Место для иконки
+    
+    // Добавляем иконку стрелки после заголовка
+    &::after {
+      content: "→";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+  
+  // Эффекты при наведении на всю карточку
+  &:hover {
+    .card-title::after {
+      opacity: 1; // Показываем стрелку
+    }
+  }
+  
+  // Корректировка отступов
+  ul {
+    margin-bottom: 0; // Убираем нижний отступ списка
+  }
+}

@@ -1,0 +1,189 @@
+{{/* layouts/partials/content-block.html - ИСПРАВЛЕННАЯ версия */}}
+
+{{ $block := .block }}
+{{ $context := .context | default "default" }}
+
+{{/* Префикс для классов */}}
+{{ $prefix := "" }}
+{{ if eq $context "handbook" }}{{ $prefix = "handbook-" }}{{ end }}
+{{ if eq $context "docs" }}{{ $prefix = "docs-" }}{{ end }}
+
+{{/* === ИЗОБРАЖЕНИЕ === */}}
+{{ if eq $block.type "image" }}
+
+{{/* ТОЧНО КАК В handbook-advanced.html */}}
+{{ $layout := $block.layout | default "default" }}
+{{ $maxWidth := $block.max_width | default "" }}
+{{ $class := $block.class | default "" }}
+
+<div class="{{ $prefix }}content-block media-block media-{{ $layout }} {{ $class }}"
+     {{ with $maxWidth }}style="max-width: {{ . }};"{{ end }}>
+
+    {{ with $block.path }}
+        {{ $imageResource := resources.Get . }}
+        {{ if $imageResource }}
+            <img src="{{ $imageResource.RelPermalink }}"
+                 alt="{{ $block.alt | default "" }}"
+                 class="img-fluid {{ if $block.border_radius }}rounded{{ end }}"
+                 loading="lazy">
+        {{ else }}
+            <div class="alert alert-warning">
+                Изображение не найдено: {{ . }}
+            </div>
+        {{ end }}
+    {{ end }}
+
+    {{/* Подпись ТОЧНО КАК В handbook-advanced.html */}}
+    {{ with $block.caption }}
+        <div class="image-caption text-center text-muted mt-2 small">
+            {{ . | markdownify }}
+        </div>
+    {{ end }}
+</div>
+
+{{/* === YOUTUBЕ ВИДЕО === */}}
+{{ else if eq $block.type "video_youtube" }}
+
+{{/* ТОЧНО КАК В handbook-advanced.html */}}
+{{ $layout := $block.layout | default "default" }}
+{{ $width := $block.width | default "560" }}
+{{ $height := $block.height | default "315" }}
+
+<div class="{{ $prefix }}content-block media-block media-{{ $layout }}">
+
+    {{ with $block.video_id }}
+        {{/* Контейнер ТОЧНО КАК В handbook-advanced.html */}}
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                src="https://www.youtube.com/embed/{{ . }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+    {{ end }}
+
+    {{/* Подпись ТОЧНО КАК В handbook-advanced.html */}}
+    {{ with $block.caption }}
+        <div class="video-caption text-center text-muted mt-2 small">
+            {{ . | markdownify }}
+        </div>
+    {{ end }}
+</div>
+
+{{/* === ЛОКАЛЬНОЕ ВИДЕО === */}}
+{{ else if eq $block.type "video_local" }}
+
+{{/* ТОЧНО КАК В handbook-advanced.html */}}
+{{ $layout := $block.layout | default "default" }}
+
+<div class="{{ $prefix }}content-block media-block media-{{ $layout }}">
+
+    {{ with $block.path }}
+        {{ $videoResource := resources.Get . }}
+        {{ if $videoResource }}
+            <video controls
+                   width="{{ $block.width | default "100%" }}"
+                   {{ with $block.poster }}poster="{{ . }}"{{ end }}
+                   {{ with $block.autoplay }}autoplay{{ end }}
+                   {{ with $block.loop }}loop{{ end }}
+                   {{ with $block.muted }}muted{{ end }}
+                   {{ with $block.controls }}controls{{ end }}
+                   {{ with $block.max_width }}style="max-width: {{ . }};"{{ end }}>
+                <source src="{{ $videoResource.RelPermalink }}" type="video/mp4">
+                Ваш браузер не поддерживает HTML5 видео.
+            </video>
+        {{ end }}
+    {{ end }}
+
+    {{/* Подпись */}}
+    {{ with $block.caption }}
+        <div class="caption text-center text-muted mt-2 small">
+            {{ . | markdownify }}
+        </div>
+    {{ end }}
+</div>
+
+{{/* === КОЛОНКИ === */}}
+{{ else if eq $block.type "columns" }}
+
+<div class="{{ $prefix }}content-block columns-block columns-{{ $block.layout | default "two-columns" }} mb-4 {{ with $block.class }}{{ . }}{{ end }}">
+    {{ with $block.title }}
+        <h4 class="columns-title mb-3">{{ . }}</h4>
+    {{ end }}
+
+    {{ if eq ($block.layout | default "two-columns") "two-columns" }}
+        <div class="two-columns-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            {{ range $block.columns }}
+                <div class="column">
+                    {{ with .title }}<h5 style="margin-bottom: 0.5rem; color: #6c757d;">{{ . }}</h5>{{ end }}
+                    <div>{{ .content | markdownify }}</div>
+                </div>
+            {{ end }}
+        </div>
+
+    {{ else if eq $block.layout "three-columns" }}
+        <div class="three-columns-layout" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+            {{ range $block.columns }}
+                <div class="column">
+                    {{ with .title }}<h5 style="margin-bottom: 0.5rem; color: #6c757d;">{{ . }}</h5>{{ end }}
+                    <div>{{ .content | markdownify }}</div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+</div>
+
+{{/* === СПИСОК === */}}
+{{ else if eq $block.type "list" }}
+
+<div class="{{ $prefix }}content-block list-block mb-3 {{ with $block.class }}{{ . }}{{ end }}">
+    {{ with $block.title }}
+        <h5 class="list-title mb-2">{{ . }}</h5>
+    {{ end }}
+
+    {{ $listType := $block.list_type | default "unordered" }}
+
+    {{ if eq $listType "ordered" }}
+        <ol class="list-ordered" style="padding-left: 1.5rem;">
+            {{ range $block.items }}
+                <li style="margin-bottom: 0.5rem;">{{ . | markdownify }}</li>
+            {{ end }}
+        </ol>
+    {{ else }}
+        <ul class="list-unordered" style="padding-left: 1.5rem;">
+            {{ range $block.items }}
+                <li style="margin-bottom: 0.5rem;">{{ . | markdownify }}</li>
+            {{ end }}
+        </ul>
+    {{ end }}
+</div>
+
+{{/* === ТЕКСТ === */}}
+{{ else if eq $block.type "text" }}
+
+<div class="{{ $prefix }}content-block text-block mb-3 {{ with $block.class }}{{ . }}{{ end }}">
+    {{ $style := $block.style | default "default" }}
+
+    {{ if eq $style "raw_html" }}
+        {{ $block.content | safeHTML }}
+    {{ else if eq $style "bold" }}
+        <strong>{{ $block.content | markdownify }}</strong>
+    {{ else if eq $style "italic" }}
+        <em>{{ $block.content | markdownify }}</em>
+    {{ else }}
+        {{ $block.content | markdownify }}
+    {{ end }}
+</div>
+
+{{/* === НЕИЗВЕСТНЫЙ ТИП === */}}
+{{ else }}
+
+<div class="{{ $prefix }}content-block unknown-block alert alert-warning mb-3">
+    Неизвестный тип блока: {{ $block.type }}
+</div>
+
+{{ end }}  {{/* ← ЗАКРЫВАЮЩИЙ end ДЛЯ ПОСЛЕДНЕГО БЛОКА */}}
+

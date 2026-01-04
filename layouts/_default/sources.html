@@ -1,0 +1,165 @@
+{{ define "main" }}
+<div class="wrap container-lg">
+    <div class="content">
+        <div class="row flex-xl-nowrap mt-5 align-items-start">
+
+            {{/* Левая боковая панель */}}
+            <div class="col-lg-3 docs-sidebar d-none d-lg-block">
+        <!-- Новая кнопка Grid navigation -->
+        <div class="grid-nav-container">
+          <a href="/table-of-contents/">
+            <button class="grid-nav-button">Grid navigation</button>
+          </a>
+        </div>
+
+        <nav class="section-nav docs-links">
+          <ul class="list-unstyled">
+            {{ $currentPage := . }}
+            {{ $sections := slice
+                (site.GetPage "docs/inside")
+                (site.GetPage "docs/aspects")
+                (site.GetPage "docs/outside")
+                (site.GetPage "blog/discussion")
+                (site.GetPage "blog/news-archive")
+                (site.GetPage "docs/reference-books")
+                (site.GetPage "about")
+            }}
+
+              {{ range $section := $sections }}
+                {{ if ne $section.Title "Empty" }}
+                    <li>
+                        <details {{ if $currentPage.IsDescendant $section }}open{{ end }}>
+                            <summary>
+                                <a href="{{ $section.Permalink }}" class="section-title-link {{ if eq $currentPage.Permalink $section.Permalink }}active{{ end }}">
+                                    {{ $section.Title }}
+                                </a>
+                            </summary>
+                            <ul class="list-unstyled list-nested">
+                                {{ range $section.Pages.ByWeight }}
+                                    {{ if ne .Title "Empty" }}
+                                        <li>
+                                            {{ if .Pages }}
+                                                <details {{ if $currentPage.IsDescendant . }}open{{ end }} class="list-item-details">
+                                                    <summary>
+                                                        <a href="{{ .Permalink }}" class="{{ if eq .Permalink $.Page.Permalink }}active{{ end }}">
+                                                            {{ .Title }}
+                                                        </a>
+                                                    </summary>
+
+                                                    <ul class="list-unstyled list-nested">
+                                                        {{ range .Pages.ByWeight }}
+                                                            <li {{ if eq .Permalink $.Page.Permalink }}class="active"{{ end }}>
+                                                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                                            </li>
+                                                        {{ end }}
+                                                    </ul>
+                                                </details>
+                                                {{ else }}
+                                                <a href="{{ .Permalink }}" class="{{ if eq .Permalink $.Page.Permalink }}active{{ end }}">
+                                                    {{ .Title }}
+                                                </a>
+                                            {{ end }}
+                                        </li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                        </details>
+                    </li>
+                {{ end }}
+            {{ end }}
+          </ul>
+        </nav>
+         <!-- Стрелочка для раскрытия всех меню -->
+        <div class="expand-all-menu"></div>
+
+      </div>
+
+            {{/* Основной контент страницы */}}
+            <main class="docs-content col-lg-6 col-xl-6 title-center">
+                <h1 class="centered-heading">{{ .Title }}</h1>
+
+
+                {{/* Контейнер для вывода источников с разделами */}}
+                <div class="sources-by-type">
+                    <div class="sources-container">
+                        <ul class="sources-list" id="sources-list">
+                            {{ $allSources := .Site.Data.sources }}
+
+                            {{ $groupedByType := dict }}
+                            {{ range $key, $value := $allSources }}
+                                {{ $type := $value.type | default "Без типа" }}
+                                {{ if not (isset $groupedByType $type) }}
+                                    {{ $groupedByType = merge $groupedByType (dict $type (slice)) }}
+                                {{ end }}
+                                {{ $items := index $groupedByType $type }}
+                                {{ $items = $items | append $value }}
+                                {{ $groupedByType = merge $groupedByType (dict $type $items) }}
+                            {{ end }}
+
+                            {{ range $type, $itemsByType := $groupedByType }}
+                                <h4 id="{{ $type | urlize | anchorize }}" class="sources-section-title">
+                                    {{ $type | title }}
+                                </h4>
+                                {{ range $index, $source := $itemsByType }}
+                                    <li class="source-item" id="source-{{ $index }}">
+                                        <span class="source-item-short">
+                                            <span class="source-name">{{ $source.name }}</span>
+                                        </span>
+                                        <span class="source-item-full">
+                                            <span class="source-item-header">
+                                            <span class="source-name">{{ .name }}</span>
+
+                                            <div class="source-details">
+                                                                                                <p>
+                                                    {{ $source.description }}
+                                                    <br>
+                                                    {{ if $source.url }}
+                                                        <a href="{{ $source.url }}" target="_blank">{{ $source.url }}</a>
+                                                    {{ end }}
+                                                </p>
+
+                                                {{ if .more_details_page }}
+                                                <div class="source-item-more-details">
+                                                    <a href="{{ .more_details_page }}" class="more-details-button">More detailed</a>
+                                                </div>
+                                                {{ end }}
+                                            </div>
+                                        </span>
+                                    </li>
+                                {{ end }}
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </main>
+
+            {{/* Правая боковая панель (навигация по источникам) */}}
+            <nav class="col-lg-3 docs-sidebar sidebar-right d-none d-lg-block">
+                <div class="page-links"id="TableOfContents">
+                    {{ $allSources := .Site.Data.sources }}
+                    {{ $types := slice }}
+                    {{ range $allSources }}
+                        {{ $type := .type | default "Без типа" }}
+                        {{ if not (in $types $type) }}
+                            {{ $types = $types | append $type }}
+                        {{ end }}
+                    {{ end }}
+                    {{ if gt (len $types) 0 }}
+                    <h3 class="mt-1 sources-toc-title">On this page</h3>
+                    <ul>
+                        {{ range $type := sort $types }}
+                            <li><a href="#{{ $type | urlize | anchorize }}">{{ $type | title }}</a></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/sources-page.js"></script>
+
+{{ end }}
+{{ define "bodyClass" }}doks-page{{ end }}

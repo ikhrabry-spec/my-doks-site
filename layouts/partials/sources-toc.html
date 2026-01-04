@@ -1,0 +1,49 @@
+{{/* ------------------------------------------------------------------------- */}}
+{{/* PARTIAL: sources-toc.html                                                 */}}
+{{/* Генерирует оглавление для списка, сгенерированного из данных (H2/H3). */}}
+{{/* Использует тот же файл группировки, что и source-list.html.              */}}
+{{/* ------------------------------------------------------------------------- */}}
+
+{{ $currentPageName := .Page.File.BaseFileName }}
+{{/* Загружаем файл группировки, например, data/companies_plus_grouping.yml */}}
+{{ $groupingStructure := index .Site.Data (printf "%s_grouping" $currentPageName) }}
+
+{{/* Проверка: если данных для TOC нет, не выводим контейнер */}}
+{{ if $groupingStructure }}
+
+
+    <div class="page-links section-nav">
+        <h3 class="mt-1 sources-toc-title">On this page</h3>
+
+        <ul class="sources-toc list-unstyled">
+            {{/* 1. ЦИКЛ по ТИПАМ (Основные разделы H2) */}}
+            {{ range $typeGroup := $groupingStructure }}
+                {{ $currentType := $typeGroup.name }}
+
+                <li>
+                    {{/* Ссылка на h2 (Тип) */}}
+                    <a href="#{{ $currentType | urlize | anchorize }}" class="sources-toc-link">{{ $currentType | title }}</a>
+
+                    {{/* 2. ПРОВЕРКА И ВЫВОД ПОДРАЗДЕЛОВ (Подтипов H3) */}}
+                    {{ if $typeGroup.subtypes }}
+                        <ul class="nested-toc">
+                        {{ range $subtypeGroup := $typeGroup.subtypes }}
+                            {{ $currentSubtype := $subtypeGroup.name }}
+
+                            {{/* Используем centered_subtitle, если он есть, иначе name */}}
+                            {{ $linkText := $subtypeGroup.centered_subtitle | default ($currentSubtype | title) }}
+
+                            {{/* Генерируем ссылку на h3 (Подтип) */}}
+                            <li>
+                                <a href="#{{ $currentSubtype | urlize | anchorize }}" class="sources-toc-link">{{ $linkText }}</a>
+                            </li>
+                        {{ end }}
+                        </ul>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>
+
+{{ end }}

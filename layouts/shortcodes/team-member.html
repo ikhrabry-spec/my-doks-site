@@ -1,0 +1,34 @@
+<div class="team-member">
+    {{ $name := .Get "name" }}
+    {{ $position := .Get "position" }}
+    {{ $photoPath := .Get "photo" }}
+    {{ $bio := .Get "bio" }}
+    {{ $intro := .Get "intro" }}
+    {{ $outro := .Get "outro" }}
+
+    {{ if $intro }}
+      <p class="intro-text">{{ $intro }}</p>
+    {{ end }}
+
+    <div class="member-core">
+        {{ $cleanPath := strings.TrimPrefix "/" $photoPath }}
+        {{ $original := resources.Get $cleanPath }}
+
+        {{ if $original }}
+          {{ $image := $original.Fill "500x500 Center" }}
+          <img src="{{ $image.RelPermalink }}" alt="{{ $name }}" class="team-photo">
+        {{ else }}
+          <img src="{{ $photoPath }}" alt="{{ $name }}" class="team-photo">
+        {{ end }}
+
+        <div class="member-details">
+            <h5>{{ $name }}</h5> <p class="position">{{ $position }}</p>
+            <p class="bio">{{ $bio }}</p>
+        </div>
+    </div>
+
+    {{ if $outro }}
+      <p class="outro-text">{{ $outro }}</p>
+    {{ end }}
+
+</div>

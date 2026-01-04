@@ -1,0 +1,45 @@
+filter_groups:
+  # Этот ключ должен совпадать с $sectionName, который передается (например, 'companies')
+  companies:
+    - ownership # Ключ атрибута 1: Форма собственности
+    - industry  # Ключ атрибута 2: Отрасль
+    - rd        # НОВЫЙ КЛЮЧ: Присутствие R&D (для маркера attr_rd_true)
+  sources:
+    - type
+    - region
+
+data:
+  # --- 1. Форма собственности (Ownership) ---
+  ownership:
+    label: "Форма собственности"
+    values:
+      # Эти ключи ('private', 'state', 'mixed') используются для создания маркеров
+      - key: "private"
+        label: "Частная"
+      - key: "state"
+        label: "Государственная"
+      - key: "mixed"       # ДОБАВЛЕНО: Для соответствия маркеру attr_ownership_mixed
+        label: "Смешанная"
+      - key: "foreign"     # ДОБАВЛЕНО: Пример
+        label: "Иностранная"
+
+  # --- 2. Отрасль (Industry) ---
+  industry:
+    label: "Отрасль"
+    values:
+      - key: "it"
+        label: "ИТ"
+      - key: "finance"
+        label: "Финансы"
+      - key: "технологии"  # ДОБАВЛЕНО: Для соответствия маркеру attr_type_технологии
+        label: "Технологии"
+      # В идеале нужно перевести все в латиницу (например, "tech"), но оставляем "технологии" для совпадения с карточками
+
+  # --- 3. Наличие R&D (Research & Development) ---
+  rd:
+    label: "Наличие R&D"
+    values:
+      - key: "true"         # ДОБАВЛЕНО: Для соответствия маркеру attr_rd_true
+        label: "Есть R&D"
+      - key: "false"        # ДОБАВЛЕНО: Предполагая, что есть и обратное значение
+        label: "Нет R&D"

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="container py-5">
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+
+    <div class="content mt-4">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+{{ end }}

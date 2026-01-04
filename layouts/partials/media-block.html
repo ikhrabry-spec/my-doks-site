@@ -1,0 +1,49 @@
+{{/* media-block.html */}}
+{{ $media := .media }}
+{{ $type := $media.type }}
+
+{{ if eq $type "image" }}
+    {{ $imageResource := resources.Get $media.path }}
+    {{ if $imageResource }}
+        <figure class="media-image">
+            <img src="{{ $imageResource.RelPermalink }}"
+                 alt="{{ $media.alt | default "" }}"
+                 class="img-fluid"
+                 {{ with $media.max_width }}style="max-width: {{ . }};"{{ end }}>
+            {{ with $media.caption }}
+                <figcaption>{{ . | markdownify }}</figcaption>
+            {{ end }}
+        </figure>
+    {{ else }}
+        <p class="text-danger">Изображение не найдено: {{ $media.path }}</p>
+    {{ end }}
+
+{{ else if eq $type "video_youtube" }}
+    <figure class="media-video-youtube">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+                    src="https://www.youtube.com/embed/{{ $media.video_id }}"
+                    allowfullscreen></iframe>
+        </div>
+        {{ with $media.caption }}
+            <figcaption>{{ . | markdownify }}</figcaption>
+        {{ end }}
+    </figure>
+
+{{ else if eq $type "video_local" }}
+    <figure class="media-video-local">
+        <video controls
+               {{ with $media.width }}width="{{ . }}"{{ end }}
+               {{ with $media.height }}height="{{ . }}"{{ end }}
+               {{ with $media.poster }}poster="{{ . }}"{{ end }}>
+            <source src="{{ $media.path }}" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        {{ with $media.caption }}
+            <figcaption>{{ . | markdownify }}</figcaption>
+        {{ end }}
+    </figure>
+
+{{ else }}
+    <p class="text-warning">Тип медиа "{{ $type }}" не поддерживается.</p>
+{{ end }}

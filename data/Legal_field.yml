@@ -1,0 +1,287 @@
+- name: "Art. 142, Criminal Code of the Russian Federation"
+  anchor: "Art142Criminal_Code"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Problems"]
+  number: 1
+  description: "Article 142. Falsification of Election Documents, Referendum Documents, All-Russian Voting Documents"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Criminal Code of the Russian Federation. Article 142.1: Falsification of electoral documents, referendum documents, and nationwide voting documents. Federal Law No. 63-FZ of June 13, 1996 (as amended). Official text available via ConsultantPlus, current version accessed 2025.</em></p>
+
+          <p><strong>Annotation:</strong> Article 142 p.1 criminalizes actions such as the falsification of ballots, voter signatures, referendum documents, and the illegal production, storage, or transportation of ballot papers. It specifies the categories of persons subject to liability (including election commission members, candidates, and authorized representatives) and establishes a range of penalties, from substantial fines to forced labor and imprisonment.
+
+          <strong>Publisher:</strong> ConsultantPlus (КонсультантПлюс) is a major Russian legal information system and electronic legal publisher providing official and consolidated versions of legislation, regulations, and judicial practice. The platform functions as an authorized distributor of normative legal acts and is widely used by legal professionals, public institutions, and researchers.
+
+          <p><strong>Link to original (in Russian):</strong> <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/9a3cbf18d6cf0c7b7af29583ffc7fff9391fc1e8/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.consultant.ru/document/cons_doc_LAW_10699/9a3cbf18d6cf0c7b7af29583ffc7fff9391fc1e8/
+          </a></p>
+
+
+- name: "Art. 141, Criminal Code of the Russian Federation"
+  anchor: "Art14_1Criminal"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Problems"]
+  number: 2
+  description: "Article 141. Obstruction of the Exercise of Electoral Rights or the Work of Election Commissions."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Criminal Code of the Russian Federation. Article 141: Obstruction of the exercise of electoral rights or the work of election commissions. Federal Law No. 63-FZ of June 13, 1996 (as amended). Official text available via ConsultantPlus, current version accessed 2025.</em></p>
+
+          <p><strong>Annotation:</strong> This article of the Criminal Code of the Russian Federation establishes criminal liability for acts that obstruct the free exercise of citizens’ electoral rights, participation in referendums or nationwide votes, violate the secrecy of voting, or interfere with the lawful activities of election commissions and their members. The provision covers both individual acts of obstruction and aggravated forms involving abuse of official position, coercion, deception, bribery, violence, or organized group activity.
+
+          A distinct and significant element of Article 141 is its explicit inclusion of unlawful interference in the operation of the State Automated System of the Russian Federation “Vybory,” recognizing technological infrastructure as a protected component of the electoral process. The article thus frames electoral integrity not only as a matter of voter freedom and commission independence, but also as a matter of safeguarding institutional and technical mechanisms underlying vote administration.
+
+          <strong>Publisher:</strong> ConsultantPlus (КонсультантПлюс) is a major Russian legal information system and electronic legal publisher providing official and consolidated versions of legislation, regulations, and judicial practice. The platform functions as an authorized distributor of normative legal acts and is widely used by legal professionals, public institutions, and researchers.
+
+          <p><strong>Link to original (in Russian):</strong> <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/7f9d47f037e2f1e9d101b64df440d4e14f6bdbc8/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.consultant.ru/document/cons_doc_LAW_10699/7f9d47f037e2f1e9d101b64df440d4e14f6bdbc8/
+          </a></p>
+
+- name: "Constitutional ban on non-verifiable e-voting"
+  anchor: "Constitutional_ban_on_e-voting"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Political_landscape"]
+  number: 1
+  description: "Landmark constitutional ruling establishing mandatory public verifiability of elections."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Federal Constitutional Court of Germany. Judgment of the Second Senate of 3 March 2009 (2 BvC 3/07, 2 BvC 4/07). Federal Constitutional Court (BVerfG).</em></p>
+
+          <p><strong>Annotation:</strong> In this ruling, the German Federal Constitutional Court held that the use of electronic voting systems is unconstitutional if the correctness of the election result cannot be verified by the general public without specialist technical knowledge. The Court emphasized that all essential steps of an election must be subject to public scrutiny. As a consequence, the decision effectively prohibited the use of many classes of DRE and remote electronic voting systems that lack a voter-verifiable paper trail or equivalent cryptographically provable verification mechanisms.
+
+           <strong>Publisher:</strong> Federal Constitutional Court of Germany (Bundesverfassungsgericht), Karlsruhe, Germany.
+
+          <p><strong>Link to original:</strong> <a href="https://www.consultant.ru/document/cons_doc_LAW_10699/7f9d47f037e2f1e9d101b64df440d4e14f6bdbc8/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.consultant.ru/document/cons_doc_LAW_10699/7f9d47f037e2f1e9d101b64df440d4e14f6bdbc8/
+          </a></p>
+
+
+- name: "Electoral Law Acts"
+  anchor: "ElectoralLawAct"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Political_landscape"]
+  number: 2
+  description: "Legal framework enabling nationwide remote internet voting based on mandatory state digital identity infrastructure."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Electronic voting in Estonia is regulated by four laws." </em></p>
+
+          <ul>
+            <li><em>“Riigikogu Election Act”</em></li>
+            <li><em>“Local Government Council Election Act”</em></li>
+            <li><em>“European Parliament Election Act”</em></li>
+            <li><em>“Referendum Act”</em></li>
+          </ul>
+
+          <p><strong>Annotation:</strong> Estonian law establishes the legal basis for remote electronic voting (i-voting) in parliamentary elections. The system relies on mandatory state-issued electronic identification (ID-card, Mobile-ID, Smart-ID) and includes procedural safeguards such as voter authentication, cryptographic protection, and auditability. A distinctive feature is the possibility for voters to cancel an electronically cast vote by voting again at a polling station, with the in-person vote prevailing. This mechanism is intended to mitigate coercion and vote-buying risks. </p>
+
+           <strong>Publisher:</strong> The information portal Valimised.ee, maintained by the State Electoral Office. Estonia's official legislative documents are published on the website Riigi Teataja. The translations published on the site are unofficial texts – they do not have any legal force and you cannot rely on them in judicial or any other official proceedings. Only legislation in Estonian has legal force in Estonia.</p>
+
+          <p><strong>Available at:</strong> <a href="https://www.riigiteataja.ee/en/eli/ee/514112013015/consolide/current"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.riigiteataja.ee/en/eli/ee/514112013015/consolide/current
+          </a></p>
+
+          <p><strong>Available at:</strong> <a href="https://www.riigiteataja.ee/en/eli/506112013004/consolide/current"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.riigiteataja.ee/en/eli/506112013004/consolide/current
+          </a></p>
+
+          <p><strong>Available at:</strong> <a href="https://www.riigiteataja.ee/en/eli/ee/529012014001/consolide/current"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.riigiteataja.ee/en/eli/ee/529012014001/consolide/current
+          </a></p>
+
+          <p><strong>Available at:</strong> <a href="https://www.riigiteataja.ee/en/eli/514112013007/consolide/current"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.riigiteataja.ee/en/eli/514112013007/consolide/current
+          </a></p>
+
+- name: "French Electoral Code"
+  anchor: "French_Electoral_Code"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Political_landscape"]
+  number: 3
+  description: "French electoral law allows the use of remote electronic voting for citizens residing abroad under specific and limited conditions."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Article R 176-3, Code électoral (French Electoral Code), regulatory provision concerning electronic voting by overseas voters, Décret n° 2022-369 of 16 March 2022, in force since 17 March 2022.</em></p>
+
+          <p><strong>Annotation:</strong> Provides that for the election of deputies by French citizens abroad, voters referred to in Article R 172 may vote by electronic correspondence; establishes an automated data processing system under the responsibility of the Minister of the Interior and the Minister of Foreign Affairs that ensures separation of voter identity data from vote data. Before deployment or substantive modification of the electronic voting system, an independent assessment must verify that it guarantees vote secrecy and election integrity; the responsible ministers may suspend implementation if these guarantees are not met. Detailed rules on data treatment, voter access rights, and procedure implementation are specified by joint ministerial order.
+
+          <strong>Publisher:</strong> Légifrance – the official public service for the dissemination of French law.
+
+          <p><strong>Link to original:</strong> <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045369343/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045369343/
+          </a></p>
+
+- name: "Canada Elections Act"
+  anchor: "Canada_Elections_ct"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Political_landscape"]
+  number: 4
+  description: "Statutory framework restricting federal adoption of electronic voting while permitting pilots."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Criminal Canada Elections Act (S.C. 2000, c. 9). Provisions on alternative voting methods. Statutes of Canada, as amended. Department of Justice Canada.</em></p>
+
+          <p><strong>Annotation:</strong> The Canada Elections Act requires explicit parliamentary authorization before alternative voting methods, including electronic voting, may be deployed in federal elections. While the Act allows testing and experimentation subject to oversight by Parliament or its committees, nationwide remote electronic voting has not been adopted. In practice, experimentation has been confined to municipal and territorial elections, reflecting a centralized, risk-averse federal regulatory approach.
+
+          <strong>Publisher:</strong> Department of Justice Canada is the official publisher of consolidated federal statutes and regulations.
+
+          <p><strong>Link to original:</strong> <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045369343/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045369343/
+          </a></p>
+
+- name: "Cybersecurity Law of China"
+  anchor: "Cybersecurity_of_China"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Political_landscape"]
+  number: 5
+  description: "The law establishes mandatory requirements for data security, server localization, log retention, and government access to information systems, indirectly restricting the deployment of remote and distributed electronic voting platforms, especially those relying on foreign or decentralized infrastructure."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Cybersecurity Law of the People's Republic of China, adopted 7 November 2016, effective 1 June 2017, amended 28 October 2025; Standing Committee of the National People's Congress, People's Republic of China.</em></p>
+
+          <p><strong>Annotation:</strong> The law establishes comprehensive requirements for cybersecurity governance within mainland China. It mandates that network operators ensure the security and integrity of personal and network data, including requirements for monitoring, log retention, compliance with standards, and protection against unauthorized access. Operators of critical information infrastructure must store personal and important data domestically unless a security assessment authorizes overseas transfer, and must adopt technical and managerial measures to prevent leaks, destruction, and loss of data. These provisions, together with server localization and other operational security duties, significantly constrain the operation of remote and distributed electronic services, including potential remote e-voting platforms that rely on foreign infrastructure or decentralized architectures.
+
+          <strong>Publisher:</strong> China Law Translate is an independent, non-governmental legal translation project that provides high-quality English translations of Chinese legislation and regulatory documents. It is widely used by researchers, legal practitioners, and policy analysts as a reference source for understanding Chinese law, while not constituting an official government publication.
+
+          <p><strong>Available at:</strong> <a href="https://www.chinalawtranslate.com/en/22075-2/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.chinalawtranslate.com/en/22075-2/
+          </a></p>
+
+- name: "HAVA (Help America Vote Act of 2002)"
+  anchor: "HAVAl"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Political_landscape"]
+  number: 6
+  description: "U.S. federal law creating the EAC and directing development of voting system standards, with state compliance varying by local law."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Help America Vote Act of 2002 (HAVA), Public Law 107-252, enacted 29 October 2002, United States of America, Title III and Title IV provisions on Voting System Standards and Election Administration.  </em></p>
+
+          <p><strong>Annotation:</strong> Establishes federal requirements for election administration in the United States and mandates creation of the Election Assistance Commission (EAC) to develop and implement voluntary voting system standards, provide guidance, and distribute funds to states for election improvements. It sets baseline expectations for accessibility, voter-verified records, and election technology standards.
+
+          <strong>Publisher:</strong> U.S. Congress / Government Publishing Office.
+
+          <p><strong>Available at:</strong> <a href="https://www.congress.gov/107/plaws/publ252/PLAW-107publ252.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.congress.gov/107/plaws/publ252/PLAW-107publ252.pdf
+          </a></p>
+
+- name: "Voluntary Voting System Guidelines (VVSG 2.0)"
+  anchor: "VoluntaryVoting_VVSG"
+  group_id: "Electoral Laws & Voting Rights"
+  referenced_in: ["Political_landscape"]
+  number: 7
+  description: "EAC-issued technical standards for voting systems, emphasizing software independence and auditability to enhance trust and accessibility."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Voluntary Voting System Guidelines (VVSG 2.0), adopted 2021 by the U.S. Election Assistance Commission (EAC), setting technical and accessibility standards for voting systems in the United States</em></p>
+
+          <p><strong>Annotation:</strong> Presents performance and conformance requirements for voting systems, addressing accessibility, usability, software independence, accuracy, privacy, and auditability. Includes methods supporting software independence and risk-limiting audits to help ensure voting accuracy and voter trust. Compliance remains voluntary unless adopted by specific states.
+
+          <strong>Publisher:</strong> U.S. Government Publishing Office / EAC.
+
+          <p><strong>Available at:</strong> <a href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-ce2bea91b76bd688ffb3e8c7c5bef6e4/pdf/GOVPUB-C13-ce2bea91b76bd688ffb3e8c7c5bef6e4.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.govinfo.gov/content/pkg/GOVPUB-C13-ce2bea91b76bd688ffb3e8c7c5bef6e4/pdf/GOVPUB-C13-ce2bea91b76bd688ffb3e8c7c5bef6e4.pdf
+          </a></p>
+
+- name: "+++Art. 141, Criminal Code of the Russian Federation"
+  anchor: "Art14_1Criminal"
+  group_id: ""
+  referenced_in: [""]
+  number: 1
+  description: "Article ssions."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Criminal Code </em></p>
+
+          <p><strong>Annotation:</strong> This articltivity.
+
+          <strong>Publisher:</strong> Consultator ers.
+
+          <p><strong>Available at:</strong> <a href="https://www.consultant.ru/document"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.consultant.ru/document/cons_
+          </a></p>

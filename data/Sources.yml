@@ -1,0 +1,1077 @@
+# data/sources.yml
+
+- name: "Video Surveillance of the Voting Process"
+  anchor: "Video_Surveillance"
+  group_id: "Thematic websites"
+  referenced_in: ["Prerequisites"]
+  number: 1
+  description: "An analytical review of the legal and technical frameworks for using video surveillance during elections in OSCE member states (Azerbaijan, Armenia, USA, etc.) and other regions."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Lysenko, Vladimir (Member of the Council of the Russian Foundation for Free Elections, Doctor of Laws). 'Video Surveillance of the Voting Process and Vote Counting: International Experience.' Russian Foundation for Free Elections (RFSV). Published on the website September 20, 2017.</em></p>
+          <p><em>[Лысенко, Владимир (член Совета Российского фонда свободных выборов, доктор юридических наук). 'Видеонаблюдение за ходом голосования и подсчёта голосов избирателей: зарубежный опыт' Российский фонд свободных выборов - РФСВ. Опубликовано на саййте 20 сентября, 2017.]</em></p>
+
+          <p><strong>Annotation:</strong> This analytical review provides a systematic overview of international practices in using video surveillance technologies during elections. The primary focus is on the member states of the Organization for Security and Co-operation in Europe (OSCE), with additional examples from the Americas and the Asia-Pacific region. The article examines the diverse legal frameworks, technical implementations (e.g., webcam placement, internet streaming, local recording), and stated objectives (transparency, fraud prevention, voter trust) behind the adoption of such systems in countries including Azerbaijan, Armenia, Georgia, Latvia, the United States, Ukraine, Brazil, and India. A key finding is the significant variation in approaches, ranging from mandatory nationwide deployment to selective use and even legislative prohibition (as in Mexico). The author highlights critical issues such as the need for clear regulations, the importance of safeguarding ballot secrecy, and the unresolved question of the legal evidential value of video recordings in electoral disputes.</p>
+
+          [<strong>Publisher:</strong> The Russian Foundation for Free Elections (RFSV) is a non-profit organization founded in 2001 by the Central Election Commission of the Russian Federation, the Institute of Socio-Political Research of the Russian Academy of Sciences, and the Kutafin Moscow State Law University, with the aim of legal education and strengthening ties between educational institutions and electoral bodies.]
+
+          <p><strong>Link to original (in Russian):</strong> <a href="https://rfsv.ru/law/pravovye-innovatsii/videonabliudenie-za-khodom-golosovaniia-i-podscheta-golosov-izbiratelei-zarubezhnyi-opyt"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://rfsv.ru/law/pravovye-innovatsii/videonabliudenie-za-khodom-golosovaniia-i-podscheta-golosov-izbiratelei-zarubezhnyi-opyt
+          </a></p>
+
+
+- name: "Screenshots: 2011 CEC Election Broadcast"
+  anchor: "Screenshots_the_Russian_elections"
+  group_id: "Social Media Platforms"
+  referenced_in: ["Prerequisites"]
+  number: 2
+  description: "An analytical review of the legal and technical frameworks for using video surveillance during elections in OSCE member states (Azerbaijan, Armenia, USA, etc.) and other regions."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>A collage of screenshots from the 2011 State Duma election results broadcast by the Central Election Commission (CEC) of Russia.</em></p>
+
+          <p><strong>Annotation:</strong> The screens show the incoming results of the vote distribution from different regions of Russia across six time zones, as they were reported on the night of the vote count. On three of these screenshots, a red annotation highlights the total percentage of votes allocated to the participating parties on those specific screens — each total inexplicably exceeds 100%. A fourth screenshot has a red underline drawing attention to the ruling party receiving nearly 100% of the votes.</p>
+    - type: "image"
+      path: "images/foto/Four_foto.jpg"        # Путь от корня папки assets/
+      layout: "centered"
+      max_width: "550px"
+      caption: "A photo selection of screenshots from the official live TV broadcast conducted by the Central Election Commission of Russia during the State Duma elections in December 2011."
+      alt: ""
+      border_radius: true                       # Закругленные углы
+
+    - type: "text"
+      content: |
+
+          <p><strong>Available at:</strong> <a href="https://images.cnscdn.com/5/3/5/1/5351d556ecdc24092ff5cfc3b9a8ccb1/original.jpg"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://images.cnscdn.com/5/3/5/1/5351d556ecdc24092ff5cfc3b9a8ccb1/original.jpg
+          </a></p>
+
+          [TinEye found 29 results. First indexed by TinEye on February 20, 2013]
+
+          <p><strong>TinEye:</strong> <a href="https://tineye.com/search/ed9fe100f0902e4aa7c20e85714577b1f4ef6946?tags=&sort=score&order=desc&page=3"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://tineye.com/search/ed9fe100f0902e4aa7c20e85714577b1f4ef6946?tags=&sort=score&order=desc&page=3
+          </a></p>
+
+- name: "Fact-check: 'Churov's 146%'"
+  anchor: "The_Churov"
+  group_id: "Thematic websites"
+  referenced_in: ["Prerequisites"]
+  number: 3
+  description: "Analysis of the notorious incident where the live broadcast of the 2011 elections displayed vote totals exceeding 100% (up to 146%). Examines versions of a technical glitch, television staff error, and intentional falsification."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Provereno.Media. 'Is it true that Churov's 146% in the State Duma elections was a technical error?' Published on the website November 6, 2020.</em></p>
+          <p><em>[Проверено.Медиа. 'Правда ли, что чуровские 146% на выборах в Госдуму были технической ошибкой?' Опубликовано на сайте 6 ноября 2020.]</em></p>
+
+          <p><strong>Annotation:</strong> This fact-checking article investigates the origin of the infamous "146% of votes" figure that appeared on screen during the live broadcast of the 2011 Russian State Duma election results. The piece examines competing explanations for the anomaly: a technical glitch in the GAS "Vybory" automated system, an error by television editors manually inputting data, and allegations of intentional fabrication. It cites statements from former CEC head Vladimir Churov, a regional election official, a systems expert, and a broadcast cameraman. The conclusion is that the televised numbers did not reflect the final official protocol and that this incident, while a significant cultural meme, is not in itself a serious argument for discussing systemic electoral fraud, unlike analyses by electoral statisticians.</p>
+
+          [<strong>Publisher:</strong> Provereno.Media is a Russian-language fact-checking and investigative media project.]
+
+          <p><strong>Link to original (in Russian):</strong> <a href="https://provereno.media/blog/2020/11/06/pravda-li-chto-churovskie-146-procentov-na-vyborah-v-gosdumu-byli-tehnicheskoj-oshibkoj/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://provereno.media/blog/2020/11/06/pravda-li-chto-churovskie-146-procentov-na-vyborah-v-gosdumu-byli-tehnicheskoj-oshibkoj/
+          </a></p>
+
+- name: "Statistical Analysis: Anomalies in the 2011 State Duma Elections"
+  anchor: "Mathematics_of_Elections"
+  group_id: "Thematic websites"
+  referenced_in: ["Prerequisites"]
+  number: 4
+  description: "Statistical analysis of the official 2011 State Duma election data, revealing anomalies in vote and turnout distributions indicative of large-scale falsifications in favor of the United Russia party."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Shpilkin, Sergey. «Mathematics of the Elections — 2011». Troitskiy Variant — Nauka (Science), no. 25(94), December 20, 2011, pp. 2-4.</em></p>
+          <p><em>[Сергей Шпилькин. 'Математика выборов — 2011'. Троицкий вариант — Наука, № 25(94), 20 декабря 2011, стр. 2-4]</em></p>
+
+          <p><strong>Annotation:</strong> This detailed scientific article applies statistical methods to analyze the official results of the 2011 Russian State Duma elections. Building on the author's earlier research, it identifies persistent anomalies: a strong positive correlation between turnout and votes for the ruling United Russia party (unlike other parties), and abnormal, non-bell-shaped distribution of turnout across precincts. A key finding is the comparison between precincts with automated ballot scanners (KOIB) and those without, showing that the described anomalies disappear where automated counting was used. The author proposes a method to separate "normal" and "anomalous" votes for United Russia, estimating the latter at 15.2 million nationally. The analysis concludes that after removing the estimated anomalous votes, United Russia's result would have fallen to approximately 34%, compared to its official tally of about 50%.</p>
+
+          [<strong>Publisher:</strong> Troitskiy Variant — Science (Троицкий вариант — Наука) is a Russian-language scientific newspaper known for its independent editorial stance and coverage of science, politics, and society.]
+
+          <p><strong>Link to original (in Russian):</strong> <a href="https://www.trv-science.ru/2011/12/matematika-vyborov-2011/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.trv-science.ru/2011/12/matematika-vyborov-2011/
+          </a></p>
+
+- name: "Statistical Anomalies: The 2016 Elections"
+  anchor: "The_2016_Elections"
+  group_id: "Thematic websites"
+  referenced_in: ["Prerequisites"]
+  number: 5
+  description: "A statistical analysis of the 2016 State Duma elections, revealing a 'double-humped' structure in the distribution of votes depending on turnout. The author estimates the scale of 'phantom' votes in favor of United Russia and calculates corrected election results."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Shpilkin, Sergey. «The Double-Humped Russia». Troitskiy Variant — Nauka (Science), no. 214, October 4, 2016, pp. 1-3.</em></p>
+          <p><em>[Сергей Шпилькин. 'Двугорбая Россия'. Троицкий вариант — Наука, № 214, 20 декабря 2016, стр. 1-3.]</em></p>
+
+          <p><strong>Annotation:</strong> In this article, independent election researcher Sergey Shpilkin analyzes the official data from the 2016 State Duma elections. Applying his signature methodology, the discovers that the distribution of votes depending on turnout has formed a distinct "double-humped" curve. The first peak, reflecting "normal" voting, is at an unprecedentedly low turnout of ~37%. The second peak at high turnouts (80-95%) is formed almost exclusively by votes for United Russia. Shpilkin argues that these votes in the second peak are "phantom" (falsified) and estimates their number at 12.1 million, or about 45% of all votes officially received by the party. The article provides a table of "corrected" election results, lists regions that made the largest contribution to the anomalies, and concludes that despite the change in the leadership of the Central Election Commission, the scale of falsifications remained comparable to the 2011 elections.</p>
+
+          [<strong>Publisher:</strong> Troitskiy Variant — Science (Троицкий вариант — Наука) is a Russian-language scientific newspaper known for its independent editorial stance and coverage of science, politics, and society.]
+
+          <p><strong>Link to original (in Russian):</strong> <a href="https://www.trv-science.ru/2016/10/dvugorbaya-rossiya/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.trv-science.ru/2016/10/dvugorbaya-rossiya/
+          </a></p>
+
+- name: "Visual Testimonies: Improvised Polling Stations"
+  anchor: "Improvised_Polling_Stations"
+  group_id: "Information Boards and Compilations"
+  referenced_in: ["Prerequisites"]
+  number: 6
+  description: "A collection of visual materials (a news article, a blog post, and an image search results page) documenting the use of unconventional, improvised polling stations during the nationwide vote on constitutional amendments in June 2020."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Visual Testimonies. «Improvised Voting Stations, June 2020». Aggregated compilation from three sources, dated June 25, 2020.</em></p>
+
+          <p><strong>Annotation:</strong> This collection of visual testimonies brings together key images that became symbolic of the organization of the vote in the summer of 2020. It includes a report from the Ukrainian publication Apostrophe, a popular post on the Russian-language blog Dzen, and Google search results for 'Голосование на пеньках (Voting on stumps)' that aggregate many similar photographs. Together, these sources form a cohesive body of evidence for the widespread practice of organizing voting in temporary, often informal locations (on tree stumps, in car trunks, on football fields), which has been a subject of public and expert discussion. Visual testimonies serve as a primary source for the analysis of this historical and social phenomenon.</p>
+
+           <p><strong>Link to original (in Russian):</strong> <a href="https://apostrophe.ua/ru/society/na-taburetkah-i-penkah-zabavnyie-foto-golosovaniya-rossiyan-za-putinskuyu-konstitutsiyu.html"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://apostrophe.ua/ru/society/na-taburetkah-i-penkah-zabavnyie-foto-golosovaniya-rossiyan-za-putinskuyu-konstitutsiyu.html
+          </a></p>
+
+           <p><strong>Link to original (in Russian):</strong> <a href="https://dzen.ru/a/XvSi7KWznGGWS6ZH"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://dzen.ru/a/XvSi7KWznGGWS6ZH
+          </a></p>
+
+
+           <p><strong>Link to original (in Russian):</strong> <a href="https://www.google.com/search?sca_esv=c2e781038ec71227&sxsrf=AE3TifOA_LCRv2rr4tYUrEh4DKJsqe1Lyg:1766263287208&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuYzzFkfneXafNx6OMdA4MRo3L_oOc-1oJ7O1RV73dx3MIyCigtuiU2aDjExIvydX8nywiH1nEvH9xs_e70oaE0MeP9P4Vk_p10mWh_TTdVGPiTK2gnRwzziDrn8fcAgaUuwnGJB8JXqWxwx7HBUhDLGnCscTFdqskCl2vxhybQ1qhyHdQ&q=%D0%93%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BD%D0%B0+%D0%BF%D0%B5%D0%BD%D1%8C%D0%BA%D0%B0%D1%85&sa=X&ved=2ahUKEwiCkMG-g82RAxV_g_0HHXkiIigQtKgLegQIGBAB"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+            https://www.google.com/search?sca_esv=c2e781038ec71227&sxsrf=AE3TifOA_LCRv2rr4tYUrEh4DKJsqe1Lyg:1766263287208&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuYzzFkfneXafNx6OMdA4MRo3L_oOc-1oJ7O1RV73dx3MIyCigtuiU2aDjExIvydX8nywiH1nEvH9xs_e70oaE0MeP9P4Vk_p10mWh_TTdVGPiTK2gnRwzziDrn8fcAgaUuwnGJB8JXqWxwx7HBUhDLGnCscTFdqskCl2vxhybQ1qhyHdQ&q=%D0%93%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BD%D0%B0+%D0%BF%D0%B5%D0%BD%D1%8C%D0%BA%D0%B0%D1%85&sa=X&ved=2ahUKEwiCkMG-g82RAxV_g_0HHXkiIigQtKgLegQIGBAB
+          </a></p>
+
+- name: "Cost components of in-person elections"
+  anchor: "Cost_components_of"
+  group_id: "Thematic websites"
+  referenced_in: ["Costs"]
+  number: 1
+  description: "Analytical overview of the cost structure of administering traditional in-person elections."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> "Ways States Pay for Elections.” 'Election Innovation & Research Center' (EIRC), published 2019, last updated August 2025.</em></p>
+
+          <p><strong>Annotation:</strong> This source examines how election administration costs are structured in practice, focusing on the operational and organizational components of in-person secret voting. It discusses categories of expenditure such as facilities, equipment, staffing, logistics, training, and ballot handling, with particular attention to how these costs arise at the level of election administration rather than political campaigning. The material is situated within the context of U.S. election administration but is representative of cost structures common to traditional polling-station-based voting systems more broadly.</p>
+
+          <strong>Publisher:</strong> The Election Innovation & Research Center (EIRC) is a nonpartisan U.S.-based organization that conducts applied research on election administration, voting technology, and electoral policy. It publishes practitioner-oriented materials intended to inform election officials and policymakers.
+
+          <p><strong>Available at:</strong> <a href="https://electioninnovation.org/research/ways-states-pay-for-elections/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://electioninnovation.org/research/ways-states-pay-for-elections/
+          </a></p>
+
+- name: "Election security expenditures"
+  anchor: "Election_security_expenditures"
+  group_id: "Information Boards and Compilations"
+  referenced_in: ["Costs"]
+  number: 2
+  description: "Policy analysis of election security funding and threat mitigation in election administration."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Shanton, Karen L. “Election Security: Federal Funding for Election Security.” Congressional Research Service. In Focus No. IF11286. 2025, April 30. </em></p>
+
+          <p><strong>Annotation:</strong> This source situates election-related expenditures within the broader context of election security and threat protection. It outlines how governments identify and fund measures aimed at protecting election infrastructure, technologies, and processes from physical, cyber, and organizational threats. The document frames these expenditures as a distinct and increasingly important category of election administration costs, shaped by evolving threat models and federal policy responses.</p>
+
+          <strong>Publisher:</strong> The Congressional Research Service (CRS) is a nonpartisan legislative support agency of the United States Congress. CRS publications provide authoritative policy analysis and contextual overviews of federal programs and funding mechanisms.
+
+          <p><strong>Available at:</strong> <a href="https://crsreports.congress.gov/product/pdf/IF/IF11286"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://crsreports.congress.gov/product/pdf/IF/IF11286
+          </a></p>
+
+- name: "Funding sources of election administration costs"
+  anchor: "Funding_sources_of_election"
+  group_id: "Thematic websites"
+  referenced_in: ["Costs"]
+  number: 3
+  description: "Comparative overview of funding responsibilities for election administration."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Funding Election Administration.” 'National Conference of State Legislatures' (NCSL), last updated April 23, 2025.</em></p>
+
+          <p><strong>Annotation:</strong> This source analyzes how responsibility for financing election administration is distributed across different levels of government. It places election costs within the institutional context of federal, state, and local governance, explaining how funding arrangements vary depending on the type of election and the structure of the electoral system. The material highlights the decentralized nature of election funding in the United States and illustrates how cost burdens are shared or divided between governmental levels.</p>
+
+          <strong>Publisher:</strong> The National Conference of State Legislatures (NCSL) is a bipartisan organization representing U.S. state legislatures. It produces comparative research and policy guidance on state governance issues, including elections, public finance, and intergovernmental relations.
+
+          <p><strong>Available at:</strong> <a href="https://www.ncsl.org/elections-and-campaigns/funding-election-administration"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.ncsl.org/elections-and-campaigns/funding-election-administration
+          </a></p>
+
+- name: "Per-voter election administration costs"
+  anchor: "Per-voter_election"
+  group_id: "Academic Journals"
+  referenced_in: ["Costs"]
+  number: 4
+  description: "Academic conference paper presenting original empirical data on election administration costs in U.S. local jurisdictions, based on a nationwide data collection project conducted in 2017-2018."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Mohr, Zachary K., Martha Kropf, JoEllen Pope, Mary Jo Shepherd, and Madison Osterloh. Election Administration Costs in Local Jurisdictions: Results from a Nationwide Data Collection Project. Presented at the Election Sciences, Reform, and Administration (ESRA) Conference, University of Wisconsin-Madison, 2018.</em></p>
+
+          <p><strong>Annotation:</strong> This study reports the results of a nationwide empirical project measuring the costs of election administration at the local level in the United States. It situates election expenditures within the institutional context of decentralized election governance and focuses on per-voter administrative costs across states and jurisdictions. The analysis demonstrates substantial variation in costs, documents methodological difficulties in aggregating election expenditures, and provides baseline estimates for average per-voter costs and total nationwide spending on local election administration in a typical election year.</p>
+
+          <strong>Publisher:</strong> Election Sciences, Reform, and Administration (ESRA) Conference, University of Wisconsin–Madison.
+
+          <p><strong>Available at:</strong> <a href="https://esra.wisc.edu/wp-content/uploads/sites/1556/2020/11/mohr.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://esra.wisc.edu/wp-content/uploads/sites/1556/2020/11/mohr.pdf
+          </a></p>
+
+- name: "Methodology of U.S. election cost measurement"
+  anchor: "Methodology_election_cost"
+  group_id: "Academic Journals"
+  referenced_in: ["Costs"]
+  number: 5
+  description: "Research summary report synthesizing methodological findings and key results from a nationwide study of U.S. election administration costs, prepared for policy and research audiences."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Mohr, Zachary K., Martha Kropf, JoEllen Pope, Mary Jo Shepherd, and Madison Osterloh. "Election Administration Costs: A Summary of Findings from a Nationwide Data Collection Project.". MIT Election Lab, January 2019.</em></p>
+
+          <p><strong>Annotation:</strong> This summary report contextualizes and synthesizes empirical findings on election administration costs in the United States. It explains why election costs are difficult to measure accurately, emphasizing the fragmented and decentralized nature of election governance and the absence of standardized accounting practices. The document clarifies the scope, limitations, and interpretive boundaries of cost estimates and situates per-voter figures within broader methodological constraints.</p>
+
+          <strong>Publisher:</strong> MIT Election Lab, Massachusetts Institute of Technology.
+
+          <p><strong>Available at:</strong> <a href="https://electionlab.mit.edu/sites/default/files/2019-01/mohr_et_al_2017summary.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://electionlab.mit.edu/sites/default/files/2019-01/mohr_et_al_2017summary.pdf
+          </a></p>
+
+- name: "Total nationwide election expenditures"
+  anchor: "Total_nationwide"
+  group_id: "Academic Journals"
+  referenced_in: ["Costs"]
+  number: 6
+  description: "Analytical research report examining total election-related expenditures in the United States, including administrative, security, accessibility, and extraordinary election-cycle costs."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “The Cost of Conducting Elections.” 'MIT Election Lab', May 16, 2022</em></p>
+
+          <p><strong>Annotation:</strong> This report examines election-related expenditures in the United States at a national scale, expanding the analytical context beyond local administrative costs. It situates election spending within a broader framework that includes security, accessibility, staffing, technology, and extraordinary expenditures during atypical election cycles. The study provides estimates for total nationwide election costs in “normal” years, analyzes deviations during the 2020 election cycle, and projects medium-term trends in election administration spending.</p>
+
+          <strong>Publisher:</strong> MIT Election Lab, Massachusetts Institute of Technology.
+
+          <p><strong>Available at:</strong> <a href="https://electionlab.mit.edu/sites/default/files/2022-05/TheCostofConductingElections-2022.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://electionlab.mit.edu/sites/default/files/2022-05/TheCostofConductingElections-2022.pdf
+          </a></p>
+
+- name: "Aggregate cost of the 2024 Lok Sabha elections"
+  anchor: "Aggregate_cost_of_the_2024"
+  group_id: "Thematic websites"
+  referenced_in: ["Costs"]
+  number: 7
+  description: "Media report summarizing expert and institutional estimates of total administrative and logistical expenditures associated with India's 2024 national parliamentary elections."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “T2024 LS polls costliest ever, expenditure may touch Rs 1.35 trn” 'Business Standard', April 25, 2024.</em></p>
+
+          <p><strong>Annotation:</strong> This article situates the 2024 Lok Sabha elections within the context of large-scale public expenditures, presenting aggregate cost estimates that place total election administration spending above USD 10 billion. It frames these figures as reflecting logistical, administrative, and operational costs borne by the state, while explicitly distinguishing them from political party and campaign expenditures. The source provides a high-level financial benchmark for assessing the scale of India's national elections.</p>
+
+          <strong>Publisher:</strong> Business Standard is a leading Indian English-language business and policy newspaper covering economics, governance, and public finance.
+
+          <p><strong>Available at:</strong> <a href="https://www.business-standard.com/elections/lok-sabha-election/2024-ls-polls-costliest-ever-expenditure-may-touch-rs-1-35-trn-report-124042500633_1.html"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.business-standard.com/elections/lok-sabha-election/2024-ls-polls-costliest-ever-expenditure-may-touch-rs-1-35-trn-report-124042500633_1.html
+          </a></p>
+
+- name: "Registered electorate in the 2024 Indian general elections"
+  anchor: "Registered_electorate_in_the_2024"
+  group_id: "Official Publications"
+  referenced_in: ["Costs"]
+  number: 8
+  description: "Official government press release reporting voter registration figures for the 2024 Lok Sabha elections."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “General Elections to Lok Sabha 2024: Record Number of Electors.” 'Press Information Bureau' (PIB), Government of India, March 2024.</em></p>
+
+          <p><strong>Annotation:</strong> This source provides authoritative data on the size of the Indian electorate ahead of the 2024 parliamentary elections, reporting approximately 968 million registered voters. Issued by the Government of India’s official information agency, it establishes the demographic scale against which logistical complexity and per-voter cost estimates of the election must be interpreted.</p>
+
+          <strong>Publisher:</strong> The Press Information Bureau (PIB) is the official public communication agency of the Government of India.
+
+          <p><strong>Available at:</strong> <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2005189"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.pib.gov.in/PressReleasePage.aspx?PRID=2005189
+          </a></p>
+
+- name: "Turnout and logistical scale of the 2024 elections"
+  anchor: "Turnout_and_logistical"
+  group_id: "Thematic websites"
+  referenced_in: ["Costs"]
+  number: 9
+  description: "International news report citing official data on voter turnout and operational aspects of India's 2024 general elections."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “India poll panel says 642 mln voters cast ballots in general election.” 'Reuters', June 3, 2024.</em></p>
+
+          <p><strong>Annotation:</strong> This report contextualizes the 2024 Lok Sabha elections by presenting official turnout figures—approximately 642 million voters—and describing the logistical effort required to conduct voting at over one million polling stations nationwide. It highlights the deployment of millions of personnel and extensive transportation infrastructure, situating India's elections as one of the most operationally complex voting exercises in the world</p>
+
+          <strong>Publisher:</strong> Reuters is an international news agency providing independent coverage of global political, economic, and social events.
+
+          <p><strong>Available at:</strong> <a href="https://www.reuters.com/world/india/india-poll-panel-says-642-mln-voters-cast-ballots-general-election-2024-06-03/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.reuters.com/world/india/india-poll-panel-says-642-mln-voters-cast-ballots-general-election-2024-06-03/
+          </a></p>
+
+- name: "Government expenditure on national and regional elections (2024)"
+  anchor: "Government_expenditure_on "
+  group_id: "Information Boards and Compilations"
+  referenced_in: ["Costs"]
+  number: 10
+  description: "Aggregated compilation combining a contemporary journalistic report on government election expenditures with a structured reference overview of Indonesia's electoral system and election calendar."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Indonesia Spends Rp 59 Trillion on Elections — and Counting.” 'Jakarta Globe', February 14, 2024.</em></p>
+          <p><em> “Elections in Indonesia.” 'Wikipedia', last updated 2024.</em></p>
+
+          <p><strong>Annotation:</strong> This aggregated source situates government spending on elections in Indonesia within both a fiscal and institutional context. The Jakarta Globe article provides a concrete, time-specific estimate of state budget expenditures allocated to the organization and conduct of the 2024 electoral cycle, including national parliamentary and presidential elections, as well as preparations for subsequent regional and local elections. The Wikipedia overview complements this data by outlining the structure, sequencing, and scale of Indonesia’s elections, clarifying which levels of government and which types of elections are encompassed by the reported expenditures. This aggregate establishes the order-of-magnitude government cost of administering elections in Indonesia and clarifies the institutional scope of those expenditures, enabling comparison with other large-scale national election systems. </p>
+
+           <strong>Publisher:</strong>
+          * Jakarta Globe is an English-language Indonesian news outlet covering national politics, governance, and public finance.
+          * Wikipedia is a collaboratively edited online encyclopedia that provides structured background information and cross-referenced summaries of complex institutional topics.
+
+          <p><strong>Available at:</strong> <a href="https://jakartaglobe.id/news/indonesia-spends-rp-59-trillion-on-elections-and-counting"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://jakartaglobe.id/news/indonesia-spends-rp-59-trillion-on-elections-and-counting
+          </a></p>
+
+          <p><strong>Available at:</strong> <a href="https://en.wikipedia.org/wiki/Elections_in_Indonesia"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://en.wikipedia.org/wiki/Elections_in_Indonesia
+          </a></p>
+
+- name: "Cost of the 2024 UK general election"
+  anchor: "Cost_of_the_UK_electionde"
+  group_id: "Thematic websites"
+  referenced_in: ["Costs"]
+  number: 11
+  description: "Analytical media article discussing public expenditures associated with the conduct of general elections in the United Kingdom."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “The cost of UK elections: who pays and how much?” 'The Conversation', June 2024</em></p>
+
+          <p><strong>Annotation:</strong> This publication situates the 2024 UK general election within the framework of public election administration expenditures. It presents a numerical estimate of the government costs associated with organizing and conducting the nationwide parliamentary vote (approximately £161 million), clearly distinguishing these administrative and logistical expenses from political party and campaign spending. The article also clarifies the institutional boundaries of the reported figures, noting that they do not include the costs of other elections held concurrently at devolved, local, or mayoral levels. The publication provides a concise reference point for assessing the scale of election administration costs in a centralized electoral system.</p>
+
+          <strong>Publisher:</strong> The Conversation is an international media platform that publishes expert-written analysis and commentary on public policy, politics, and social issues.
+
+          <p><strong>Available at:</strong> <a href="https://www.ncl.ac.uk/press/articles/latest/2024/06/conversationelectionspending/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.ncl.ac.uk/press/articles/latest/2024/06/conversationelectionspending/
+          </a></p>
+
+- name: "Global voting systems market outlook"
+  anchor: "Global_voting_systems"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Costs"]
+  number: 12
+  description: "Market research report summarizing the size, structure, and projected growth of the global voting systems market through 2027"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>'Global Voting System Market Outlook 2027'. Market research report (146 pages, PDF). Research and Markets, June 2020. Report ID: 5120465.</em></p>
+
+          <p><strong>Annotation:</strong> This source provides a structured overview of the global voting systems market, including electronic voting machines (EVMs), with segmentation by system type (notably Direct Recording Electronic systems versus paper-based solutions), application context, and geographic regions. The report presents historical market valuations (e.g., the valuation of the DRE voting system segment at USD 382 million in 2018) alongside forward-looking projections (e.g., growth beyond USD 613.3 million by 2027).
+
+          Although the full report consists of an extensive multi-page PDF intended for commercial distribution, the information referenced in this project is derived exclusively from the publicly available report description and summary page.
+
+          <strong>Publisher:</strong> Research and Markets — a commercial platform and distributor of analytical and market research reports. It operates as a publisher and supplier, aggregating reports produced by specialized research firms and making them available in electronic (PDF) format to institutional and professional audiences worldwide.
+
+          <p><strong>Available at:</strong> <a href="https://www.researchandmarkets.com/reports/5120465/global-voting-system-market-outlook-2027"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.researchandmarkets.com/reports/5120465/global-voting-system-market-outlook-2027
+          </a></p>
+
+- name: "Voting Management Software Market Size"
+  anchor: "Voting_Management_Software"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Costs"]
+  number: 13
+  description: "Voting Management Software Market Size and Forecasts, Global and Regional Share, Trends, and Growth Opportunity Analysis Report Coverage: By Deployment Type, Offering, and End User."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> 'Voting Management Software Market Size and Forecasts, Global and Regional Share, Trends, and Growth Opportunity Analysis'. Market research report (159 pages, PDF). Research and Markets, November 2023. Report ID: 5925260.</em></p>
+
+          <p><strong>Annotation:</strong> This market research report examines the global voting management software industry, covering platforms and solutions used to plan, organize, and execute voting and polling processes across organizations. It outlines market dynamics, segmentation (e.g., cloud-based vs. on-premise), revenue forecasts, vendor ecosystems, and key industry trends.
+
+          Although the full report consists of an extensive multi-page PDF intended for commercial distribution, the information referenced in this project is derived exclusively from the publicly available report description and summary page.
+
+          <strong>Publisher:</strong> Research and Markets — a commercial platform and distributor of analytical and market research reports. It operates as a publisher and supplier, aggregating reports produced by specialized research firms and making them available in electronic (PDF) format to institutional and professional audiences worldwide.
+
+          <p><strong>Available at:</strong> <a href="https://www.researchandmarkets.com/reports/5925260/voting-management-software-market-size"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.researchandmarkets.com/reports/5925260/voting-management-software-market-size
+          </a></p>
+
+- name: "Online Voting System Market"
+  anchor: "Online_Voting_System_Market"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Costs"]
+  number: 14
+  description: "Online Voting System Market Size, Share, Competitive Landscape and Trend Analysis Report, by Offering (Solution, Service), by Deployment Model (On-premise, Cloud), by End-user (Government, Universities and Colleges, Enterprises): Global Opportunity Analysis and Industry Forecast, 2021-2031"
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> 'Online Voting System Market Size, Share, Competitive Landscape and Trend Analysis Report, by Offering (Solution, Service), by Deployment Model (On-premise, Cloud), by End-user (Government, Universities and Colleges, Enterprises): Global Opportunity Analysis and Industry Forecast, 2021–2031'. Market research report (320 pages, PDF). Research and Markets, September 2022. Report Code: A08885.</em></p>
+
+          <p><strong>Annotation:</strong> This industry report from Allied Market Research provides detailed analysis and projections for the global online voting system market from 2021 to 2031. It includes market valuations for 2021 (approximately USD 292.7 million), projected growth in total market size by 2031 (approx. USD 736.8 million), and compound annual growth rates (CAGR). The report categorizes trends by offering type, deployment model, end-user sectors, and geographical regions. Though the publicly available summary (press and sample pages) extracts headline forecast data, the full downloadable PDF elaborates on methodologies, segmentation, and competitive landscapes that underpin the summary figures used on our site.
+
+          <strong>Publisher:</strong> Allied Market Research — a global market research and consulting firm specializing in industry and technology forecasts. The company publishes proprietary analytical reports in electronic (PDF) format for institutional and commercial clients.
+
+          <p><strong>Available at:</strong> <a href="https://www.alliedmarketresearch.com/online-voting-system-market-A08885"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.alliedmarketresearch.com/online-voting-system-market-A08885
+          </a></p>
+
+- name: "Costs of Public Opinion Research"
+  anchor: "Costs_of_public_Opinion_Research"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Costs"]
+  number: 15
+  description: "Global market size and structure of public opinion and electoral polling services."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> 'Public Opinion and Election Polling Global Market Report 2024'. Market research report (PDF). The Business Research Company, 2024.</em></p>
+
+          <p><strong>Annotation:</strong> This analytical report assesses the global market for public opinion and electoral polling services, covering surveys of political preferences and public attitudes conducted through all major methodologies, including telephone polling, face-to-face interviews, and electronic and online surveys. The report presents aggregate market size estimates, identifying the total value of the global polling industry at USD 8.18 billion in 2023, and analyzes its composition, growth dynamics, and regional distribution.
+
+          Although the full report is a commercially distributed multi-page PDF, the information used in this project is derived exclusively from the publicly available report description and summary page.
+
+          <strong>Publisher:</strong> The Business Research Company is an international commercial research organization specializing in industry and market analysis across economic, technological, social, and political domains. It publishes proprietary analytical reports in electronic (PDF) format for institutional, corporate, and policy audiences.
+
+          <p><strong>Available at:</strong> <a href="https://www.thebusinessresearchcompany.com/report/public-opinion-and-election-polling-global-market-report"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.thebusinessresearchcompany.com/report/public-opinion-and-election-polling-global-market-report
+          </a></p>
+
+- name: "Use of e-voting around the world"
+  anchor: "Usee-votingaroundworld"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Political_landscape"]
+  number: 1
+  description: "Overview of the global adoption of electronic voting technologies, with a focus on the use of Direct-Recording Electronic (DRE) voting machines and the presence or absence of Voter-Verifiable Paper Audit Trails (VVPAT) in different countries."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Use of e-voting around the world” 'International IDEA' (Institute for Democracy and Electoral Assistance). Published February 06, 2023.</em></p>
+
+          <p><strong>Annotation:</strong> This source provides a comparative overview of countries that have implemented electronic voting technologies, distinguishing between systems based on Direct-Recording Electronic (DRE) machines with and without a Voter-Verifiable Paper Audit Trail (VVPAT). It enumerates jurisdictions using DRE systems, including countries employing VVPAT mechanisms (such as India, Mexico, and the Russian Federation) and those operating without voter-verifiable paper records (such as Brazil and France). The material is descriptive rather than prescriptive and situates national practices within a broader global landscape of electronic voting adoption.</p>
+
+          <strong>Publisher:</strong> International IDEA (Institute for Democracy and Electoral Assistance) is an intergovernmental organization supporting sustainable democratic change worldwide. Its work focuses on electoral processes, political participation, constitution-building, and democratic governance. Headquarters: Stockholm, Sweden.
+
+          <p><strong>Available at:</strong> <a href="https://www.idea.int/news-media/multimedia-reports/use-e-voting-around-world"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.idea.int/news-media/multimedia-reports/use-e-voting-around-world
+          </a></p>
+
+- name: "French Overseas Voters"
+  anchor: "French_Overseas_Voters"
+  group_id: "Thematic websites"
+  referenced_in: ["Political_landscape"]
+  number: 2
+  description: "The record-high use of online voting by French citizens abroad during the 2024 legislative elections, illustrating the practical scope and limits of remote electronic voting under French electoral law."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “French Overseas Voters Set New Online Voting Record, by Graham Wetherall-Grujić. Democracy Technologies – The online magazine for digital democracy. Published July 4, 2024. Innovation in Politics Institute.</em></p>
+
+          <p><strong>Annotation:</strong> Reports that over 410,000 votes were cast online by French citizens living abroad in the first round of France’s 2024 legislative elections, setting a new record for online voting participation. It describes how the online voting system is implemented for overseas voters, the limitations on its use (e.g., not available for presidential elections), and contextual information about voting options and concerns around security and accessibility.</p>
+
+          <strong>Publisher:</strong> Democracy Technologies is an online analytical magazine focused on digital democracy, civic technology, and innovation in democratic governance. The publication is produced by the Innovation in Politics Institute, a Berlin-based non-profit organization that conducts research, policy analysis, and public communication on democratic innovation, including digital participation, e-voting, and institutional reform.
+
+          <p><strong>Available at:</strong> <a href="https://democracy-technologies.org/voting/france-new-online-voting-record/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://democracy-technologies.org/voting/france-new-online-voting-record/
+          </a></p>
+
+- name: "Remote Voting Final Report"
+  anchor: "Remote_Voting_Final_Report"
+  group_id: "Information Boards and Compilations"
+  referenced_in: ["Political_landscape"]
+  number: 3
+  description: "European Commission report showing that data protection, cybersecurity, and electoral integrity norms shape national remote voting regulation across the EU."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em>Remote Voting Final Report, European Commission, Directorate-General for Justice and Consumers (DG JUST), 21 November 2018 (published June 2020). Publisher: European Commission.</em></p>
+
+          <p><strong>Annotation:</strong> This Commission report analyzes legal and practical issues surrounding remote voting in EU Member States, focusing on regulatory constraints deriving from data protection (including GDPR), cybersecurity, and electoral integrity requirements. It examines how differing national frameworks address challenges in voter identification, vote anonymity, auditability, and cross-border data flows, without proposing a single EU-wide legal regime.
+
+          <strong>Publisher:</strong> ConsultantPlus (КонсультантПлюс) is a major Russian legal information system and electronic legal publisher providing official and consolidated versions of legislation, regulations, and judicial practice. The platform functions as an authorized distributor of normative legal acts and is widely used by legal professionals, public institutions, and researchers.
+
+          <p><strong>Available at:</strong> <a href="https://commission.europa.eu/system/files/2020-06/20181121_remote_voting_final_report_final_clean.pdf"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://commission.europa.eu/system/files/2020-06/20181121_remote_voting_final_report_final_clean.pdf
+          </a></p>
+
+- name: "Global Data Privacy Laws by Country"
+  anchor: "Global_Data_Privacy"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Political_landscape"]
+  number: 4
+  description: "Overview of data subject rights under global privacy regimes, highlighting access, correction, deletion, and objection rights."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Global Data Privacy Laws by Country (updated October 2024), article by Jan Gallego, published 21 August 2023 on GetTerms.io. </em></p>
+
+          <p><strong>Annotation:</strong> Article surveys data privacy laws worldwide and explains that many jurisdictions grant individuals data subject rights — including rights to access, rectify, erase, and object to the processing of their personal data — though specific rights vary by country and legal framework. </p>
+
+          <strong>Publisher:</strong> GetTerms.io is a platform that provides information and guidance on privacy policies, laws, and compliance requirements for global data protection frameworks.
+
+          <p><strong>Available at:</strong> <a href="https://getterms.io/blog/global-data-privacy-laws-by-country"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://getterms.io/blog/global-data-privacy-laws-by-country
+          </a></p>
+
+- name: "Access to and Use of Voter Registration Lists"
+  anchor: "Useevotingaroundworld"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Political_landscape"]
+  number: 5
+  description: "Overview of U.S. state-level regulations governing access to voter registration lists, including rules on disclosure, sale, permitted uses, and protections for sensitive personal data such as voter addresses."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Access to and Use of Voter Registration Lists. National Conference of State Legislatures (NCSL). Continuously updated policy overview, current version accessed 2025.</em></p>
+
+          <p><strong>Annotation:</strong> The source documents significant interstate variation in voter data protection: in many states voter records are publicly accessible or purchasable, while others allow broad categories of voters to request address concealment.</p>
+
+          <strong>Publisher:</strong> The National Conference of State Legislatures (NCSL) is a bipartisan U.S. organization serving state legislatures by providing research, policy analysis, and comparative legal information on state-level governance and legislation.
+
+          <p><strong>Available at:</strong> <a href="https://www.ncsl.org/elections-and-campaigns/access-to-and-use-of-voter-registration-lists"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.ncsl.org/elections-and-campaigns/access-to-and-use-of-voter-registration-lists
+          </a></p>
+
+
+- name: "Internet usage worldwide — Statista"
+  anchor: "Internet_usage_worldwide"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 1
+  description: "A global overview of internet usage, penetration, and demographic patterns, summarizing key indicators of worldwide digital connectivity."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Slotta, Daniel. 'Internet usage worldwide — statistics & facts'. Statista, topic page “Internet › Demographics & Use”, published December 17, 2025.</em></p>
+
+          <p><strong>Annotation:</strong> This topic page provides a comprehensive overview of global internet usage as of 2024–2025, covering the total number of internet users, regional distribution, penetration rates, and demographic differences by age and gender. It highlights disparities between regions with near-universal connectivity (such as Northern Europe and parts of the Middle East) and regions with limited access, particularly in Africa and heavily restricted environments such as North Korea. The source also discusses the growing role of mobile internet, which accounts for a majority share of global web traffic, and notes structural challenges related to infrastructure development, cybersecurity, and digital literacy.</p>
+
+          <strong>Publisher:</strong> Statista GmbH is a Germany-based provider of statistical data and market insights, publishing aggregated statistics, analyses, and topic overviews across economic, social, and technological domains.
+
+          <p><strong>Available at:</strong> <a href="https://www.statista.com/topics/1145/internet-usage-worldwide/#topicOverview"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.statista.com/topics/1145/internet-usage-worldwide/#topicOverview
+          </a></p>
+
+- name: "Countries with the largest digital populations in the world (as of October 2025)"
+  anchor: "NumberInternetUsers"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 2
+  description: "Comparative statistical overview of countries with the largest internet user populations, based on Statista’s consolidated data as of October 2025."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Tila, Christy. Countries with the highest number of internet users 2025. Statista, statistic page “Internet › Demographics & Use”, published November 19, 2025.</em></p>
+
+          <p><strong>Annotation:</strong> This statistic presents a ranked comparison of countries by the absolute number of internet users, measured in millions, as of October 2025. It shows that China leads globally with approximately 1.3 billion users, followed by India with around 1.03 billion and the United States in third place. The accompanying contextual text situates these figures within broader regional patterns of internet usage, highlighting strong concentration in Eastern Asia and significantly lower levels in Africa and the Middle East. The source also notes structural differences between urban and rural connectivity and provides contextual indicators related to internet penetration and usage intensity, particularly in China.</p>
+
+          <strong>Publisher:</strong> Statista GmbH is a Germany-based provider of market and statistical data, publishing curated datasets, charts, and analytical commentary on global economic, technological, and social trends.
+
+          <p><strong>Available at:</strong> <a href="https://www.statista.com/statistics/262966/number-of-internet-users-in-selected-countries/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.statista.com/statistics/262966/number-of-internet-users-in-selected-countries/
+          </a></p>
+
+- name: "Internet Usage Statistics 2026"
+  anchor: "InternetUsageStatistics"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 3
+  description: "Aggregated global internet usage statistics and trends, including number of users, growth patterns, and regional distribution as of 2025."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Kumar, Naveen. Internet Usage Statistics 2026 [New Global Data]. DemandSage, published September 2, 2025.</em></p>
+
+          <p><strong>Annotation:</strong> This article provides comprehensive statistics on global internet adoption, indicating that over 5.65 billion people use the internet worldwide, representing about 68.7 % of the global population. It breaks down internet usage by region, highlights leading countries, and presents historical and forecasted data on internet user growth. The piece also examines daily usage patterns and device penetration, making it suitable for understanding broad digital inclusion trends.</p>
+
+          <strong>Publisher:</strong> DemandSage is an online data and statistics platform focused on compiling and presenting trends in digital usage, demographics, and market insights based on multiple data sources.
+
+          <p><strong>Available at:</strong> <a href="https://www.demandsage.com/internet-user-statistics/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.demandsage.com/internet-user-statistics/
+          </a></p>
+
+- name: "Digital population in India 2025, by type"
+  anchor: "India_Digital_Population"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 4
+  description: "Premium statistical overview of India’s digital population structure in 2025, distinguishing active internet users and social media users, with contextual analysis of market drivers."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Christy Tila. Digital population in India 2025, by type. Statista, published November 27, 2025.</em></p>
+
+          <p><strong>Annotation:</strong> The Statista publication analyzes the composition and growth of India’s digital population as of February 2025, highlighting the impact of the government’s Digital India initiative and expanding internet penetration. It emphasizes the dominant role of mobile internet usage and attributes rapid adoption to structural factors such as affordable data plans introduced by Reliance Jio, rural–urban convergence in connectivity, and nationwide digitization efforts. The source provides contextual interpretation alongside a premium statistical chart, illustrating how policy, infrastructure, and market competition collectively shaped India’s emergence as one of the world’s largest digital populations.</p>
+
+          <strong>Publisher:</strong> Statista GmbH — a global provider of market, consumer, and demographic statistics, headquartered in Hamburg, Germany.
+
+          <p><strong>Available at:</strong> <a href="https://www.statista.com/statistics/309866/india-digital-population-by-type/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.statista.com/statistics/309866/india-digital-population-by-type/
+          </a></p>
+
+- name: "How Many Smartphones Are In The World? (2025)"
+  anchor: "HowManySmartphones"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 5
+  description: "Statistical overview of the global number of mobile phones and smartphone users, including both smartphone and feature phone subscriptions."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Turner, Ash. How Many Smartphones Are In The World? (2025).BankMyCell blog, updated January 04, 2025.</em></p>
+
+          <p><strong>Annotation:</strong> This article compiles data on the global distribution of mobile phones and smartphones. As of 2024, 4.88 billion people (≈60.42 % of the world’s population) use smartphones, and total smartphone subscriptions are estimated at around 7.21 billion. When feature phones are included, global mobile phone subscriptions reach approximately 8.31 billion, illustrating that many individuals hold multiple devices. The piece also includes regional penetration details and contextualizes mobile adoption within broader communication trends.</p>
+
+          <strong>Publisher:</strong> BankMyCell is an independent mobile data and analytics platform providing insights on global phone usage, trends, and market statistics.
+
+          <p><strong>Available at:</strong> <a href="https://www.bankmycell.com/blog/how-many-phones-are-in-the-world"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.bankmycell.com/blog/how-many-phones-are-in-the-world
+          </a></p>
+
+- name: "Number of Internet Users Worldwide 2014-2029"
+  anchor: "Number_of_Internet"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 6
+  description: "Statistical forecast illustrating the global growth in the number of internet users from 2014 to 2029 based on Statista's Key Market Indicators."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Number of internet users worldwide 2014-2029. Statista Research Department. Forecast published July 10, 2025.</em></p>
+
+          <p><strong>Annotation:</strong> The forecast projects a continuous increase in the global number of internet users between 2024 and 2029, resulting in a cumulative growth of several billion users and reaching a new historical peak by 2029. The data represent estimates of individuals using the internet by country or region, without accounting for connection quality or usage frequency. The indicators are derived from Statista’s Key Market Indicators (KMI), which aggregate and harmonize primary and secondary data from national statistical offices, international organizations, trade associations, and industry publications, providing a comparable macro-level view of global internet adoption trends.</p>
+
+          <strong>Publisher:</strong> Statista Research Department — the analytical and research division of Statista GmbH, responsible for producing forecasts, market indicators, and synthesized statistical datasets based on international and national sources.
+
+          <p><strong>Available at:</strong> <a href="https://www.statista.com/forecasts/1146844/internet-users-in-the-world/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.statista.com/forecasts/1146844/internet-users-in-the-world/
+          </a></p>
+
+- name: "Motorola Moto G05 — Price in India"
+  anchor: "Motorola_Moto_G05"
+  group_id: "Information Boards and Compilations"
+  referenced_in: ["Technical_Landscape"]
+  number: 7
+  description: "Retail pricing and market valuation page showing current and historical price ranges for the Motorola Moto G05 smartphone in the Indian market, aggregated from reseller and trade-in data."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Motorola Moto G05 price in India — product listing and price guide page. Cashify India, as of 3 January 2026 (price observed).</em></p>
+
+          <p><strong>Annotation:</strong> This source provides up-to-date pricing information for the Motorola Moto G05 in India, reflecting prevalent retail and reseller market prices at the time of observation. It demonstrates that entry-level smartphones with acceptable performance characteristics (such as Moto G05) are available at comparatively low price points in a major emerging-market context. As prices on such pages are dynamic and influenced by stock, offers, and seller, the listed range should be interpreted as illustrative rather than definitive retail pricing.</p>
+
+          Price snapshot (as of 3 January 2026): Approximate price range reported on Cashify India: ₹7,000–₹8,500 INR (varies by seller condition — new, refurbished, cashback offers, etc.).
+
+          <strong>Publisher / Platform:</strong> Cashify India — a consumer electronics resale and pricing platform providing real-time price comparisons, trade-in valuations, and marketplace listings for new and used smartphones, tablets, and accessories in the Indian market.
+
+          <p><strong>Available at:</strong> <a href="https://www.cashify.in/motorola-moto-g05-price-in-india"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.cashify.in/motorola-moto-g05-price-in-india
+          </a></p>
+
+- name: "Rekomendasi HP Android Dibawah 1 Juta"
+  anchor: "RekomendasiDibawah"
+  group_id: "Information Boards and Compilations"
+  referenced_in: ["Technical_Landscape"]
+  number: 8
+  description: "Overview of recommended Android smartphones priced below 1 million Indonesian rupiah (≈ ~USD 65–70) for 2025, with brief specifications and indicative price points."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> 7+ Rekomendasi HP Android Dibawah 1 Juta 2025, DoranGadget.com — smartphone review and recommendation article (published online). Publisher: Doran Gadget — Indonesian consumer gadget blog.</em></p>
+
+          <p><strong>Annotation:</strong> This article presents a curated list of entry-level Android smartphones widely available in the Indonesian market at prices below approximately Rp 1 000 000, illustrating the accessibility of basic yet functional mobile devices in emerging economies. Models listed include Itel A60S (≈ Rp 929 ribuan), Redmi A2 (≈ Rp 950 ribuan), Itel Vision 1 (≈ Rp 999 ribuan), Itel A70 and Evercoss M6A (≈ Rp 800 ribuan), ZTE Blade A72 (≈ Rp 800 ribuan), among others, demonstrating that a range of certified smartphones can be obtained in the sub-one-million price segment. </p>
+
+          <strong>Publisher:</strong> Doran Gadget — Indonesian electronics retail chain operating physical stores and an online platform; the company also publishes editorial content and buyer guides on consumer gadgets.
+
+          Doran Gadget is an Indonesian technology and gadget review blog that provides product recommendations, specifications, and pricing insights primarily for consumer electronics and smartphones.
+
+          <p><strong>Available at:</strong> <a href="https://dorangadget.com/rekomendasi-hp-android-dibawah-1-juta/"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://dorangadget.com/rekomendasi-hp-android-dibawah-1-juta/
+          </a></p>
+
+- name: "Verified marketplace evidence"
+  anchor: "Verified_marketplace_evidence"
+  group_id: "Information Boards and Compilations"
+  referenced_in: ["Technical_Landscape"]
+  number: 9
+  description: "Compilation of publicly accessible retail listings documenting the market availability, pricing, and baseline hardware configurations of entry-level Android smartphones offered in South and Southeast Asian consumer markets."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p style="line-height: 1.4;"><em> Ultra-Budget Smartphones: Retail Price Listings (South & Southeast Asia, early 2026). Sub-US$100 Android Devices — verified marketplace evidence</em></p>
+
+          <p><strong>Source characteristics:</strong></p>
+          <ul>
+          <li><strong>Source type:</strong> Online retail listings and regional e-commerce product pages</li>
+          <li><strong>Geographic focus:</strong> India, Indonesia</li>
+          <li><strong>Market segment:</strong> Budget and ultra-budget consumer smartphones</li>
+          <li><strong>Price range covered:</strong> Approximately USD 70-90 (local currency equivalents)</li>
+          <li><strong>Device characteristics reflected in listings:</strong>
+            <ul>
+              <li>Android smartphones with 3-4 GB RAM</li>
+              <li>Internal storage of 64 GB</li>
+              <li>Rear cameras in the 50 MP class (model-dependent)</li>
+            </ul>
+          </li>
+          <li><strong>Function of sources:</strong> Price and availability confirmation (non-analytical)</li>
+          </ul>
+
+          <p><strong>Referenced retail sources (URLs):</strong></p>
+          <ul>
+          <li><strong>Amazon India</strong> — <em>Motorola Moto G05 4G</em>
+          <p><strong>Available at:</strong> <a href="https://www.amazon.in/Motorola-Forest-Green-64GB-Storage/dp/B0DSTLPR3C"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.amazon.in/Motorola-Forest-Green-64GB-Storage/dp/B0DSTLPR3C
+          </a></p>
+          </li>
+
+          <li><strong>Cashify India</strong> — <em>Motorola Moto G05 4G price overview</em>
+          <p><strong>Available at:</strong> <a href="https://www.cashify.in/motorola-moto-g05-price-in-india"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.cashify.in/motorola-moto-g05-price-in-india
+          </a></p>
+          </li>
+
+          <li><strong>MobileMall Indonesia</strong> — <em>Itel A90</em>
+          <p><strong>Available at:</strong> <a href="https://mobilemall.co/itel-a90"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://mobilemall.co/itel-a90
+          </a></p>
+          </li>
+
+          <li><strong>MobileMall Indonesia</strong> — <em>ZTE Nubia A36</em>
+          <p><strong>Available at:</strong> <a href="https://indonesia.mobilemall.co/zte-nubia-a36"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://indonesia.mobilemall.co/zte-nubia-a36
+          </a></p>
+          </li>
+          </ul>
+          <strong>Price reference date^</strong> Prices and configurations as displayed on retailer pages at the time of access (December 2025; dates vary by source).
+
+          <strong>Limitations:</strong> Retail prices are subject to change due to promotions, stock availability, regional taxes, and currency fluctuations. Listings are cited solely to demonstrate market presence and pricing levels.
+
+- name: "Satellite & Non-Terrestrial Networks"
+  anchor: "SatelliteNetworks"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 10
+  description: "Industry research report analyzing the development, deployment timelines, and commercial adoption of satellite-based and non-terrestrial network (NTN) technologies for mobile communications."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> GSMA Intelligence. Satellite and Non-Terrestrial Network (NTN) Tracker, Q3 2025. Industry research report. 2025. GSMA Intelligence.</em></p>
+
+          <p><strong>Annotation:</strong> The report documents the global progress of non-terrestrial network (NTN) and device-to-device (D2D) technologies for mobile connectivity, with an emphasis on direct messaging services and early-stage consumer availability. It highlights the phased evolution from text-based and emergency communication toward broader data services as satellite constellations and mobile network integration mature.</p>
+
+          <strong>Publisher:</strong> GSMA Intelligence — research and analytics division of the GSMA, providing market intelligence for the global mobile ecosystem.
+
+          <p><strong>Available at:</strong> <a href="https://www.gsmaintelligence.com/research/satellite-and-ntn-tracker-q3-2025"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.gsmaintelligence.com/research/satellite-and-ntn-tracker-q3-2025
+          </a></p>
+
+- name: "Satellite Internet Market"
+  anchor: "SatelliteInternetMarket"
+  group_id: "Commercial Analytical Research"
+  referenced_in: ["Technical_Landscape"]
+  number: 11
+  description: "Market research report examining the global satellite internet sector, including service capabilities, technology trends, and long-term growth projections."
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> Satellite Internet Market Size, Share & Trends Analysis Report. Industry analysis and forecast report. Grand View Research. Publication year as stated on site.</em></p>
+
+          <p><strong>Annotation:</strong> The report analyzes the expansion of satellite internet services, focusing on improvements in throughput, latency, and coverage that enable progressively more data-intensive applications. Medium-term forecasts indicate increasing technical feasibility of broadband and video communication as satellite infrastructure and ground networks scale.</p>
+
+          <strong>Publisher:</strong> Grand View Research — international market research and consulting firm specializing in industry trend analysis and forecasting.
+
+          <p><strong>Available at:</strong> <a href="https://www.grandviewresearch.com/industry-analysis/satellite-internet-market-report"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.grandviewresearch.com/industry-analysis/satellite-internet-market-report
+          </a></p>
+
+- name: "+++Use of e-voting around the world"
+  anchor: "Usee_votingaroundworld"
+  group_id: ""
+  referenced_in: [""]
+  number: 1
+  description: "Overview "
+  content_blocks:
+
+    - type: "text"
+      content: |
+          <p><em> “Use world” 'International. 06, 2023.</em></p>
+
+          <p><strong>Annotation:</strong> This source adoption.</p>
+
+          <strong>Publisher:</strong> International   : Stockholm, Sweden.
+
+          <p><strong>Available at:</strong> <a href="https://www.idea.int/new"
+          style="color: #2563EB; font-size: 0.8rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+           https://www.idea.int/news-media/multime
+          </a></p>
+
+
+
+          <p style="text-align: right; margin-top: -0.5rem;">
+            <small style="color: #666; font-size: 0.8rem;">
+              <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+            </small>
+          </p>
+

@@ -6,21 +6,26 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thuliteio/doks.git"
+    "url": "git+https://github.com/thuliteio/doks.git"
   },
   "scripts": {
     "create": "hugo new",
     "dev": "hugo server --disableFastRender --noHTTPCache",
     "format": "prettier **/** -w -c",
     "build": "hugo --minify --gc",
-    "preview": "vite preview --outDir public"
+    "preview": "vite preview --outDir public",
+    "start": "hugo server"
   },
   "dependencies": {
+    "@tabler/icons": "^3.12.0",
     "@thulite/doks-core": "^1.7.0",
     "@thulite/images": "^3.3.0",
     "@thulite/inline-svg": "^1.2.0",
     "@thulite/seo": "^2.4.0",
-    "@tabler/icons": "^3.12.0",
+    "autoprefixer": "^10.4.21",
+    "bootstrap": "^5.3.7",
+    "postcss": "^8.5.6",
+    "realfavicon": "^0.4.18",
     "thulite": "^2.5.0"
   },
   "devDependencies": {
@@ -35,5 +40,11 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "main": "postcss.config.js",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/thuliteio/doks/issues"
+  },
+  "homepage": "https://github.com/thuliteio/doks#readme"
 }

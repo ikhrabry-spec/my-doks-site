@@ -1,0 +1,26 @@
+
+# data/companies+grouping.yml
+
+- name: "Traditional Voting Solutions"
+  header_text: "Companies providing automation and modernization for conventional voting processes — including voter registration, paper ballot management, and DRE voting machines."
+  subtypes:
+    - name: "Voter Registration & Mail-in Voting Systems"
+      centered_subtitle: "Voter Registration & Mail-in Voting Systems"
+      description_text: "Platforms and systems designed for voter enrollment, distribution, tracking, and processing of mail-in ballots."
+    - name: "Paper Ballot Counting Systems"
+      centered_subtitle: "Paper Ballot Counting Systems"
+      description_text: "Hardware and software solutions for scanning, recognizing, and automatically counting paper ballots."
+    - name: "DRE Voting Machines"
+      centered_subtitle: "DRE Voting Machines"
+      description_text: "Direct Recording Elections voting devices that record and store votes digitally without paper ballots."
+
+- name: "New Voting Technologies"
+  header_text: "Developers of advanced and emerging solutions enabling digital, remote, or device-based voting across various platforms and environments."
+  subtypes:
+    - name: "Specialized Voting Devices"
+      centered_subtitle: "Specialized Voting Devices"
+      description_text: "Producers of dedicated voting terminals, networked keypads, and localized digital systems for collective decision-making."
+    - name: "BYOD Voting Solutions"
+      centered_subtitle: "BYOD Voting Solutions"
+      description_text: "BYOD (Bring Your Own Device). Online platforms and mobile services enabling secure voting through voters’ own devices — computers, tablets, or smartphones."
+

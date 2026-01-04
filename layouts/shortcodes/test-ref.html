@@ -1,0 +1,6 @@
+{{/* test-ref shortcode - аналогично patent-ref */}}
+
+{{ $testNumber := .Get 0 }}
+<span class="test-reference" data-test-number="{{ $testNumber }}">
+  [tst{{ $testNumber }}]
+</span>

@@ -1,0 +1,24 @@
+<div class="sources-list">
+  {{ range .Site.Data.Sources }}
+    <div class="source-item">
+      <a href="{{ .url }}" class="source-link">{{ .name }}</a>
+      <p class="source-desc">{{ .description }}</p>
+    </div>
+  {{ end }}
+</div>
+
+{{/* Счётчик для источников на этой странице */}}
+{{ $page := .Page }}
+{{ $counter := 0 }}
+
+{{ if not ($page.Scratch.Get "source_counter") }}
+  {{ $page.Scratch.Set "source_counter" 1 }}
+  {{ $counter = 1 }}
+{{ else }}
+  {{ $counter = $page.Scratch.Get "source_counter" }}
+  {{ $page.Scratch.Set "source_counter" (add $counter 1) }}
+{{ end }}
+
+<span class="source-reference" data-source-number="{{ $counter }}">
+  [Src {{ $counter }}]
+</span>

@@ -1,0 +1,1418 @@
+- name: "Avante International Technology Inc."
+  anchor: "Avante_International"
+  group_id: "DRE Voting Machines"
+  referenced_in: ["Corporate_Proposals"]
+  number: 1
+  description: "Developer of election management systems and electronic voting machines supporting in-person voting."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Avante International Technology provides election technology solutions centered on the computerization of traditional in-person voting processes. Its product portfolio includes the Avante Election Management System, supporting paper-ballot voting and direct-recording electronic (DRE) voting at polling stations, as well as biometric enrollment solutions designed for national identification, voting, driving license issuance, and related applications.
+
+        * **Target audience:** Election authorities and government agencies responsible for organizing and administering supervised polling-station elections and national or regional identification systems.
+        * **Voting technology and architecture:** The Avante Election Management System integrates centralized election administration software with precinct-level voting devices. The architecture supports both paper-based ballots and DRE electronic entry machines deployed at polling places. In parallel, Avante offers biometric enrollment solutions intended for identity management scenarios that may be linked to electoral or civic infrastructure.
+        * **Scope and limitation:** Avante’s solutions are intended for controlled, in-person election environments and centralized election administration workflows. The systems are deployed within polling stations and related official election infrastructure.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Princeton Junction, New Jersey, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.avantetech.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.avantetech.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Clear Ballot Group, Inc."
+  anchor: "Clear_Ballot "
+  group_id: "Paper Ballot Counting Systems"
+  referenced_in: ["Corporate_Proposals"]
+  number: 2
+  description: "Provider of optical scanning and image-based tabulation systems for paper ballots."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction</strong>: United States.</em></p>
+        <p><strong>Overview:</strong> Clear Ballot Group develops systems for paper-based voting that integrate ballot definition, optical scanning, and automated vote tabulation. Its solutions are designed to support both in-person voting at polling stations and voting by mail within a unified ballot processing framework.
+
+        * **Target audience:** State and local election authorities administering paper-ballot elections, including jurisdictions combining polling-station voting with mail-in voting.
+        * **Voting technology and architecture:** Clear Ballot's platform enables the use of paper ballots printed either at polling stations or by voters for mail-in voting, generated using the same ballot definition software. Ballots are accepted and read using optical scanners, after which votes are automatically counted. Certified Clear Ballot systems operate on closed, isolated wired networks and are designed without connectivity to modems, the Internet, Wi-Fi, or Bluetooth.
+        * **Scope and limitation:** The Clear Ballot platform is intended for paper-ballot election workflows conducted within officially administered voting and counting processes, including centralized or precinct-based tabulation.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Boston, Massachusetts, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States (state and local elections in multiple states)</em></p>
+
+    - type: "text"
+      content: |
+          <p><strong>Website:</strong> <a href="https://www.clearballot.com/"
+          style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+          target="_blank"
+           rel="noopener noreferrer"
+          onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+          onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+          https://www.clearballot.com/
+          </a></p>
+
+          <p style="text-align: right; margin-top: -0.5rem;">
+             <small style="color: #666; font-size: 0.8rem;">
+               <strong>Information current as of:</strong> December 2025 (from company websites, EAC registry, etc.)
+             </small>
+          </p>
+
+- name: "Dominion Voting Systems Corporation"
+  anchor: "Dominion_Voting_Systems"
+  group_id: "DRE Voting Machines"
+  referenced_in: ["Corporate_Proposals"]
+  number: 3
+  description: "Legacy voting machine manufacturer whose operations were acquired and rebranded as Liberty Vote in 2025."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Formerly Canada / United States; now reorganized under U.S. entity Liberty Vote.</em></p>
+        <p><strong>Overview:</strong> Dominion Voting Systems Corporation is a company that supplies voting software and voting machines, including tabulators and electronic voting devices that count votes directly on each machine. The company historically maintained international headquarters in Toronto, Canada, and U.S. headquarters in Denver, Colorado. In addition to operations in the United States and Canada, the company has operated in Serbia..
+
+        * **Target audience:** State and local election authorities managing traditional elections.
+        * **Voting technology and architecture:** The company’s systems include direct-recording electronic (DRE) voting machines, tabulators, and centralized election management software enabling vote capture at polling stations and aggregation of results.
+        * **Scope and limitation:** Designed for supervised, polling-station-based elections using certified voting hardware and centralized election administration systems.
+        * **Corporate status and transition** Acquired and rebranded as Liberty Vote in 2025; legacy Dominion systems and assets are now managed under that new entity (https://libertyvote.com/?utm_source=chatgpt.com).
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Toronto, Ontario, Canada & Denver, Colorado, United States (historical)</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States; Canada; Serbia</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://libertyvote.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://libertyvote.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+
+- name: "Smartmatic USA Corporation"
+  anchor: "Smartmatic_USA_Corporationonal"
+  group_id: "Specialized Voting Devices"
+  referenced_in: ["Corporate_Proposals"]
+  number: 4
+  description: "Multinational developer of electronic voting systems and election management solutions."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States (division of multinational).</em></p>
+        <p><strong>Overview:</strong> Smartmatic produces electronic voting machines that count votes directly on each device, along with software designed for their operation. The company’s global headquarters are located in London, United Kingdom, with Smartmatic USA headquartered in Boca Raton, Florida, and representative offices in multiple countries.
+
+        * **Target audience:** Election commissions and governmental authorities administering large-scale electoral processes.
+        * **Voting technology and architecture:** Smartmatic systems consist of electronic voting machines combined with election management software supporting vote capture, device configuration, and result aggregation.
+        * **Scope and limitation:** Focused on administered elections using dedicated voting devices and centralized election software.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Boca Raton, Florida, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States; international deployments through parent and affiliated entities</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.smartmatic.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.smartmatic.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+
+- name: "Hart InterCivic, Inc."
+  anchor: "Hart_InterCivic"
+  group_id: "DRE Voting Machines"
+  referenced_in: ["Corporate_Proposals"]
+  number: 5
+  description: "Supplier of Verity voting systems and election technology in the U.S."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Hart InterCivic supplies Verity Voting machines and customized software for election administration. Verity Voting systems support both paper ballot voting and direct touchscreen entry, while maintaining a paper audit trail in the form of bar codes.
+
+        * **Target audience:** State and local election authorities conducting in-person elections.
+        * **Voting technology and architecture:** Verity Voting machines allow votes to be recorded either on paper ballots or via touchscreen interfaces, with votes tallied on each machine. The system supports ranked-choice voting. Verity Voting machines are manufactured approximately five miles from Hart InterCivic’s headquarters.
+        * **Scope and limitation:** Designed for polling-station elections using certified voting hardware with paper audit trails.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Austin, Texas, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.hartintercivic.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.hartintercivic.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Election Systems & Software, Inc. (ES&S)"
+  anchor: "Election_Systems& "
+  group_id: "DRE Voting Machines"
+  referenced_in: ["Corporate_Proposals"]
+  number: 6
+  description: "Major U.S. voting system manufacturer offering a wide range of election technologies."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Election Systems & Software, Inc. (ES&S) provides voting machines including printers, scanners, tabulators, and ballot-marking devices, along with customized voting software.
+
+        * **Target audience:** County, state, and municipal election administrators.
+        * **Voting technology and architecture:** ES&S systems provide voter-verifiable paper trails retained for audit purposes. The company also offers hosting services for storing and visualizing election results.
+        * **Scope and limitation:** Focused on supervised elections using physical voting devices and centralized result management.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Omaha, Nebraska, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States (nationwide at state and county level)</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.essvote.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.essvote.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "MicroVote General Corp."
+  anchor: "MicroVote_General_Corp."
+  group_id: "DRE Voting Machines"
+  referenced_in: ["Corporate_Proposals"]
+  number: 7
+  description: "Provider of direct recording electronic voting systems."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> MicroVote General Corp supplies direct-recording electronic (DRE) voting devices for use in polling-station elections.
+
+        * **Target audience:** Local election authorities seeking electronic voting machines.
+        * **Voting technology and architecture:** The company’s offerings consist of DRE voting devices designed for direct electronic vote capture.
+        * **Scope and limitation:** Limited to polling-place-based electronic voting systems.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Indianapolis, Indiana, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States (limited number of jurisdictions)</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="http://www.microvote.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        http://www.microvote.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Unisyn Voting Solutions"
+  anchor: "Unisyn_Voting_Solutions"
+  group_id: "Paper Ballot Counting Systems"
+  referenced_in: ["Corporate_Proposals"]
+  number: 8
+  description: "Provider of ballot scanning and election reporting systems."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Unisyn Voting Solutions, a division of International Lottery and Totalizator, Inc., provides voting devices including printers, scanners, tabulators, and ballot-marking devices, along with customizable election software. The company also provides voter education and mail-in voting services.
+
+        * **Target audience:** Election jurisdictions administering paper-based and hybrid voting processes.
+        * **Voting technology and architecture:** The OCS software package produces comprehensive reports containing summary and detailed election data; supports secure communication between devices; uses barcoding; manages multiple ballot styles; and stores polling-station and county data in databases. The system supports ranked voting, user access control, encrypted data distribution to voting devices, centralized result aggregation, turnout reporting, audit trails, ballot image extraction, and review of questionable ballot markings according to presumed voter intent.
+        * **Scope and limitation:** Designed for supervised election administration with centralized reporting and audit functionality.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Vista, California, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States (state and local elections)</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.unisynvoting.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.unisynvoting.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Voterite, Inc. dba VotRite"
+  anchor: "VoteriteVotRiteational"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 9
+  description: "Provider of EVS machines and cloud-based voting services."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Voterite, Inc., operating as VotRite, provides VotRite Titan LT2100 EVS direct-recording electronic voting machines that operate with their own databases and run on AWS cloud servers, creating a virtual private cloud for each election.
+
+        * **Target audience:** Election administrators and organizations requiring electronic and online voting solutions.
+        * **Voting technology and architecture:** The system records all voting sessions as immutable PNG files, each assigned a randomly generated 32-digit ID. USB drives are encrypted. VotRite also provides online voting software using secure internet connections and PIN-based ballot access. The platform integrates with county and state voter registration databases and supports multiple election formats, including proportional, weighted, district, party, and statewide voting.
+        * **Scope and limitation:** Combines electronic voting devices with cloud-based infrastructure and online voting components, subject to regulatory acceptance.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Boca Raton, Florida, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States (specific jurisdictions and organizational elections)</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.voterite.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.voterite.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "VotingWorks"
+  anchor: "VotingWorks"
+  group_id: "Paper Ballot Counting Systems"
+  referenced_in: ["Corporate_Proposals"]
+  number: 10
+  description: "Nonprofit developer of open-source voting hardware and audit software for traditional elections"
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> VotingWorks is a nonprofit organization that develops and sells open-source voting hardware and software at cost in the United States.
+
+        * **Target audience:** State and local election jurisdictions seeking transparent and auditable voting systems.
+        * **Voting technology and architecture:** Hardware includes polling-station scanners and ballot-marking devices (BMDs). Software includes the Arlo Risk Limiting Audit (RLA) system for monitoring manual vote counting. Arlo is open-source and freely available. VotingWorks optionally provides hosting and support services.
+        * **Scope and limitation:** Focused on supervised, in-person elections using open-source hardware and audit-oriented software.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            San Francisco, California, United States </em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.voting.works/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.voting.works/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "BallotReady, Inc."
+  anchor: "BallotReady"
+  group_id: "Voter Registration & Mail-in Voting Systems"
+  referenced_in: ["Corporate_Proposals"]
+  number: 11
+  description: "Developer of election management systems and electronic voting machines supporting in-person voting."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Founded in 2015, BallotReady provides voter-facing information services, including voter registration guidance, polling place information, and structured data on elected offices and candidates at all levels of government.
+
+        * **Target audience:** Voters, civic organizations, media platforms, and institutions requiring structured electoral information
+        * **Voting technology and architecture:** Maintains a comprehensive nationwide database covering federal, state, and local offices, accessible via API or standard data exports. Designed for information delivery and voter guidance rather than vote casting.
+        * **Scope and limitation:** Not intended for conducting secret ballots or for direct vote capture; operates as an informational and data infrastructure service.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            United States (city not publicly specified)</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.ballotready.org"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.ballotready.org
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "BallotTrax (division of i3logix, Inc.)"
+  anchor: "BallotTraxInc)"
+  group_id: "Voter Registration & Mail-in Voting Systems"
+  referenced_in: ["Corporate_Proposals"]
+  number: 12
+  description: "BallotTrax is a proprietary ballot tracking system used to monitor vote-by-mail ballot envelopes throughout the postal and election workflow."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> BallotTrax is developed and operated by i3logix, Inc. and is designed to track mailed ballot envelopes from dispatch through delivery and receipt by the election authority.
+
+        * **Target audience:** Election administrators and voters participating in vote-by-mail elections.
+        * **Voting technology and architecture:** Uses a centralized tracking system integrated with postal and election workflows. Provides voters with a web interface to receive notifications about ballot status, configurable by language, delivery method, and timing.
+        * **Scope and limitation:** Tracks ballot envelopes and logistics only; does not record, tabulate, or interpret votes.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Denver, Colorado, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://ballottrax.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://ballottrax.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Democracy Live, Inc."
+  anchor: "Democracy_Live"
+  group_id: "DRE Voting Machines"
+  referenced_in: ["Corporate_Proposals"]
+  number: 13
+  description: "Developer of proprietary wireless personal voting devices and polling software for closed, in-person electronic voting environments."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Democracy Live’s product line includes the OmniBallot portal and the OmniBallot tablet. The OmniBallot portal has been in use since 2008 and supports remote ballot marking and printing for subsequent postal submission.
+
+        * **Target audience:** Election jurisdictions and voters, particularly those requiring remote or accessible ballot-marking solutions.
+        * **Voting technology and architecture:** The OmniBallot portal enables voters to access and mark ballots digitally, print them on standard printers, and return them by mail. The OmniBallot tablet is a HAVA-compliant ballot-marking device designed for in-person polling places.
+        * **Scope and limitation:** Systems support ballot preparation and marking; the vote itself is cast via printed ballots rather than through electronic transmission of completed votes.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Seattle, Washington, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a https://democracylive.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://democracylive.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+
+- name: "Meridia"
+  anchor: "Meridia"
+  group_id: "Specialized Voting Devices"
+  referenced_in: ["Corporate_Proposals"]
+  number: 14
+  description: "Developer of election management systems and electronic voting machines supporting in-person voting."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Pennsylvania, United States.</em></p>
+        <p><strong>Overview:</strong> Meridia, incorporated as Photo Communications Corp. on May 12, 1972, operates under the trade names Meridia and Meridia Interactive Solutions. The company provides proprietary, radio frequency-based, wireless personal voting devices and customizable polling and voting software. These devices form a closed, isolated wireless network that eliminates connection to modems, the Internet, WiFi, or Bluetooth, enabling votes cast on participating devices to be counted.
+
+        * **Target audience:** Organizations conducting supervised voting sessions for committees, councils, boards, or corporate/association meetings.
+        * **Voting technology and architecture:** RF-based personal voting devices connect to a local receiver to form a closed network. Votes are collected on devices and tallied through the proprietary software. The system does not require Internet or external network connectivity.
+        * **Scope and limitation:** Focused on in-person, localized electronic voting; not intended for governmental or public elections.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Malvern, Pennsylvania, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.meridiaars.com"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.meridiaars.com
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Quizzbox Solutions"
+  anchor: "Avante_International"
+  group_id: "Specialized Voting Devices"
+  referenced_in: ["Corporate_Proposals"]
+  number: 15
+  description: "Provider of wireless personal voting devices and hybrid voting software for meetings, events, and organizational decision-making."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> France, European Union</em></p>
+        <p><strong>Overview:</strong> Quizzbox Solutions supplies personal wireless voting devices (“tubes”) and polling and voting software that allows these devices to connect to an isolated wireless network without Internet access, typically within a range of approximately 30 meters. In addition to device-based voting, the company offers online voting through its website and the Votebox platform, enabling hybrid voting scenarios that combine local and remote participation.
+
+        * **Target audience:** Organizations, educational institutions, associations, and event organizers requiring electronic voting or polling for meetings, examinations, or collective decision-making.
+        * **Voting technology and architecture:** Wireless voting devices connect to a local isolated network via a receiver, while web-based voting is provided through secure online platforms. The system supports both standalone device-based voting and hybrid configurations.
+        * **Scope and limitation:** Intended for supervised, organizational, or hybrid voting environments; not positioned as a system for official governmental elections.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Paris and Clermont-Ferrand, France. Subsidiary: Stuttgart, Germany (QuizzBox Solutions GmbH)</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            Europe, with global use via online services</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://quizzbox.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://quizzbox.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Votebox"
+  anchor: "Votebox"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 16
+  description: "Votebox is a hybrid voting software platform enabling voting via browser or local devices for in-person, online, and hybrid meetings."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> France (QuizzBox Solutions GmbH operates it; product developed under QuizzBox ecosystem)</em></p>
+        <p><strong>Overview:</strong> The Votebox solution, developed within the Quizzbox ecosystem, supports both web-based online voting accessible through any modern browser (smartphone, tablet, PC) and local interactive voting using handsets or wireless devices in offline meetings. It is positioned for assemblies, councils, federations, and organizational general meetings, supporting a mix of secret and public ballot configurations and delivering real-time results directly to participants.
+
+        * **Target audience:** Organizations such as local authorities, associations, clubs, and enterprises wanting flexible hybrid or remote voting.
+        * **Voting technology and architecture:** Combines web app voting with browser accessibility and hardware components (handsets or wireless inputs) for onsite votes; votes are managed and tabulated through the Votebox central system.
+        * **Scope and limitation:** Aimed at organizational and meeting-level voting; not certified for statewide public elections.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Clermont-Ferrand & Paris, France</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://votebox.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://votebox.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "ElectionBuddy Inc."
+  anchor: "ElectionBuddy"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 17
+  description: "Cloud-based online voting platform that enables organizations to conduct elections, polls, and meetings with secure web ballots and integrated voter notifications."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Canada </em></p>
+        <p><strong>Overview:</strong> ElectionBuddy provides a comprehensive digital election and meeting voting platform that operates entirely online, allowing voters to cast ballots via web browsers or devices authenticated through unique voter keys or access codes. It supports a wide range of voting methods and ballot configurations, includes automatic result tabulation, and incorporates encryption and anonymization to safeguard vote secrecy and integrity.
+
+        * **Target audience:** Associations, unions, homeowner groups, schools, and nonprofit organizations conducting remote or hybrid elections.
+        * **Voting technology and architecture:** Hosted cloud service, individualized access keys emailed or sent to voters, integrated ballot creation and voter list management, and secure result processing.
+        * **Scope and limitation:** Focused on organizational elections rather than government general elections; relies on centralized cloud infrastructure.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Edmonton, Alberta, Canada</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International (web-based)</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://electionbuddy.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://electionbuddy.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "ezVote"
+  anchor: "ezVote"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 18
+  description: "ezVote is an online voting system that enables organizations to create and manage digital elections and polls via a website interface."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States (operates as ezVoteOnline)</em></p>
+        <p><strong>Overview:</strong> ezVote provides web-based voting services allowing administrators to configure election parameters, ballot options, and voter lists, with voters casting votes through web pages from any Internet-connected device. The system includes authentication mechanisms and aims to provide secret ballot options along with real-time results and administrative dashboards.
+
+        * **Target audience:** Clubs, associations, homeowner groups, and civic organizations requiring online voting.
+        * **Voting technology and architecture:** Web application with proprietary backend, voter credential management, and real-time result calculation; ballots and participation are recorded via standard Internet voting interfaces.
+        * **Scope and limitation:** Designed for non-governmental elections; security and secrecy depend on centralized server and credentialing; degree of anonymity is configurable by the administrator.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Not prominently disclosed — appears to be a U.S.-based online service</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International (web-based)</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.ezvoteonline.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.ezvoteonline.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "benel Solutions / ElectionsOnline"
+  anchor: "benel_Solutions"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 19
+  description: "benel Solutions provides integration and support for third-party online voting software such as ElectionsOnline, enabling remote election services within broader enterprise systems."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> benel Solutions partners with ElectionsOnline technology to offer web-based voting solutions that can integrate with member management systems and other platforms. This integration enables structured voting workflows and data synchronization within organizational applications such as AMS or CRM systems for association elections and polls.
+
+        * **Target audience:** Associations and enterprises requiring integrated online voting within broader systems.
+        * **Voting technology and architecture:** Integration of hosted voting services (ElectionsOnline) with third-party platforms, SSO support, and embedded ballot interfaces.
+        * **Scope and limitation:** Depends on the licensed voting technology; not a standalone election platform in itself.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            McLean, Virginia, United States (benel Solutions)</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States and global via integrations</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.benelsolutions.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.benelsolutions.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Skypunch Technology Inc."
+  anchor: "Skypunch_Technology"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 20
+  description: "Skypunch Technology provides an online voting system with cryptographically verifiable ballots and an immutable ledger database for elections and polls."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> The Skypunch online voting system focuses on cryptographic verification and an append-only ledger database that renders ballots transparent and resistant to alteration, enabling verification by voters and election administrators. The architecture supports web access from devices including desktops, laptops, tablets, and smartphones.
+
+        * **Target audience:** Membership associations, unions, educational institutions, corporate governance bodies, and civic groups.
+        * **Voting technology and architecture:** Web-hosted platform with cryptographic auditing and append-only databases to ensure ballot immutability and post-election verification.
+        * **Scope and limitation:** Tailored for organizational elections and may not meet standards for public political elections without additional certification.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Charleston, West Virginia, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.electionsonline.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.electionsonline.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "eBallot"
+  anchor: "eBallot"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 21
+  description: "eBallot is an online voting platform offering web-based election software for organizations of various sizes."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States (Votenet Solutions, Inc.)</em></p>
+        <p><strong>Overview:</strong> eBallot provides a secure web-based voting system allowing online ballots to be cast and counted through browser interfaces, with features including vote analytics, anonymity, weighted voting, and proxy options. The platform accommodates both self-administered and managed voting scenarios with real-time results.
+
+        * **Target audience:** Businesses, associations, schools, and nonprofit organizations conducting online elections.
+        * **Voting technology and architecture:** Web app voting with centralized tallying, support for anonymous results, and administrative dashboards.
+        * **Scope and limitation:** Designed for organizational and private elections rather than official public political elections.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Washington, United States (marketing and support presence)</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.eballot.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.eballot.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "nVotes (Agora Voting)"
+  anchor: "nVotesAgoraVoting"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 22
+  description: "nVotes, originally known as Agora Voting, is a configurable online voting platform with cryptographic features allowing voters to verify that their encrypted ballot was registered."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Spain.</em></p>
+        <p><strong>Overview:</strong> The software provides a modular set of voting capabilities selected in consultation with developers, incorporating cryptographic techniques for voter verification and receipt matching to confirm proper ballot registration. Public documentation of internal security guarantees and full architectural details is limited.
+
+        * **Target audience:** Organizations seeking tailored online voting solutions with verifiability features.
+        * **Voting technology and architecture:** Web-centric voting with encryption and ballot receipts enabling voter-side verification.
+        * **Scope and limitation:** Limited public disclosure of full guarantees and verification mechanisms; intended for organizational use.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Spain (developer team origin)</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://nvotes.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://nvotes.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "BigPulse Voting Pty Ltd"
+  anchor: "BigPulse_Voting_Pty"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 23
+  description: "BigPulse Voting is an Australian provider of online voting systems using Single Sign-On authentication and configurable anonymity models for organizational and institutional elections."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Australia </em></p>
+        <p><strong>Overview:</strong> BigPulse Voting provides a web-based voting platform that does not require client-side software installation and relies on Single Sign-On (SSO) authentication mechanisms, including CAS, Shibboleth, SOAP, LDAP, Flexmls, and third-party identity providers such as Facebook. Voting data is stored on BigPulse’s own server infrastructure, with daily security checks, structured backup and disaster recovery procedures, and end-to-end 256-bit TLS/SSL encryption. The company states that data storage and processing comply with the EU General Data Protection Regulation (GDPR) and that it is certified under the EU–US Data Privacy Framework.
+
+        The system enforces a one-vote-per-voter rule and issues digital voting receipts, which can be digitally signed. Multiple anonymity configurations are supported, including modes that provide full ballot secrecy and others that allow voter identification; in non-anonymous modes, re-voting is permitted. Election results are published via secure URLs. Voters are notified by email and receive unique links granting direct access to ballots. The platform supports voter segmentation, accessibility features for visually impaired voters, multilingual interfaces, and a wide range of voting methods.
+
+        * **Target audience:** Organizations, associations, institutions, and enterprises conducting remote or hybrid elections.
+        * **Voting technology and architecture:** Browser-based online voting platform with SSO authentication, encrypted data storage, configurable anonymity, and digital receipts.
+        * **Scope and limitation:** Designed for organizational and institutional elections; not positioned as a system for national public political elections.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Australia (with offices in North America, Europe, and the United Kingdom)</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.bigpulsevoting.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.bigpulsevoting.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Simply Voting Inc."
+  anchor: "Simply_Voting_Inc"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 24
+  description: "Simply Voting is a Canadian online voting service that enables organizations to create, manage, and publish secure electronic elections via web interfaces."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Canada</em></p>
+        <p><strong>Overview:</strong> Simply Voting provides an online election service allowing administrators to configure election schedules, ballot structures, and voter lists. The system automatically generates unique passwords for each voter, which can be distributed via mass email using the built-in Email Blast feature, along with direct voting links. As an alternative, customers may integrate their own authentication mechanisms.
+
+        Voters access elections through the customer’s proprietary website, where they are authenticated and presented with available ballots. Voters who have not yet participated receive a tamper-proof electronic ballot. Completed ballots are encrypted and stored anonymously. Upon voting, each voter receives a receipt and is prevented from voting again in the same election. During the voting period, administrators can monitor turnout and send reminder messages. After voting closes, results and detailed reports are immediately available and may be published. Published results can be independently checked by downloading files containing ballots and receipt codes. Simply Voting states that it guarantees the reliability of its hardware, software, and personnel.
+
+        * **Target audience:** Associations, corporations, cooperatives, and organizations conducting online elections.
+        * **Voting technology and architecture:** Web-based voting system with encrypted ballots, voter authentication, receipt issuance, and centralized tallying.
+        * **Scope and limitation:** Intended for organizational and corporate elections; relies on centralized infrastructure and administrative trust.
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Montreal, Quebec, Canada</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International</em></p>
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.simplyvoting.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.simplyvoting.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "POLYAS GmbH"
+  anchor: "POLYASGmbH"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 25
+  description: "POLYAS GmbH is a German provider of certified online voting management services operating under the POLYAS brand."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Germany</em></p>
+        <p><strong>Overview:</strong> POLYAS provides online voting services hosted in the Open Telekom Cloud (OTC). The POLYAS voting software complies with Common Criteria requirements and holds certifications from the German Federal Office for Information Security (BSI), as well as ISO/IEC 27001 certification. The system supports voter verification mechanisms allowing voters to confirm that their vote is included in the final result using a QR code, which can be scanned with a secondary device.
+
+        The platform is designed for managing online elections with an emphasis on procedural transparency, certification, and regulatory compliance within European legal frameworks.
+        * **Target audience:** Organizations, institutions, and entities requiring certified online voting services.
+        * **Voting technology and architecture:** Cloud-hosted online voting system with certified software, cryptographic safeguards, and voter verification via QR codes.
+        * **Scope and limitation:** Oriented toward legally regulated organizational elections; operates within defined certification and hosting constraints.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Kassel, Germany</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            Primarily Europe; international clients</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.polyas.de/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.polyas.de/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Assembly Voting ApS"
+  anchor: "Assembly_Voting_ApS"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 26
+  description: "Assembly Voting ApS is a Danish provider of the Electa online voting system based on cryptographic verification and distributed trust mechanisms."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Denmark</em></p>
+        <p><strong>Overview:</strong> Assembly Voting offers the Electa online voting system, which uses a distributed cryptographic model. Prior to an election, election officials each generate a personal component of a shared decryption key, which can only be activated collectively. Voters receive two separate access codes via independent channels to access their digital ballots. Ballots are encrypted before transmission, and voters receive digital receipts.
+
+        Encrypted votes are mixed to ensure anonymity. All election-related actions are logged. After the election closes, a required number of election officials jointly verify that no votes were added, altered, or removed. Only after verification are the anonymous votes decrypted to produce the final result. Verification is based on mathematical methods documented in the system’s cryptographic protocol documentation. The company declares cooperation with government structures, though not in the direct conduct of voting.
+        * **Target audience:** Organizations and institutions requiring cryptographically verifiable online elections.
+        * **Voting technology and architecture:** Online voting system using encryption, distributed decryption keys, vote mixing, and formal cryptographic verification.
+        * **Scope and limitation:** Complex operational model requiring coordinated election officials; designed for structured elections rather than informal polling.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Brøndby, Denmark</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            Europe; international deployments</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://assemblyvoting.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://assemblyvoting.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Votem Corp"
+  anchor: "Votem_Corp"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 27
+  description: "Votem Corp is a U.S. company providing the CastIron® election management platform for remote, mobile, and hybrid voting."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Votem offers the CastIron® election management platform, supporting multiple voting formats including web-based, mobile, and paper ballot workflows. The platform includes MobileMark™, an electronic ballot delivery system designed for Uniformed and Overseas Citizens Voting Act (UOCAVA) voters, and FastPass Voting®, which allows voters to mark ballots on mobile devices and then print tabulated paper ballots on demand using QR codes.
+
+        CastIron leverages Open Code Advantage™, enabling peer review and auditing of source code, and claims compliance with ADA, HAVA, WCAG 2.0, and the Rehabilitation Act. Votem’s security model relies on Google Cloud Platform infrastructure. The platform incorporates blockchain-based components, providing a distributed database, immutability of records, transparent audit trails, and the ability to trace votes to their source without attributing ballots to voters. Votem states that it actively cooperates with government entities but does not conduct voting on their behalf.
+        * **Target audience:** Election administrators, particularly for overseas and accessibility-focused voting.
+        * **Voting technology and architecture:** Hybrid voting platform combining web, mobile, paper, cloud infrastructure, and blockchain-based audit mechanisms.
+        * **Scope and limitation:** Complex system dependent on cloud infrastructure; primarily positioned for specific regulated use cases.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Ohio, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States; selected international use cases</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.avantetech.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.avantetech.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Right2Vote Infotech Private Limited"
+  anchor: "Right2VoteInfotechPrivateLimited"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 28
+  description: "Right2Vote Infotech is an Indian provider of online voting services approved for corporate elections under Indian regulatory frameworks."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> India</em></p>
+        <p><strong>Overview:</strong> Right2Vote provides an online voting platform accessible through its website. The company explicitly states that coercion resistance is impossible and that technical failures may occur during online voting. Despite these limitations, Right2Vote reports that its platform has been certified by the Standards, Testing and Quality Certification Authority (STQC) under the Ministry of Electronics and Information Technology (MEITY), Government of India, and approved by the Ministry of Corporate Affairs (MCA) for use in elections. The system is not used for government political voting.
+
+        * **Target audience:** Corporations and organizations conducting shareholder or internal elections in India.
+        * **Voting technology and architecture:** Web-based online voting platform with centralized management and regulatory certification.
+        * **Scope and limitation:** Approved for corporate use only; explicitly acknowledges coercion and technical risks.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Mumbai, India</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            India</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://right2vote.in/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://right2vote.in/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Scytl Election Technologies SLU"
+  anchor: "ScytlElectionTechnologiesSLU"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 29
+  description: "Scytl Election Technologies is a Spanish company that has developed and deployed electronic and internet voting systems in multiple countries."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Spain</em></p>
+        <p><strong>Overview:</strong> Scytl’s voting technologies have been used internationally in various public and institutional contexts. The New South Wales government selected Scytl to provide software for its iVote online voting system between 2018 and 2022. In Malta, Scytl and Idox implemented the eCount electronic vote-counting system beginning in 2019. In Norway, an internet voting project using Scytl technology was discontinued in 2014 due to security concerns, lack of turnout improvement, and high costs.
+
+        Scytl entered a joint venture with Swiss Post to deploy the sVote system in several Swiss cantons for expatriate voting; however, Swiss authorities banned its use in referendums in May 2019, and the system has not been used since. Swiss Post acquired the software rights in 2020 following Scytl’s financial difficulties. Scytl UAE provides digital voting systems for Federal National Council elections in the United Arab Emirates. The company holds multiple patents related to data protection, encryption, and secure storage.
+        * **Target audience:** Governmental and institutional election authorities.
+        * **Voting technology and architecture:** Internet voting and electronic counting systems using cryptographic protection and centralized infrastructures.
+        * **Scope and limitation:** History includes both large-scale deployments and formal discontinuations due to regulatory and security concerns.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Barcelona, Spain</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            International (historical deployments)</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.scytl.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.scytl.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "Cybernetica AS"
+  anchor: "Cybernetica_AS"
+  group_id: "BYOD Voting Solutions"
+  referenced_in: ["Corporate_Proposals"]
+  number: 30
+  description: "Cybernetica AS has participated in the development of the technological infrastructure for electronic voting in Estonia."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> Estonia</em></p>
+        <p><strong>Overview:</strong> Cybernetica AS is an Estonian R&D-intensive information and communications technology company that develops mission-critical digital systems in areas such as secure data exchange, digital identity and authentication, cybersecurity, privacy-enhancing technologies, and interoperability platforms. Its technologies are deployed across government and enterprise environments in more than 30 countries. The company also provides security audits, research and consulting services, and contributes to complex national infrastructures including cross-system data frameworks, secure digital identities, and surveillance technologies.
+
+        * **Target audience:** Estonian public authorities
+        * **Voting technology and architecture:** IVXV system; state-operated PKI infrastructure; centralized storage and verification mechanisms.
+        * **Scope and limitation:** the model is tightly coupled to Estonia’s national identification framework and legal environment; its transferability to other jurisdictions is constrained by institutional and regulatory prerequisites.
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Tallinn</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            Estonia</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.avantetech.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.avantetech.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+- name: "+++Avante International Technology Inc."
+  anchor: "Avante_International"
+  group_id: ""
+  referenced_in: [""]
+  number: 1
+  description: "Developer of election management ting."
+  content_blocks:
+    - type: "text"
+      content: |
+        <p><em><strong>Registration / legal jurisdiction:</strong> United States.</em></p>
+        <p><strong>Overview:</strong> Provides election management software
+        * **Target audience:** Election authol in-person elections.
+        * **Voting technology and architecture:** Centralizedng devices.
+        * **Scope and limitation:** Focused on polling-
+
+    - type: "columns"
+      layout: "two-columns"
+      columns:
+        - content: |
+            <p><em><strong>Headquarters</strong><br>
+            Princeton Junction, New Jersey, United States</em></p>
+        - content: |
+            <p><em><strong>Territory of operation</strong><br>
+            United States</em></p>
+
+    - type: "text"
+      content: |
+        <p><strong>Website:</strong> <a href="https://www.avantetech.com/"
+        style="color: #2563EB; font-size: 1.1rem; font-weight: normal; text-decoration: none;"
+        target="_blank"
+        rel="noopener noreferrer"
+        onmouseover="this.style.borderBottom='1px solid #1D4ED8'; this.style.color='#1D4ED8';"
+        onmouseout="this.style.borderBottom='1px dotted #2563EB'; this.style.color='#2563EB';">
+        https://www.avantetech.com/
+        </a></p>
+
+        <p style="text-align: right; margin-top: -0.5rem;">
+          <small style="color: #666; font-size: 0.8rem;">
+            <strong>Information current as of:</strong> December 2025 (from company website, EAC registry, etc.)
+          </small>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

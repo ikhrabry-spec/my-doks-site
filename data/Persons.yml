@@ -1,0 +1,219 @@
+- name: "Яндекс"
+  group_id: "Сайты"
+  referenced_in: ["problems"]
+  attributes:
+    ownership: "Public"
+    rd_presence: "High"
+  fields:
+    address: "Москва, ул. Льва Толстого, 16"
+    url: "http://www.yandex.ru"
+    subtitles:
+      - "Машинное обучение"
+      - "Беспилотные технологии"
+      - "Облачные сервисы"
+
+      # ================================================
+# ТЕСТ: Гибкий порядок с content_blocks (НОВАЯ СТРУКТУРА)
+# ================================================
+
+# ТЕСТ 1: Базовая проверка гибкого порядка
+- name: "ТЕСТ: Гибкий порядок блоков"
+  anchor: "test-flexible-order"
+  group_id: "Test Flex"
+  referenced_in: ["Problems"]
+
+  # НОВАЯ СТРУКТУРА: content_blocks
+  content_blocks:
+    # 1. Текст заголовок (ПЕРВЫЙ в порядке)
+    - type: "text"
+      style: "subtitle"
+      content: "## Тест гибкого порядка"
+
+    # 2. Изображение (ВТОРОЙ в порядке)
+    - type: "image"
+      path: "images/test/advanced-card.jpg"
+      caption: "**Подпись с Markdown**: Рисунок 1"
+      max_width: "300px"
+
+    # 3. Обычный текст (ТРЕТИЙ)
+    - type: "text"
+      style: "paragraph"
+      content: "Это текст *между* изображениями. Мы можем менять порядок блоков как угодно!"
+
+    # 4. Ещё изображение (ЧЕТВЁРТЫЙ)
+    - type: "image"
+      path: "images/test/diagram.png"
+      caption: "Рисунок 2: Диаграмма"
+
+    # 5. YouTube видео (ПЯТЫЙ)
+    - type: "video_youtube"
+      video_id: "dQw4w9WgXcQ"
+      caption: "Тестовое видео с YouTube"
+
+    # 6. Заключительный текст (ШЕСТОЙ)
+    - type: "text"
+      style: "bold"
+      content: "**ИТОГ:** Порядок задаётся последовательностью в YAML!"
+
+  # Старые поля для обратной совместимости
+  description: "Эта карточка использует новую структуру content_blocks"
+  attributes:
+    category: ["test", "flexible"]
+    complexity: "medium"
+
+# ТЕСТ 2: Только текст (минимальный)
+- name: "ТЕСТ: Только текстовые блоки"
+  anchor: "test-text-only"
+  group_id: "Test Flex"
+  referenced_in: ["Problems"]
+
+  content_blocks:
+    - type: "text"
+      style: "subtitle"
+      content: "## Глава 1: Введение"
+
+    - type: "text"
+      style: "paragraph"
+      content: "Это обычный параграф с *курсивом* и **жирным** текстом."
+
+    - type: "text"
+      style: "bold"
+      content: "**Важное замечание:** Это выделенный текст!"
+
+    - type: "text"
+      style: "paragraph"
+      content: "И ещё один параграф в конце."
+
+# ТЕСТ 3: Чередование медиа и текста (реальный кейс)
+- name: "ТЕСТ: Инструкция с чередованием"
+  anchor: "test-alternating"
+  group_id: "Test Flex"
+  referenced_in: ["Problems"]
+
+  content_blocks:
+    # Инструкция
+    - type: "text"
+      style: "subtitle"
+      content: "## Шаг 1: Подготовка"
+
+    - type: "text"
+      content: "Перед началом убедитесь, что у вас есть все инструменты:"
+
+    # Изображение инструментов
+    - type: "image"
+      path: "images/test/tools.jpg"
+      caption: "Рис. 1: Необходимые инструменты"
+
+    # Следующий шаг
+    - type: "text"
+      style: "subtitle"
+      content: "## Шаг 2: Установка"
+
+    - type: "text"
+      content: "Посмотрите видеоинструкцию по установке:"
+
+    # Видео
+    - type: "video_youtube"
+      video_id: "dQw4w9WgXcQ"
+      caption: "Видеоинструкция"
+
+    # Заключение
+    - type: "text"
+      style: "subtitle"
+      content: "## Шаг 3: Проверка"
+
+    - type: "text"
+      content: "После установки проверьте работу системы."
+
+# ТЕСТ 4: Локальные видео с подписями
+- name: "ТЕСТ: Локальные видео"
+  anchor: "test-local-video"
+  group_id: "Test Flex"
+  referenced_in: ["Problems"]
+
+  content_blocks:
+    - type: "text"
+      content: "Демонстрация локального видео файла:"
+
+    - type: "video_local"
+      path: "videos/demo-advanced-features.mp4"
+      caption: "*Демонстрационный ролик* с Markdown-подписью"
+
+    - type: "text"
+      content: "Видео показывает основные функции."
+
+# ТЕСТ 5: Сложная композиция
+- name: "ТЕСТ: Сложная композиция"
+  anchor: "test-complex-composition"
+  group_id: "Test Flex"
+  referenced_in: ["Problems"]
+
+  content_blocks:
+    # Введение
+    - type: "text"
+      style: "subtitle"
+      content: "## Часть 1: Теория"
+
+    - type: "text"
+      content: "Основные концепции представлены на схеме:"
+
+    # Диаграмма
+    - type: "image"
+      path: "images/test/diagram.png"
+      caption: "Схема 1: Основные концепции"
+      max_width: "400px"
+
+    # Подробности
+    - type: "text"
+      style: "subtitle"
+      content: "## Часть 2: Практика"
+
+    - type: "text"
+      content: "Практическое применение показано в видео:"
+
+    # Видео
+    - type: "video_youtube"
+      video_id: "short-video-id"
+      caption: "Видео 1: Практическое применение"
+
+    # Примеры
+    - type: "text"
+      style: "subtitle"
+      content: "## Часть 3: Примеры"
+
+    - type: "image"
+      path: "images/test/example1.jpg"
+      caption: "Пример 1"
+      max_width: "200px"
+
+    - type: "image"
+      path: "images/test/example2.jpg"
+      caption: "Пример 2"
+      max_width: "200px"
+
+    - type: "image"
+      path: "images/test/example3.jpg"
+      caption: "Пример 3"
+      max_width: "200px"
+
+    # Заключение
+    - type: "text"
+      style: "bold"
+      content: "**Вывод:** Гибкая структура позволяет создавать любые композиции!"
+
+# ТЕСТ 6: Пустая карточка (проверка обратной совместимости)
+- name: "ТЕСТ: Обратная совместимость (старый формат)"
+  anchor: "test-backward-compat"
+  group_id: "Test Flex"
+  referenced_in: ["Problems"]
+
+  # СТАРАЯ СТРУКТУРА (без content_blocks)
+  media:
+    - type: "image"
+      path: "images/test/advanced-card.jpg"
+      alt: "Тестовое изображение"
+
+  description: "Эта карточка использует старую структуру (media + description)"
+
+  attributes:
+    category: ["test", "backward"]

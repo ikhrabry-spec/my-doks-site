@@ -1,0 +1,220 @@
+{{/* docs-page.html */}}
+
+{{ define "main" }}
+<div class="wrap container-lg">
+  <div class="content">
+    <div class="row flex-xl-nowrap mt-5 align-items-start">
+
+      {{/* ЛЕВАЯ КОЛОНКА */}}
+      <div class="col-lg-3 docs-sidebar d-none d-lg-block">
+        <div class="grid-nav-container">
+            <a href="/table-of-contents/">
+                <button class="grid-nav-button">Grid navigation</button>
+            </a>
+        </div>
+        <nav class="section-nav docs-links">
+            <ul class="list-unstyled">
+                {{ $currentPage := . }}
+                {{ $sections := slice
+                    (site.GetPage "docs/inside")
+                    (site.GetPage "docs/aspects")
+                    (site.GetPage "docs/outside")
+                    (site.GetPage "blog/discussion")
+                    (site.GetPage "blog/news-archive")
+                    (site.GetPage "docs/reference-books")
+                    (site.GetPage "about")
+                }}
+
+                {{ range $section := $sections }}
+                    {{ if ne $section.Title "Empty" }}
+                        <li>
+                            <details {{ if $currentPage.IsDescendant $section }}open{{ end }}>
+                                <summary>
+                                    <a href="{{ $section.Permalink }}" class="section-title-link {{ if eq $currentPage.Permalink $section.Permalink }}active{{ end }}">
+                                        {{ $section.Title }}
+                                    </a>
+                                </summary>
+                                <ul class="list-unstyled list-nested">
+                                    {{ range $section.Pages.ByWeight }}
+                                        {{ if ne .Title "Empty" }}
+                                            <li>
+                                                {{ if .Pages }}
+                                                    <details {{ if $currentPage.IsDescendant . }}open{{ end }} class="list-item-details">
+                                                        <summary>
+                                                            <a href="{{ .Permalink }}" class="{{ if eq .Permalink $.Page.Permalink }}active{{ end }}">
+                                                                {{ .Title }}
+                                                            </a>
+                                                        </summary>
+
+                                                        <ul class="list-unstyled list-nested">
+                                                            {{ range .Pages.ByWeight }}
+                                                                <li {{ if eq .Permalink $.Page.Permalink }}class="active"{{ end }}>
+                                                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                                                </li>
+                                                            {{ end }}
+                                                        </ul>
+                                                    </details>
+                                                {{ else }}
+                                                    <a href="{{ .Permalink }}" class="{{ if eq .Permalink $.Page.Permalink }}active{{ end }}">
+                                                        {{ .Title }}
+                                                    </a>
+                                                {{ end }}
+                                            </li>
+                                        {{ end }}
+                                    {{ end }}
+                                </ul>
+                            </details>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </nav>
+        <div class="expand-all-menu"></div>
+      </div>
+      {{/* КОНЕЦ ЛЕВОЙ КОЛОНКИ */}}
+
+
+<main class="docs-content col-lg-6 col-xl-6 title-center my-custom-page">
+  <h1 class="centered-heading">{{ .Title }}</h1>
+
+  {{/* ===================================================== */}}
+  {{/* НОВАЯ ЛОГИКА: Поддержка content_blocks на страницах */}}
+  {{/* ===================================================== */}}
+         {{ if .Params.content_blocks }}
+          <div class="docs-page-structured-content">
+            {{ range $block := .Params.content_blocks }}
+              {{ partial "content-block.html" (dict "block" $block "context" "docs") }}
+            {{ end }}
+          </div>
+        {{ else }}
+          <div class="docs-page-markdown-content">
+            {{ .Content }}
+          </div>
+        {{ end }}
+      </main>
+
+      {{/* ПРАВАЯ КОЛОНКА - ИСПРАВЛЕННАЯ */}}
+      <nav class="col-lg-3 docs-sidebar sidebar-right d-none d-lg-block">
+        <div class="page-links">
+
+      {{/* ВСЕГДА показываем заголовок для TOC */}}
+          <h3 class="mt-1 sources-toc-title">On this page</h3>
+
+          {{/* 1. КАСТОМНОЕ TOC ДЛЯ CONTENT_BLOCKS */}}
+          {{ if .Params.content_blocks }}
+            {{ partial "content-blocks-toc.html" . }}
+
+          {{/* 2. СТАНДАРТНОЕ TOC HUGO */}}
+          {{ else if .TableOfContents }}
+             {{ .TableOfContents }}
+      {{ else }}
+      {{/* Если нет ни content_blocks, ни стандартного TOC */}}
+      <p class="text-muted small">No table of contents available.</p>
+
+             {{ end }}
+
+{{/* 3. СУЩЕСТВУЮЩАЯ ЛОГИКА СО ШОРТКОДАМИ */}}
+{{ $usedShortcodes := slice }}
+{{ $allContent := "" }}
+
+{{/* Собираем ВЕСЬ контент страницы: и основной, и из content_blocks */}}
+
+{{/* 1. Основной контент */}}
+{{ if .Content }}
+  {{ $allContent = .RawContent }}
+{{ end }}
+
+{{/* 2. Контент из content_blocks */}}
+{{ if .Params.content_blocks }}
+  {{ range .Params.content_blocks }}
+    {{ if and (eq .type "text") .content }}
+      {{ $allContent = printf "%s\n%s" $allContent .content }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Ищем шорткоды во всём контенте */}}
+{{ if $allContent }}
+  {{ if (findRE `{{\s*<\s*source-ref` $allContent) }}
+    {{ $usedShortcodes = $usedShortcodes | append "source" }}
+  {{ end }}
+  {{ if (findRE `{{\s*<\s*publication-ref` $allContent) }}
+    {{ $usedShortcodes = $usedShortcodes | append "publication" }}
+  {{ end }}
+  {{ if (findRE `{{\s*<\s*company-ref` $allContent) }}
+    {{ $usedShortcodes = $usedShortcodes | append "company" }}
+  {{ end }}
+  {{ if (findRE `{{\s*<\s*patent-ref` $allContent) }}
+    {{ $usedShortcodes = $usedShortcodes | append "patent" }}
+  {{ end }}
+  {{ if (findRE `{{\s*<\s*legal-ref` $allContent) }}
+    {{ $usedShortcodes = $usedShortcodes | append "legal" }}
+  {{ end }}
+  {{ if (findRE `{{\s*<\s*test-ref` $allContent) }}
+    {{ $usedShortcodes = $usedShortcodes | append "test" }}
+  {{ end }}
+
+  {{ $usedShortcodes = $usedShortcodes | uniq }}
+{{ end }}
+
+          {{ range $shortcodeType := $usedShortcodes }}
+            {{ $dataMap := dict
+              "source" (dict "data" $.Site.Data.Sources "title" "Sources" "url" "/docs/reference-books/sources/")
+              "publication" (dict "data" $.Site.Data.Publications "title" "Publications" "url" "/docs/reference-books/publications/")
+              "company" (dict "data" $.Site.Data.Companies "title" "Companies" "url" "/docs/reference-books/companies/")
+              "patent" (dict "data" $.Site.Data.Patents "title" "Patents" "url" "/docs/reference-books/patents/")
+              "legal" (dict "data" $.Site.Data.Legal_field "title" "Legal field" "url" "/docs/reference-books/legal_field/")
+              "test" (dict "data" $.Site.Data.Test "title" "Test" "url" "/empty/Test/")
+            }}
+
+            {{ $config := index $dataMap $shortcodeType }}
+            {{ $data := $config.data }}
+            {{ $title := $config.title }}
+            {{ $url := $config.url }}
+
+            {{ if $data }}
+              {{ $currentPageSlug := $.File.BaseFileName }}
+              {{ $filteredItems := slice }}
+
+              {{ range $item := $data }}
+                {{ if and $item (reflect.IsMap $item) }}
+                  {{ if isset $item "referenced_in" }}
+                    {{ if in $item.referenced_in $currentPageSlug }}
+                      {{ $filteredItems = $filteredItems | append $item }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+
+
+              {{ if gt (len $filteredItems) 0 }}
+                <h3 class="mt-1 centered-heading">
+                  <a href="{{ $url }}">{{ $title }}</a>
+                </h3>
+
+                {{ if eq $shortcodeType "source" }}
+                  {{ partial "sources.html" (dict "context" $ "displayNumbers" true) }}
+                {{ else if eq $shortcodeType "publication" }}
+                  {{ partial "publications.html" (dict "context" $ "displayNumbers" true) }}
+                {{ else if eq $shortcodeType "company" }}
+                  {{ partial "companies.html" (dict "context" $ "displayNumbers" true) }}
+                {{ else if eq $shortcodeType "patent" }}
+                  {{ partial "patents.html" (dict "context" $ "displayNumbers" true) }}
+                {{ else if eq $shortcodeType "legal" }}
+                  {{ partial "legal-field.html" (dict "context" $ "displayNumbers" true) }}
+                {{ else if eq $shortcodeType "test" }}
+                  {{ partial "test.html" (dict "context" $ "displayNumbers" true) }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "bodyClass" }}doks-page{{ end }}

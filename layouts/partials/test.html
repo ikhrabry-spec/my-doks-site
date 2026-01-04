@@ -1,0 +1,111 @@
+<div class="test-container">
+    <div class="test-header"></div>
+    <ul class="test-list" id="test-list">
+        {{ $isTestPage := and (eq .context.Kind "page") (eq .context.File.BaseFileName "Test") }}
+        {{ $currentPageSlug := .context.File.BaseFileName }}
+        {{ $showNumbers := .displayNumbers }}
+        {{ $counter := 0 }}
+
+        {{ $testsToDisplay := .context.Site.Data.Test }}
+
+        {{ if not $isTestPage }}
+            {{ $testsToDisplay = slice }}
+            {{ range .context.Site.Data.Test }}
+                {{ if in .referenced_in $currentPageSlug }}
+                    {{ $testsToDisplay = $testsToDisplay | append . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $testsToDisplay }}
+            {{ $counter = add $counter 1 }}
+
+            {{/* ГЕНЕРАЦИЯ cardId */}}
+            {{ $cardId := "" }}
+            {{ with .anchor }}
+                {{ $cardId = trim . " " }}
+            {{ end }}
+            {{ if eq $cardId "" }}
+                {{ with .name }}
+                    {{ $cardId = . | urlize }}
+                {{ else }}
+                    {{ $cardId = printf "test-%d" $counter }}
+                {{ end }}
+            {{ end }}
+
+            <li class="test-item filterable-item"
+                id="card-{{ $cardId }}"
+                data-card-id="{{ $cardId }}"
+                data-test-number="{{ $counter }}"
+                data-test-name="{{ .name | default .title }}">
+
+                <!-- КОРОТКИЙ ВИД -->
+                <span class="test-item-short">
+                    {{ if $showNumbers }}
+                        <span class="test-number">{{ $counter }}.</span>
+                        <span class="test-name">{{ .name | default .title }}</span>
+                    {{ end }}
+                </span>
+
+                <!-- ПОЛНЫЙ ВИД -->
+                <span class="test-item-full" style="display: none;">
+                    <span class="test-item-header">
+                        <span class="test-number">{{ $counter }}.</span>
+                        <span class="test-name">{{ .name | default .title }}</span>
+                    </span>
+                    <div class="test-details">
+                        <p>
+                            {{ with .description }}{{ . | markdownify }}<br>{{ end }}
+                            {{ with .author }}<strong>Автор:</strong> {{ . }}<br>{{ end }}
+                            {{ with .year }}<strong>Год:</strong> {{ . }}<br>{{ end }}
+                            {{ with .country }}<strong>Страна:</strong> {{ . }}<br>{{ end }}
+                            {{ with .url }}<a href="{{ . }}" target="_blank">{{ . }}</a>{{ end }}
+                        </p>
+
+                        <!-- ССЫЛКА -->
+                        {{ $collectionBaseUrl := "/empty/test/" }}
+                        <div class="test-item-more-details">
+                            <a href="{{ $collectionBaseUrl }}#card-{{ $cardId }}"
+                               class="more-details-button"
+                               onclick="return saveScrollPositionForTests(event)">
+                                More detailed
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+
+<script>
+// ФУНКЦИЯ СОХРАНЕНИЯ ДЛЯ TESTS
+function saveScrollPositionForTests(event) {
+    console.log('📍 [TESTS] Сохраняем данные для возврата...');
+
+    // Находим карточку
+    const link = event.currentTarget;
+    const card = link.closest('.test-item');
+
+    if (!card) {
+        console.error('❌ Карточка теста не найдена');
+        return true;
+    }
+
+    // Получаем номер маркера
+    const testNumber = card.getAttribute('data-test-number');
+
+    // Очищаем ВСЁ для чистоты
+    sessionStorage.clear();
+
+    // Сохраняем тип И номер
+    sessionStorage.setItem('markerType', 'test');  // КЛЮЧЕВОЕ!
+    sessionStorage.setItem('markerNumber', testNumber);
+    sessionStorage.setItem('scrollTop', window.pageYOffset);
+    sessionStorage.setItem('timestamp', Date.now());
+
+    console.log('💾 [TESTS] Сохранено тип: test, номер:', testNumber);
+
+    return true; // Разрешаем переход
+}
+</script>

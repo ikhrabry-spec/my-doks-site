@@ -1,0 +1,93 @@
+{{ $pageName := .Page.File.BaseFileName }}
+
+{{/* Companies */}}
+{{ $companies := where .Site.Data.Companies "referenced_in" "intersect" (slice $pageName) }}
+{{ if $companies }}
+  <div class="ref-group companies-group mb-4">
+    <h4 class="ref-group-title mb-2">Companies</h4>
+    {{ range sort $companies "number" "asc" }}
+      <div class="ref-item company-reference-item d-flex align-items-start mb-2"
+           data-company-number="{{ .number }}">
+        <span class="ref-number me-2">{{ .number }}.</span>
+        <div class="ref-content">
+          <div class="ref-name">{{ .name }}</div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{/* Publications */}}
+{{ $publications := where .Site.Data.Publications "referenced_in" "intersect" (slice $pageName) }}
+{{ if $publications }}
+  <div class="ref-group publications-group mb-4">
+    <h4 class="ref-group-title mb-2">Publications</h4>
+    {{ range sort $publications "number" "asc" }}
+      <div class="ref-item publication-reference-item d-flex align-items-start mb-2"
+           data-publication-number="{{ .number }}">
+        <span class="ref-number me-2">{{ .number }}.</span>
+        <div class="ref-content">
+          <div class="ref-title">{{ .title }}</div>
+          {{ if .authors }}
+            <div class="ref-authors small text-muted">{{ .authors }}</div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{/* Sources */}}
+{{ $sources := where .Site.Data.Sources "referenced_in" "intersect" (slice $pageName) }}
+{{ if $sources }}
+  <div class="ref-group sources-group mb-4">
+    <h4 class="ref-group-title mb-2">Sources</h4>
+    {{ range sort $sources "number" "asc" }}
+      <div class="ref-item source-reference-item d-flex align-items-start mb-2"
+           data-source-number="{{ .number }}">
+        <span class="ref-number me-2">{{ .number }}.</span>
+        <div class="ref-content">
+          {{ if .name }}
+            <div class="ref-name">{{ .name }}</div>
+          {{ else if .title }}
+            <div class="ref-title">{{ .title }}</div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{/* Patents */}}
+{{ $patents := where .Site.Data.Patents "referenced_in" "intersect" (slice $pageName) }}
+{{ if $patents }}
+  <div class="ref-group patents-group mb-4">
+    <h4 class="ref-group-title mb-2">Patents</h4>
+    {{ range sort $patents "number" "asc" }}
+      <div class="ref-item patent-reference-item d-flex align-items-start mb-2"
+           data-patent-number="{{ .number }}">
+        <span class="ref-number me-2">{{ .number }}.</span>
+        <div class="ref-content">
+          <div class="ref-title">{{ .title }}</div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{/* Legal */}}
+{{ $legal := where .Site.Data.Legal_field "referenced_in" "intersect" (slice $pageName) }}
+{{ if $legal }}
+  <div class="ref-group legal-group mb-4">
+    <h4 class="ref-group-title mb-2">Legal Documents</h4>
+    {{ range sort $legal "number" "asc" }}
+      <div class="ref-item legal-reference-item d-flex align-items-start mb-2"
+           data-legal-number="{{ .number }}">
+        <span class="ref-number me-2">{{ .number }}.</span>
+        <div class="ref-content">
+          <div class="ref-title">{{ .title }}</div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,0 +1,9 @@
+header:
+  logo: "/images/logos/logo-black-red-horizontal-sharped.svg"
+  show_search: true
+
+doks:
+    backgroundDots: true
+    sectionFooter: true
+flexsearch:
+    enabled: true

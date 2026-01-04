@@ -1,0 +1,102 @@
+{{/* Шаблон для страницы source-list.html с полным списком источников или компаний */}}
+{{ $currentPageName := .Page.File.BaseFileName }}
+{{ $sources := index .Site.Data $currentPageName }}               {{/* companies_plus.yml */}}
+{{ $groupingStructure := index .Site.Data (printf "%s_grouping" $currentPageName) }} {{/* companies_plus_grouping.yml */}}
+
+{{ if not $sources }}
+    {{ errorf "Ошибка: Не найден файл данных 'data/%s.yml' для страницы %s. Проверьте имя файла данных." $currentPageName .Page.RelPermalink }}
+{{ end }}
+
+<ul class="sources-list list-unstyled" id="sources-list">
+    {{/* 1. ЦИКЛ по ТИПАМ (Основной Раздел H2) */}}
+    {{ range $typeGroup := $groupingStructure }}
+        {{ $currentTypeName := $typeGroup.name }}
+        {{ $currentTypeSlug := $currentTypeName | urlize | anchorize }}
+
+        {{/* Вывод Заголовка H2 */}}
+        <h2 id="{{ $currentTypeSlug }}" class="sources-group-header">
+            {{ $currentTypeName | title }}
+        </h2>
+
+        {{ with $typeGroup.header_text }}
+            <p class="lead text-center mb-2">{{ . }}</p>
+        {{ end }}
+
+        {{ if $typeGroup.subtypes }}
+            {{/* 2. Если есть ПОДТИПЫ (H3), цикл по ним */}}
+            {{ range $subtypeGroup := $typeGroup.subtypes }}
+                {{ $currentSubtypeName := $subtypeGroup.name }}
+
+                {{/* Вывод Подзаголовка H3 */}}
+                {{ $currentSubtypeSlug := $currentSubtypeName | urlize | anchorize }}
+<h3 id="{{ $currentSubtypeSlug }}" class="sources-subtype-header text-center">
+                    {{ $subtypeGroup.centered_subtitle | default ($currentSubtypeName | title) }}
+                </h3>
+
+                {{ with $subtypeGroup.description_text }}
+                    <p class="text-center mb-2">{{ . }}</p>
+                {{ end }}
+
+                {{/* 3. ВЫВОД КАРТОЧЕК ДЛЯ ЭТОГО ПОДТИПА */}}
+                {{ range $index, $source := $sources }}
+                    {{ $sourceGroupId := $source.group_id | default "" }}
+
+                    {{ if eq $sourceGroupId $currentSubtypeName }}
+                        {{/* ГЕНЕРАЦИЯ ID ДЛЯ КАРТОЧКИ */}}
+                        {{ $cardId := "" }}
+                        {{ with $source.anchor }}
+                            {{ $cardId = trim . " " }}
+                        {{ end }}
+                        {{ if eq $cardId "" }}
+                            {{ with $source.name }}
+                                {{ $cardId = . | urlize }}
+                            {{ else }}
+                                {{ $cardId = printf "item-%d" $index }}
+                            {{ end }}
+                        {{ end }}
+
+                        {{ $tagString := "" }}
+                        {{ range $key, $value := $source.attributes }}
+                            {{ if reflect.IsSlice $value }}
+                                {{ range $value }}
+                                    {{ $tagString = printf "%s attr_%s_%s" $tagString ($key | lower) (. | lower) }}
+                                {{ end }}
+                            {{ else }}
+                                {{ $tagString = printf "%s attr_%s_%s" $tagString ($key | lower) ($value | lower) }}
+                            {{ end }}
+                        {{ end }}
+    {{ partial "handbook-card.html" (dict "source" $source "index" $index "cardId" $cardId "tagString" (trim $tagString " ")) }}
+
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+
+        {{ else }}
+            {{/* 4. Если НЕТ ПОДТИПОВ, ВЫВОДИМ КАРТОЧКИ ПО ОСНОВНОМУ ТИПУ (H2) */}}
+            {{ range $index, $source := $sources }}
+                {{ $sourceGroupId := $source.group_id | default "" }}
+
+                {{ if eq ($sourceGroupId | urlize) $currentTypeSlug }}
+                    {{/* ГЕНЕРАЦИЯ ID ДЛЯ КАРТОЧКИ */}}
+                    {{ $cardId := "" }}
+                    {{ with $source.anchor }}
+                        {{ $cardId = trim . " " }}
+                    {{ end }}
+                    {{ if eq $cardId "" }}
+                        {{ with $source.name }}
+                            {{ $cardId = . | urlize }}
+                        {{ else }}
+                            {{ $cardId = printf "item-%d" $index }}
+                        {{ end }}
+                    {{ end }}
+
+                    {{ $tagString := "" }}
+                    {{ range $key, $value := $source.attributes }}
+                        {{ $tagString = printf "%s attr_%s_%s" $tagString ($key | lower) ($value | lower) }}
+                    {{ end }}
+    {{ partial "handbook-card.html" (dict "source" $source "index" $index "cardId" $cardId "tagString" (trim $tagString " ")) }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</ul>
