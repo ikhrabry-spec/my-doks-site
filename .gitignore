@@ -10,3 +10,8 @@ resources
 "*.txtu" 
 "*.txtu" 
 "*.tmp" 
+"" 
+"# Backup files" 
+"*.backup"  
+"*.txtu" 
+"*.txtu" 
