@@ -4,3 +4,9 @@
 node_modules
 public
 resources
+"" 
+"# Backup files" 
+"*.backup" 
+"*.txtu" 
+"*.txtu" 
+"*.tmp" 

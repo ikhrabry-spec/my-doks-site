@@ -32,7 +32,7 @@
 
                         {{/* 4. Универсальная кнопка удаления фильтра (для filter-text) */}}
                         <button type="button" class="btn filter-remove-btn" id="filter-remove-btn" style="display: none;">
-                            {{ $filterRemoveIcon := resources.Get "images/icon/filter-xmark.svg" }}
+                            {{ $filterRemoveIcon := resources.Get "images/Icon/filter-xmark.svg" }}
                             <img src="{{ $filterRemoveIcon.RelPermalink }}" alt="Remove filter">
                         </button>
                     </div>
@@ -66,7 +66,7 @@
                         {{ end }}
 
                         <button id="filter-attribute-remove-btn" class="btn filter-remove-btn d-none" type="button">
-                            {{ $filterRemoveIcon := resources.Get "images/icon/filter-xmark.svg" }}
+                            {{ $filterRemoveIcon := resources.Get "images/Icon/filter-xmark.svg" }}
                             <img src="{{ $filterRemoveIcon.RelPermalink }}" alt="Remove filter">
                         </button>
 
@@ -80,7 +80,7 @@
                         {{/* 3. Блок переключения режимов (ТРИ ТОЧКИ) */}}
                         <div class="search-mode-container">
                             <button type="button" class="btn search-mode-toggle" id="search-mode-toggle">
-                                <img src="{{ (resources.Get "images/icon/Three dots.svg").RelPermalink }}" alt="Переключить режим поиска">
+                                <img src="{{ (resources.Get "images/Icon/Three dots.svg").RelPermalink }}" alt="Переключить режим поиска">
                             </button>
 
                             {{/* Выпадающее меню режимов */}}
@@ -92,19 +92,19 @@
                                     {{/* Ваши оригинальные пункты меню */}}
                                     <li data-mode="page-highlight">
                                         <span class="mode-icon">
-                                            <img src="{{ (resources.Get "images/icon/Search (2).svg").RelPermalink }}" alt="Find on this Page">
+                                            <img src="{{ (resources.Get "images/Icon/Search (2).svg").RelPermalink }}" alt="Find on this Page">
                                         </span>
                                         Find on this Page
                                     </li>
                                     <li data-mode="site">
                                         <span class="mode-icon">
-                                            <img src="{{ (resources.Get "images/icon/Search (2).svg").RelPermalink }}" alt="Search this site">
+                                            <img src="{{ (resources.Get "images/Icon/Search (2).svg").RelPermalink }}" alt="Search this site">
                                         </span>
                                         Search this site
                                     </li>
                                     <li data-mode="filter-text">
                                         <span class="mode-icon">
-                                            <img src="{{ (resources.Get "images/icon/Filter (2).svg").RelPermalink }}" alt="Contains Text">
+                                            <img src="{{ (resources.Get "images/Icon/Filter (2).svg").RelPermalink }}" alt="Contains Text">
                                         </span>
                                         Contains Text
                                     </li>
@@ -112,7 +112,7 @@
                                     {{/* ⭐ ИСПРАВЛЕННЫЙ ПУНКТ МЕНЮ С НОВЫМ ID ⭐ */}}
                                     <li data-mode="filter-attribute" id="filter-mode-menu-item">
                                         <span class="mode-icon">
-                                            <img src="{{ (resources.Get "images/icon/Filter (2).svg").RelPermalink }}" alt="Filter by Attribute">
+                                            <img src="{{ (resources.Get "images/Icon/Filter (2).svg").RelPermalink }}" alt="Filter by Attribute">
                                         </span>
                                         Filter by Attribute
                                     </li>
@@ -125,10 +125,10 @@
                         <div class="search-pagination" id="search-pagination" style="display: none;">
                             <span class="search-indicator" id="search-indicator">0/0</span>
                             <button type="button" class="btn" id="next-btn">
-                                <img src="{{ (resources.Get "images/icon/Arrow-down-thin.svg").RelPermalink }}" alt="Следующий результат">
+                                <img src="{{ (resources.Get "images/Icon/Arrow-down-thin.svg").RelPermalink }}" alt="Следующий результат">
                             </button>
                             <button type="button" class="btn" id="prev-btn">
-                                <img src="{{ (resources.Get "images/icon/Arrow-up-thin.svg").RelPermalink }}" alt="Предыдущий результат">
+                                <img src="{{ (resources.Get "images/Icon/Arrow-up-thin.svg").RelPermalink }}" alt="Предыдущий результат">
                             </button>
                         </div>
                     </div>
@@ -144,8 +144,8 @@
 
                 {{/* Кнопка переключения вида карточек (находится вне search-block) */}}
                 <button type="button" id="toggle-cards-button" class="btn btn-primary">
-                    {{ $listIcon := resources.Get "images/icon/icon-list.svg" }}
-                    {{ $descIcon := resources.Get "images/icon/icon-text.svg" }}
+                    {{ $listIcon := resources.Get "images/Icon/icon-list.svg" }}
+                    {{ $descIcon := resources.Get "images/Icon/icon-text.svg" }}
                     <img id="list-icon" src="{{ $listIcon.RelPermalink }}" alt="List" style="display: none;">
                     <img id="desc-icon" src="{{ $descIcon.RelPermalink }}" alt="Text">
                 </button>
