@@ -1,4 +1,4 @@
-baseURL: 'http://balloting.net/'
+baseURL: 'https://balloting.net/'
 title: 'Balloting.Net'
 theme: 'doks'
 languageCode: 'en-us'
