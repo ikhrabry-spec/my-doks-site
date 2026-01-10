@@ -81,96 +81,6 @@
     </ul>
 </div>
 
-<!-- СКРИПТ для автоматического раскрытия по hash - ПОСЛЕ закрытия всех Hugo блоков -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const hash = window.location.hash;
-    console.log('LEGAL FIELD DEBUG: Текущий hash:', hash);
-
-    if (hash && hash.startsWith('#card-')) {
-        const cardId = hash.substring(6); // Убираем "#card-"
-        console.log('LEGAL FIELD DEBUG: Ищем карточку с ID:', cardId);
-
-        const card = document.getElementById('card-' + cardId);
-        if (card) {
-            console.log('✅ LEGAL FIELD: Карточка найдена');
-
-            const full = card.querySelector('.legal-item-full');
-            const short = card.querySelector('.legal-item-short');
-
-            if (full && short) {
-                console.log('LEGAL FIELD: Full/Short элементы найдены');
-                console.log('До - full.display:', full.style.display);
-                console.log('До - short.display:', short.style.display);
-
-                full.style.display = 'block';
-                short.style.display = 'none';
-
-                console.log('После - full.display:', full.style.display);
-                console.log('После - short.display:', short.style.display);
-
-                // Добавляем класс для стилизации
-                card.classList.add('is-expanded');
-
-                // Прокручиваем с задержкой
-                setTimeout(() => {
-                    card.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    console.log('✅ LEGAL FIELD: Карточка раскрыта и прокручена');
-                }, 150);
-            } else {
-                console.log('❌ LEGAL FIELD: Full или Short элементы не найдены');
-                if (!full) console.log('  - Не найден .legal-item-full');
-                if (!short) console.log('  - Не найден .legal-item-short');
-            }
-        } else {
-            console.log('❌ LEGAL FIELD: Карточка не найдена по ID card-' + cardId);
-
-            // Пробуем найти другим способом
-            const allLegalCards = document.querySelectorAll('.legal-item');
-            console.log('Все legal карточки на странице:', allLegalCards.length);
-
-            // Ищем по data-card-id
-            const cardByDataId = document.querySelector('.legal-item[data-card-id="' + cardId + '"]');
-            console.log('Нашли по data-card-id:', !!cardByDataId);
-
-            // Пробуем раскрыть если нашли
-            if (cardByDataId) {
-                console.log('✅ Нашли по data-card-id!');
-                const full = cardByDataId.querySelector('.legal-item-full');
-                const short = cardByDataId.querySelector('.legal-item-short');
-
-                if (full && short) {
-                    full.style.display = 'block';
-                    short.style.display = 'none';
-                    cardByDataId.classList.add('is-expanded');
-
-                    setTimeout(() => {
-                        cardByDataId.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }, 150);
-                }
-            }
-        }
-    } else {
-        console.log('LEGAL FIELD: Нет hash или hash не начинается с #card-');
-    }
-});
-
-// Также обрабатываем изменения hash
-window.addEventListener('hashchange', function() {
-    console.log('LEGAL FIELD: Hash изменён на', window.location.hash);
-    // Перезагружаем страницу для простоты, или можно добавить логику закрытия/открытия
-    setTimeout(() => {
-        location.reload();
-    }, 100);
-});
-</script>
-
 <script>
 // ФУНКЦИЯ СОХРАНЕНИЯ ДЛЯ LEGAL
 function saveScrollPositionForLegal(event) {
@@ -181,7 +91,7 @@ function saveScrollPositionForLegal(event) {
     const card = link.closest('.legal-item');
 
     if (!card) {
-        console.error('❌ Карточка закона не найдена');
+        console.error('❌ Карточка legal не найдена');
         return true;
     }
 

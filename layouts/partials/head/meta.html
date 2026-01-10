@@ -1,2 +1,9 @@
-echo ^<meta name="description" content="{{ .Site.Params.description }}"^> > layouts\partials\head\meta.html
-echo ^<meta name="keywords" content="{{ delimit .Site.Params.keywords "," }}"^> >> layouts\partials\head\meta.html
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- with .Site.Params.description }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+{{- with .Site.Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">

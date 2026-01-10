@@ -1,16 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
-
 <head>
-
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Site.Title }}</title>
   {{ partial "head/custom-head" . }}
-
 </head>
-
 <body class="{{ block "bodyClass" . }}{{ end }}">
   {{ if not .IsHome }}
     {{ partial "header" . }}

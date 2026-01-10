@@ -109,58 +109,6 @@ window.updateListIndicatorsReady = true;
 window.dispatchEvent(new CustomEvent('updateListIndicatorsReady'));
 console.log('Событие updateListIndicatorsReady отправлено');
 
-// --- Функции для страницы Оглавления ---
-function toggleTocDisplay() {
-    let isListView = false;
-    if (tocItems.length > 0) {
-        const firstItem = tocItems[0];
-        const list = firstItem.querySelector('.card-list');
-        isListView = list && window.getComputedStyle(list).display !== 'none';
-    }
-
-    isListView = !isListView;
-
-    if (listIcon) listIcon.style.display = isListView ? 'none' : 'block';
-    if (descIcon) descIcon.style.display = isListView ? 'block' : 'none';
-
-    tocItems.forEach(item => {
-        const description = item.querySelector('.card-text');
-        const list = item.querySelector('.card-list');
-        if (description && list) {
-            description.style.display = isListView ? 'none' : 'block';
-            list.style.display = isListView ? 'block' : 'none';
-        }
-    });
-
-    console.log('Переключено на режим:', isListView ? 'список' : 'текст');
-
-    // Вызов updateListIndicators с обработкой готовности
-    setTimeout(function() {
-        if (window.updateListIndicatorsReady) {
-            // Если функция уже готова, вызываем её
-            if (window.updateListIndicators && typeof window.updateListIndicators === 'function') {
-                window.updateListIndicators();
-                console.log('Вызвана функция updateListIndicators');
-            }
-        } else {
-            // Если функция еще не готова, ждем события о её готовности
-            console.log('Функция еще не готова, ждем события updateListIndicatorsReady');
-
-            window.addEventListener('updateListIndicatorsReady', function handler() {
-                // Удаляем обработчик после первого срабатывания
-                window.removeEventListener('updateListIndicatorsReady', handler);
-
-                if (window.updateListIndicators && typeof window.updateListIndicators === 'function') {
-                    window.updateListIndicators();
-                    console.log('Вызвана функция updateListIndicators после события готовности');
-                } else {
-                    console.error('Функция updateListIndicators все еще не найдена после события');
-                }
-            });
-        }
-    }, 10);
-}
-
   // --- Функции для страницы Оглавления ---
   function toggleTocDisplay() {
 
@@ -572,41 +520,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ДВУХУРОВНЕВОЕ МЕНЮ
-
+// ДВУХУРОВНЕВОЕ МЕНЮ
 document.addEventListener('DOMContentLoaded', function() {
   const expandAllButton = document.querySelector('.docs-sidebar .expand-all-menu');
   let isExpanded = false;
-  let timeoutIds = [];
 
-  // Улучшенная функция для пометки подменю, содержащего активную страницу
+  // Функция для пометки активных меню
   function markActiveMenus() {
-    console.log('Помечаем активные меню...');
-
-    // Сначала удаляем все старые пометки
     document.querySelectorAll('.docs-sidebar details').forEach(detail => {
       detail.classList.remove('has-active-child');
     });
 
-    // Ищем активные элементы - не только ссылки, но и li с классом active
-    const activeElements = document.querySelectorAll('.docs-sidebar .active');
-    console.log('Найдено активных элементов:', activeElements.length);
-
-    activeElements.forEach(element => {
-      console.log('Обрабатываем активный элемент:', element);
-
-      // Находим ссылку, связанную с активным элементом
+    document.querySelectorAll('.docs-sidebar .active').forEach(element => {
       let link = element;
       if (element.tagName === 'LI') {
         link = element.querySelector('a');
       }
 
       if (link && link.tagName === 'A') {
-        console.log('Обрабатываем активную ссылку:', link.href);
-
-        // Находим все родительские details и помечаем их как содержащие активную страницу
         let parentElement = link.closest('details');
         while (parentElement) {
-          console.log('Помечаем родительский элемент:', parentElement);
           parentElement.classList.add('has-active-child');
           parentElement.setAttribute('open', 'open');
           parentElement = parentElement.parentElement.closest('details');
@@ -620,125 +553,93 @@ document.addEventListener('DOMContentLoaded', function() {
     return detail.classList.contains('has-active-child');
   }
 
-  // Очистка всех таймаутов
-  function clearAllTimeouts() {
-    timeoutIds.forEach(id => clearTimeout(id));
-    timeoutIds = [];
-  }
-
-  // Обработка клика по заголовкам первого уровня
-  document.querySelectorAll('.docs-sidebar details summary').forEach(summary => {
-    const link = summary.querySelector('.section-title-link');
-
-    if (link) {
-      link.addEventListener('click', function(e) {
-        const details = summary.parentElement;
-        if (!details.hasAttribute('open')) {
-          details.setAttribute('open', 'open');
-        }
-        // Закрываем другие меню, но не активные
-        document.querySelectorAll('.docs-sidebar details').forEach(detail => {
-          if (detail !== details && !detail.contains(details) && !isActiveMenu(detail)) {
-            detail.removeAttribute('open');
-          }
-        });
-      });
-    }
-  });
-
-  // Вызываем функцию пометки активных меню с задержкой
-  setTimeout(markActiveMenus, 100);
-
-  // Обработчики наведения только для неактивных меню
-  document.querySelectorAll('.docs-sidebar details').forEach(details => {
-    // Пропускаем активные меню - они не должны реагировать на наведение
-    if (isActiveMenu(details)) return;
-
-    let timeoutId;
-
-    details.addEventListener('mouseenter', function() {
-      if (!isExpanded) {
-        clearTimeout(timeoutId);
-        openTimeout = setTimeout(() => {
-          this.classList.remove('closing');
-          this.setAttribute('open', 'open');
-        }, 300); // Задержка перед открытием
-      }
-    });
-
-    details.addEventListener('mouseleave', function() {
-      if (!isExpanded && !isActiveMenu(this)) { // Добавляем проверку isActiveMenu
-        clearTimeout(openTimeout); // Очищаем таймер открытия
-        const currentDetails = this;
-        closeTimeout = setTimeout(() => {
-          isAnimating = true; // Флаг установлен, анимация началась
-            // Медленное закрытие
-          currentDetails.classList.add('closing');
-
-        // После завершения анимации закрытия
-        setTimeout(() => {
-          if (!isActiveMenu(currentDetails)) {
-            currentDetails.removeAttribute('open');
-            currentDetails.classList.remove('closing');
-            isAnimating = false; // Анимация завершена, флаг сброшен
-          }
-        }, 500); // 5 секунд - время анимации
-        }, 200);
-        timeoutIds.push(timeoutId);
-      }
-    });
-  });
-
-  // Функциональность стрелочки раскрытия всех меню
+  // Обработчик для кнопки раскрытия/сворачивания
   if (expandAllButton) {
-    expandAllButton.addEventListener('click', function() {
+    expandAllButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
       isExpanded = !isExpanded;
       const allDetails = document.querySelectorAll('.docs-sidebar details');
 
-
       if (isExpanded) {
-        if (isAnimating) { // Проверяем, идёт ли анимация
-        // Раскрываем все меню
-        // Добавляем задержку перед открытием.
-        // Это даст время любым текущим анимациям закрытия завершиться.
-          setTimeout(() => {
-            allDetails.forEach(detail => {
-              detail.setAttribute('open', 'open');
-            });
-        }, 500); // 500 мс - достаточное время для завершения анимации
-        } else {
-          allDetails.forEach(detail => {
-            detail.setAttribute('open', 'open');
-          });
-        }
-
-      } else {
-        // Сворачиваем только неактивные меню
+        // РАСКРЫВАЕМ ВСЕ меню
         allDetails.forEach(detail => {
+          // Убираем анимацию закрытия при принудительном открытии
+          detail.classList.remove('closing');
+          // Открываем меню
+          detail.setAttribute('open', 'open');
+          // Добавляем атрибут, что меню открыто через кнопку
+          detail.setAttribute('data-forced-open', 'true');
+        });
+      } else {
+        // СВОРАЧИВАЕМ только неактивные
+        allDetails.forEach(detail => {
+          detail.removeAttribute('data-forced-open');
           if (!isActiveMenu(detail)) {
             detail.removeAttribute('open');
           }
         });
       }
 
+      // Обновляем визуальное состояние кнопки
       this.classList.toggle('expanded');
+
+      console.log('Кнопка нажата. Состояние:', isExpanded ? 'развернуто' : 'свернуто');
     });
   }
 
-  // Защита активных меню: если активное меню было закрыто, немедленно открываем его
+  // Базовые обработчики наведения для меню
+  document.querySelectorAll('.docs-sidebar details').forEach(details => {
+    // Пропускаем активные меню
+    if (isActiveMenu(details)) return;
+
+    let openTimer, closeTimer;
+
+    details.addEventListener('mouseenter', function() {
+      // Не открываем при наведении, если меню развернуто через кнопку
+      if (!isExpanded) {
+        clearTimeout(closeTimer);
+        openTimer = setTimeout(() => {
+          this.classList.remove('closing');
+          this.setAttribute('open', 'open');
+        }, 300);
+      }
+    });
+
+    details.addEventListener('mouseleave', function() {
+      // Не закрываем при уходе, если меню развернуто через кнопку
+      if (!isExpanded && !isActiveMenu(this)) {
+        clearTimeout(openTimer);
+
+        const currentDetails = this;
+        currentDetails.classList.add('closing');
+
+        closeTimer = setTimeout(() => {
+          if (!isActiveMenu(currentDetails)) {
+            currentDetails.removeAttribute('open');
+          }
+          currentDetails.classList.remove('closing');
+        }, 5000); // 5 секунд
+      }
+    });
+  });
+
+  // Вызываем функцию пометки активных меню
+  setTimeout(markActiveMenus, 100);
+
+  // MutationObserver для защиты активных меню
   const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
       if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
         const detail = mutation.target;
         if (isActiveMenu(detail) && !detail.hasAttribute('open')) {
-          // Немедленно открываем активное меню обратно
           detail.setAttribute('open', 'open');
         }
       }
     });
   });
 
-  // Начинаем наблюдение за изменениями атрибута open
   document.querySelectorAll('.docs-sidebar details').forEach(detail => {
     observer.observe(detail, { attributes: true });
   });
