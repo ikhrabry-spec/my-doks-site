@@ -1,7 +1,9 @@
 ---
 title: "Test"
 subtitle: ""
-layout: reference-books  
+layout: reference-books 
+sitemap_exclude: true
+robots: noindex 
 weight: 11
 ---
 

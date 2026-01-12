@@ -19,3 +19,10 @@ outputFormats:
     mediaType: "application/json"
     isPlainText: true
 
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+  excludeKinds:
+    - taxonomy    # Исключает все страницы таксономий (категории, теги)
+    - term        # Исключает все страницы терминов (конкретные теги)
+    # - 404       # Если нужно, можно исключить страницу 404

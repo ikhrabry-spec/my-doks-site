@@ -3,6 +3,8 @@ title: "Test page"
 description: "Исчерпывающая демонстрация всех типов блоков и их параметров"
 layout: docs-page
 toc: true
+sitemap_exclude: true
+robots: noindex
 
 content_blocks:
   # ==================== РАЗДЕЛ 0: ТЕКСТОВЫЕ БЛОКИ ====================
