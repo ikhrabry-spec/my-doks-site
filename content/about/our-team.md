@@ -5,41 +5,41 @@ weight: 10
 has_sections: true
 ---
 
-The Creators of the New Technology. An Initiative Open to Evolution.
+The Creators of the New Technology. Building the Platform for Secure Democracy.
 ## Founding Team: The Visionaries
 We are the architects of the new Online Secret Ballot System. Our journey began with a simple question: 'How to make secret voting truly secure, transparent, and accessible?' The answer has become our technology, the key elements of which are covered by patents.
 <div class="team-grid">
- {{< team-member 
-  name="Alexandr Khrabry" 
-  position="Co-inventor" 
-  photo="images/foto/AI-1.png" 
-  bio="PHD in computational physics (Graduated with honors). Research scholar at Princeton University, Lawrence Livermore National Laboratory, Princeton Plasma Physics Laboratory. AI and machine learning research"
-  intro="Alexander conducted a profound critical analysis of the proposed technology and refined its patent core."
+ {{< team-member
+  name="Alexander Khrabry"
+  position="Co-inventor"
+  photo="images/foto/AI-1.png"
+  bio="PhD in Computational Physics (with honors). Research scholar at Princeton University, Lawrence Livermore National Laboratory, Princeton Plasma Physics Laboratory. AI and machine learning research."
+  intro="Alexander conducted a rigorous critical analysis of the proposed technology and refined its patent core."
 >}}
-{{< team-member 
-  name="Iosif Khrabry" 
-  position="Co-inventor" 
-  photo="images/foto/IS.png" 
-  bio="PHD in social and human sciences.  Founder and CEO of a publishing house Norint.  Founder and manager of the Charitable Leningrad Gallery Foundation.  Developer of original publishing projects."
-  intro="Iosif became the ideological inspirer and driving force of the project, the creator of the basis of our technology."
-  outro=""
+{{< team-member
+  name="Iosif Khrabry"
+  position="Co-inventor"
+  photo="images/foto/IS.png"
+  bio="PhD in Social and Human Sciences, Physics and Mathematics background. Founder of Norint Publishing House. Creator and manager of major encyclopedic projects. Founder of the Charitable Foundation."
+  intro="Iosif is the originator of the project and the creator of its mathematical and philosophical conceptual foundation."
+
 >}}
 </div>
 
-## Future Team: Open Roles
-No fundamental problem is solved alone. We believe in the power of the collective mind and intend to create a community to refine and promote our technology, transitioning our existing developments into quality implementation and deployment. We aim to attract world-class specialists to our team. These may include individuals, established teams, or proven companies.
+## Looking ahead
+We have set ourselves an ambitious goal - but we understand that it cannot be achieved alone. We are seeking partners who share this vision: enterprises and their leaders, ready to contribute their expertise, infrastructure, and resources to make it a reality.
 
-Technology is nothing without a community that understands and believes in it. We need evangelists who can disseminate information about our technology's capabilities, turn complex ideas into compelling narratives, and engage both governmental and non-governmental organizations to utilize our platform.
+The technology we have developed will not implement itself. It requires a coalition of industry players, each building on their own strengths, to turn a breakthrough into a global standard.
+
+We have solved the fundamental problems. The next step is to bring them to life - together.
 
 ## Future Advisory Board
 
 The development of a trusted voting system requires multifaceted expertise. As a key part of our growth strategy, we plan to establish an independent Advisory Board comprising leading experts in cryptography, data protection, electoral law, and public policy. Their expert judgments and guidance will be instrumental in ensuring the highest levels of academic rigor, security, and ethical compliance of our platform.
 
-## Join Our Mission. Shape the Future With Us
-The future of our technology is still being developed. Its ultimate shape depends on the skills, passion, and competence of those who join us.
+## Join Our Mission.
+Our team is the driving force behind a new era of democracy. We see secure electronic remote voting not merely as a tool for representative institutions or direct collective decision-making, but first and foremost as an instrument of socio-democratic development. These technologies serve to cultivate social consciousness, shape public morality, and establish ethical and social norms. They promote informed, well-grounded decision-making on matters of social significance - and in doing so, they become one of the essential pillars of tomorrow's society.
 
-We are more than just a team; we are a project founded on the mission to create a new world of democracy. We view secret electronic remote voting not merely as a tool for representative institutions or direct collective decision-making, but fundamentally as an instrument for democratic societal development. It is a mechanism fostering civic consciousness and promoting the informed and substantiated adoption of socially significant decisions—making it an essential element of democracy in the future.
+Our team is more than just developers; we are building the road to a secure, democratic future.
 
-We are more than just a project; we are a growing alliance for secure, society-improving democracy.
-
-Join the discussion on the "Discussion" section of our website.
+**Join us.**

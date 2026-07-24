@@ -2,12 +2,12 @@
 title: "Inside"
 subtitle: "From Problem Awareness to Solution"
 description: "History of encounters with numerous purposefully organized cases of voting fraud. Formation of secure voting principles. The emergence of the idea. Technology development. Patents. Possibilities of use. Paths and conditions for promotion. Perspectives."
-layout: "docs-page"  
+layout: "docs-page"
 weight: 10
 ---
-The encounters with numerous purposefully organized cases of voting fraud. The emergence of the idea. Formation of secure voting principles. Technology development. Patents. Possibilities of use. Paths and conditions for promotion. Perspectives
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The encounters with numerous purposefully organized cases of voting fraud. The emergence of the idea. Formation of secure voting principles. Technology development. Patents. Possibilities of use. Paths and conditions for promotion. Perspectives
 
-## [Prerequisites](/docs/inside/Prerequisites/)  
+## [Prerequisites](/docs/inside/Prerequisites/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An excursion into history showing the events and the emotions they evoked that led to the development of an online voting system. An examination of the problems that have prevented such a system from existing, and the formulation of the tasks that must be solved within our moral and ethical framework.
 

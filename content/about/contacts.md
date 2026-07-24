@@ -6,8 +6,8 @@ weight: 11
 ---
 ## Contact the Founders
 
-**Iosif Khabry: ikhabry@balloting.net**  
-**Alexandr Khabry: akhabry@balloting.net**
+**Iosif Khabry: ikhabry@balloting.net**<br>
+**Alexander Khabry: akhabry@balloting.net**
 
 ## For authors
 
@@ -23,7 +23,7 @@ Email: **partners@balloting.net**
 
 ## For General Inquiries
 
-The following email address is intended for questions:  
+The following email address is intended for questions:
 
 Email: **info@balloting.net**
 

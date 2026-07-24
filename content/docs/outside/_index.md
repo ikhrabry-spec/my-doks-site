@@ -5,7 +5,7 @@ description: "Companies and corporations offering secret ballot services and the
 layout: "docs-page"  # Тот же layout для всех разделов docs
 weight: 20
 ---
-Companies and corporations offering secret ballot services and their proposed solutions. Published and patented developments in secure voting technology. Legislation of different countries in the field of electronic voting and election computerization.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Companies and corporations offering secret ballot services and their proposed solutions. Published and patented developments in secure voting technology. Legislation of different countries in the field of electronic voting and election computerization.
 
 ## [Corporate Proposals](/docs/outside/Corporate_Proposals/)
 
