@@ -17,7 +17,7 @@ Email: **authors@balloting.net**
 
 ## For partners
 
-This address is intended for commercial offers of cooperation and the placement of advertising information about their developments or companies:
+This address — along with the founders' addresses — is reserved for proposals regarding collaboration on the development, implementation, and commercialization of technologies aligned with our mission:
 
 Email: **partners@balloting.net**
 
