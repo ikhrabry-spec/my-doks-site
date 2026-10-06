@@ -9,7 +9,6 @@ The Creators of the New Technology. Building the Platform for Secure Democracy.
 ## Founding Team: The Visionaries
 We are the architects of the new Online Secret Ballot System. Our journey began with a simple question: 'How to make secret voting truly secure, transparent, and accessible?' The answer has become our technology, the key elements of which are covered by patents.
 <div class="team-grid">
-
  {{< team-member
   name="Alexander Khrabry"
   position="Co-inventor"
@@ -23,7 +22,6 @@ We are the architects of the new Online Secret Ballot System. Our journey began 
   photo="images/foto/IS.png"
   bio="PhD in Social and Human Sciences, Physics and Mathematics background. Founder of Norint Publishing House. Creator and manager of major encyclopedic projects. Founder of the Charitable Foundation."
   intro="Iosif is the originator of the project and the creator of its mathematical and philosophical conceptual foundation."
-
 >}}
 </div>
 

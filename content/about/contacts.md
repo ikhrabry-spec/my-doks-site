@@ -7,8 +7,8 @@ weight: 11
 ## Contact the Founders
 
 
-**Iosif Khrabryi: ikhrabry@balloting.net**
-**Aleksandr Khrabryi: akhrabry@balloting.net**
+**Iosif Khrabryi: ikhrabry@balloting.net**  
+**Alexander Khrabry: akhrabry@balloting.net**
 
 ## For authors
 
