@@ -9,6 +9,7 @@ The Creators of the New Technology. Building the Platform for Secure Democracy.
 ## Founding Team: The Visionaries
 We are the architects of the new Online Secret Ballot System. Our journey began with a simple question: 'How to make secret voting truly secure, transparent, and accessible?' The answer has become our technology, the key elements of which are covered by patents.
 <div class="team-grid">
+
  {{< team-member
   name="Alexander Khrabry"
   position="Co-inventor"
