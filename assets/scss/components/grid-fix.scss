@@ -86,7 +86,7 @@
        }
 
   .card-subtitle {
-    color: #000 !important; /* Черный цвет подзаголовка */
+    color: #000 ; /* Черный цвет подзаголовка */
     text-decoration: none !important; /* Убираем подчеркивание */
     font-style: italic;
     font-size: 0.95rem;
@@ -283,4 +283,38 @@
 
 .toc-card.list-incomplete:hover::after {
   opacity: 0;
+}
+
+
+
+/* Вся карточка — кликабельная */
+.toc-card-link {
+  display: block;          /* чтобы ссылка занимала всю ширину */
+  text-decoration: none;   /* убираем подчёркивание */
+  color: inherit;          /* наследуем цвет текста */
+  transition: all 0.2s ease;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Эффект при наведении на всю карточку */
+.toc-card-link:hover {
+  background-color: rgba(0, 123, 255, 0.05); /* лёгкий фон */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Заголовок внутри ссылки — меняет цвет при наведении */
+.toc-card-link:hover .card-title {
+  color: #7c599c; /* или ваш основной цвет */
+}
+
+/* Подзаголовок внутри ссылки */
+.toc-card-link:hover .card-subtitle {
+  color: #7c599c;
+}
+
+/* Описание внутри ссылки */
+.toc-card-link:hover .card-description {
+  color: #7c599c;
 }

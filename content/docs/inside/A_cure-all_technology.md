@@ -24,7 +24,7 @@ A concise summary of the multitude of ideas, realized in inventions, that consti
 ### Identifying the Problem
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All known systems that provide for voter registration and the maintenance of voter rolls aim to create computerized records of voters, protect voters' personal data, and provide registered voters with an anonymous certificate granting them the right and ability to vote. However, there are no known inventions aimed at protecting against malicious actions by the organizers of the vote and those who conduct voter registration and accounting.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The protection we propose relies on separating the persons maintaining the system from the persons conducting voter registration. The persons maintaining the system are responsible for its functioning and for the disclosure of voters' personal data that is not subject to publication (for example, their place of residence). The persons conducting voter registration are responsible for distorting the voter lists and the positions (e.g., addresses) that voters may occupy. The goal of the invention is to enable public oversight of how voter accounting is conducted without disclosing voters' confidential data. The system can be used for control that allows, firstly, to identify and hold accountable those who disclose personal data and those who introduce distortions into the voter lists, and secondly, to detect and correct these distortions. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The protection we propose relies on separating the persons maintaining the system from the persons conducting voter registration. The persons maintaining the system are responsible for its functioning and for the disclosure of voters' personal data that is not subject to publication (for example, their place of residence). The persons conducting voter registration are responsible for distorting the voter lists and the positions (e.g., addresses) that voters may occupy. The goal of the invention is to enable public oversight of how voter accounting is conducted without disclosing voters' confidential data. The system can be used for control that allows, firstly, to identify and hold accountable those who disclose personal data and those who introduce distortions into the voter lists, and secondly, to detect and correct these distortions.
 
 ### The Essence of the Invention
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In elections and referendums conducted by state structures within a certain territory, the persons entitled to vote are all citizens registered at one of the addresses in that territory. If desired, a malicious state structure responsible for accounting for residential addresses and registering citizens at these addresses can either include non-existent addresses among the list of addresses, registering non-existent people at these addresses, or register non-existent people at existing addresses.
@@ -40,7 +40,6 @@ A concise summary of the multitude of ideas, realized in inventions, that consti
 ## The Balloting Process
 ### Set of Objectives
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The system and method we have developed comprehensively ensure:
-
 * the impossibility of ballot stuffing and vote substitution during secret voting;
 * the voter's ability to verify the correct accounting of their cast vote in the results, but only as part of a public procedure, combined with the ability to change their choice during the allotted voting time, which renders vote trading and voting under pressure meaningless;
 * the simultaneous receipt of results by all voting participants immediately after its conclusion and their verifiability;
@@ -55,12 +54,11 @@ A concise summary of the multitude of ideas, realized in inventions, that consti
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The achievement of the stated objectives is based on:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-* direct message exchange between the devices within this network, 
-* asymmetric multi-stage encryption, 
-* the use of rhythmized anonymizing mailing, 
-* distributed storage of information encrypted with personal keys generated separately by each participant's device, 
-* the specificity of the encryption, distribution, decryption, and storage procedures performed separately by each device, and 
+* direct message exchange between the devices within this network,
+* asymmetric multi-stage encryption,
+* the use of rhythmized anonymizing mailing,
+* distributed storage of information encrypted with personal keys generated separately by each participant's device,
+* the specificity of the encryption, distribution, decryption, and storage procedures performed separately by each device, and
 * multiple duplication of information and its independent processing by each of these devices.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During the voting process, the participants' devices join a peer-to-peer hybrid overlay network, which is dynamically formed for the specific current vote from those admitted to it (i.e., those with access who have passed authentication).
@@ -69,9 +67,9 @@ A concise summary of the multitude of ideas, realized in inventions, that consti
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Participation in the vote begins with the device of an authenticated voter distributing the generated public key for anonymizing mailing and including it in a list for subsequent verification of results. During the allotted voting time, the voter makes their choice and places it in a voting message. Their device then encrypts this message with its generated voting key, places the encrypted message anonymously into public access (distributes it to other devices and the server) using the anonymizing mailing, and collects encrypted messages from other devices.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upon the expiration of the voting time, all devices anonymously place their voting keys into public access. Using these keys, they decrypt the collected choices from other devices. In doing so, each device separately verifies the participants and the lists of intermediate and final results, then independently of one another calculates the voting outcome. This outcome can be checked by anyone after its visualization on the website by the server and by each device independently of the others. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upon the expiration of the voting time, all devices anonymously place their voting keys into public access. Using these keys, they decrypt the collected choices from other devices. In doing so, each device separately verifies the participants and the lists of intermediate and final results, then independently of one another calculates the voting outcome. This outcome can be checked by anyone after its visualization on the website by the server and by each device independently of the others.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upon the expiration of the voting time, all devices anonymously place their voting keys into public access. Using these keys, they decrypt the collected choices from other devices. In doing so, each device separately verifies the participants and the lists of intermediate and final results, then independently of one another calculates the voting outcome. This outcome can be checked by anyone after its visualization on the website by the server and by each device independently of the others. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upon the expiration of the voting time, all devices anonymously place their voting keys into public access. Using these keys, they decrypt the collected choices from other devices. In doing so, each device separately verifies the participants and the lists of intermediate and final results, then independently of one another calculates the voting outcome. This outcome can be checked by anyone after its visualization on the website by the server and by each device independently of the others.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A detailed description of the functioning of our proposed system and an explanation of the mechanisms ensuring the achievement of the stated goals can be found in patent «A system and method of secret online voting countering vote stuffing and substitution, vote trading and pressure on voters» {{< patent-ref "3">}}.
 

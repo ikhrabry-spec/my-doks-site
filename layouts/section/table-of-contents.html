@@ -21,26 +21,28 @@
     {{ $currentPage := . }}
 
     {{ range $section := $sections }}
+      {{ $pages := where (where $section.Pages "Kind" "page") "File.BaseFileName" "!=" "_index" }}
+      {{ $pageCount := len $pages }}
+      {{ $hasContent := or $section.Description (gt $pageCount 0) }}
+
       <div class="toc-item">
-        <div class="toc-card">
+        <div class="toc-card{{ if $hasContent }} has-content{{ end }}">
 
-          <h3 class="card-title">
-            <a href="{{ $section.RelPermalink }}" class="card-title-link">{{ $section.Title }}</a>
-          </h3>
+          <a href="{{ $section.RelPermalink }}" class="toc-card-link">
 
-          {{ if $section.Params.subtitle }}
-            <p class="card-subtitle">{{ $section.Params.subtitle }}</p>
-          {{ end }}
+            <h3 class="card-title">{{ $section.Title }}</h3>
 
-          {{ if $section.Description }}
-            <p class="card-text card-description">{{ $section.Description }}</p>
-          {{ end }}
+            {{ if $section.Params.subtitle }}
+              <p class="card-subtitle">{{ $section.Params.subtitle }}</p>
+            {{ end }}
 
-          {{ $pages := where (where $section.Pages "Kind" "page") "File.BaseFileName" "!=" "_index" }}
-          {{ $pageCount := len $pages }}
+            {{ if $section.Description }}
+              <p class="card-text card-description">{{ $section.Description }}</p>
+            {{ end }}
+
+          </a>
 
           {{ if gt $pageCount 0 }}
-
             <div class="card-list">
               <ul class="list-unstyled">
                 {{ $sectionPages := sort $section.Pages ".Weight" }}
@@ -90,6 +92,4 @@
 {{ end }}
 
 {{ define "bodyClass" }}section-table-of-contents{{ end }}
-
-
 

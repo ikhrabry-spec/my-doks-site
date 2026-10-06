@@ -5,9 +5,9 @@ description: "The costs associated with organizing and conducting the process of
 layout: "docs-page"  # Специальный layout для разделов документации
 weight: 10
 ---
-Costs of organizing and conducting the voting process during the elections of heads and parliamentarians of states, regions, cities, and localities. Problems and legal violations during this process, such as ballot stuffing and counting fraud. Violations of law during the election campaign. Abuse of power throughout the entire election period.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Costs of organizing and conducting the voting process during the elections of heads and parliamentarians of states, regions, cities, and localities. Problems and legal violations during this process, such as ballot stuffing and counting fraud. Violations of law during the election campaign. Abuse of power throughout the entire election period.
 
-## [Costs](/docs/aspects/Costs/)  
+## [Costs](/docs/aspects/Costs/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of costs for conducting secret voting at the state level. The level of costs established in the 2020s. The market size for the computerization of secret voting and the consumers of election services. Prospects for changing these costs through computerization.
 
